@@ -1,0 +1,3 @@
+gpi_offer_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: GPIOfferBundle:Default:index }

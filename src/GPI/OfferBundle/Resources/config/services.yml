@@ -1,0 +1,9 @@
+services:
+#    gpi_offer.example:
+#        class: GPI\OfferBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+    gpi_offer.admin.offer:
+        class: GPI\OfferBundle\Admin\OfferAdmin
+        arguments: [~, GPI\OfferBundle\Entity\Offer, GPIOfferBundle:OfferAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Offer}

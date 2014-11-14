@@ -1,59 +1,24 @@
-Sonata Standard Edition
+Gielda Projektow Inzynierskich
 =======================
 
 What's inside?
 --------------
 
-Sonata Standard Edition comes pre-configured with the following bundles:
-
-* Bundles from Symfony Standard distribution
-* Sonata Admin Bundles: Admin and Doctrine ORM Admin
-* Sonata Ecommerce Bundles: Payment, Customer, Invoice, Order and Product
-* Sonata Foundation Bundles: Core, Notification, Formatter, Intl, Cache, Seo and Easy Extends
-* Sonata Feature Bundles: Page, Media, News, User, Block, Timeline
-* Api Bundles: FOSRestBundle, BazingaHateoasBundle, NelmioApiDocBundle and JMSSerializerBundle
-
 Installation
 ------------
 
-Get composer:
-
-    curl -s http://getcomposer.org/installer | php
-
-Run the following command for the 2.3 branch:
-
-    php composer.phar create-project sonata-project/sandbox:2.3.x-dev
-
-Or to get the 2.3 develop branch:
-
-    php composer.phar create-project sonata-project/sandbox:dev-2.3-develop
-
-The installation process used Incenteev's ParameterHandler to handle parameters.yml configuration. With the current
-installation, it is possible to use environment variables to configure this file:
-
-    DATABASE_NAME=sonata DATABASE_USER=root DATABASE_PASSWORD="" php composer.phar create-project sonata-project/sandbox:dev-2.3-develop
-    
-You might experience some timeout issues with composer, as the ``create-project`` start different scripts, you can increase the default composer value with the ``COMPOSER_PROCESS_TIMEOUT`` env variable:
-
-    COMPOSER_PROCESS_TIMEOUT=600 php composer.phar create-project sonata-project/sandbox:dev-2.3-develop
+sometimes problems with downloading with composer classes:
+ - src/application/sonata/classificationBundle/entity/Context.php
+ - classificationBundle/.../context.orm.php
 
 Reset the data
 --------------
 
-Fixtures are automatically loaded on the ``composer create-project`` step. If you'd like to reset your sandbox to the default fixtures (or you had an issue while installing and want to fill in the fixtures manually), you may run:
-
-    php bin/load_data.php
-
-This will completely reset your database.
 
 Run
 ---
 
-If you are running PHP5.4, you can use the built in server to start the demo:
-
-    app/console server:run localhost:9090
-
-Now open your browser and go to http://localhost:9090/
+php app/console server:run
 
 Tests
 -----
