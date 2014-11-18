@@ -7,11 +7,18 @@ services:
         arguments: [~, GPI\OfferBundle\Entity\Offer, GPIOfferBundle:OfferAdmin]
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: Offer}
+    gpi_offer.offer_repository:
+        class: GPI\OfferBundle\Entity\OfferRepository
+        factory_service: doctrine.orm.default_entity_manager
+        factory_method: getRepository
+        arguments:
+            - GPI\OfferBundle\Entity\Offer
     gpi.block.service.offer:
         id: gpi.block.service.offer
         class: GPI\Sonata\BlockBundle\Block\OfferBlockService
         arguments:
             - gpi.block.service.offer
             - @templating
+            - @gpi_offer.offer_repository
         tags:
             - {name: sonata.block}

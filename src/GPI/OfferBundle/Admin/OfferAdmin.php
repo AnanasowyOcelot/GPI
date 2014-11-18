@@ -50,11 +50,8 @@ class OfferAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id')
             ->add('name')
             ->add('content')
-
-
             ->add('category', 'sonata_type_model_list', array(), array())
         ;
     }

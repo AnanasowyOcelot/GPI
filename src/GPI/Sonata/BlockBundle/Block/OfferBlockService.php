@@ -3,6 +3,9 @@
 
 namespace GPI\Sonata\BlockBundle\Block;
 
+use Doctrine\ORM\EntityManager;
+use GPI\OfferBundle\Entity\Offer;
+use GPI\OfferBundle\Entity\OfferRepository;
 use Sonata\BlockBundle\Block\BaseBlockService;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
@@ -12,9 +15,23 @@ use Sonata\BlockBundle\Block\BlockContextInterface;
 
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Validator\ErrorElement;
+use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 
 class OfferBlockService extends BaseBlockService
 {
+
+    private $or;
+    /**
+     * @param string          $name
+     * @param EngineInterface $templating
+     * @param OfferRepository $or
+     */
+    public function __construct($name, EngineInterface $templating, OfferRepository $or)
+    {
+        $this->name       = $name;
+        $this->templating = $templating;
+        $this->or = $or;
+    }
 
     public function getName()
     {
@@ -53,12 +70,20 @@ class OfferBlockService extends BaseBlockService
 //            ->end();
     }
 
+    /**
+     * @return array
+     */
+    private function getOffers() {
+        $offers = $this->or->findAll();
+        return $offers;
+    }
+
     public function execute(BlockContextInterface $blockContext, Response $response = null)
     {
         $settings = $blockContext->getSettings();
 
         return $this->renderResponse($blockContext->getTemplate(), array(
-            'offers' => "PACAK!!!!",
+            'offers' => $this->getOffers(),
             'block' => $blockContext->getBlock(),
             'settings' => $settings
         ), $response);
