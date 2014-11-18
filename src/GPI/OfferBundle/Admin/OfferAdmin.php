@@ -53,6 +53,9 @@ class OfferAdmin extends Admin
             ->add('id')
             ->add('name')
             ->add('content')
+
+
+            ->add('category', 'sonata_type_model_list', array(), array())
         ;
     }
 
@@ -65,6 +68,7 @@ class OfferAdmin extends Admin
             ->add('id')
             ->add('name')
             ->add('content')
+            ->add('category', 'sonata_type_model_list', array(), array())
         ;
     }
 

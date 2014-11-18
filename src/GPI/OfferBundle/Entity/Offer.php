@@ -35,7 +35,10 @@ class Offer
      */
     private $content;
 
-
+    /**
+     * @ORM\OneToOne(targetEntity="\Application\Sonata\ClassificationBundle\Entity\Category")
+     */
+    private $category;
 
     /**
      * Get id
@@ -92,4 +95,21 @@ class Offer
     {
         return $this->content;
     }
+
+    /**
+     * @param mixed $categories
+     */
+    public function setCategory($categories)
+    {
+        $this->category = $categories;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
 }

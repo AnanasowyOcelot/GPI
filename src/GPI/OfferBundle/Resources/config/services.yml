@@ -7,3 +7,11 @@ services:
         arguments: [~, GPI\OfferBundle\Entity\Offer, GPIOfferBundle:OfferAdmin]
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: Offer}
+    gpi.block.service.offer:
+        id: gpi.block.service.offer
+        class: GPI\Sonata\BlockBundle\Block\OfferBlockService
+        arguments:
+            - gpi.block.service.offer
+            - @templating
+        tags:
+            - {name: sonata.block}
