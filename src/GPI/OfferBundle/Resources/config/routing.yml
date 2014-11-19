@@ -1,3 +1,7 @@
-gpi_offer_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: GPIOfferBundle:Default:index }
+gpi_offer_details:
+    path:     /details/{id}
+    defaults: { _controller: GPIOfferBundle:OfferDetails:index }
+
+index:
+    path:     /offer/add
+    defaults: { _controller: GPIOfferBundle:AddOffer:index }

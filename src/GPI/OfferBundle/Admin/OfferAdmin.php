@@ -51,7 +51,7 @@ class OfferAdmin extends Admin
     {
         $formMapper
             ->add('name')
-            ->add('content')
+            ->add('content', 'textarea', array('attr' => array('class' => 'ckeditor')))
             ->add('category', 'sonata_type_model_list', array(), array())
         ;
     }
