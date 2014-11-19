@@ -19,6 +19,7 @@ class AddOfferController extends Controller
             ->add('category', 'entity', array(
                 'class' => 'Application\Sonata\ClassificationBundle\Entity\Category',
             ))
+            ->add('file')
             ->add('submit', 'submit')
             ->getForm();
 
@@ -28,6 +29,9 @@ class AddOfferController extends Controller
         if ($form->isValid()) {
             /** @var \Doctrine\ORM\EntityManager $repo */
             $repo = $this->getDoctrine()->getManager();
+
+            $offer->upload();
+
             $repo->persist($offer);
             $repo->flush($offer);
         }

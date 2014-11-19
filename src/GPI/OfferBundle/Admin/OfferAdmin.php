@@ -22,6 +22,7 @@ class OfferAdmin extends Admin
             ->add('id')
             ->add('name')
             ->add('content')
+            ->add('category')
         ;
     }
 
@@ -33,7 +34,9 @@ class OfferAdmin extends Admin
         $listMapper
             ->add('id')
             ->add('name')
-            ->add('content')
+            ->add('category')
+            ->add('contentShort')
+//            ->add('numFiles')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -51,9 +54,14 @@ class OfferAdmin extends Admin
     {
         $formMapper
             ->add('name')
-            ->add('content', 'textarea', array('attr' => array('class' => 'ckeditor')))
+            ->add('content', 'textarea', array(
+                'attr' => array('class' => 'ckeditor')
+            ))
             ->add('category', 'sonata_type_model_list', array(), array())
-        ;
+            ->add('webPath', 'url', array(
+                'read_only'=>true
+            ))
+            ->add('file', 'file');
     }
 
     /**
@@ -66,7 +74,7 @@ class OfferAdmin extends Admin
             ->add('name')
             ->add('content')
             ->add('category', 'sonata_type_model_list', array(), array())
-        ;
+            ->add('webPath', 'url');
     }
 
     protected function configureSideMenu(MenuItemInterface $menu, $action, AdminInterface $childAdmin = null)
