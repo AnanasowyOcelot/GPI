@@ -112,11 +112,11 @@ class OfferBlockService extends BaseBlockService implements PaginatorAwareInterf
             $this->request->query->get('page', 1),
             5
         );
-        $categories = $this->em->getRepository('\Application\Sonata\ClassificationBundle\Entity\Category');
+//        $categories = $this->em->getRepository('\Application\Sonata\ClassificationBundle\Entity\Category');
 
         return $this->renderResponse($blockContext->getTemplate(), array(
             'pagination' => $pagination,
-            'categories' => $categories,
+//            'categories' => $categories,
             'block' => $blockContext->getBlock(),
             'settings' => $settings
         ), $response);

@@ -7,7 +7,9 @@ use GPI\OfferBundle\Entity\Offer;
 use GPI\OfferBundle\Form\DocumentType;
 use GPI\OfferBundle\Form\OfferType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpFoundation\Request;
+use Tools\LogBundle\EventListener\BacktraceLoggerListener;
 
 
 class AddOfferController extends Controller
