@@ -22,8 +22,7 @@ class OfferAdmin extends Admin
             ->add('id')
             ->add('name')
             ->add('content')
-            ->add('category')
-        ;
+            ->add('category');
     }
 
     /**
@@ -43,8 +42,7 @@ class OfferAdmin extends Admin
                     'edit' => array(),
                     'delete' => array(),
                 )
-            ))
-        ;
+            ));
     }
 
     /**
@@ -58,10 +56,17 @@ class OfferAdmin extends Admin
                 'attr' => array('class' => 'ckeditor')
             ))
             ->add('category', 'sonata_type_model_list', array(), array())
-            ->add('webPath', 'url', array(
-                'read_only'=>true
-            ))
-            ->add('file', 'file');
+            ->add('documents', 'entity', array(
+                    'class' => 'GPI\OfferBundle\Entity\Document',
+                    'read_only' => true,
+                    'multiple' => true
+            ));
+
+//            ->add('webPath', 'url', array(
+//                'read_only'=>true
+//            ))
+//            ->add('documents', 'entity', array('class'=>'GPI\OfferBundle\Entity\Document')
+
     }
 
     /**
@@ -74,7 +79,8 @@ class OfferAdmin extends Admin
             ->add('name')
             ->add('content')
             ->add('category', 'sonata_type_model_list', array(), array())
-            ->add('webPath', 'url');
+            ->add('documents', 'entity', array('class' => 'GPI\OfferBundle\Entity\Document'));
+
     }
 
     protected function configureSideMenu(MenuItemInterface $menu, $action, AdminInterface $childAdmin = null)
@@ -85,7 +91,7 @@ class OfferAdmin extends Admin
 
         $admin = $this->isChild() ? $this->getParent() : $this;
 
-        $id      = $admin->getRequest()->get('id');
+        $id = $admin->getRequest()->get('id');
         $offer = $this->getObject($id);
 
         $menu->addChild(

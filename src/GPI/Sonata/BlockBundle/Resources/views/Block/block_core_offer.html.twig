@@ -1,12 +1,31 @@
 {% block block %}
     <h3 class="sonata-feed-title">{{ settings.title }}</h3>
 
-    <div class="sonata-feeds-container">
-        {% for offer in offers %}
+    {%  for category in categories %}
+        category.name
+        dupa!
+    {% endfor %}
+
+    <table>
+        <div class="block-newsletter col-sm-12 well">
+            <div class="count">
+                Całkowita ilość aukcji: {{ pagination.getTotalItemCount }}
+            </div>
+            {# sorting of properties based on query components #}
+            <div{% if pagination.isSorted('a.name') %} class="sorted"{% endif %}>Sortuj po: {{ knp_pagination_sortable(pagination, 'Nazwa', 'a.name') }}  {{ knp_pagination_sortable(pagination, 'Id', 'a.id') }}</div>
+        </div>
+
+        {# table body #}
+        {% for offer in pagination %}
             <div class="block-newsletter col-sm-12 well">
-                <h5 class="panel-title truncate">Name: {{ offer.name }}</h5>
-                <a href="{{ path('gpi_offer_details', {'id': offer.id }) }}">Details</a>
+            <h5 class="panel-title truncate">Name: {{ offer.name }}</h5>
+            <a href="{{ path('gpi_offer_details', {'id': offer.id }) }}">Details</a>
             </div>
         {% endfor %}
+    </table>
+    {# display navigation #}
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
     </div>
+
 {% endblock %}

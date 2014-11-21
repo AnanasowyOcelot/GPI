@@ -20,5 +20,17 @@ services:
             - gpi.block.service.offer
             - @templating
             - @gpi_offer.offer_repository
+            - @doctrine.orm.entity_manager
         tags:
             - {name: sonata.block}
+            - { name: knp_paginator.injectable, paginator: knp_paginator }
+        calls:
+            - [setRequest, [@request_stack]]
+    gpi_offer.form.offer:
+        class: GPI\OfferBundle\Form\OfferType
+        tags:
+            - { name: form.type, alias: offer }
+    gpi_offer.form.document:
+        class: GPI\OfferBundle\Form\DocumentType
+        tags:
+            - { name: form.type, alias: document }
