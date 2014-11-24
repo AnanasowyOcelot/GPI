@@ -1,0 +1,20 @@
+{% macro menu_categories(categories) %}
+    {% for category in categories %}
+        <li>
+            <a href="{{ path('gpi_offer_offers_by_cetegories', {'id': category.id}) }}">{{ category.name }}</a>
+            {% if category.children %}
+                <ul>
+                    {{ _self.menu_categories(category.children) }}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+{% endmacro %}
+
+{% block block %}
+    <h3 class="sonata-feed-title">{{ settings.title }}</h3>
+
+    <ul class="main-menu">
+        {{ _self.menu_categories(categories) }}
+    </ul>
+{% endblock %}

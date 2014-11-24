@@ -13,6 +13,14 @@ services:
         factory_method: getRepository
         arguments:
             - GPI\OfferBundle\Entity\Offer
+    gpi_sonata.category_repository:
+        class: GPI\Sonata\ClassificationBundle\Entity\CategoryRepository
+        factory_service: doctrine.orm.default_entity_manager
+        factory_method: getRepository
+        arguments:
+            - Application\Sonata\ClassificationBundle\Entity\Category
+        calls:
+            - [setOfferRootCategoryId, [%gpi_offer.root_category_id%]]
     gpi.block.service.offer:
         id: gpi.block.service.offer
         class: GPI\Sonata\BlockBundle\Block\OfferBlockService
@@ -24,6 +32,17 @@ services:
         tags:
             - {name: sonata.block}
             - { name: knp_paginator.injectable, paginator: knp_paginator }
+        calls:
+            - [setRequest, [@request_stack]]
+    gpi.block.service.categories:
+        id: gpi.block.service.categories
+        class: GPI\Sonata\BlockBundle\Block\CategoriesBlockService
+        arguments:
+            - gpi.block.service.categories
+            - @templating
+            - @gpi_sonata.category_repository
+        tags:
+            - {name: sonata.block}
         calls:
             - [setRequest, [@request_stack]]
     gpi_offer.form.offer:

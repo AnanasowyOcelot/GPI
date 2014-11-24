@@ -5,3 +5,6 @@ gpi_offer_details:
 index:
     path:     /offer/add
     defaults: { _controller: GPIOfferBundle:AddOffer:index }
+
+gpi_offer_offers_by_cetegories:
+    path:     /category/{id}
