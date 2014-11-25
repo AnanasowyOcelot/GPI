@@ -2,9 +2,10 @@ gpi_offer_details:
     path:     /details/{id}
     defaults: { _controller: GPIOfferBundle:OfferDetails:index }
 
-index:
+gpi_offer_add:
     path:     /offer/add
     defaults: { _controller: GPIOfferBundle:AddOffer:index }
 
-gpi_offer_offers_by_cetegories:
-    path:     /category/{id}
+gpi_offer_offers_by_cetegory:
+    path:     /category/{slug}
+    defaults: { _controller: GPIOfferBundle:OffersByCategory:index }

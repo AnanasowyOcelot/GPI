@@ -35,7 +35,7 @@ class CategoryRepository extends EntityRepository
             $tree[] = array(
                 'name' => $category->getName(),
                 'children' => $this->offerCategoryTree($category->getId()),
-                'id' => $category->getId()
+                'slug' => $category->getSlug()
             );
         }
 

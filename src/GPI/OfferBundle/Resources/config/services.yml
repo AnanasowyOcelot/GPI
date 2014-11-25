@@ -29,6 +29,7 @@ services:
             - @templating
             - @gpi_offer.offer_repository
             - @doctrine.orm.entity_manager
+            - @gpi_sonata.category_repository
         tags:
             - {name: sonata.block}
             - { name: knp_paginator.injectable, paginator: knp_paginator }

@@ -11,6 +11,7 @@ use Knp\Component\Pager\Paginator;
 use Sonata\BlockBundle\Block\BaseBlockService;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use GPI\Sonata\ClassificationBundle\Entity\CategoryRepository;
 
 use Sonata\BlockBundle\Model\BlockInterface;
 use Sonata\BlockBundle\Block\BlockContextInterface;
@@ -23,6 +24,12 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 class OfferBlockService extends BaseBlockService implements PaginatorAwareInterface
 {
+
+    /**
+     * @var CategoryRepository
+     */
+    private $catRepo;
+
 
     private $or;
     /**
@@ -40,13 +47,16 @@ class OfferBlockService extends BaseBlockService implements PaginatorAwareInterf
      * @param EngineInterface $templating
      * @param OfferRepository $or
      * @param EntityManager $em
+     * @param CategoryRepository $catRepo
      */
-    public function __construct($name, EngineInterface $templating, OfferRepository $or, EntityManager $em)
+    public function __construct($name, EngineInterface $templating, OfferRepository $or, EntityManager $em, CategoryRepository $catRepo)
     {
         $this->name = $name;
         $this->templating = $templating;
         $this->or = $or;
         $this->em = $em;
+        $this->catRepo = $catRepo;
+
     }
 
     public function getName()
@@ -95,6 +105,16 @@ class OfferBlockService extends BaseBlockService implements PaginatorAwareInterf
         return $offers;
     }
 
+    private function getOffersBySlug($slug)
+    {
+        $category = $this->catRepo->findBy(array('slug'=>$slug));
+        $offers = $this->or->findBy(array('category'=>$category));
+        return $offers;
+    }
+
+    /**
+     * @var \Symfony\Component\HttpFoundation\Request
+     */
     protected $request;
 
     public function setRequest(RequestStack $request_stack)
@@ -105,18 +125,25 @@ class OfferBlockService extends BaseBlockService implements PaginatorAwareInterf
     public function execute(BlockContextInterface $blockContext, Response $response = null)
     {
 
+        $slug = $this->request->get('slug');
+
+        if ($slug === null) {
+            $offers = $this->getOffers();
+        } else {
+            $offers = $this->getOffersBySlug($slug);
+        }
+
         $settings = $blockContext->getSettings();
-        $offers = $this->getOffers();
+
         $pagination = $this->paginator->paginate(
             $offers,
             $this->request->query->get('page', 1),
             5
         );
-//        $categories = $this->em->getRepository('\Application\Sonata\ClassificationBundle\Entity\Category');
+
 
         return $this->renderResponse($blockContext->getTemplate(), array(
             'pagination' => $pagination,
-//            'categories' => $categories,
             'block' => $blockContext->getBlock(),
             'settings' => $settings
         ), $response);

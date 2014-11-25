@@ -4,18 +4,12 @@
 namespace GPI\Sonata\BlockBundle\Block;
 
 
-use Doctrine\ORM\EntityManager;
-use GPI\OfferBundle\Entity\OfferRepository;
 use GPI\Sonata\ClassificationBundle\Entity\CategoryRepository;
-use Knp\Bundle\PaginatorBundle\Definition\PaginatorAwareInterface;
-use Knp\Component\Pager\Paginator;
 use Sonata\BlockBundle\Block\BaseBlockService;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
-
 use Sonata\BlockBundle\Model\BlockInterface;
 use Sonata\BlockBundle\Block\BlockContextInterface;
-
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Validator\ErrorElement;
 use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;

@@ -1,7 +1,7 @@
 {% macro menu_categories(categories) %}
     {% for category in categories %}
         <li>
-            <a href="{{ path('gpi_offer_offers_by_cetegories', {'id': category.id}) }}">{{ category.name }}</a>
+            <a href="{{ path('gpi_offer_offers_by_cetegory', {'slug': category.slug}) }}">{{ category.name }}</a>
             {% if category.children %}
                 <ul>
                     {{ _self.menu_categories(category.children) }}
