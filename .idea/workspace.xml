@@ -22,7 +22,17 @@
     <favorites_list name="sandbox" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="AppKernel.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="135" column="76" selection-start="6037" selection-end="6037" vertical-scroll-proportion="0.08928572" vertical-offset="2233" max-vertical-offset="2737">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -66,10 +76,8 @@
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Entity/Offer.php" />
         <option value="$PROJECT_DIR$/vendor/sonata-project/user-bundle/Resources/views/Profile/show.html.twig" />
-        <option value="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/show.html.twig" />
         <option value="$PROJECT_DIR$/vendor/sonata-project/user-bundle/Controller/ProfileFOSUser1Controller.php" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Controller/ProfileController.php" />
-        <option value="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Controller/ProfileFOSUser1Controller.php" />
         <option value="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Controller/ProfileController.php" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Admin/OfferAdmin.php" />
         <option value="$PROJECT_DIR$/app/config/sonata/sonata_admin.yml" />
@@ -83,6 +91,8 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Admin/DocumentAdmin.php" />
+        <option value="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Controller/ProfileFOSUser1Controller.php" />
+        <option value="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/show.html.twig" />
       </list>
     </option>
   </component>
@@ -1446,7 +1456,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5659051" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18453427" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875606" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875606" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1497,20 +1507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Resources/views/Block/block_core_offer.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="34" selection-start="413" selection-end="413" vertical-scroll-proportion="0.38716355" vertical-offset="34" max-vertical-offset="629">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/OfferDetailsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/classification-bundle/Model/Category.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="19" selection-start="615" selection-end="615" vertical-scroll-proportion="0.19729207" vertical-offset="102" max-vertical-offset="5049">
@@ -1536,15 +1532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="1" selection-end="1" vertical-scroll-proportion="0.032882012" vertical-offset="0" max-vertical-offset="517">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Block/OfferBlockService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="39" selection-start="3471" selection-end="3472" vertical-scroll-proportion="1.0192307" vertical-offset="2297" max-vertical-offset="2856">
-          <folding>
-            <element signature="e#50#81#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1683,31 +1670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Controller/ProfileFOSUser1Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="35" selection-start="630" selection-end="630" vertical-scroll-proportion="0.53968257" vertical-offset="51" max-vertical-offset="799">
-          <folding>
-            <element signature="e#62#130#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Controller/ProfileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="760" selection-end="760" vertical-scroll-proportion="0.8095238" vertical-offset="0" max-vertical-offset="1462">
-          <folding>
-            <element signature="e#314#371#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="653" selection-end="653" vertical-scroll-proportion="0.74206346" vertical-offset="0" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/sonata/sonata_admin.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="97" column="39" selection-start="5420" selection-end="5420" vertical-scroll-proportion="0.0" vertical-offset="1431" max-vertical-offset="3655">
@@ -1736,15 +1698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="24" selection-start="31" selection-end="31" vertical-scroll-proportion="0.06854839" vertical-offset="0" max-vertical-offset="527">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/AddOfferController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="521" selection-end="521" vertical-scroll-proportion="-7.0" vertical-offset="175" max-vertical-offset="884">
-          <folding>
-            <element signature="e#46#82#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1804,23 +1757,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="67" selection-start="1253" selection-end="1279" vertical-scroll-proportion="0.23572744" vertical-offset="331" max-vertical-offset="1122">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="183" column="0" selection-start="6014" selection-end="6014" vertical-scroll-proportion="-17.423077" vertical-offset="2658" max-vertical-offset="3213">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Admin/OfferAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="33" selection-start="1874" selection-end="1915" vertical-scroll-proportion="0.51046026" vertical-offset="759" max-vertical-offset="2210">
           <folding />
         </state>
       </provider>
@@ -1850,9 +1789,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Admin/OfferAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="33" selection-start="1874" selection-end="1915" vertical-scroll-proportion="0.48412699" vertical-offset="759" max-vertical-offset="2210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/OfferDetailsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="54" selection-start="298" selection-end="324" vertical-scroll-proportion="0.37701613" vertical-offset="0" max-vertical-offset="496">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="30" selection-start="657" selection-end="683" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/AddOfferController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="42" selection-start="749" selection-end="749" vertical-scroll-proportion="-4.8461537" vertical-offset="299" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Controller/ProfileFOSUser1Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="19" selection-start="1413" selection-end="1413" vertical-scroll-proportion="-12.846154" vertical-offset="346" max-vertical-offset="850">
+          <folding>
+            <element signature="e#62#105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Block/OfferBlockService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="39" selection-start="3471" selection-end="3472" vertical-scroll-proportion="0.52380955" vertical-offset="1991" max-vertical-offset="2856">
+          <folding>
+            <element signature="e#50#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="594" selection-end="594" vertical-scroll-proportion="0.4722222" vertical-offset="102" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Resources/views/Block/block_core_offer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="18" selection-start="752" selection-end="974" vertical-scroll-proportion="0.67460316" vertical-offset="34" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="76" selection-start="6037" selection-end="6037" vertical-scroll-proportion="0.7718254" vertical-offset="1889" max-vertical-offset="2737">
+        <state line="135" column="76" selection-start="6037" selection-end="6037" vertical-scroll-proportion="0.08928572" vertical-offset="2233" max-vertical-offset="2737">
           <folding />
         </state>
       </provider>

@@ -4,6 +4,7 @@
 
 namespace Application\Sonata\UserBundle\Controller;
 
+use GPI\OfferBundle\Entity\OfferRepository;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use Symfony\Component\HttpFoundation\Response;
 use FOS\UserBundle\Model\UserInterface;
@@ -30,12 +31,14 @@ class ProfileFOSUser1Controller extends BaseController
         if (!is_object($user) || !$user instanceof UserInterface) {
             throw new AccessDeniedException('This user does not have access to this section.');
         }
-        echo 'dupa';
-        die();
+
+
+        $offers = $this->get('gpi_offer.offer_repository')->findBy(array('createdBy'=>$this->getUser()));
+
         return $this->render('SonataUserBundle:Profile:show.html.twig', array(
             'user'   => $user,
             'blocks' => $this->container->getParameter('sonata.user.configuration.profile_blocks'),
-            'dupa'=>'wieloryb!!!!!!!!!!!!!1'
+            'offers'=>$offers
         ));
     }
 }
