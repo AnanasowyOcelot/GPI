@@ -7,6 +7,11 @@ services:
         arguments: [~, GPI\OfferBundle\Entity\Offer, GPIOfferBundle:OfferAdmin]
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: Offer}
+    gpi_offer.admin.document:
+        class: GPI\OfferBundle\Admin\DocumentAdmin
+        arguments: [~, GPI\OfferBundle\Entity\Document, GPIOfferBundle:DocumentAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Document}
     gpi_offer.offer_repository:
         class: GPI\OfferBundle\Entity\OfferRepository
         factory_service: doctrine.orm.default_entity_manager

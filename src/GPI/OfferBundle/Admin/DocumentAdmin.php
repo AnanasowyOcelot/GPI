@@ -11,7 +11,7 @@ use Knp\Menu\ItemInterface as MenuItemInterface;
 use Sonata\AdminBundle\Admin\AdminInterface;
 
 
-class OfferAdmin extends Admin
+class DocumentAdmin extends Admin
 {
     /**
      * @param DatagridMapper $datagridMapper
@@ -20,8 +20,7 @@ class OfferAdmin extends Admin
     {
         $datagridMapper
             ->add('id')
-            ->add('name')
-            ->add('content');
+            ->add('description');
 
     }
 
@@ -32,14 +31,13 @@ class OfferAdmin extends Admin
     {
         $listMapper
             ->add('id')
-            ->add('name')
-            ->add('category',null,array(
+            ->add('description')
+            ->add('WebPath')
+            ->add('createdBy',null,array(
                 'sortable'=>true,
                 'sort_field_mapping'=> array('fieldName'=>'name'),
-                'sort_parent_association_mappings' => array(array('fieldName'=>'category'))
-                ))
-            ->add('contentShort')
-//            ->add('numFiles')
+                'sort_parent_association_mappings' => array(array('fieldName'=>'createdBy')
+                )))
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -56,21 +54,18 @@ class OfferAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('name')
-            ->add('content', 'textarea', array(
-                'attr' => array('class' => 'ckeditor')
+            ->add('id', null, array(
+                'read_only' => true
             ))
-            ->add('category', 'sonata_type_model_list', array(), array())
-            ->add('documents', 'entity', array(
-                    'class' => 'GPI\OfferBundle\Entity\Document',
-                    'read_only' => true,
-                    'multiple' => true,
-            ));
+            ->add('description', 'textarea')
+            ->add('WebPath', 'textarea', array(
+                'read_only' => true
+            ))
+            ->add('createdBy',null,array(
+                'read_only' => true,
+                'disabled' => true,
 
-//            ->add('webPath', 'url', array(
-//                'read_only'=>true
-//            ))
-//            ->add('documents', 'entity', array('class'=>'GPI\OfferBundle\Entity\Document')
+            ));
 
     }
 
@@ -81,10 +76,13 @@ class OfferAdmin extends Admin
     {
         $showMapper
             ->add('id')
-            ->add('name')
-            ->add('content')
-            ->add('category', 'sonata_type_model_list', array(), array())
-            ->add('documents', 'entity', array('class' => 'GPI\OfferBundle\Entity\Document'));
+            ->add('description')
+            ->add('WebPath')
+            ->add('createdBy',null,array(
+                'sortable'=>true,
+                'sort_field_mapping'=> array('fieldName'=>'name'),
+                'sort_parent_association_mappings' => array(array('fieldName'=>'createdBy')
+                )));
 
     }
 
@@ -97,7 +95,7 @@ class OfferAdmin extends Admin
         $admin = $this->isChild() ? $this->getParent() : $this;
 
         $id = $admin->getRequest()->get('id');
-        $offer = $this->getObject($id);
+//        $offer = $this->getObject($id);
 
         $menu->addChild(
             $this->trans('Edycja', array(), 'SonataOfferBundle'),

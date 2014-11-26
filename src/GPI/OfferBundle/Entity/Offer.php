@@ -5,6 +5,9 @@ namespace GPI\OfferBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints AS Assert;
 use Doctrine\Common\Collections\ArrayCollection;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Application\Sonata\UserBundle\Entity\User as User;
+
 /**
  * Offer
  *
@@ -50,6 +53,50 @@ class Offer
      */
     private $documents;
 
+    /////////////////////////////////////////////////////////////////
+    /**
+     * @var User $createdBy
+     *
+     * @Gedmo\Blameable(on="create")
+     * @ORM\ManyToOne(targetEntity="Application\Sonata\UserBundle\Entity\User")
+     * @ORM\JoinColumn(name="created_by", referencedColumnName="id")
+     */
+    private $createdBy;
+
+    /**
+     * @var User $updatedBy
+     *
+     * @Gedmo\Blameable(on="update")
+     * @ORM\ManyToOne(targetEntity="Application\Sonata\UserBundle\Entity\User")
+     * @ORM\JoinColumn(name="updated_by", referencedColumnName="id")
+     */
+    private $updatedBy;
+
+    /**
+     * @var User $contentChangedBy
+     *
+     * @Gedmo\Timestampable(on="change", field={"content", "name"})
+     * @ORM\ManyToOne(targetEntity="Application\Sonata\UserBundle\Entity\User")
+     * @ORM\JoinColumn(name="content_changed_by", referencedColumnName="id")
+     */
+    private $contentChangedBy;
+
+    public function getCreatedBy()
+    {
+        return $this->createdBy;
+    }
+
+    public function getUpdatedBy()
+    {
+        return $this->updatedBy;
+    }
+
+    public function getContentChangedBy()
+    {
+        return $this->contentChangedBy;
+    }
+    /////////////////////////////////////////////////////////////////
+
     /**
      * @param \GPI\OfferBundle\Entity\Document $document
      * @return Offer
@@ -76,9 +123,6 @@ class Offer
     {
         return $this->documents;
     }
-//////////////////////////////////////////////////
-
-///////////////////////////////////////////////
 
     /**
      * Get id

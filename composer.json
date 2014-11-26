@@ -8,7 +8,7 @@
         "psr-0": { "": "src/" }
     },
 
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
 
     "require": {
         "php": ">=5.3.3",
@@ -75,7 +75,7 @@
         "mopa/bootstrap-bundle": "v3.0.0-beta3",
         "twbs/bootstrap": "v3.0.0",
 
-        "stof/doctrine-extensions-bundle": "~1.1",
+        "stof/doctrine-extensions-bundle": "1.2.*@dev",
         "stephpy/TimelineBundle": "~2.0@dev",
         "stephpy/timeline": "~1.0@dev",
 

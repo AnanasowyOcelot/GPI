@@ -111,6 +111,10 @@ doctrine:
                 auto_mapping: true
                 mappings: ~
 
+#            tree: true
+#            blameable: true # not needed: listeners are not enabled by default
+
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: %mailer_transport%
@@ -170,3 +174,10 @@ monolog:
             level: warning
             id: logger_database
 #            formatter: monolog.processor.request
+#
+stof_doctrine_extensions:
+    default_locale: pl
+    orm:
+        default:
+            tree: true
+            blameable: true # not needed: listeners are not enabled by default

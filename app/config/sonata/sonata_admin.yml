@@ -95,6 +95,12 @@ sonata_admin:
                 icon:            '<i class="fa fa-puzzle-piece"></i>'
                 items:
                     - gpi_offer.admin.offer
+            sonata.admin.group.document_manager:
+                label:           Documents Manager
+                label_catalogue: SonataOfferBundle
+                icon:            '<i class="fa fa-puzzle-piece"></i>'
+                items:
+                    - gpi_offer.admin.document
 
 
             sonata.admin.group.administration:
