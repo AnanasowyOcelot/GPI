@@ -23,28 +23,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AddOfferController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/AddOfferController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="83" selection-start="1044" selection-end="1044" vertical-scroll-proportion="-11.730769" vertical-offset="273" max-vertical-offset="833">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="OfferEditController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/OfferEditController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.032882012" vertical-offset="0" max-vertical-offset="517">
+            <state line="39" column="0" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.9256017" vertical-offset="240" max-vertical-offset="850">
+              <folding>
+                <element signature="e#47#82#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OfferType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Form/OfferType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="40" selection-start="783" selection-end="783" vertical-scroll-proportion="-5.230769" vertical-offset="255" max-vertical-offset="782">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sonata_user.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/sonata/sonata_user.yml">
+      <file leaf-file-name="show.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="48" selection-start="1751" selection-end="1775" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="969">
+            <state line="18" column="74" selection-start="636" selection-end="636" vertical-scroll-proportion="-6.3076925" vertical-offset="142" max-vertical-offset="1020">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OfferAdmin.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Admin/OfferAdmin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="44" selection-start="1660" selection-end="1660" vertical-scroll-proportion="-5.4615383" vertical-offset="776" max-vertical-offset="2210">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/views/EditOffer/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="0" selection-start="114" selection-end="114" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="255">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="14" selection-start="215" selection-end="229" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
               <folding />
             </state>
           </provider>
@@ -60,8 +89,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Tools/LogBundle/DependencyInjection/ToolsLogExtension.php" />
-        <option value="$PROJECT_DIR$/src/Tools/LogBundle/Entity/SystemLog.php" />
         <option value="$PROJECT_DIR$/src/Tools/LogBundle/Entity/SystemLogRepository.php" />
         <option value="$PROJECT_DIR$/src/Tools/LogBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/Tools/LogBundle/Processor/RequestProcessor.php" />
@@ -91,7 +118,6 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Admin/DocumentAdmin.php" />
         <option value="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Controller/ProfileFOSUser1Controller.php" />
-        <option value="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/show.html.twig" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Tests/Controller/OfferDetailsControllerTest.php" />
         <option value="$PROJECT_DIR$/app/phpunit.xml.dist" />
         <option value="$PROJECT_DIR$/app/tests.bootstrap.php" />
@@ -100,7 +126,6 @@
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Tests/Controller/DefaultControllerTest.php" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Tests/Controller/AddOfferControllerTest.php" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Entity/OfferRepository.php" />
-        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Entity/OfferFilterParams.php" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Controller/OffersByCategoryController.php" />
         <option value="$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Resources/views/Block/block_core_categories.html.twig" />
@@ -110,6 +135,10 @@
         <option value="$PROJECT_DIR$/app/config/sonata/sonata_user.yml" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Controller/AddOfferController.php" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Controller/CategoryController.php" />
+        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Resources/views/EditOffer/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Form/OfferType.php" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Controller/OfferEditController.php" />
       </list>
     </option>
@@ -283,6 +312,104 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="OfferBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OfferBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EditOffer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OfferBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OfferBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddOffer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -676,13 +803,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sandbox\src\GPI\OfferBundle\Resources\views\AddOffer" />
       <recent name="C:\xampp\htdocs\sandbox\src\GPI\OfferBundle\Controller" />
       <recent name="C:\xampp\htdocs\sandbox\src\GPI\OfferBundle\Admin" />
       <recent name="C:\xampp\htdocs\sandbox\src\Application\Sonata\UserBundle\Controller" />
       <recent name="C:\xampp\htdocs\sandbox\src\Application\Sonata\UserBundle\Resources\views\Profile" />
-      <recent name="C:\xampp\htdocs\sandbox\src\Application\Sonata\UserBundle\Resources\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sandbox\src\GPI\OfferBundle\Resources\views\EditOffer" />
       <recent name="C:\xampp\htdocs\sandbox\src\GPI\Sonata\BlockBundle\Resources\views\Block" />
       <recent name="C:\xampp\htdocs\sandbox\src\GPI\Sonata\BlockBundle\Resources\views" />
       <recent name="C:\xampp\htdocs\sandbox\src\GPI\Sonata\AdminBundle" />
@@ -783,21 +911,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/example/em.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="12" selection-start="3867" selection-end="4124" vertical-scroll-proportion="0.04336735" vertical-offset="1632" max-vertical-offset="2142" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/example/app/Entity/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3791" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Block/CategoriesBlockService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="45" selection-start="2424" selection-end="2424" vertical-scroll-proportion="1.7066326" vertical-offset="708" max-vertical-offset="1649" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="35" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.8330059" vertical-offset="205" max-vertical-offset="731" />
@@ -816,11 +929,6 @@
     <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Entity/Document.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="133" column="35" selection-start="2944" selection-end="2956" vertical-scroll-proportion="1.2866108" vertical-offset="1646" max-vertical-offset="3672" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Admin/OfferAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="33" selection-start="1874" selection-end="1915" vertical-scroll-proportion="0.48412699" vertical-offset="759" max-vertical-offset="2210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/OfferDetailsController.php">
@@ -988,20 +1096,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="594" selection-end="594" vertical-scroll-proportion="0.08928572" vertical-offset="295" max-vertical-offset="1003">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Controller/ProfileFOSUser1Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="16" selection-start="579" selection-end="579" vertical-scroll-proportion="0.65384614" vertical-offset="204" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/action.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="36" selection-start="814" selection-end="833" vertical-scroll-proportion="-14.384615" vertical-offset="51" max-vertical-offset="731">
@@ -1058,13 +1152,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="30" selection-start="657" selection-end="683" vertical-scroll-proportion="0.03256705" vertical-offset="221" max-vertical-offset="1122">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/Menu/ProfileMenuBuilder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="17" selection-start="644" selection-end="644" vertical-scroll-proportion="0.26587301" vertical-offset="121" max-vertical-offset="1462">
@@ -1075,20 +1162,6 @@
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/Block/ProfileMenuBlockService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="84" column="48" selection-start="2311" selection-end="2311" vertical-scroll-proportion="0.5019841" vertical-offset="903" max-vertical-offset="1496">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="113" selection-end="126" vertical-scroll-proportion="0.12523021" vertical-offset="0" max-vertical-offset="543">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/sonata/sonata_user.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="48" selection-start="1751" selection-end="1775" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="969">
           <folding />
         </state>
       </provider>
@@ -1107,17 +1180,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/sonata/sonata_user.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="48" selection-start="1751" selection-end="1775" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/views/AddOffer/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="30" selection-start="657" selection-end="683" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/views/EditOffer/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="114" selection-end="114" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Admin/OfferAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="44" selection-start="1660" selection-end="1660" vertical-scroll-proportion="-5.4615383" vertical-offset="776" max-vertical-offset="2210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Controller/ProfileFOSUser1Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="16" selection-start="579" selection-end="579" vertical-scroll-proportion="-0.035196688" vertical-offset="204" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="14" selection-start="215" selection-end="229" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="74" selection-start="636" selection-end="636" vertical-scroll-proportion="-6.3076925" vertical-offset="142" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Form/OfferType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="40" selection-start="783" selection-end="783" vertical-scroll-proportion="-5.230769" vertical-offset="255" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/AddOfferController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="83" selection-start="1044" selection-end="1044" vertical-scroll-proportion="-11.730769" vertical-offset="273" max-vertical-offset="833">
-          <folding />
+        <state line="38" column="37" selection-start="961" selection-end="1045" vertical-scroll-proportion="0.5685484" vertical-offset="364" max-vertical-offset="901">
+          <folding>
+            <element signature="e#46#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/OfferEditController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.032882012" vertical-offset="0" max-vertical-offset="517">
-          <folding />
+        <state line="39" column="0" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.9256017" vertical-offset="240" max-vertical-offset="850">
+          <folding>
+            <element signature="e#47#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

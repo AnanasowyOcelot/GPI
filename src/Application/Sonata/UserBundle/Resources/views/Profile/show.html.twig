@@ -16,6 +16,7 @@ file that was distributed with this source code.
         <div class="block-newsletter col-sm-12 well">
             <h5 class="panel-title truncate">Name: {{ offer.name }}</h5>
             <a href="{{ path('gpi_offer_details', {'id': offer.id }) }}">Details</a>
+            <a href="{{ path('gpi_offer_edit', {'id': offer.id }) }}">Edit</a>
         </div>
     {% endfor %}
     <div class="row row-fluid">
