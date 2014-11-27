@@ -28,4 +28,5 @@ class CategoryController extends Controller
           'deep'          => $deep + 1
         ));
     }
+
 }

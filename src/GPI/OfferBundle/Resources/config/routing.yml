@@ -7,5 +7,5 @@ gpi_offer_add:
     defaults: { _controller: GPIOfferBundle:AddOffer:index }
 
 gpi_offer_offers_by_cetegory:
-    path:     /category/{slug}
+    path:     /category/{categorySlug}
     defaults: { _controller: GPIOfferBundle:OffersByCategory:index }

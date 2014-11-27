@@ -36,6 +36,7 @@ class AddOfferController extends Controller
 //            $repo->persist($d3);
             $repo->persist($offer);
             $repo->flush();
+            return $this->redirect($this->generateUrl('sonata_user_profile_show'));
         }
 
         return $this->render('GPIOfferBundle:AddOffer:index.html.twig', array(

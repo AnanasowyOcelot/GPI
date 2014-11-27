@@ -12,4 +12,36 @@ use Doctrine\ORM\EntityRepository;
  */
 class OfferRepository extends EntityRepository
 {
+
+    public function filterBy(OfferFilterParams $params)
+    {
+        if ($params->getCategory() == null && $params->getName() == null) {
+            $offers = $this->findAll();
+        } else {
+            $queryBuilder = $this->createQueryBuilder('o');
+            if ($params->getName() != null) {
+                $name = $params->getName();
+                $queryBuilder->andWhere('o.name LIKE :pac');
+                $queryBuilder->setParameter('pac', '%' . $name . '%');
+            }
+            if ($params->getCategory() != null) {
+                $category = $params->getCategory();
+                $queryBuilder->andWhere('o.category = :cat');
+                $queryBuilder->setParameter('cat', $category);
+            }
+            $offers = $queryBuilder->getQuery()->getResult();
+        }
+
+
+//        if ($name != null) {
+//            $queryBuilder = $this->createQueryBuilder('o')->where('o.name LIKE :pac');
+//            $queryBuilder->setParameter('pac', $name);
+//            $query = $queryBuilder->getQuery();
+//
+//            $offers = $query->getResult();
+//        }else{
+//            $offers = $this->findAll();
+//        }
+        return $offers;
+    }
 }

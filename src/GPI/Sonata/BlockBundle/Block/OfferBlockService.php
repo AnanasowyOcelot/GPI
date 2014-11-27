@@ -5,6 +5,7 @@ namespace GPI\Sonata\BlockBundle\Block;
 
 
 use Doctrine\ORM\EntityManager;
+use GPI\OfferBundle\Entity\OfferFilterParams;
 use GPI\OfferBundle\Entity\OfferRepository;
 use Knp\Bundle\PaginatorBundle\Definition\PaginatorAwareInterface;
 use Knp\Component\Pager\Paginator;
@@ -96,21 +97,7 @@ class OfferBlockService extends BaseBlockService implements PaginatorAwareInterf
 //            ->end();
     }
 
-    /**
-     * @return array
-     */
-    private function getOffers()
-    {
-        $offers = $this->or->findAll();
-        return $offers;
-    }
 
-    private function getOffersBySlug($slug)
-    {
-        $category = $this->catRepo->findBy(array('slug'=>$slug));
-        $offers = $this->or->findBy(array('category'=>$category));
-        return $offers;
-    }
 
     /**
      * @var \Symfony\Component\HttpFoundation\Request
@@ -124,14 +111,13 @@ class OfferBlockService extends BaseBlockService implements PaginatorAwareInterf
 
     public function execute(BlockContextInterface $blockContext, Response $response = null)
     {
+        $searchParams = new OfferFilterParams();
+        $categorySlug = $this->request->get('categorySlug');
+        $searchParams->setCategory($this->catRepo->findOneBy(array('slug' => $categorySlug)));
+        $searchParams->setName($this->request->get('name'));
 
-        $slug = $this->request->get('slug');
 
-        if ($slug === null) {
-            $offers = $this->getOffers();
-        } else {
-            $offers = $this->getOffersBySlug($slug);
-        }
+        $offers = $this->or->filterBy($searchParams);
 
         $settings = $blockContext->getSettings();
 
@@ -145,7 +131,8 @@ class OfferBlockService extends BaseBlockService implements PaginatorAwareInterf
         return $this->renderResponse($blockContext->getTemplate(), array(
             'pagination' => $pagination,
             'block' => $blockContext->getBlock(),
-            'settings' => $settings
+            'settings' => $settings,
+            'searchParam'=> $searchParams->getName()
         ), $response);
     }
 
