@@ -133,7 +133,8 @@ class AppKernel extends Kernel
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
             new GPI\OfferBundle\GPIOfferBundle(),
 
-            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle()
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new GPI\LayoutBundle\GPILayoutBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

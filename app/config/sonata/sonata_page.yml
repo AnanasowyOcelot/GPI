@@ -109,6 +109,38 @@ sonata_page:
                      B: content_bottom
                      F: footer
 
+        new_layout:
+            path: 'ApplicationSonataPageBundle::new_layout.html.twig'
+            name: 'New super layout'
+            containers:
+                 header:
+                     name: Header
+                 content_top:
+                     name: Top content
+                 left_col:
+                     name: Left content
+                 rigth_col:
+                     name: Right content
+                 content_bottom:
+                     name: Bottom content
+                 footer:
+                     name: Footer
+            matrix:
+                 layout: |
+                     HHHHHHHH
+                     TTTTTTTT
+                     LLLLRRRR
+                     BBBBBBBB
+                     FFFFFFFF
+
+                 mapping:
+                     H: header
+                     T: content_top
+                     L: left_col
+                     R: rigth_col
+                     B: content_bottom
+                     F: footer
+
     page_defaults:
         homepage: { decorate: false, enabled: true }
 
