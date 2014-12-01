@@ -26,21 +26,17 @@
       <file leaf-file-name="new_layout.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/new_layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="741" column="33" selection-start="37197" selection-end="37197" vertical-scroll-proportion="0.17708333" vertical-offset="12512" max-vertical-offset="19992">
+            <state line="93" column="0" selection-start="3438" selection-end="3438" vertical-scroll-proportion="0.662531" vertical-offset="1314" max-vertical-offset="19244">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base_layout.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/Resources/views/base_layout.html.twig">
+      <file leaf-file-name="PageExtension.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/Twig/Extension/PageExtension.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="179" column="19" selection-start="8219" selection-end="8603" vertical-scroll-proportion="-11.461538" vertical-offset="841" max-vertical-offset="1462">
-              <folding>
-                <element signature="e#1509#7997#0" expanded="false" />
-                <element signature="n#style#0;n#span#0;n#li#4;n#ul#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#li#5;n#ul#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="229" column="34" selection-start="7110" selection-end="7110" vertical-scroll-proportion="-11.115385" vertical-offset="3315" max-vertical-offset="4777">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -48,42 +44,77 @@
       <file leaf-file-name="2columns_layout.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/Resources/views/2columns_layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="15" selection-start="306" selection-end="882" vertical-scroll-proportion="-13.730769" vertical-offset="102" max-vertical-offset="646">
+            <state line="17" column="23" selection-start="497" selection-end="497" vertical-scroll-proportion="-1.1973684" vertical-offset="198" max-vertical-offset="646">
               <folding>
-                <marker date="1415784991288" expanded="true" signature="357:576" placeholder="..." />
-                <marker date="1415784991288" expanded="true" signature="604:825" placeholder="..." />
-                <marker date="1415784991288" expanded="true" signature="847:858" placeholder="..." />
+                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/Resources/views/layout.html.twig">
+      <file leaf-file-name="Builder.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Sonata/Bundle/DemoBundle/Menu/Builder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="3" selection-start="282" selection-end="316" vertical-scroll-proportion="-4.423077" vertical-offset="89" max-vertical-offset="1258">
+            <state line="27" column="21" selection-start="564" selection-end="564" vertical-scroll-proportion="-2.6153846" vertical-offset="306" max-vertical-offset="2261">
               <folding>
-                <marker date="1415784991306" expanded="true" signature="342:2410" placeholder="..." />
-                <marker date="1415784991306" expanded="true" signature="372:2284" placeholder="..." />
-                <marker date="1415784991306" expanded="true" signature="414:504" placeholder="..." />
-                <marker date="1415784991306" expanded="true" signature="586:910" placeholder="..." />
-                <marker date="1415784991306" expanded="true" signature="1009:1274" placeholder="..." />
-                <marker date="1415784991306" expanded="true" signature="1329:1901" placeholder="..." />
-                <marker date="1415784991306" expanded="true" signature="1973:2245" placeholder="..." />
-                <marker date="1415784991306" expanded="true" signature="2314:2399" placeholder="..." />
+                <element signature="e#6#245#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demo_2columns_layout.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/demo_2columns_layout.html.twig">
+      <file leaf-file-name="LoadPageData.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Sonata/Bundle/DemoBundle/DataFixtures/ORM/LoadPageData.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="25" selection-start="225" selection-end="285" vertical-scroll-proportion="0.8076923" vertical-offset="191" max-vertical-offset="748">
+            <state line="2" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="-1.2307693" vertical-offset="2" max-vertical-offset="21165">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SonataBasketBundle.en.xliff" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/sonata-project/ecommerce/src/BasketBundle/Resources/translations/SonataBasketBundle.en.xliff">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="323" column="24" selection-start="16208" selection-end="16208" vertical-scroll-proportion="0.0" vertical-offset="5419" max-vertical-offset="6018">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FOSUserBundle.pl.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.pl.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="79" column="6" selection-start="2087" selection-end="2087" vertical-scroll-proportion="0.0" vertical-offset="1121" max-vertical-offset="1734">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="account.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/Resources/views/Block/account.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="32" selection-start="468" selection-end="468" vertical-scroll-proportion="-9.423077" vertical-offset="44" max-vertical-offset="493">
               <folding>
-                <marker date="1417183771474" expanded="true" signature="624:775" placeholder="..." />
-                <marker date="1417183771474" expanded="true" signature="1095:1143" placeholder="..." />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="block_base.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/Resources/views/Block/block_base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="2" selection-start="2" selection-end="2" vertical-scroll-proportion="3.7307692" vertical-offset="97" max-vertical-offset="629">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SonataBlockExtension.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/sonata-project/block-bundle/DependencyInjection/SonataBlockExtension.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="96" column="27" selection-start="3878" selection-end="3878" vertical-scroll-proportion="-4.576923" vertical-offset="1292" max-vertical-offset="5338">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,13 +129,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Tests/Controller/DefaultControllerTest.php" />
-        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Tests/Controller/AddOfferControllerTest.php" />
-        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Entity/OfferRepository.php" />
-        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Entity/OfferFilterParams.php" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Controller/OffersByCategoryController.php" />
-        <option value="$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Resources/views/Block/block_core_categories.html.twig" />
-        <option value="$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Resources/views/Block/block_core_offer.html.twig" />
         <option value="$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Block/OfferBlockService.php" />
         <option value="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/action.html.twig" />
         <option value="$PROJECT_DIR$/app/config/sonata/sonata_user.yml" />
@@ -142,12 +167,18 @@
         <option value="$PROJECT_DIR$/src/Application/Sonata/PageBundle/Entity/Block.php" />
         <option value="$PROJECT_DIR$/src/Application/Sonata/PageBundle/Entity/Page.php" />
         <option value="$PROJECT_DIR$/src/Application/Sonata/PageBundle/Entity/Site.php" />
-        <option value="$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/demo_layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Application/Sonata/PageBundle/ApplicationSonataPageBundle.php" />
         <option value="$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/config/doctrine/Block.orm.xml" />
         <option value="$PROJECT_DIR$/app/config/sonata/sonata_page.yml" />
         <option value="$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/demo_2columns_layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Resources/views/Block/block_core_offer.html.twig" />
+        <option value="$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Resources/views/Block/block_core_categories.html.twig" />
         <option value="$PROJECT_DIR$/vendor/sonata-project/page-bundle/Resources/views/base_layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/demo_layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Sonata/Bundle/DemoBundle/DataFixtures/ORM/LoadPageData.php" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/vendor/sonata-project/user-bundle/Resources/views/Block/account.html.twig" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/new_layout.html.twig" />
       </list>
     </option>
@@ -204,6 +235,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -360,11 +392,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
+              <option name="myItemId" value="Sonata" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Sonata" />
+              <option name="myItemId" value="Bundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -382,15 +414,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Sonata" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PageBundle" />
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DemoBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -408,25 +440,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Sonata" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PageBundle" />
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DemoBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -439,10 +467,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -450,19 +474,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PageBundle" />
+              <option name="myItemId" value="Bundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
+              <option name="myItemId" value="DemoBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="serializer" />
+              <option name="myItemId" value="Menu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -477,10 +497,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -488,67 +504,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PageBundle" />
+              <option name="myItemId" value="Bundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
+              <option name="myItemId" value="DemoBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doctrine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sonata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PageBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
+              <option name="myItemId" value="Form" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -566,13 +530,52 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sonata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.lastSelected" value="web.server" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -583,8 +586,9 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/ToDo/GieldaProjektowInzynierskich/Unify-v1.6" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eplakaty/eplakaty.pl" />
     <property name="recentsLimit" value="5" />
+    <property name="SearchEverywhereHistory" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -655,12 +659,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="699" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="699" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864675" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46234676" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09807356" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875606" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875606" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -670,14 +674,14 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21163167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26898223" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -697,88 +701,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/Menu/ProfileMenuBuilder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="17" selection-start="644" selection-end="644" vertical-scroll-proportion="0.26587301" vertical-offset="121" max-vertical-offset="1462" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/Block/ProfileMenuBlockService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="48" selection-start="2311" selection-end="2311" vertical-scroll-proportion="0.5019841" vertical-offset="903" max-vertical-offset="1496" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/CategoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="879" selection-end="879" vertical-scroll-proportion="-15.461538" vertical-offset="74" max-vertical-offset="595" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Entity/Offer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="7" selection-start="3976" selection-end="3976" vertical-scroll-proportion="3.9047618" vertical-offset="1330" max-vertical-offset="3706" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/sonata/sonata_user.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="48" selection-start="1751" selection-end="1775" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="969" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/views/AddOffer/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="30" selection-start="657" selection-end="683" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/views/EditOffer/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="255" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Admin/OfferAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="44" selection-start="1660" selection-end="1660" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="2312" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Controller/ProfileFOSUser1Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="16" selection-start="579" selection-end="579" vertical-scroll-proportion="-0.035196688" vertical-offset="204" max-vertical-offset="731" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="14" selection-start="215" selection-end="229" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="74" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0" vertical-offset="142" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Form/OfferType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="40" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="816" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/AddOfferController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="37" selection-start="961" selection-end="1045" vertical-scroll-proportion="0.5685484" vertical-offset="364" max-vertical-offset="901" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/LayoutBundle/GPILayoutBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="524" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/OfferEditController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="2" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="850" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/LayoutBundle/Resources/public/css/pages/pricing/pricing.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="3094" />
@@ -811,93 +733,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/features/frontend/page/homepage.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="22" selection-start="377" selection-end="377" vertical-scroll-proportion="0.61488676" vertical-offset="14" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sonata/Bundle/DemoBundle/DataFixtures/ORM/LoadPageData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="13" selection-start="8023" selection-end="8023" vertical-scroll-proportion="-1.1758894" vertical-offset="4437" max-vertical-offset="21182">
-          <folding />
-        </state>
+        <state line="12" column="22" selection-start="377" selection-end="377" vertical-scroll-proportion="0.61488676" vertical-offset="14" max-vertical-offset="323" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/FOS/UserBundle/ApplicationFOSUserBundle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="532">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="532" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/doc/reference/translation.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="28" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0" vertical-offset="497" max-vertical-offset="3281">
-          <folding />
-        </state>
+        <state line="35" column="28" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0" vertical-offset="497" max-vertical-offset="3281" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/fos/fos_elastica.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="52" selection-start="9015" selection-end="9021" vertical-scroll-proportion="0.0" vertical-offset="3264" max-vertical-offset="5508">
-          <folding />
-        </state>
+        <state line="192" column="52" selection-start="9015" selection-end="9021" vertical-scroll-proportion="0.0" vertical-offset="3264" max-vertical-offset="5508" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/Resources/config/doctrine/Page.orm.xml.skeleton">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="14" selection-start="821" selection-end="821" vertical-scroll-proportion="0.35150376" vertical-offset="0" max-vertical-offset="532">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/demo_layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="748">
-          <folding />
-        </state>
+        <state line="11" column="14" selection-start="821" selection-end="821" vertical-scroll-proportion="0.35150376" vertical-offset="0" max-vertical-offset="532" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/ApplicationSonataPageBundle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="3" selection-start="317" selection-end="317" vertical-scroll-proportion="0.26877472" vertical-offset="0" max-vertical-offset="527">
-          <folding />
-        </state>
+        <state line="15" column="3" selection-start="317" selection-end="317" vertical-scroll-proportion="0.26877472" vertical-offset="0" max-vertical-offset="527" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="37" selection-start="1835" selection-end="1835" vertical-scroll-proportion="-15.038462" vertical-offset="459" max-vertical-offset="2754">
-          <folding />
-        </state>
+        <state line="51" column="37" selection-start="1835" selection-end="1835" vertical-scroll-proportion="-15.038462" vertical-offset="459" max-vertical-offset="2754" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/Entity/Block.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="10" selection-start="232" selection-end="232" vertical-scroll-proportion="-0.65384614" vertical-offset="34" max-vertical-offset="629">
-          <folding />
-        </state>
+        <state line="10" column="10" selection-start="232" selection-end="232" vertical-scroll-proportion="-0.65384614" vertical-offset="34" max-vertical-offset="629" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/Entity/Page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="10" selection-start="232" selection-end="232" vertical-scroll-proportion="-0.65384614" vertical-offset="34" max-vertical-offset="646">
-          <folding />
-        </state>
+        <state line="10" column="10" selection-start="232" selection-end="232" vertical-scroll-proportion="-0.65384614" vertical-offset="34" max-vertical-offset="646" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/Entity/Site.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="10" selection-start="232" selection-end="232" vertical-scroll-proportion="-0.65384614" vertical-offset="34" max-vertical-offset="646">
-          <folding />
-        </state>
+        <state line="10" column="10" selection-start="232" selection-end="232" vertical-scroll-proportion="-0.65384614" vertical-offset="34" max-vertical-offset="646" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/Entity/Snapshot.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="21" selection-start="232" selection-end="243" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="646">
-          <folding />
-        </state>
+        <state line="10" column="21" selection-start="232" selection-end="243" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="646" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/config/serializer/Entity.Block.xml">
@@ -956,78 +842,190 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/sonata/sonata_page.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="0" selection-start="3395" selection-end="3395" vertical-scroll-proportion="0.0" vertical-offset="1542" max-vertical-offset="2975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/ToDo/GieldaProjektowInzynierskich/Unify-v1.6/HTML/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="26" selection-start="275" selection-end="275" vertical-scroll-proportion="0.26877472" vertical-offset="0" max-vertical-offset="18802">
-          <folding />
-        </state>
+        <state line="8" column="26" selection-start="275" selection-end="275" vertical-scroll-proportion="0.26877472" vertical-offset="0" max-vertical-offset="18802" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/ToDo/GieldaProjektowInzynierskich/Unify-v1.6/HTML/page_2_columns_left.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="0" selection-end="74428" vertical-scroll-proportion="0.23517786" vertical-offset="0" max-vertical-offset="19227">
+        <state line="7" column="17" selection-start="0" selection-end="74428" vertical-scroll-proportion="0.23517786" vertical-offset="0" max-vertical-offset="19227" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Block/CategoriesBlockService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1649" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Block/OfferBlockService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.3167702" vertical-offset="153" max-vertical-offset="2346" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Resources/views/Block/block_core_offer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="40" selection-start="18" selection-end="80" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="646">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/demo_2columns_layout.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Resources/views/Block/block_core_categories.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="25" selection-start="225" selection-end="285" vertical-scroll-proportion="0.8076923" vertical-offset="191" max-vertical-offset="748">
-          <folding>
-            <marker date="1417183771474" expanded="true" signature="624:775" placeholder="..." />
-            <marker date="1417183771474" expanded="true" signature="1095:1143" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="3" selection-start="282" selection-end="316" vertical-scroll-proportion="-4.423077" vertical-offset="89" max-vertical-offset="1258">
-          <folding>
-            <marker date="1415784991306" expanded="true" signature="342:2410" placeholder="..." />
-            <marker date="1415784991306" expanded="true" signature="372:2284" placeholder="..." />
-            <marker date="1415784991306" expanded="true" signature="414:504" placeholder="..." />
-            <marker date="1415784991306" expanded="true" signature="586:910" placeholder="..." />
-            <marker date="1415784991306" expanded="true" signature="1009:1274" placeholder="..." />
-            <marker date="1415784991306" expanded="true" signature="1329:1901" placeholder="..." />
-            <marker date="1415784991306" expanded="true" signature="1973:2245" placeholder="..." />
-            <marker date="1415784991306" expanded="true" signature="2314:2399" placeholder="..." />
-          </folding>
+        <state line="15" column="0" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="442">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/Resources/views/base_layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="19" selection-start="8219" selection-end="8603" vertical-scroll-proportion="-11.461538" vertical-offset="841" max-vertical-offset="1462">
+        <state line="150" column="113" selection-start="7753" selection-end="7757" vertical-scroll-proportion="-2.9423077" vertical-offset="1190" max-vertical-offset="2159">
           <folding>
-            <element signature="e#1509#7997#0" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#li#4;n#ul#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#li#5;n#ul#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2947#7502#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/mopa/bootstrap-bundle/Mopa/Bundle/BootstrapBundle/Resources/public/bootstrap/components.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="170" column="101" selection-start="15637" selection-end="15660" vertical-scroll-proportion="-2.5384614" vertical-offset="2824" max-vertical-offset="50728">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/demo_layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="36" selection-start="255" selection-end="261" vertical-scroll-proportion="-2.3076923" vertical-offset="110" max-vertical-offset="748">
+          <folding>
+            <marker date="1417446584727" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1417446584727" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/demo_2columns_layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="26" selection-start="29" selection-end="30" vertical-scroll-proportion="-0.14814815" vertical-offset="102" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/sonata/sonata_page.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="17" selection-start="1705" selection-end="1705" vertical-scroll-proportion="0.12915851" vertical-offset="852" max-vertical-offset="2975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/CmsManager/CmsManagerInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="20" selection-start="976" selection-end="976" vertical-scroll-proportion="-6.5384617" vertical-offset="221" max-vertical-offset="2125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/Twig/Extension/PageExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="229" column="34" selection-start="7110" selection-end="7110" vertical-scroll-proportion="-11.115385" vertical-offset="3315" max-vertical-offset="4777">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="49" selection-start="465" selection-end="465" vertical-scroll-proportion="0.50927836" vertical-offset="25" max-vertical-offset="1258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/sonata/sonata_block.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="12" selection-start="125" selection-end="125" vertical-scroll-proportion="0.1330724" vertical-offset="0" max-vertical-offset="1734">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/Resources/views/2columns_layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="15" selection-start="306" selection-end="882" vertical-scroll-proportion="-13.730769" vertical-offset="102" max-vertical-offset="646">
+        <state line="17" column="23" selection-start="497" selection-end="497" vertical-scroll-proportion="-1.1973684" vertical-offset="198" max-vertical-offset="646">
           <folding>
-            <marker date="1415784991288" expanded="true" signature="357:576" placeholder="..." />
-            <marker date="1415784991288" expanded="true" signature="604:825" placeholder="..." />
-            <marker date="1415784991288" expanded="true" signature="847:858" placeholder="..." />
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sonata/Bundle/DemoBundle/Menu/Builder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="21" selection-start="564" selection-end="564" vertical-scroll-proportion="-2.6153846" vertical-offset="306" max-vertical-offset="2261">
+          <folding>
+            <element signature="e#6#245#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sonata/Bundle/DemoBundle/DataFixtures/ORM/LoadPageData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="-1.2307693" vertical-offset="2" max-vertical-offset="21165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="605" selection-end="605" vertical-scroll-proportion="0.5403423" vertical-offset="51" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="376" selection-end="376" vertical-scroll-proportion="0.68445474" vertical-offset="96" max-vertical-offset="527">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/Resources/views/Block/account.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="32" selection-start="468" selection-end="468" vertical-scroll-proportion="-9.423077" vertical-offset="44" max-vertical-offset="493">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/Resources/views/Block/block_base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="2" selection-start="2" selection-end="2" vertical-scroll-proportion="3.7307692" vertical-offset="97" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/block-bundle/DependencyInjection/SonataBlockExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="27" selection-start="3878" selection-end="3878" vertical-scroll-proportion="-4.576923" vertical-offset="1292" max-vertical-offset="5338">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.pl.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="6" selection-start="2087" selection-end="2087" vertical-scroll-proportion="0.0" vertical-offset="1121" max-vertical-offset="1734">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/ecommerce/src/BasketBundle/Resources/translations/SonataBasketBundle.en.xliff">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="323" column="24" selection-start="16208" selection-end="16208" vertical-scroll-proportion="0.0" vertical-offset="5419" max-vertical-offset="6018">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/new_layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="741" column="33" selection-start="37197" selection-end="37197" vertical-scroll-proportion="0.17708333" vertical-offset="12512" max-vertical-offset="19992">
+        <state line="93" column="0" selection-start="3438" selection-end="3438" vertical-scroll-proportion="0.662531" vertical-offset="1314" max-vertical-offset="19244">
           <folding />
         </state>
       </provider>

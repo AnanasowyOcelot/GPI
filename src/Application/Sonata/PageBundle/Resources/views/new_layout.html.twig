@@ -21,20 +21,20 @@
     <link rel="shortcut icon" href="favicon.ico">
 
     <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="bundles/gpilayout/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bundles/gpilayout/css/style.css">
+    <link rel="stylesheet" href="/bundles/gpilayout/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bundles/gpilayout/css/style.css">
 
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="bundles/gpilayout/plugins/line-icons/line-icons.css">
-    <link rel="stylesheet" href="bundles/gpilayout/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="bundles/gpilayout/plugins/flexslider/flexslider.css">
-    <link rel="stylesheet" href="bundles/gpilayout/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="/bundles/gpilayout/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="/bundles/gpilayout/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/bundles/gpilayout/plugins/flexslider/flexslider.css">
+    <link rel="stylesheet" href="/bundles/gpilayout/plugins/owl-carousel/owl-carousel/owl.carousel.css">
 
     <!-- CSS Theme -->
-    <link rel="stylesheet" href="bundles/gpilayout/css/theme-colors/default.css">
+    <link rel="stylesheet" href="/bundles/gpilayout/css/theme-colors/default.css">
 
     <!-- CSS Customization -->
-    <link rel="stylesheet" href="bundles/gpilayout/css/custom.css">
+    <link rel="stylesheet" href="/bundles/gpilayout/css/custom.css">
 
     {% block sonata_page_stylesheets %}
         {% block page_stylesheets %} {# Deprecated block #}
@@ -68,6 +68,7 @@
 <div class="header">
 <!-- Topbar -->
 <div class="topbar">
+
     <div class="container">
         <!-- Topbar Navigation -->
         <ul class="loginbar pull-right">
@@ -86,9 +87,23 @@
             <li class="topbar-devider"></li>
             <li><a href="page_faq.html">Help</a></li>
             <li class="topbar-devider"></li>
-            <li><a href="page_login.html">Login</a></li>
+
+            {% if app.user %}
+            <li><a href="{{ path('sonata_user_profile_show') }}">{{ app.user.username }}</a></li>
+                <li class="topbar-devider"></li>
+
+                <li><a href="{{ path('fos_user_security_logout') }}">{{ 'link_logout' | trans({}, "SonataUserBundle") }}</a></li>
+            {% else %}
+            <li><a href="{{ path('fos_user_security_login') }}">{{ 'link_login'|trans({}, 'SonataUserBundle') }} / {{ 'link_register'|trans({}, 'SonataUserBundle') }}</a></li>
+            {% endif %}
+
         </ul>
         <!-- End Topbar Navigation -->
+        {#<div style="display:inline;">#}
+
+        {#</div>#}
+
+
     </div>
 </div>
 <!-- End Topbar -->
@@ -102,8 +117,8 @@
         <span class="sr-only">Toggle navigation</span>
         <span class="fa fa-bars"></span>
     </button>
-    <a class="navbar-brand" href="index.html">
-        <img id="logo-header" src="bundles/gpilayout/img/logo1-default.png" alt="Logo">
+    <a class="navbar-brand" href="/">
+        <img id="logo-header" src="/bundles/gpilayout/img/logo1-default.png" alt="Logo">
     </a>
 </div>
 
@@ -111,67 +126,8 @@
 <div class="collapse navbar-collapse navbar-responsive-collapse">
 <ul class="nav navbar-nav">
 <!-- Home -->
-<li class="dropdown">
-    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-        Home
-    </a>
-    <ul class="dropdown-menu">
-        <li><a href="index.html">Option 1: Default Page</a></li>
-
-        <!-- One Page -->
-        <li class="dropdown-submenu">
-            <a href="javascript:void(0);">Option 2: One Page</a>
-            <ul class="dropdown-menu">
-                <li><a target="_blank" href="One-Page/index.html">- One Page Template</a></li>
-                <li><a target="_blank" href="One-Page/dark-page-example.html">- One Page Dark Theme</a></li>
-            </ul>
-        </li>
-        <!-- End One Page -->
-
-        <!-- Shop UI Page -->
-        <li class="dropdown-submenu">
-            <a href="javascript:void(0);">Option 3: Shop UI</a>
-            <ul class="dropdown-menu">
-                <li><a target="_blank" href="Shop-UI/index.html">- Home Page</a></li>
-                <li><a target="_blank" href="Shop-UI/shop-ui-inner.html">- Product Page</a></li>
-                <li><a target="_blank" href="Shop-UI/shop-ui-filter-grid.html">- Filter Grid Page</a></li>
-                <li><a target="_blank" href="Shop-UI/shop-ui-filter-list.html">- Filter List Page</a></li>
-                <li><a target="_blank" href="Shop-UI/shop-ui-add-to-cart.html">- Checkout Page</a></li>
-                <li><a target="_blank" href="Shop-UI/shop-ui-login.html">- Login Page</a></li>
-                <li><a target="_blank" href="Shop-UI/shop-ui-register.html">- Registration Page</a></li>
-            </ul>
-        </li>
-        <!-- End Shop UI -->
-
-        <li><a href="page_home8.html">Option 4: Home Discover</a></li>
-        <li><a href="page_home9.html">Option 5: Home Creative</a></li>
-        <li><a href="page_home10.html">Option 6: Home Inspire</a></li>
-        <li><a href="page_home11.html">Option 7: Home Desire</a></li>
-        <li><a href="page_jobs.html">Option 8: Home Jobs</a></li>
-        <li><a href="page_home3.html">Option 9: Amazing Content</a></li>
-        <li><a href="page_home6.html">Option 10: Home Magazine</a></li>
-        <li><a href="page_home4.html">Option 11: Home Sidebar</a></li>
-        <li><a href="page_home7.html">Option 12: Home Portfolio</a></li>
-        <li><a href="page_home1.html">Option 13: Home Default v1</a></li>
-        <li><a href="page_home2.html">Option 14: Home Default v2</a></li>
-        <li><a href="page_home5.html">Option 15: Home Default v3</a></li>
-
-        <!-- Misc Pages -->
-        <li class="dropdown-submenu">
-            <a href="javascript:void(0);">Options: Misc Pages</a>
-            <ul class="dropdown-menu">
-                <li><a href="page_misc_blank.html">- Blank page</a></li>
-                <li><a href="page_misc_boxed.html">- Boxed Page</a></li>
-                <li><a href="page_misc_boxed_img.html">- Boxed Image Page</a></li>
-                <li><a href="page_misc_boxed_fixed_header.html">- Boxed Fixed Menu</a></li>
-                <li><a href="page_misc_fixed_header.html">- Fixed Menu</a></li>
-                <li><a href="page_misc_dark.html">- Dark Page</a></li>
-                <li><a href="page_misc_dark_boxed.html">- Dark Boxed Page</a></li>
-                <li><a href="page_misc_dark_other_color.html">- Dark Page With Different Theme Color</a></li>
-            </ul>
-        </li>
-        <!-- End Misc Pages -->
-    </ul>
+<li>
+    <a href="/" class="dropdown-toggle" >Home</a>
 </li>
 <!-- End Home -->
 
@@ -381,23 +337,23 @@
 <li class="dropdown-submenu">
     <a href="javascript:void(0);">Sub Level 1</a>
     <ul class="dropdown-menu no-bottom-space">
-        <li><a href="index.hmtl">Sub Level 2</a></li>
+        <li><a href="/">Sub Level 2</a></li>
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Sub Level 2</a>
             <ul class="dropdown-menu">
-                <li><a href="index.hmtl">Sub Level 3</a></li>
-                <li><a href="index.hmtl">Sub Level 3</a></li>
-                <li><a href="index.hmtl">Sub Level 3</a></li>
-                <li><a href="index.hmtl">Sub Level 3</a></li>
+                <li><a href="/">Sub Level 3</a></li>
+                <li><a href="/">Sub Level 3</a></li>
+                <li><a href="/">Sub Level 3</a></li>
+                <li><a href="/">Sub Level 3</a></li>
             </ul>
         </li>
-        <li><a href="index.hmtl">Sub Level 2</a></li>
+        <li><a href="/">Sub Level 2</a></li>
         <li class="dropdown-submenu">
             <a href="javascript:void(0);">Sub Level 2</a>
             <ul class="dropdown-menu no-bottom-space">
-                <li><a href="index.hmtl">Sub Level 3</a></li>
-                <li><a href="index.hmtl">Sub Level 3</a></li>
-                <li><a href="index.hmtl">Sub Level 3</a></li>
+                <li><a href="/">Sub Level 3</a></li>
+                <li><a href="/">Sub Level 3</a></li>
+                <li><a href="/">Sub Level 3</a></li>
             </ul>
         </li>
     </ul>
@@ -590,7 +546,7 @@
 
                                 <li class="big-screen-space"></li>
 
-                                <li><h3>6 Columns</h6></li>
+                                <li><h6>6 Columns</h6></li>
 
                                 <!-- 6 Columns -->
                                 <li><a href="portfolio_6_columns_fullwidth_no_space.html">6 Columns Fullwidth No Sapce</a></li>
@@ -665,14 +621,14 @@
 
 <!--=== Breadcrumbs ===-->
 <div class="breadcrumbs">
-    <div class="container">
-        <h1 class="pull-left">Left Column</h1>
-        <ul class="pull-right breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="">Pages</a></li>
-            <li class="active">Left Column</li>
-        </ul>
-    </div>
+    {#<div class="container">#}
+        {#<h1 class="pull-left">Left Column</h1>#}
+        {#<ul class="pull-right breadcrumb">#}
+            {#<li><a href="/">Home</a></li>#}
+            {#<li><a href="">Pages</a></li>#}
+            {#<li class="active">Left Column</li>#}
+        {#</ul>#}
+    {#</div>#}
 </div><!--/breadcrumbs-->
 <!--=== End Breadcrumbs ===-->
 
@@ -705,19 +661,19 @@
             {#<div class="posts margin-bottom-30">#}
             {#<div class="headline"><h2>Recent Blog Entries</h2></div>#}
             {#<dl class="dl-horizontal">#}
-            {#<dt><a href="#"><img src="bundles/gpilayout/img/sliders/elastislide/10.jpg" alt="" /></a></dt>#}
+            {#<dt><a href="#"><img src="/bundles/gpilayout/img/sliders/elastislide/10.jpg" alt="" /></a></dt>#}
             {#<dd>#}
             {#<p><a href="#">Lorem sequat ipsum dolor lorem sunt aliqua put</a></p>#}
             {#</dd>#}
             {#</dl>#}
             {#<dl class="dl-horizontal">#}
-            {#<dt><a href="#"><img src="bundles/gpilayout/img/sliders/elastislide/11.jpg" alt="" /></a></dt>#}
+            {#<dt><a href="#"><img src="/bundles/gpilayout/img/sliders/elastislide/11.jpg" alt="" /></a></dt>#}
             {#<dd>#}
             {#<p><a href="#">It works on all major web browsers tablets</a></p>#}
             {#</dd>#}
             {#</dl>#}
             {#<dl class="dl-horizontal">#}
-            {#<dt><a href="#"><img src="bundles/gpilayout/img/sliders/elastislide/9.jpg" alt="" /></a></dt>#}
+            {#<dt><a href="#"><img src="/bundles/gpilayout/img/sliders/elastislide/9.jpg" alt="" /></a></dt>#}
             {#<dd>#}
             {#<p><a href="#">Brunch 3 wolf moon tempor sunt aliqua put.</a></p>#}
             {#</dd>#}
@@ -790,7 +746,7 @@
             {#<div class="item">#}
             {#<a href="#">#}
             {#<em class="overflow-hidden">#}
-            {#<img class="img-responsive" src="bundles/gpilayout/img/main/1.jpg" alt="">#}
+            {#<img class="img-responsive" src="/bundles/gpilayout/img/main/1.jpg" alt="">#}
             {#</em>    #}
             {#<span>#}
             {#<strong>Happy New Year</strong>#}
@@ -801,7 +757,7 @@
             {#<div class="item">#}
             {#<a href="#">#}
             {#<em class="overflow-hidden">#}
-            {#<img class="img-responsive" src="bundles/gpilayout/img/main/2.jpg" alt="">#}
+            {#<img class="img-responsive" src="/bundles/gpilayout/img/main/2.jpg" alt="">#}
             {#</em>    #}
             {#<span>#}
             {#<strong>Award Winning Agency</strong>#}
@@ -812,7 +768,7 @@
             {#<div class="item">#}
             {#<a href="#">#}
             {#<em class="overflow-hidden">#}
-            {#<img class="img-responsive" src="bundles/gpilayout/img/main/3.jpg" alt="">#}
+            {#<img class="img-responsive" src="/bundles/gpilayout/img/main/3.jpg" alt="">#}
             {#</em>    #}
             {#<span>#}
             {#<strong>Wolf Moon Officia</strong>#}
@@ -823,7 +779,7 @@
             {#<div class="item">#}
             {#<a href="#">#}
             {#<em class="overflow-hidden">#}
-            {#<img class="img-responsive" src="bundles/gpilayout/img/main/4.jpg" alt="">#}
+            {#<img class="img-responsive" src="/bundles/gpilayout/img/main/4.jpg" alt="">#}
             {#</em>    #}
             {#<span>#}
             {#<strong>Food Truck Quinoa Nesciunt</strong>#}
@@ -834,7 +790,7 @@
             {#<div class="item">#}
             {#<a href="#">#}
             {#<em class="overflow-hidden">#}
-            {#<img class="img-responsive" src="bundles/gpilayout/img/main/5.jpg" alt="">#}
+            {#<img class="img-responsive" src="/bundles/gpilayout/img/main/5.jpg" alt="">#}
             {#</em>    #}
             {#<span>#}
             {#<strong>Happy New Year</strong>#}
@@ -845,7 +801,7 @@
             {#<div class="item">#}
             {#<a href="#">#}
             {#<em class="overflow-hidden">#}
-            {#<img class="img-responsive" src="bundles/gpilayout/img/main/1.jpg" alt="">#}
+            {#<img class="img-responsive" src="/bundles/gpilayout/img/main/1.jpg" alt="">#}
             {#</em>    #}
             {#<span>#}
             {#<strong>Happy New Year</strong>#}
@@ -856,7 +812,7 @@
             {#<div class="item">#}
             {#<a href="#">#}
             {#<em class="overflow-hidden">#}
-            {#<img class="img-responsive" src="bundles/gpilayout/img/main/2.jpg" alt="">#}
+            {#<img class="img-responsive" src="/bundles/gpilayout/img/main/2.jpg" alt="">#}
             {#</em>    #}
             {#<span>#}
             {#<strong>Award Winning Agency</strong>#}
@@ -867,7 +823,7 @@
             {#<div class="item">#}
             {#<a href="#">#}
             {#<em class="overflow-hidden">#}
-            {#<img class="img-responsive" src="bundles/gpilayout/img/main/3.jpg" alt="">#}
+            {#<img class="img-responsive" src="/bundles/gpilayout/img/main/3.jpg" alt="">#}
             {#</em>    #}
             {#<span>#}
             {#<strong>Wolf Moon Officia</strong>#}
@@ -878,7 +834,7 @@
             {#<div class="item">#}
             {#<a href="#">#}
             {#<em class="overflow-hidden">#}
-            {#<img class="img-responsive" src="bundles/gpilayout/img/main/4.jpg" alt="">#}
+            {#<img class="img-responsive" src="/bundles/gpilayout/img/main/4.jpg" alt="">#}
             {#</em>    #}
             {#<span>#}
             {#<strong>Food Truck Quinoa Nesciunt</strong>#}
@@ -889,7 +845,7 @@
             {#<div class="item">#}
             {#<a href="#">#}
             {#<em class="overflow-hidden">#}
-            {#<img class="img-responsive" src="bundles/gpilayout/img/main/5.jpg" alt="">#}
+            {#<img class="img-responsive" src="/bundles/gpilayout/img/main/5.jpg" alt="">#}
             {#</em>    #}
             {#<span>#}
             {#<strong>Happy New Year</strong>#}
@@ -911,104 +867,104 @@
     {#<ul class="slides">#}
         {#<li>#}
             {#<a href="#">#}
-                {#<img src="bundles/gpilayout/img/clients/hp_grey.png" alt="" />#}
-                {#<img src="bundles/gpilayout/img/clients/hp.png" class="color-img" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/hp_grey.png" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/hp.png" class="color-img" alt="" />#}
             {#</a>#}
         {#</li>#}
         {#<li>#}
             {#<a href="#">#}
-                {#<img src="bundles/gpilayout/img/clients/igneus_grey.png" alt="" />#}
-                {#<img src="bundles/gpilayout/img/clients/igneus.png" class="color-img" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/igneus_grey.png" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/igneus.png" class="color-img" alt="" />#}
             {#</a>#}
         {#</li>#}
         {#<li>#}
             {#<a href="#">#}
-                {#<img src="bundles/gpilayout/img/clients/vadafone_grey.png" alt="" />#}
-                {#<img src="bundles/gpilayout/img/clients/vadafone.png" class="color-img" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/vadafone_grey.png" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/vadafone.png" class="color-img" alt="" />#}
             {#</a>#}
         {#</li>#}
         {#<li>#}
             {#<a href="#">#}
-                {#<img src="bundles/gpilayout/img/clients/walmart_grey.png" alt="" />#}
-                {#<img src="bundles/gpilayout/img/clients/walmart.png" class="color-img" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/walmart_grey.png" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/walmart.png" class="color-img" alt="" />#}
             {#</a>#}
         {#</li>#}
         {#<li>#}
             {#<a href="#">#}
-                {#<img src="bundles/gpilayout/img/clients/shell_grey.png" alt="" />#}
-                {#<img src="bundles/gpilayout/img/clients/shell.png" class="color-img" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/shell_grey.png" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/shell.png" class="color-img" alt="" />#}
             {#</a>#}
         {#</li>#}
         {#<li>#}
             {#<a href="#">#}
-                {#<img src="bundles/gpilayout/img/clients/natural_grey.png" alt="" />#}
-                {#<img src="bundles/gpilayout/img/clients/natural.png" class="color-img" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/natural_grey.png" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/natural.png" class="color-img" alt="" />#}
             {#</a>#}
         {#</li>#}
         {#<li>#}
             {#<a href="#">#}
-                {#<img src="bundles/gpilayout/img/clients/aztec_grey.png" alt="" />#}
-                {#<img src="bundles/gpilayout/img/clients/aztec.png" class="color-img" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/aztec_grey.png" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/aztec.png" class="color-img" alt="" />#}
             {#</a>#}
         {#</li>#}
         {#<li>#}
             {#<a href="#">#}
-                {#<img src="bundles/gpilayout/img/clients/gamescast_grey.png" alt="" />#}
-                {#<img src="bundles/gpilayout/img/clients/gamescast.png" class="color-img" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/gamescast_grey.png" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/gamescast.png" class="color-img" alt="" />#}
             {#</a>#}
         {#</li>#}
         {#<li>#}
             {#<a href="#">#}
-                {#<img src="bundles/gpilayout/img/clients/cisco_grey.png" alt="" />#}
-                {#<img src="bundles/gpilayout/img/clients/cisco.png" class="color-img" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/cisco_grey.png" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/cisco.png" class="color-img" alt="" />#}
             {#</a>#}
         {#</li>#}
         {#<li>#}
             {#<a href="#">#}
-                {#<img src="bundles/gpilayout/img/clients/everyday_grey.png" alt="" />#}
-                {#<img src="bundles/gpilayout/img/clients/everyday.png" class="color-img" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/everyday_grey.png" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/everyday.png" class="color-img" alt="" />#}
             {#</a>#}
         {#</li>#}
         {#<li>#}
             {#<a href="#">#}
-                {#<img src="bundles/gpilayout/img/clients/cocacola_grey.png" alt="" />#}
-                {#<img src="bundles/gpilayout/img/clients/cocacola.png" class="color-img" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/cocacola_grey.png" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/cocacola.png" class="color-img" alt="" />#}
             {#</a>#}
         {#</li>#}
         {#<li>#}
             {#<a href="#">#}
-                {#<img src="bundles/gpilayout/img/clients/spinworkx_grey.png" alt="" />#}
-                {#<img src="bundles/gpilayout/img/clients/spinworkx.png" class="color-img" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/spinworkx_grey.png" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/spinworkx.png" class="color-img" alt="" />#}
             {#</a>#}
         {#</li>#}
         {#<li>#}
             {#<a href="#">#}
-                {#<img src="bundles/gpilayout/img/clients/shell_grey.png" alt="" />#}
-                {#<img src="bundles/gpilayout/img/clients/shell.png" class="color-img" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/shell_grey.png" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/shell.png" class="color-img" alt="" />#}
             {#</a>#}
         {#</li>#}
         {#<li>#}
             {#<a href="#">#}
-                {#<img src="bundles/gpilayout/img/clients/natural_grey.png" alt="" />#}
-                {#<img src="bundles/gpilayout/img/clients/natural.png" class="color-img" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/natural_grey.png" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/natural.png" class="color-img" alt="" />#}
             {#</a>#}
         {#</li>#}
         {#<li>#}
             {#<a href="#">#}
-                {#<img src="bundles/gpilayout/img/clients/gamescast_grey.png" alt="" />#}
-                {#<img src="bundles/gpilayout/img/clients/gamescast.png" class="color-img" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/gamescast_grey.png" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/gamescast.png" class="color-img" alt="" />#}
             {#</a>#}
         {#</li>#}
         {#<li>#}
             {#<a href="#">#}
-                {#<img src="bundles/gpilayout/img/clients/everyday_grey.png" alt="" />#}
-                {#<img src="bundles/gpilayout/img/clients/everyday.png" class="color-img" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/everyday_grey.png" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/everyday.png" class="color-img" alt="" />#}
             {#</a>#}
         {#</li>#}
         {#<li>#}
             {#<a href="#">#}
-                {#<img src="bundles/gpilayout/img/clients/spinworkx_grey.png" alt="" />#}
-                {#<img src="bundles/gpilayout/img/clients/spinworkx.png" class="color-img" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/spinworkx_grey.png" alt="" />#}
+                {#<img src="/bundles/gpilayout/img/clients/spinworkx.png" class="color-img" alt="" />#}
             {#</a>#}
         {#</li>#}
     {#</ul>#}
@@ -1025,7 +981,7 @@
             <div class="row">
                 <!-- About -->
                 {#<div class="col-md-3 md-margin-bottom-40">#}
-                    {#<a href="index.html"><img id="logo-footer" class="footer-logo" src="bundles/gpilayout/img/logo2-default.png" alt=""></a>#}
+                    {#<a href="/"><img id="logo-footer" class="footer-logo" src="/bundles/gpilayout/img/logo2-default.png" alt=""></a>#}
                     {#<p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.</p>#}
                     {#<p>Duis eleifend fermentum ante ut aliquam. Cras mi risus, dignissim sed adipiscing ut, placerat non arcu.</p>#}
                 {#</div><!--/col-md-3-->#}
@@ -1142,18 +1098,18 @@
 </div><!--/wrapper-->
 
 <!-- JS Global Compulsory -->
-<script type="text/javascript" src="bundles/gpilayout/plugins/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="bundles/gpilayout/plugins/jquery/jquery-migrate.min.js"></script>
-<script type="text/javascript" src="bundles/gpilayout/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/bundles/gpilayout/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/bundles/gpilayout/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="/bundles/gpilayout/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!-- JS Implementing Plugins -->
-<script type="text/javascript" src="bundles/gpilayout/plugins/back-to-top.js"></script>
-<script type="text/javascript" src="bundles/gpilayout/plugins/flexslider/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="bundles/gpilayout/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="/bundles/gpilayout/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="/bundles/gpilayout/plugins/flexslider/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="/bundles/gpilayout/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
 <!-- JS Customization -->
-<script type="text/javascript" src="bundles/gpilayout/js/custom.js"></script>
+<script type="text/javascript" src="/bundles/gpilayout/js/custom.js"></script>
 <!-- JS Page Level -->
-<script type="text/javascript" src="bundles/gpilayout/js/app.js"></script>
-<script type="text/javascript" src="bundles/gpilayout/js/plugins/owl-recent-works.js"></script>
+<script type="text/javascript" src="/bundles/gpilayout/js/app.js"></script>
+<script type="text/javascript" src="/bundles/gpilayout/js/plugins/owl-recent-works.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
         App.init();
@@ -1162,9 +1118,9 @@
     });
 </script>
 <!--[if lt IE 9]>
-<script src="bundles/gpilayout/plugins/respond.js"></script>
-<script src="bundles/gpilayout/plugins/html5shiv.js"></script>
-<script src="bundles/gpilayout/js/plugins/placeholder-IE-fixes.js"></script>
+<script src="/bundles/gpilayout/plugins/respond.js"></script>
+<script src="/bundles/gpilayout/plugins/html5shiv.js"></script>
+<script src="/bundles/gpilayout/js/plugins/placeholder-IE-fixes.js"></script>
 <![endif]-->
 
 </body>
