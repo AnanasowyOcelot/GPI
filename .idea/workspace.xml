@@ -26,7 +26,7 @@
       <file leaf-file-name="new_layout.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/new_layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="639" column="0" selection-start="31453" selection-end="31773" vertical-scroll-proportion="-4.923077" vertical-offset="10607" max-vertical-offset="19397">
+            <state line="138" column="8" selection-start="4936" selection-end="4936" vertical-scroll-proportion="-2.9807692" vertical-offset="2191" max-vertical-offset="19397">
               <folding />
             </state>
           </provider>
@@ -35,10 +35,9 @@
       <file leaf-file-name="demo_2columns_layout.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/demo_2columns_layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="26" selection-start="29" selection-end="30" vertical-scroll-proportion="6.5384617" vertical-offset="204" max-vertical-offset="748">
+            <state line="2" column="26" selection-start="29" selection-end="30" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="748">
               <folding>
-                <marker date="1417183771474" expanded="true" signature="624:775" placeholder="..." />
-                <marker date="1417183771474" expanded="false" signature="1095:1143" placeholder="..." />
+                <element signature="n#style#0;n#img#0;n#a#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,7 +73,7 @@
       <file leaf-file-name="sonata_page.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/config/sonata/sonata_page.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="68" selection-start="2527" selection-end="2527" vertical-scroll-proportion="0.16504854" vertical-offset="1275" max-vertical-offset="2975">
+            <state line="51" column="68" selection-start="1636" selection-end="1636" vertical-scroll-proportion="0.19805825" vertical-offset="765" max-vertical-offset="2975">
               <folding />
             </state>
           </provider>
@@ -117,7 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/show.html.twig" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Form/OfferType.php" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Controller/OfferEditController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
@@ -166,6 +164,7 @@
         <option value="$PROJECT_DIR$/vendor/sonata-project/user-bundle/Resources/config/routing/sonata_security_1.xml" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Registration/register.html.twig" />
         <option value="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Security/login.html.twig" />
+        <option value="$PROJECT_DIR$/vendor/sonata-project/page-bundle/Resources/doc/reference/page_composer.rst" />
         <option value="$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/new_layout.html.twig" />
         <option value="$PROJECT_DIR$/app/config/sonata/sonata_page.yml" />
       </list>
@@ -1278,13 +1277,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/Resources/doc/reference/page_composer.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="31" selection-start="305" selection-end="305" vertical-scroll-proportion="0.4009434" vertical-offset="0" max-vertical-offset="2533">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="636">
@@ -1329,16 +1321,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/demo_2columns_layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="26" selection-start="29" selection-end="30" vertical-scroll-proportion="6.5384617" vertical-offset="204" max-vertical-offset="748">
-          <folding>
-            <marker date="1417183771474" expanded="true" signature="624:775" placeholder="..." />
-            <marker date="1417183771474" expanded="false" signature="1095:1143" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="31" selection-start="2250" selection-end="2250" vertical-scroll-proportion="0.0" vertical-offset="1303" max-vertical-offset="1819">
@@ -1346,37 +1328,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/Resources/views/2columns_layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="23" selection-start="497" selection-end="497" vertical-scroll-proportion="-5.576923" vertical-offset="144" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/Resources/config/routing/sonata_profile_1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/Resources/translations/SonataUserBundle.pl.xliff">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="47" selection-start="270" selection-end="293" vertical-scroll-proportion="0.16504854" vertical-offset="0" max-vertical-offset="8721">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/Resources/views/Registration/register_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="36" selection-start="102" selection-end="102" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="340">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Registration/register.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19" selection-start="15" selection-end="19" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="204">
           <folding />
         </state>
       </provider>
@@ -1402,16 +1356,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/Resources/views/2columns_layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="23" selection-start="497" selection-end="497" vertical-scroll-proportion="-5.576923" vertical-offset="144" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/Registration/register.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="19" selection-start="15" selection-end="19" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/page-bundle/Resources/doc/reference/page_composer.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="31" selection-start="103" selection-end="103" vertical-scroll-proportion="0.16765286" vertical-offset="51" max-vertical-offset="2533">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/Resources/config/routing/sonata_profile_1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/user-bundle/Resources/views/Registration/register_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="36" selection-start="102" selection-end="102" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/new_layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="639" column="0" selection-start="31453" selection-end="31773" vertical-scroll-proportion="-4.923077" vertical-offset="10607" max-vertical-offset="19397">
+        <state line="138" column="8" selection-start="4936" selection-end="4936" vertical-scroll-proportion="-2.9807692" vertical-offset="2191" max-vertical-offset="19397">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/demo_2columns_layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="26" selection-start="29" selection-end="30" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="748">
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/sonata/sonata_page.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="68" selection-start="2527" selection-end="2527" vertical-scroll-proportion="0.16504854" vertical-offset="1275" max-vertical-offset="2975">
+        <state line="51" column="68" selection-start="1636" selection-end="1636" vertical-scroll-proportion="0.19805825" vertical-offset="765" max-vertical-offset="2975">
           <folding />
         </state>
       </provider>
