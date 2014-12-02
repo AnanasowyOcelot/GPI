@@ -78,7 +78,7 @@ sonata_page:
 #                     F: footer
 
         2columns:
-            path: 'ApplicationSonataPageBundle::demo_2columns_layout.html.twig'
+            path: 'ApplicationSonataPageBundle::new_layout.html.twig'
             name: '2 columns layout'
             containers:
                  header:
