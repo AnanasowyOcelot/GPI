@@ -46,36 +46,36 @@ sonata_page:
         javascripts:
             - assetic/sonata_front_js.js
 
-    default_template: default
+    default_template: new_layout
     templates:
-        default:
-            path: 'ApplicationSonataPageBundle::demo_layout.html.twig'
-            name: 'default'
-            containers:
-                 header:
-                     name: Header
-                 content_top:
-                     name: Top content
-                 content:
-                     name: Main content
-                 content_bottom:
-                     name: Bottom content
-                 footer:
-                     name: Footer
-            matrix:
-                 layout: |
-                     HHHHHHHH
-                     TTTTTTTT
-                     CCCCCCCC
-                     BBBBBBBB
-                     FFFFFFFF
-
-                 mapping:
-                     H: header
-                     T: content_top
-                     C: content
-                     B: content_bottom
-                     F: footer
+#        default:
+#            path: 'ApplicationSonataPageBundle::demo_layout.html.twig'
+#            name: 'default'
+#            containers:
+#                 header:
+#                     name: Header
+#                 content_top:
+#                     name: Top content
+#                 content:
+#                     name: Main content
+#                 content_bottom:
+#                     name: Bottom content
+#                 footer:
+#                     name: Footer
+#            matrix:
+#                 layout: |
+#                     HHHHHHHH
+#                     TTTTTTTT
+#                     CCCCCCCC
+#                     BBBBBBBB
+#                     FFFFFFFF
+#
+#                 mapping:
+#                     H: header
+#                     T: content_top
+#                     C: content
+#                     B: content_bottom
+#                     F: footer
 
         2columns:
             path: 'ApplicationSonataPageBundle::demo_2columns_layout.html.twig'
@@ -142,7 +142,7 @@ sonata_page:
                      F: footer
 
     page_defaults:
-        homepage: { decorate: false, enabled: true }
+        homepage: { decorate: true, enabled: true }
 
     caches:
         esi:
