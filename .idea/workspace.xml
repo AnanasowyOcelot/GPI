@@ -26,16 +26,27 @@
       <file leaf-file-name="Offer.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Entity/Offer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="0" selection-start="1488" selection-end="1488" vertical-scroll-proportion="0.48710603" vertical-offset="799" max-vertical-offset="4658">
+            <state line="150" column="7" selection-start="3191" selection-end="3191" vertical-scroll-proportion="0.6833811" vertical-offset="2073" max-vertical-offset="2924">
+              <folding>
+                <element signature="e#42#74#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Offer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Model/Offer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="11" selection-start="1150" selection-end="1150" vertical-scroll-proportion="-38.576923" vertical-offset="0" max-vertical-offset="2057">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="OfferStatus.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Entity/OfferStatus.php">
+        <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Model/OfferStatus.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="2" selection-start="219" selection-end="219" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="272">
+            <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="255">
               <folding />
             </state>
           </provider>
@@ -44,7 +55,7 @@
       <file leaf-file-name="OfferTest.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Tests/Entity/OfferTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="641" selection-end="641" vertical-scroll-proportion="-6.5384617" vertical-offset="255" max-vertical-offset="1054">
+            <state line="9" column="5" selection-start="190" selection-end="190" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1326">
               <folding />
             </state>
           </provider>
@@ -54,7 +65,13 @@
         <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state line="11" column="0" selection-start="226" selection-end="318" vertical-scroll-proportion="4.5384617" vertical-offset="305" max-vertical-offset="1003">
-              <folding />
+              <folding>
+                <marker date="1417598440709" expanded="true" signature="401:653" placeholder="..." />
+                <marker date="1417598440709" expanded="true" signature="702:1980" placeholder="..." />
+                <marker date="1417598440709" expanded="true" signature="1001:1254" placeholder="..." />
+                <marker date="1417598440709" expanded="true" signature="1324:1603" placeholder="..." />
+                <marker date="1417598440709" expanded="true" signature="1715:1969" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,8 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/config/serializer/Entity.Page.xml" />
-        <option value="$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/config/serializer/Entity.Block.xml" />
         <option value="$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/config/doctrine/Snapshot.orm.xml" />
         <option value="$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/config/doctrine/Site.orm.xml" />
         <option value="$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/config/doctrine/Page.orm.xml" />
@@ -115,10 +130,12 @@
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Entity/OfferStatus.php" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Tests/Entity/OfferTest.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Tests/Controller/AddOfferControllerTest.php" />
+        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Model/OfferStatus.php" />
+        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Tests/Entity/OfferTest.php" />
+        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Model/Offer.php" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Entity/Offer.php" />
       </list>
     </option>
@@ -304,6 +321,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OfferBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OfferBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -326,18 +395,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sandbox\src\GPI\OfferBundle\Model" />
       <recent name="C:\xampp\htdocs\sandbox\web\uploads\documents" />
       <recent name="C:\xampp\htdocs\sandbox\src\Application\Sonata\UserBundle\Resources\views" />
       <recent name="C:\xampp\htdocs\sandbox\src\Application\Sonata\UserBundle\Resources" />
       <recent name="C:\xampp\htdocs\sandbox\src\Application\Sonata\PageBundle\Resources\views" />
-      <recent name="C:\xampp\htdocs\sandbox\src\GPI\LayoutBundle\Resources\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sandbox\src\GPI\OfferBundle\Model" />
       <recent name="C:\xampp\htdocs\sandbox\src\Sonata\Bundle" />
       <recent name="C:\xampp\htdocs\sandbox\src\GPI" />
       <recent name="C:\xampp\htdocs\sandbox\src\GPI\LayoutBundle\Resources\public" />
       <recent name="C:\xampp\htdocs\sandbox\src\GPI\OfferBundle\Resources\views\EditOffer" />
-      <recent name="C:\xampp\htdocs\sandbox\src\GPI\Sonata\BlockBundle\Resources\views\Block" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.OfferAdmin.php">
@@ -435,13 +504,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="38" selection-start="5458" selection-end="5458" vertical-scroll-proportion="-3.9807692" vertical-offset="1884" max-vertical-offset="2754">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="636">
@@ -733,13 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Entity/OfferStatus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="2" selection-start="219" selection-end="219" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="0" selection-start="205" selection-end="205" vertical-scroll-proportion="0.35220996" vertical-offset="0" max-vertical-offset="724">
@@ -767,7 +822,13 @@
     <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="226" selection-end="318" vertical-scroll-proportion="4.5384617" vertical-offset="305" max-vertical-offset="1003">
-          <folding />
+          <folding>
+            <marker date="1417598440709" expanded="true" signature="401:653" placeholder="..." />
+            <marker date="1417598440709" expanded="true" signature="702:1980" placeholder="..." />
+            <marker date="1417598440709" expanded="true" signature="1001:1254" placeholder="..." />
+            <marker date="1417598440709" expanded="true" signature="1324:1603" placeholder="..." />
+            <marker date="1417598440709" expanded="true" signature="1715:1969" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -780,15 +841,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Tests/Entity/OfferTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="641" selection-end="641" vertical-scroll-proportion="-6.5384617" vertical-offset="255" max-vertical-offset="1054">
+        <state line="9" column="5" selection-start="190" selection-end="190" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1326">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Model/OfferStatus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Model/Offer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="11" selection-start="1150" selection-end="1150" vertical-scroll-proportion="-38.576923" vertical-offset="0" max-vertical-offset="2057">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Entity/Offer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="0" selection-start="1488" selection-end="1488" vertical-scroll-proportion="0.48710603" vertical-offset="799" max-vertical-offset="4658">
-          <folding />
+        <state line="150" column="7" selection-start="3191" selection-end="3191" vertical-scroll-proportion="0.6833811" vertical-offset="2073" max-vertical-offset="2924">
+          <folding>
+            <element signature="e#42#74#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

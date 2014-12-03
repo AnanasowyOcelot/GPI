@@ -14,7 +14,7 @@ use Application\Sonata\UserBundle\Entity\User as User;
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="GPI\OfferBundle\Entity\OfferRepository")
  */
-class Offer
+class Offer extends \GPI\OfferBundle\Model\Offer
 {
     const MAX_FILES = 20;
 
@@ -25,14 +25,15 @@ class Offer
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
+
 
     /**
      * @var integer
      *
      * @ORM\Column(name="status", type="integer")
      */
-    private $status;
+    protected $status;
 
     /**
      * @var string
@@ -40,44 +41,40 @@ class Offer
      * @ORM\Column(name="name", type="string", length=255)
      * @Assert\Length(min = 5)
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      *
      * @ORM\Column(name="content", type="text")
      */
-    private $content;
+    protected $content;
 
     /**
      * @ORM\ManyToOne(targetEntity="\Application\Sonata\ClassificationBundle\Entity\Category")
      */
-    private $category;
+    protected $category;
 
     /**
      * @var ArrayCollection $trainings
      * @ORM\OneToMany(targetEntity="\GPI\OfferBundle\Entity\Document", mappedBy="offer", cascade={"persist"})
      */
-    private $documents;
+    protected $documents;
 
-    public function __construct()
+    protected $endTime;
+
+    public function getContentChangedBy()
     {
-        $this->status = OfferStatus::ACTIVE;
+        return $this->contentChangedBy;
     }
 
-    public function isCanceled()
+    public function getMainPhoto()
     {
-        return $this->status === OfferStatus::CANCELED;
-    }
-
-    public function cancel()
-    {
-        $this->status = OfferStatus::CANCELED;
-    }
-
-    public function deactivate()
-    {
-        $this->status = OfferStatus::DEACTIVATED;
+        if (!$this->documents->isEmpty()) {
+            return $this->documents->get(0)->getWebPath();
+        } else {
+            return "uploads/documents/default.jpg";
+        }
     }
 
     /**
@@ -96,7 +93,6 @@ class Offer
         return $this->status;
     }
 
-    /////////////////////////////////////////////////////////////////
     /**
      * @var User $createdBy
      *
@@ -104,7 +100,7 @@ class Offer
      * @ORM\ManyToOne(targetEntity="Application\Sonata\UserBundle\Entity\User")
      * @ORM\JoinColumn(name="created_by", referencedColumnName="id")
      */
-    private $createdBy;
+    protected $createdBy;
 
     /**
      * @var User $updatedBy
@@ -113,7 +109,7 @@ class Offer
      * @ORM\ManyToOne(targetEntity="Application\Sonata\UserBundle\Entity\User")
      * @ORM\JoinColumn(name="updated_by", referencedColumnName="id")
      */
-    private $updatedBy;
+    protected $updatedBy;
 
     /**
      * @var User $contentChangedBy
@@ -122,7 +118,7 @@ class Offer
      * @ORM\ManyToOne(targetEntity="Application\Sonata\UserBundle\Entity\User")
      * @ORM\JoinColumn(name="content_changed_by", referencedColumnName="id")
      */
-    private $contentChangedBy;
+    protected $contentChangedBy;
 
     public function getCreatedBy()
     {
@@ -132,45 +128,6 @@ class Offer
     public function getUpdatedBy()
     {
         return $this->updatedBy;
-    }
-
-    public function getMainPhoto()
-    {
-        if (!$this->documents->isEmpty()) {
-            return $this->documents->get(0)->getWebPath();
-        } else {
-            return "uploads/documents/default.jpg";
-        }
-    }
-
-    public function getContentChangedBy()
-    {
-        return $this->contentChangedBy;
-    }
-
-    public function isActive()
-    {
-        return $this->status === OfferStatus::ACTIVE;
-    }
-    /////////////////////////////////////////////////////////////////
-
-    /**
-     * @param \GPI\OfferBundle\Entity\Document $document
-     * @return Offer
-     */
-    public function addDocument($document)
-    {
-        $this->documents[] = $document;
-
-        $document->setOffer($this);
-
-        return $this;
-    }
-
-
-    public function removeDocument($document)
-    {
-
     }
 
     /**
@@ -192,65 +149,6 @@ class Offer
     }
 
     /**
-     * Set name
-     *
-     * @param string $name
-     * @return Offer
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-
-    /**
-     * Set content
-     *
-     * @param string $content
-     * @return Offer
-     */
-    public function setContent($content)
-    {
-        $this->content = $content;
-
-        return $this;
-    }
-
-    /**
-     * Get content
-     *
-     * @return string
-     */
-    public function getContent()
-    {
-        return $this->content;
-    }
-
-    /**
-     * Get content short
-     *
-     * @return string
-     */
-    public function getContentShort()
-    {
-        $maxLength = 30;
-        $string = strip_tags($this->content);
-        return (strlen($string) > $maxLength) ? substr($string, 0, $maxLength) . '...' : $string;
-    }
-
-    /**
      * @param mixed $categories
      */
     public function setCategory($categories)
@@ -265,8 +163,4 @@ class Offer
     {
         return $this->category;
     }
-
-//    public function numFiles(){
-//        return 9;
-//    }
 }

@@ -2,7 +2,7 @@
 
 namespace GPI\OfferBundle\Tests\Entity;
 
-use GPI\OfferBundle\Entity\Offer;
+use GPI\OfferBundle\Model\Offer;
 
 class OfferTest extends \PHPUnit_Framework_TestCase
 {
@@ -49,6 +49,22 @@ class OfferTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($offer->isActive());
 
         $offer->deactivate();
+
+        $this->assertFalse($offer->isActive());
+    }
+
+    public function testOfferActiveBeforeEndTime()
+    {
+        $offer = new Offer();
+        $offer->setEndTime(new \DateTime('+1 day'));
+
+        $this->assertTrue($offer->isActive());
+    }
+
+    public function testOfferNotActiveAfterEndTime()
+    {
+        $offer = new Offer();
+        $offer->setEndTime(new \DateTime('-1 day'));
 
         $this->assertFalse($offer->isActive());
     }
