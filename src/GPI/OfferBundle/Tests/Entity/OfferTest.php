@@ -6,9 +6,30 @@ use GPI\OfferBundle\Model\Offer;
 
 class OfferTest extends \PHPUnit_Framework_TestCase
 {
+
+    /**
+     * @param $date
+     * @return \GPI\OfferBundle\Model\Calendar
+     */
+    private function getCalendar($date = '2000-02-02 12:00')
+    {
+        $calendar = $this->getMockBuilder('\GPI\OfferBundle\Model\Calendar')
+            ->setMethods(array('time'))
+            ->getMock();
+
+        $calendar->expects($this->any())
+            ->method('time')
+            ->will($this->returnValue(strtotime($date)));
+        return $calendar;
+    }
+
+    private function getOffer($calendar = null){
+        return new Offer(new \DateTime('2014-12-03 14:01'), $calendar);
+    }
+
     public function testShortContentMax30Chars()
     {
-        $offer = new Offer();
+        $offer = $this->getOffer();
 
         $str30 = str_repeat('b', 30);
 
@@ -26,14 +47,16 @@ class OfferTest extends \PHPUnit_Framework_TestCase
 
     public function testNewOfferIsActive()
     {
-        $offer = new Offer();
+        $calendar = $this->getCalendar('2014-12-02 14:01');
+
+        $offer = $this->getOffer($calendar);
 
         $this->assertEquals($offer->isActive(), true);
     }
 
     public function testCancelOffer()
     {
-        $offer = new Offer();
+        $offer = $this->getOffer();
 
         $this->assertFalse($offer->isCanceled());
 
@@ -44,7 +67,9 @@ class OfferTest extends \PHPUnit_Framework_TestCase
 
     public function testDeactivateOffer()
     {
-        $offer = new Offer();
+        $calendar = $this->getCalendar('2014-12-01 14:01');
+
+        $offer = $this->getOffer($calendar);
 
         $this->assertTrue($offer->isActive());
 
@@ -55,16 +80,16 @@ class OfferTest extends \PHPUnit_Framework_TestCase
 
     public function testOfferActiveBeforeEndTime()
     {
-        $offer = new Offer();
-        $offer->setEndTime(new \DateTime('+1 day'));
+        $calendar = $this->getCalendar('2014-12-01 14:01');
+        $offer = new Offer(new \DateTime('2014-12-03 14:01'), $calendar);
 
         $this->assertTrue($offer->isActive());
     }
 
     public function testOfferNotActiveAfterEndTime()
     {
-        $offer = new Offer();
-        $offer->setEndTime(new \DateTime('-1 day'));
+        $calendar = $this->getCalendar('2014-12-02 14:01');
+        $offer = new Offer(new \DateTime('2014-12-01 14:01'), $calendar);
 
         $this->assertFalse($offer->isActive());
     }

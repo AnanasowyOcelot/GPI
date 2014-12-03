@@ -13,11 +13,20 @@ class Offer
     protected $content;
     protected $documents;
     protected $endTime;
+    private $calendar;
+    protected $category;
 
-    public function __construct()
+    public function __construct(\DateTime $endTime, Calendar $calendar = null)
     {
         $this->status = OfferStatus::ACTIVE;
-        $this->endTime = new \DateTime('+30 days');
+
+        $this->setEndTime($endTime);
+
+        if ($calendar !== null) {
+            $this->calendar = $calendar;
+        } else {
+            $this->calendar = new Calendar();
+        }
     }
 
     public function setEndTime(\DateTime $endTime)
@@ -32,7 +41,10 @@ class Offer
 
     public function isActive()
     {
-        return $this->status === OfferStatus::ACTIVE && $this->endTime > new \DateTime('now');
+        if ($this->endTime < $this->calendar->dateTimeNow()) {
+            return false;
+        }
+        return $this->status === OfferStatus::ACTIVE;
     }
 
     public function cancel()
@@ -54,18 +66,38 @@ class Offer
         return $this;
     }
 
-
     public function removeDocument($document)
     {
         // TODO: zrobić!
     }
-
 
     public function setName($name)
     {
         $this->name = $name;
 
         return $this;
+    }
+
+    public function getMainPhoto()
+    {
+        if (!$this->getDocuments()->isEmpty()) {
+            return $this->getDocuments()->get(0)->getWebPath();
+        } else {
+            return "uploads/documents/default.jpg";
+        }
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getDocuments()
+    {
+        return $this->documents;
+    }
+
+    public function getCategory()
+    {
+        return $this->category;
     }
 
     /**
@@ -77,7 +109,6 @@ class Offer
     {
         return $this->name;
     }
-
 
     /**
      * Set content

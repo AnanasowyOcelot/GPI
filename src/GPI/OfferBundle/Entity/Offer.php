@@ -16,8 +16,6 @@ use Application\Sonata\UserBundle\Entity\User as User;
  */
 class Offer extends \GPI\OfferBundle\Model\Offer
 {
-    const MAX_FILES = 20;
-
     /**
      * @var integer
      *
@@ -26,7 +24,6 @@ class Offer extends \GPI\OfferBundle\Model\Offer
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-
 
     /**
      * @var integer
@@ -63,20 +60,6 @@ class Offer extends \GPI\OfferBundle\Model\Offer
 
     protected $endTime;
 
-    public function getContentChangedBy()
-    {
-        return $this->contentChangedBy;
-    }
-
-    public function getMainPhoto()
-    {
-        if (!$this->documents->isEmpty()) {
-            return $this->documents->get(0)->getWebPath();
-        } else {
-            return "uploads/documents/default.jpg";
-        }
-    }
-
     /**
      * @param int $status
      */
@@ -85,13 +68,6 @@ class Offer extends \GPI\OfferBundle\Model\Offer
         $this->status = $status;
     }
 
-    /**
-     * @return int
-     */
-    public function getStatus()
-    {
-        return $this->status;
-    }
 
     /**
      * @var User $createdBy
@@ -120,24 +96,6 @@ class Offer extends \GPI\OfferBundle\Model\Offer
      */
     protected $contentChangedBy;
 
-    public function getCreatedBy()
-    {
-        return $this->createdBy;
-    }
-
-    public function getUpdatedBy()
-    {
-        return $this->updatedBy;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDocuments()
-    {
-        return $this->documents;
-    }
-
     /**
      * Get id
      *
@@ -156,11 +114,12 @@ class Offer extends \GPI\OfferBundle\Model\Offer
         $this->category = $categories;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getCategory()
+
+    public function __get($param)
     {
-        return $this->category;
+        if(property_exists($this, $param)){
+            return $this->$param;
+        }
+        throw new \InvalidArgumentException();
     }
 }
