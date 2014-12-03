@@ -8,6 +8,7 @@ sometimes problems with downloading with composer classes:
  - src/application/sonata/classificationBundle/entity/Context.php
  - classificationBundle/.../context.orm.php
 
+npm install
 
 Run
 ---
@@ -17,9 +18,12 @@ Run
 Tests
 -----
 
-
 ### Unit testing
 
 To run the test suites, you can run the command:
 
     phpunit -c app --bootstrap app\tests.bootstrap.php src\GPI\OfferBundle
+
+To run continuous testing:
+
+    grunt watch

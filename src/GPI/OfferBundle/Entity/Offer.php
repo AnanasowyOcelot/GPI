@@ -60,6 +60,26 @@ class Offer
      */
     private $documents;
 
+    public function __construct()
+    {
+        $this->status = OfferStatus::ACTIVE;
+    }
+
+    public function isCanceled()
+    {
+        return $this->status === OfferStatus::CANCELED;
+    }
+
+    public function cancel()
+    {
+        $this->status = OfferStatus::CANCELED;
+    }
+
+    public function deactivate()
+    {
+        $this->status = OfferStatus::DEACTIVATED;
+    }
+
     /**
      * @param int $status
      */
@@ -114,10 +134,11 @@ class Offer
         return $this->updatedBy;
     }
 
-    public function getMainPhoto(){
-        if(!$this->documents->isEmpty()){
+    public function getMainPhoto()
+    {
+        if (!$this->documents->isEmpty()) {
             return $this->documents->get(0)->getWebPath();
-        }else{
+        } else {
             return "uploads/documents/default.jpg";
         }
     }
@@ -125,6 +146,11 @@ class Offer
     public function getContentChangedBy()
     {
         return $this->contentChangedBy;
+    }
+
+    public function isActive()
+    {
+        return $this->status === OfferStatus::ACTIVE;
     }
     /////////////////////////////////////////////////////////////////
 
@@ -187,7 +213,6 @@ class Offer
     {
         return $this->name;
     }
-
 
 
     /**

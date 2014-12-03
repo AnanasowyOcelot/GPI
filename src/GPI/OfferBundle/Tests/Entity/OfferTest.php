@@ -23,4 +23,34 @@ class OfferTest extends \PHPUnit_Framework_TestCase
         $offer->setContent($str31);
         $this->assertEquals($offer->getContentShort(), 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb...');
     }
+
+    public function testNewOfferIsActive()
+    {
+        $offer = new Offer();
+
+        $this->assertEquals($offer->isActive(), true);
+    }
+
+    public function testCancelOffer()
+    {
+        $offer = new Offer();
+
+        $this->assertFalse($offer->isCanceled());
+
+        $offer->cancel();
+
+        $this->assertTrue($offer->isCanceled());
+    }
+
+    public function testDeactivateOffer()
+    {
+        $offer = new Offer();
+
+        $this->assertTrue($offer->isActive());
+
+        $offer->deactivate();
+
+        $this->assertFalse($offer->isActive());
+    }
+
 }

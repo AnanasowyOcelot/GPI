@@ -11,5 +11,6 @@ namespace GPI\OfferBundle\Entity;
 
 class OfferStatus {
     const ACTIVE = 0;
-    const DELETED = 1;
+    const CANCELED = 1;
+    const DEACTIVATED = 2;
 } 
