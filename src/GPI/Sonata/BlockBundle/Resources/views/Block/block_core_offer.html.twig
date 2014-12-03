@@ -6,24 +6,42 @@
         <input type="submit" value="Szukaj"/>
     </form>
 
-    <table>
-        <div class="block-newsletter col-sm-12 well">
-            <div class="count">
-                Całkowita ilość aukcji: {{ pagination.getTotalItemCount }}
+    <div class="block-newsletter col-sm-12 well">
+        <div class="count">
+            Całkowita ilość aukcji: {{ pagination.getTotalItemCount }}
+        </div>
+        {# sorting of properties based on query components #}
+        <div{% if pagination.isSorted('a.name') %} class="sorted"{% endif %}>Sortuj
+            po: {{ knp_pagination_sortable(pagination, 'Nazwa', 'a.name') }}  {{ knp_pagination_sortable(pagination, 'Id', 'a.id') }}</div>
+    </div>
+
+    {# table body #}
+    {% for offer in pagination %}
+        <div class="container content">
+
+            <div class="col-md-12">
+
+                <div class="owl-carousel-v1 owl-work-v1">
+
+                    <div class="owl-recent-works-v1">
+
+                        <div class="item">
+                            <a href="{{ path('gpi_offer_details', {'id': offer.id }) }}">
+                                <em class="overflow-hidden">
+                                    <img class="img-responsive" src="{{ offer.getMainPhoto() }}" alt="">
+                                </em>
+                                <span>
+                                    <strong>{{ offer.name }}</strong>
+                                    <i>Miejsce na podtytuł</i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            {# sorting of properties based on query components #}
-            <div{% if pagination.isSorted('a.name') %} class="sorted"{% endif %}>Sortuj
-                po: {{ knp_pagination_sortable(pagination, 'Nazwa', 'a.name') }}  {{ knp_pagination_sortable(pagination, 'Id', 'a.id') }}</div>
         </div>
 
-        {# table body #}
-        {% for offer in pagination %}
-            <div class="block-newsletter col-sm-12 well">
-                <h5 class="panel-title truncate">Name: {{ offer.name }}</h5>
-                <a href="{{ path('gpi_offer_details', {'id': offer.id }) }}">Details</a>
-            </div>
-        {% endfor %}
-    </table>
+    {% endfor %}
     {# display navigation #}
     <div class="navigation">
         {{ knp_pagination_render(pagination) }}

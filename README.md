@@ -22,4 +22,4 @@ Tests
 
 To run the test suites, you can run the command:
 
-    phpunit -c app --bootstrap app\tests\bootstrap.php src\GPI\OfferBundle
+    phpunit -c app --bootstrap app\tests.bootstrap.php src\GPI\OfferBundle

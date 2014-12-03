@@ -28,6 +28,13 @@ class Offer
     private $id;
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="status", type="integer")
+     */
+    private $status;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
@@ -52,6 +59,22 @@ class Offer
      * @ORM\OneToMany(targetEntity="\GPI\OfferBundle\Entity\Document", mappedBy="offer", cascade={"persist"})
      */
     private $documents;
+
+    /**
+     * @param int $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+
+    /**
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
 
     /////////////////////////////////////////////////////////////////
     /**
@@ -89,6 +112,14 @@ class Offer
     public function getUpdatedBy()
     {
         return $this->updatedBy;
+    }
+
+    public function getMainPhoto(){
+        if(!$this->documents->isEmpty()){
+            return $this->documents->get(0)->getWebPath();
+        }else{
+            return "uploads/documents/default.jpg";
+        }
     }
 
     public function getContentChangedBy()

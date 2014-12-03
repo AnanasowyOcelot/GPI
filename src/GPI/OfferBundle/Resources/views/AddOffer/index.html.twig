@@ -1,8 +1,6 @@
-{% extends "::base.html.twig" %}
+{% extends "SonataUserBundle:Profile:action.html.twig" %}
+{% block sonata_profile_content %}
 
-{% block title %}GPIOfferBundle:AddOffer:index{% endblock %}
-
-{% block body %}
 <div class="headline"><h2>Dodaj nową aukcję</h2></div>
 
     {{ form(form) }}
