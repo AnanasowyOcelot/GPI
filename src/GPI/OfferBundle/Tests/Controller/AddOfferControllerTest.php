@@ -12,5 +12,4 @@ class AddOfferControllerTest extends WebTestCase
 
         //$crawler = $client->request('GET', '/');
     }
-
 }

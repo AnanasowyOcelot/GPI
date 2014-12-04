@@ -2,18 +2,17 @@
 
 namespace GPI\OfferBundle\Entity;
 
-
-class OfferFilterParams {
+class OfferFilterParams
+{
     private $name = null;
 
     private $category = null;
 
-//    function __construct(array $params = array())
-//    {
-//        $this->setCategory($params['category']);
-//        $this->setName($params['name']);
-//    }
-
+    //    function __construct(array $params = array())
+    //    {
+    //        $this->setCategory($params['category']);
+    //        $this->setName($params['name']);
+    //    }
 
     /**
      * @param mixed $categpory
@@ -46,6 +45,4 @@ class OfferFilterParams {
     {
         return $this->name;
     }
-
-
-} 
+}

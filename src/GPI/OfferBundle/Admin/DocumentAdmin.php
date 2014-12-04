@@ -10,7 +10,6 @@ use Sonata\AdminBundle\Show\ShowMapper;
 use Knp\Menu\ItemInterface as MenuItemInterface;
 use Sonata\AdminBundle\Admin\AdminInterface;
 
-
 class DocumentAdmin extends Admin
 {
     /**
@@ -21,7 +20,6 @@ class DocumentAdmin extends Admin
         $datagridMapper
             ->add('id')
             ->add('description');
-
     }
 
     /**
@@ -33,19 +31,27 @@ class DocumentAdmin extends Admin
             ->add('id')
             ->add('description')
             ->add('WebPath')
-            ->add('createdBy',null,array(
-                'sortable'=>true,
-                'sort_field_mapping'=> array('fieldName'=>'name'),
-                'sort_parent_association_mappings' => array(array('fieldName'=>'createdBy')
-                )))
-            ->add('_action', 'actions', array(
-                'actions' => array(
-                    'show' => array(),
-                    'edit' => array(),
-                    'delete' => array(),
-
+            ->add(
+                'createdBy',
+                null,
+                array(
+                    'sortable' => true,
+                    'sort_field_mapping' => array('fieldName' => 'name'),
+                    'sort_parent_association_mappings' => array(array('fieldName' => 'createdBy')
+                    )
                 )
-            ));
+            )
+            ->add(
+                '_action',
+                'actions',
+                array(
+                    'actions' => array(
+                        'show' => array(),
+                        'edit' => array(),
+                        'delete' => array(),
+                    )
+                )
+            );
     }
 
     /**
@@ -54,19 +60,29 @@ class DocumentAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id', null, array(
-                'read_only' => true
-            ))
+            ->add(
+                'id',
+                null,
+                array(
+                    'read_only' => true
+                )
+            )
             ->add('description', 'textarea')
-            ->add('WebPath', 'textarea', array(
-                'read_only' => true
-            ))
-            ->add('createdBy',null,array(
-                'read_only' => true,
-                'disabled' => true,
-
-            ));
-
+            ->add(
+                'WebPath',
+                'textarea',
+                array(
+                    'read_only' => true
+                )
+            )
+            ->add(
+                'createdBy',
+                null,
+                array(
+                    'read_only' => true,
+                    'disabled' => true,
+                )
+            );
     }
 
     /**
@@ -78,12 +94,16 @@ class DocumentAdmin extends Admin
             ->add('id')
             ->add('description')
             ->add('WebPath')
-            ->add('createdBy',null,array(
-                'sortable'=>true,
-                'sort_field_mapping'=> array('fieldName'=>'name'),
-                'sort_parent_association_mappings' => array(array('fieldName'=>'createdBy')
-                )));
-
+            ->add(
+                'createdBy',
+                null,
+                array(
+                    'sortable' => true,
+                    'sort_field_mapping' => array('fieldName' => 'name'),
+                    'sort_parent_association_mappings' => array(array('fieldName' => 'createdBy')
+                    )
+                )
+            );
     }
 
     protected function configureSideMenu(MenuItemInterface $menu, $action, AdminInterface $childAdmin = null)
@@ -95,34 +115,11 @@ class DocumentAdmin extends Admin
         $admin = $this->isChild() ? $this->getParent() : $this;
 
         $id = $admin->getRequest()->get('id');
-//        $offer = $this->getObject($id);
+        //        $offer = $this->getObject($id);
 
         $menu->addChild(
             $this->trans('Edycja', array(), 'SonataOfferBundle'),
             array('uri' => $admin->generateUrl('edit', array('id' => $id)))
         );
-
-//        $menu->addChild(
-//            $this->trans('offer.sidemenu.view_categories', array(), 'SonataOfferBundle'),
-//            array('uri' => $admin->generateUrl('gpi_offer.admin.offer.category.list', array('id' => $id)))
-//        );
-
-//        $menu->addChild(
-//            $this->trans('product.sidemenu.view_collections', array(), 'SonataProductBundle'),
-//            array('uri' => $admin->generateUrl('sonata.product.admin.product.collection.list', array('id' => $id)))
-//        );
-//
-//        $menu->addChild(
-//            $this->trans('product.sidemenu.view_deliveries', array(), 'SonataProductBundle'),
-//            array('uri' => $admin->generateUrl('sonata.product.admin.delivery.list', array('id' => $id)))
-//        );
-//
-//        if (!$offer->isVariation() && $this->getCode() == 'sonata.product.admin.product') {
-//            $menu->addChild(
-//                $this->trans('product.sidemenu.view_variations'),
-//                array('uri' => $admin->generateUrl('sonata.product.admin.product.variation.list', array('id' => $id)))
-//            );
-//
-//        }
     }
 }

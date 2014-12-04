@@ -11,14 +11,26 @@ module.exports = function(grunt) {
                 colors: true
             }
         },
+        phpcs: {
+            application: {
+                dir: [
+                    'src/GPI/OfferBundle/**/*.php'
+                ]
+            },
+            options: {
+                bin: 'bin/phpcs',
+                standard: 'PSR2'
+            }
+        },
         watch: {
             test: {
                 files: ['src/**/*.*'],
-                tasks: ['phpunit']
+                tasks: ['phpunit', 'phpcs']
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-phpunit');
+    grunt.loadNpmTasks('grunt-phpcs');
 };

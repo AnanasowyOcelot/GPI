@@ -6,7 +6,6 @@ use GPI\OfferBundle\Model\Offer;
 
 class OfferTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @param $date
      * @return \GPI\OfferBundle\Model\Calendar
@@ -23,7 +22,8 @@ class OfferTest extends \PHPUnit_Framework_TestCase
         return $calendar;
     }
 
-    private function getOffer($calendar = null){
+    private function getOffer($calendar = null)
+    {
         return new Offer(new \DateTime('2014-12-03 14:01'), $calendar);
     }
 
@@ -93,5 +93,4 @@ class OfferTest extends \PHPUnit_Framework_TestCase
 
         $this->assertFalse($offer->isActive());
     }
-
 }

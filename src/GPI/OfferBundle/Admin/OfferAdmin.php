@@ -10,7 +10,6 @@ use Sonata\AdminBundle\Show\ShowMapper;
 use Knp\Menu\ItemInterface as MenuItemInterface;
 use Sonata\AdminBundle\Admin\AdminInterface;
 
-
 class OfferAdmin extends Admin
 {
     /**
@@ -22,7 +21,6 @@ class OfferAdmin extends Admin
             ->add('id')
             ->add('name')
             ->add('content');
-
     }
 
     /**
@@ -33,21 +31,30 @@ class OfferAdmin extends Admin
         $listMapper
             ->add('id')
             ->add('name')
-            ->add('category',null,array(
-                'sortable'=>true,
-                'sort_field_mapping'=> array('fieldName'=>'name'),
-                'sort_parent_association_mappings' => array(array('fieldName'=>'category'))
-                ))
-            ->add('contentShort')
-//            ->add('numFiles')
-            ->add('_action', 'actions', array(
-                'actions' => array(
-                    'show' => array(),
-                    'edit' => array(),
-                    'delete' => array(),
-
+            ->add(
+                'category',
+                null,
+                array(
+                    'sortable' => true,
+                    'sort_field_mapping' => array('fieldName' => 'name'),
+                    'sort_parent_association_mappings' => array(
+                        array('fieldName' => 'category')
+                    )
                 )
-            ));
+            )
+            ->add('contentShort')
+            //            ->add('numFiles')
+            ->add(
+                '_action',
+                'actions',
+                array(
+                    'actions' => array(
+                        'show' => array(),
+                        'edit' => array(),
+                        'delete' => array(),
+                    )
+                )
+            );
     }
 
     /**
@@ -57,21 +64,33 @@ class OfferAdmin extends Admin
     {
         $formMapper
             ->add('name')
-            ->add('content', 'textarea', array(
-                'attr' => array('class' => 'ckeditor')
-            ))
-            ->add('category', 'sonata_type_model_list', array(), array())
-            ->add('documents', 'entity', array(
+            ->add(
+                'content',
+                'textarea',
+                array(
+                    'attr' => array('class' => 'ckeditor')
+                )
+            )
+            ->add(
+                'category',
+                'sonata_type_model_list',
+                array(),
+                array()
+            )
+            ->add(
+                'documents',
+                'entity',
+                array(
                     'class' => 'GPI\OfferBundle\Entity\Document',
                     'read_only' => true,
                     'multiple' => true,
-            ));
+                )
+            );
 
-//            ->add('webPath', 'url', array(
-//                'read_only'=>true
-//            ))
-//            ->add('documents', 'entity', array('class'=>'GPI\OfferBundle\Entity\Document')
-
+        //            ->add('webPath', 'url', array(
+        //                'read_only'=>true
+        //            ))
+        //            ->add('documents', 'entity', array('class'=>'GPI\OfferBundle\Entity\Document')
     }
 
     /**
@@ -85,7 +104,6 @@ class OfferAdmin extends Admin
             ->add('content')
             ->add('category', 'sonata_type_model_list', array(), array())
             ->add('documents', 'entity', array('class' => 'GPI\OfferBundle\Entity\Document'));
-
     }
 
     protected function configureSideMenu(MenuItemInterface $menu, $action, AdminInterface $childAdmin = null)
@@ -104,27 +122,33 @@ class OfferAdmin extends Admin
             array('uri' => $admin->generateUrl('edit', array('id' => $id)))
         );
 
-//        $menu->addChild(
-//            $this->trans('offer.sidemenu.view_categories', array(), 'SonataOfferBundle'),
-//            array('uri' => $admin->generateUrl('gpi_offer.admin.offer.category.list', array('id' => $id)))
-//        );
+        //        $menu->addChild(
+        //            $this->trans('offer.sidemenu.view_categories', array(), 'SonataOfferBundle'),
+        //            array('uri' => $admin->generateUrl('gpi_offer.admin.offer.category.list', array('id' => $id)))
+        //        );
 
-//        $menu->addChild(
-//            $this->trans('product.sidemenu.view_collections', array(), 'SonataProductBundle'),
-//            array('uri' => $admin->generateUrl('sonata.product.admin.product.collection.list', array('id' => $id)))
-//        );
-//
-//        $menu->addChild(
-//            $this->trans('product.sidemenu.view_deliveries', array(), 'SonataProductBundle'),
-//            array('uri' => $admin->generateUrl('sonata.product.admin.delivery.list', array('id' => $id)))
-//        );
-//
-//        if (!$offer->isVariation() && $this->getCode() == 'sonata.product.admin.product') {
-//            $menu->addChild(
-//                $this->trans('product.sidemenu.view_variations'),
-//                array('uri' => $admin->generateUrl('sonata.product.admin.product.variation.list', array('id' => $id)))
-//            );
-//
-//        }
+        //        $menu->addChild(
+        //            $this->trans('product.sidemenu.view_collections', array(), 'SonataProductBundle'),
+        //            array('uri' => $admin->generateUrl(
+        //                    'sonata.product.admin.product.collection.list',
+        //                    array('id' => $id))
+        //            )
+        //        );
+        //
+        //        $menu->addChild(
+        //            $this->trans('product.sidemenu.view_deliveries', array(), 'SonataProductBundle'),
+        //            array('uri' => $admin->generateUrl('sonata.product.admin.delivery.list', array('id' => $id)))
+        //        );
+        //
+        //        if (!$offer->isVariation() && $this->getCode() == 'sonata.product.admin.product') {
+        //            $menu->addChild(
+        //                $this->trans('product.sidemenu.view_variations'),
+        //                array('uri' => $admin->generateUrl(
+        //                        'sonata.product.admin.product.variation.list',
+        //                        array('id' => $id))
+        //                )
+        //            );
+        //
+        //        }
     }
 }

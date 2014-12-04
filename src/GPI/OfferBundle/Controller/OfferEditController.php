@@ -7,11 +7,8 @@ use GPI\OfferBundle\Form\OfferType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-
 class OfferEditController extends Controller
 {
-
-
     public function editAction($id, Request $request)
     {
         /**
@@ -37,9 +34,8 @@ class OfferEditController extends Controller
             $em->persist($editOffer);
             $em->flush();
             return $this->redirect($this->generateUrl('sonata_user_profile_show'));
-
         }
 
         return $this->render('GPIOfferBundle:EditOffer:index.html.twig', array('form' => $form->createView()));
     }
-} 
+}

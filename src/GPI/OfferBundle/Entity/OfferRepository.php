@@ -32,16 +32,15 @@ class OfferRepository extends EntityRepository
             $offers = $queryBuilder->getQuery()->getResult();
         }
 
-
-//        if ($name != null) {
-//            $queryBuilder = $this->createQueryBuilder('o')->where('o.name LIKE :pac');
-//            $queryBuilder->setParameter('pac', $name);
-//            $query = $queryBuilder->getQuery();
-//
-//            $offers = $query->getResult();
-//        }else{
-//            $offers = $this->findAll();
-//        }
+        //        if ($name != null) {
+        //            $queryBuilder = $this->createQueryBuilder('o')->where('o.name LIKE :pac');
+        //            $queryBuilder->setParameter('pac', $name);
+        //            $query = $queryBuilder->getQuery();
+        //
+        //            $offers = $query->getResult();
+        //        }else{
+        //            $offers = $this->findAll();
+        //        }
         return $offers;
     }
 }

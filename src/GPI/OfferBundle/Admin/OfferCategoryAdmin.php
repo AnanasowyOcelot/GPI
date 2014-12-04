@@ -1,14 +1,5 @@
 <?php
 
-/*
- * This file is part of the Sonata package.
- *
- * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
 namespace GPI\OfferBundle\Admin;
 
 use Sonata\AdminBundle\Admin\Admin;
@@ -28,7 +19,11 @@ class OfferCategoryAdmin extends Admin
      */
     protected function configureSideMenu(MenuItemInterface $menu, $action, AdminInterface $childAdmin = null)
     {
-        if (!$childAdmin && !in_array($action, array('edit'))) {
+        $correctAction = in_array(
+            $action,
+            array('edit')
+        );
+        if (!$childAdmin && !$correctAction) {
             return;
         }
 
@@ -37,8 +32,17 @@ class OfferCategoryAdmin extends Admin
         $id = $admin->getRequest()->get('id');
 
         $menu->addChild(
-            $this->trans('offer.sidemenu.link_offer_edit', array(), 'SonataOfferBundle'),
-            array('uri' => $admin->generateUrl('edit', array('id' => $id)))
+            $this->trans(
+                'offer.sidemenu.link_offer_edit',
+                array(),
+                'SonataOfferBundle'
+            ),
+            array(
+                'uri' => $admin->generateUrl(
+                    'edit',
+                    array('id' => $id)
+                )
+            )
         );
     }
 
@@ -50,23 +54,26 @@ class OfferCategoryAdmin extends Admin
         $this->setTranslationDomain('SonataOfferBundle');
     }
 
-
     /**
      * {@inheritdoc}
      */
     public function configureFormFields(FormMapper $formMapper)
     {
         if (!$this->isChild()) {
-            $formMapper->add('offer', 'sonata_type_model_list', array(), array(
-                'admin_code' => 'gpi_offer.admin.offer'
-            ));
+            $formMapper->add(
+                'offer',
+                'sonata_type_model_list',
+                array(),
+                array(
+                    'admin_code' => 'gpi_offer.admin.offer'
+                )
+            );
         }
 
         $formMapper
             ->add('category')
             ->add('main')
-            ->add('enabled')
-        ;
+            ->add('enabled');
     }
 
     /**
@@ -77,14 +84,17 @@ class OfferCategoryAdmin extends Admin
         if (!$this->isChild()) {
             $list
                 ->addIdentifier('id')
-                ->addIdentifier('offer', null, array(
-                    'admin_code' => 'gpi_offer.admin.offer'
-                ));
+                ->addIdentifier(
+                    'offer',
+                    null,
+                    array(
+                        'admin_code' => 'gpi_offer.admin.offer'
+                    )
+                );
         }
 
         $list
-            ->addIdentifier('category')
-        ;
+            ->addIdentifier('category');
     }
 
     /**
@@ -96,8 +106,7 @@ class OfferCategoryAdmin extends Admin
     {
         if (!$this->isChild()) {
             $filter
-                ->add('category')
-            ;
+                ->add('category');
         }
     }
 }

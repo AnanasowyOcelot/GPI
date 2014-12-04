@@ -68,7 +68,6 @@ class Offer extends \GPI\OfferBundle\Model\Offer
         $this->status = $status;
     }
 
-
     /**
      * @var User $createdBy
      *
@@ -114,10 +113,9 @@ class Offer extends \GPI\OfferBundle\Model\Offer
         $this->category = $categories;
     }
 
-
     public function __get($param)
     {
-        if(property_exists($this, $param)){
+        if (property_exists($this, $param)) {
             return $this->$param;
         }
         throw new \InvalidArgumentException();
