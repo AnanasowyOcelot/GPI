@@ -1,7 +1,13 @@
 {% extends "SonataUserBundle:Profile:action.html.twig" %}
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
 {% block sonata_profile_content %}
 
 <div class="headline"><h2>Dodaj nową aukcję</h2></div>
 
-    {{ form(form) }}
+    {{ form_start(form) }}
+
+    {{ form_end(form) }}
+
 {% endblock %}
+
+

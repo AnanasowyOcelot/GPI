@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Validator\Constraints AS Assert;
 use Application\Sonata\UserBundle\Entity\User as User;
 use Gedmo\Mapping\Annotation as Gedmo;
+use GPI\OfferBundle\Model\Document as BaseDocument;
 
 /**
  * Document
@@ -14,7 +15,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="GPI\OfferBundle\Entity\DocumentRepository")
  */
-class Document
+class Document extends BaseDocument
 {
     /**
      * @var integer
@@ -23,18 +24,19 @@ class Document
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="description", type="string", length=255, nullable=true)
      */
-    private $description;
+    protected $description;
+
     /**
      * @ORM\ManyToOne(targetEntity="\GPI\OfferBundle\Entity\Offer", inversedBy="documents")
      */
-    private $offer;
+    protected $offer;
     /////////////////////////////////////////////////////////////////
     /**
      * @var User $createdBy
@@ -43,7 +45,7 @@ class Document
      * @ORM\ManyToOne(targetEntity="Application\Sonata\UserBundle\Entity\User")
      * @ORM\JoinColumn(name="created_by", referencedColumnName="id")
      */
-    private $createdBy;
+    protected $createdBy;
 
     /**
      * @var User $updatedBy
@@ -52,7 +54,7 @@ class Document
      * @ORM\ManyToOne(targetEntity="Application\Sonata\UserBundle\Entity\User")
      * @ORM\JoinColumn(name="updated_by", referencedColumnName="id")
      */
-    private $updatedBy;
+    protected $updatedBy;
 
     /**
      * @var User $contentChangedBy
@@ -61,7 +63,15 @@ class Document
      * @ORM\ManyToOne(targetEntity="Application\Sonata\UserBundle\Entity\User")
      * @ORM\JoinColumn(name="content_changed_by", referencedColumnName="id")
      */
-    private $contentChangedBy;
+    protected $contentChangedBy;
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
     public function getCreatedBy()
     {
@@ -102,19 +112,10 @@ class Document
         $this->description = $description;
     }
 
-    /**
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
     public function __toString()
     {
-        return $this->getDescription()." (".$this->getWebPath().")";
+        return $this->getDescription() . " (" . $this->getWebPath() . ")";
     }
-
 
     /**
      * Get id
@@ -162,7 +163,7 @@ class Document
     /**
      * @Assert\File(maxSize="6000000")
      */
-    private $file;
+    protected $file;
 
     /**
      * Sets file.

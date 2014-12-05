@@ -1,9 +1,12 @@
-{% extends "::base.html.twig" %}
+{% extends "SonataUserBundle:Profile:action.html.twig" %}
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
 
-{% block title %}GPIOfferBundle:EditOffer:index{% endblock %}
+{% block sonata_profile_content %}
 
-{% block body %}
-    <h1>Welcome to the EditOffer:index page</h1>
+    <div class="headline"><h2>Edytuj</h2></div>
 
-    {{ form(form) }}
+    {{ form_start(form) }}
+
+    {{ form_end(form) }}
+
 {% endblock %}

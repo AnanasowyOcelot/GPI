@@ -18,8 +18,6 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 class CategoriesBlockService extends BaseBlockService
 {
-
-
     /**
      * @var CategoryRepository
      */
@@ -75,7 +73,9 @@ class CategoriesBlockService extends BaseBlockService
     }
 
 
-
+    /**
+     * @var \Symfony\Component\HttpFoundation\Request
+     */
     protected $request;
 
     public function setRequest(RequestStack $request_stack)
@@ -87,15 +87,14 @@ class CategoriesBlockService extends BaseBlockService
     {
 
         $settings = $blockContext->getSettings();
-
-
+        $categoryToBoldSlug = $this->request->get('categorySlug');
         $categories = $this->catRepo->offerCategoryTree();
-
 
         return $this->renderResponse($blockContext->getTemplate(), array(
             'categories' => $categories,
             'block' => $blockContext->getBlock(),
-            'settings' => $settings
+            'settings' => $settings,
+            'slug' => $categoryToBoldSlug
         ), $response);
     }
 

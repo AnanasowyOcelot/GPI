@@ -105,14 +105,6 @@ class Offer extends \GPI\OfferBundle\Model\Offer
         return $this->id;
     }
 
-    /**
-     * @param mixed $categories
-     */
-    public function setCategory($categories)
-    {
-        $this->category = $categories;
-    }
-
     public function __get($param)
     {
         if (property_exists($this, $param)) {

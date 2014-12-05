@@ -11,8 +11,8 @@ class OfferType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('content')
+            ->add('name', 'text')
+            ->add('content', 'textarea')
             ->add(
                 'category',
                 'entity',
@@ -27,9 +27,6 @@ class OfferType extends AbstractType
                     'type' => 'document',
                     'allow_add' => true,
                     'allow_delete' => true,
-                    'prototype' => true,
-                    'by_reference' => false,
-                    'required' => false
                 )
             )
             ->add('submit', 'submit');
@@ -44,7 +41,7 @@ class OfferType extends AbstractType
     {
         $resolver->setDefaults(
             array(
-                'data_class' => 'GPI\OfferBundle\Entity\Offer',
+                'data_class' => 'GPI\OfferBundle\Model\Command\AddNewOfferCommand',
             )
         );
     }

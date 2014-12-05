@@ -1,10 +1,15 @@
-{% macro menu_categories(categories) %}
+{% macro menu_categories(categories, slug) %}
     {% for category in categories %}
         <li>
+            {% if category.slug != slug %}
             <a href="{{ path('gpi_offer_offers_by_cetegory', {'categorySlug': category.slug}) }}">{{ category.name }}</a>
+            {% else %}
+               <strong> <a href="{{ path('gpi_offer_offers_by_cetegory', {'categorySlug': category.slug}) }}">{{ category.name }}</a></strong>
+
+            {% endif %}
             {% if category.children %}
                 <ul>
-                    {{ _self.menu_categories(category.children) }}
+                    {{ _self.menu_categories(category.children, slug) }}
                 </ul>
             {% endif %}
         </li>
@@ -15,6 +20,6 @@
     <div class="headline"><h2>{{ settings.title }}</h2></div>
 
     <ul class="main-menu">
-        {{ _self.menu_categories(categories) }}
+        {{ _self.menu_categories(categories, slug) }}
     </ul>
 {% endblock %}

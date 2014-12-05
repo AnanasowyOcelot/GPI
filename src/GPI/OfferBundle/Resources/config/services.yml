@@ -55,6 +55,10 @@ services:
         class: GPI\OfferBundle\Form\OfferType
         tags:
             - { name: form.type, alias: offer }
+    gpi_offer.form.offer_update:
+        class: GPI\OfferBundle\Form\UpdateOfferType
+        tags:
+            - { name: form.type, alias: offer_update }
     gpi_offer.form.document:
         class: GPI\OfferBundle\Form\DocumentType
         tags:

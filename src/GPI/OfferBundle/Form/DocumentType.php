@@ -16,9 +16,6 @@ class DocumentType extends AbstractType
                 'file',
                 'file'
             );
-            // TODO: kiedys chcialem to odkomentowac (moze) - Lukasz
-            //->add('file', 'file', array('multiple'=>true));
-            //->add('submit', 'submit');
     }
 
     public function getName()

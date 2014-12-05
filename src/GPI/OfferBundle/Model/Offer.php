@@ -2,7 +2,8 @@
 
 namespace GPI\OfferBundle\Model;
 
-use \GPI\OfferBundle\Entity\Document as Document;
+use Application\Sonata\ClassificationBundle\Entity\Category;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class Offer
 {
@@ -16,17 +17,24 @@ class Offer
     private $calendar;
     protected $category;
 
-    public function __construct(\DateTime $endTime, Calendar $calendar = null)
+    public function __construct(\DateTime $endTime, $name, $content, $category, Calendar $calendar = null)
     {
         $this->status = OfferStatus::ACTIVE;
 
         $this->setEndTime($endTime);
-
+        $this->setName($name);
+        $this->setContent($content);
+        $this->setCategory($category);
         if ($calendar !== null) {
             $this->calendar = $calendar;
         } else {
             $this->calendar = new Calendar();
         }
+    }
+
+    protected function setCategory(Category $category)
+    {
+        $this->category = $category;
     }
 
     public function setEndTime(\DateTime $endTime)
@@ -73,8 +81,13 @@ class Offer
 
     public function setName($name)
     {
+        if ($name === null) {
+            throw new \InvalidArgumentException('Offer name cannot be null.');
+        }
+        if ($name === '') {
+            throw new \InvalidArgumentException('Offer name cannot be empty.');
+        }
         $this->name = $name;
-
         return $this;
     }
 
@@ -83,7 +96,7 @@ class Offer
         if (!$this->getDocuments()->isEmpty()) {
             return $this->getDocuments()->get(0)->getWebPath();
         } else {
-            return "uploads/documents/default.jpg";
+            return "/uploads/documents/default.jpg";
         }
     }
 
@@ -110,17 +123,15 @@ class Offer
         return $this->name;
     }
 
-    /**
-     * Set content
-     *
-     * @param string $content
-     * @return Offer
-     */
     public function setContent($content)
     {
+        if ($content === null) {
+            throw new \InvalidArgumentException('Offer content cannot be null.');
+        }
+        if ($content === '') {
+            throw new \InvalidArgumentException('Offer content cannot be empty.');
+        }
         $this->content = $content;
-
-        return $this;
     }
 
     /**
