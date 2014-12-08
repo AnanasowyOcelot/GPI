@@ -135,6 +135,8 @@ class AppKernel extends Kernel
 
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new GPI\LayoutBundle\GPILayoutBundle(),
+
+            new Bmatzner\FontAwesomeBundle\BmatznerFontAwesomeBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

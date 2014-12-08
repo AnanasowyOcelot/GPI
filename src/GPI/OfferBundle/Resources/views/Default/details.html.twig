@@ -1,28 +1,40 @@
-<div class="block-newsletter col-sm-12 well">Tytuł: {{ offer.name }}</div>
-<div class="block-newsletter col-sm-12 well">Treść: {{ offer.content|raw }}</div>
-<div class="block-newsletter col-sm-12 well">Kategoria: {{ offer.category }}</div>
-
 <div class="container content">
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-9">
+            <div class="headline"><h2>{{ offer.name }}</h2></div>
+            <p>{{ offer.content|raw }}</p>
 
-    <div class="col-md-12">
+            <div class="block-newsletter col-sm-12 well">Kategoria: {{ offer.category }}</div>
 
-        <div class="owl-carousel-v1 owl-work-v1">
+            <div class="container content">
 
-            <div class="owl-recent-works-v1">
-                {% for ducument in offer.documents %}
+                <div class="col-md-12">
 
-                <div class="item">
-                    {#<a href="{{ path('gpi_offer_details', {'id': offer.id }) }}">#}
-                    <em class="overflow-hidden">
-                        <img class="img-responsive" src="/{{ ducument.getWebPath() }}" alt="">
-                    </em>
+                    <div class="owl-carousel-v1 owl-work-v1">
+
+                        <div class="owl-recent-works-v1">
+                            {% for ducument in offer.documents %}
+
+
+                                <div class="item">
+                                    <a href="/{{ ducument.getWebPath() }}" target="_blank">
+                                        <em class="overflow-hidden">
+                                            <img class="img-responsive" src="/{{ ducument.getWebPath() }}" alt="">
+                                        </em>
                                 <span>
                                     <strong>{{ ducument.description }}</strong>
+                                    {#<i>Anim pariatur cliche reprehenderit</i>#}
                                 </span>
-                    {#</a>#}
+                                    </a>
+                                </div>
+
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
             </div>
-            {% endfor %}
         </div>
     </div>
 </div>

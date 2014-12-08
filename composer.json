@@ -29,7 +29,7 @@
         "jms/di-extra-bundle": "~1.4",
         "jms/serializer-bundle": "~0.11",
 
-        "doctrine/orm": "~2.4",
+        "doctrine/orm": "~2.4.0",
         "doctrine/doctrine-bundle": "~1.2",
         "doctrine/doctrine-migrations-bundle": "~2.0@dev",
         "doctrine/migrations": "~1.0@dev",
@@ -81,7 +81,7 @@
 
         "incenteev/composer-parameter-handler": "~2.0",
 
-        "bmatzner/fontawesome-bundle": "4.2.0"
+        "bmatzner/fontawesome-bundle": "~4.2"
     },
 
     "require-dev": {
