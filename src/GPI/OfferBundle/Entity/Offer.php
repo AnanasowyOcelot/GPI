@@ -58,7 +58,16 @@ class Offer extends \GPI\OfferBundle\Model\Offer
      */
     protected $documents;
 
+
     protected $endTime;
+
+    /**
+     * @return mixed
+     */
+    public function getEndTime()
+    {
+        return $this->endTime;
+    }
 
     /**
      * @param int $status
@@ -111,5 +120,17 @@ class Offer extends \GPI\OfferBundle\Model\Offer
             return $this->$param;
         }
         throw new \InvalidArgumentException();
+    }
+
+    /**
+     * Get content short
+     *
+     * @return string
+     */
+    public function getContentShort()
+    {
+        $maxLength = 30;
+        $string = strip_tags($this->content);
+        return (strlen($string) > $maxLength) ? substr($string, 0, $maxLength) . '...' : $string;
     }
 }

@@ -17,29 +17,64 @@
 
     {# table body #}
     {% for offer in pagination %}
-        <div class="container content">
+        <!--Table Search v2-->
+        <div class="table-search-v2 margin-bottom-20">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Miniaturka</th>
+                        <th class="hidden-sm">Treść</th>
+                        <th>Status</th>
+                        <th>Kontakt</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <img class="rounded-x" src="{{ offer.getMainPhoto() }}" alt="">
+                        </td>
+                        <td class="td-width">
+                            <h3><a href="{{ path('gpi_offer_details', {'id': offer.id }) }}">{{ offer.name }}</a></h3>
+                            <p>{{ offer.getContentShort() }}</p>
+                            <small class="hex">Zakończenie {{ offer.getEndTime() }}</small>
+                        </td>
+                        <td>
+                            <span class="label label-success">Aktywna</span>
+                        </td>
+                        <td>
+                            <ul class="list-inline s-icons">
+                                <li>
+                                    <a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Facebook" href="/">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Twitter" href="/">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Dropbox" href="/">
+                                        <i class="fa fa-dropbox"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Linkedin" href="/">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <span><a href="#">info@example.com</a></span>
+                            <span><a href="#">www.htmlstream.com</a></span>
+                        </td>
+                    </tr>
 
-            <div class="col-md-12">
-
-                <div class="owl-carousel-v1 owl-work-v1">
-
-                    <div class="owl-recent-works-v1">
-
-                        <div class="item">
-                            <a href="{{ path('gpi_offer_details', {'id': offer.id }) }}">
-                                <em class="overflow-hidden">
-                                    <img class="img-responsive" src="{{ offer.getMainPhoto() }}" alt="">
-                                </em>
-                                <span>
-                                    <strong>{{ offer.name }}</strong>
-                                    <i>Miejsce na podtytuł</i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                    </tbody>
+                </table>
             </div>
         </div>
+        <!--End Table Search v2-->
 
     {% endfor %}
     {# display navigation #}
@@ -48,3 +83,7 @@
     </div>
 
 {% endblock %}
+
+
+
+
