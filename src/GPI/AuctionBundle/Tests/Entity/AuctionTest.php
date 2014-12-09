@@ -9,11 +9,11 @@ class AuctionTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @param $date
-     * @return \GPI\AuctionBundle\Model\Calendar
+     * @return \GPI\CoreBundle\Model\Calendar\Calendar
      */
     private function getCalendar($date = '2000-02-02 12:00')
     {
-        $calendar = $this->getMockBuilder('\GPI\AuctionBundle\Model\Calendar')
+        $calendar = $this->getMockBuilder('\GPI\CoreBundle\Model\Calendar\Calendar')
             ->setMethods(array('time'))
             ->getMock();
 

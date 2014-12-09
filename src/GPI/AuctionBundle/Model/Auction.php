@@ -3,6 +3,7 @@
 namespace GPI\AuctionBundle\Model;
 
 use Application\Sonata\ClassificationBundle\Entity\Category;
+use GPI\CoreBundle\Model\Calendar\Calendar;
 use Symfony\Component\Validator\Constraints as Assert;
 
 class Auction

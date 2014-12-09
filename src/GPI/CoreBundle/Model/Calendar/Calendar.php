@@ -1,6 +1,6 @@
 <?php
 
-namespace GPI\AuctionBundle\Model;
+namespace GPI\CoreBundle\Model\Calendar;
 
 class Calendar
 {

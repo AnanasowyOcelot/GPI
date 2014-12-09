@@ -132,6 +132,7 @@ class AppKernel extends Kernel
 
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
             new GPI\AuctionBundle\GPIAuctionBundle(),
+            new GPI\CoreBundle\GPICoreBundle(),
 
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new GPI\LayoutBundle\GPILayoutBundle(),

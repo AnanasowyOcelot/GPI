@@ -3,7 +3,7 @@
 namespace GPI\AuctionBundle\Model\Command;
 
 use Symfony\Component\Validator\Constraints as Assert;
-use GPI\AuctionBundle\Model\Document;
+use GPI\CoreBundle\Model\Document\Document;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
 
 class UpdateAuctionCommand

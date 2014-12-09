@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Validator\Constraints AS Assert;
 use Application\Sonata\UserBundle\Entity\User as User;
 use Gedmo\Mapping\Annotation as Gedmo;
-use GPI\AuctionBundle\Model\Document as BaseDocument;
+use GPI\CoreBundle\Model\Document\Document as BaseDocument;
 
 /**
  * Document
