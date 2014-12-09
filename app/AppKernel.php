@@ -131,7 +131,7 @@ class AppKernel extends Kernel
             new Application\Sonata\TimelineBundle\ApplicationSonataTimelineBundle(), // easy extends integration
 
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
-            new GPI\OfferBundle\GPIOfferBundle(),
+            new GPI\AuctionBundle\GPIAuctionBundle(),
 
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new GPI\LayoutBundle\GPILayoutBundle(),

@@ -93,5 +93,5 @@ sonata_block:
         sonata.seo.block.breadcrumb.homepage:
 
         # Custom
-        gpi.block.service.offer:
+        gpi.block.service.auction:
         gpi.block.service.categories:

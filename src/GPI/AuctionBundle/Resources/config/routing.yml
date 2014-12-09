@@ -1,0 +1,15 @@
+gpi_auction_details:
+    path:     /details/{id}
+    defaults: { _controller: GPIAuctionBundle:AuctionDetails:index }
+
+gpi_auction_add:
+    path:     /auction/add
+    defaults: { _controller: GPIAuctionBundle:AddAuction:index }
+
+gpi_auction_edit:
+    path:     /auction/edit/{id}
+    defaults: { _controller: GPIAuctionBundle:AuctionEdit:edit }
+
+gpi_auction_auctions_by_cetegory:
+    path:     /category/{categorySlug}
+    defaults: { _controller: GPIAuctionBundle:AuctionsByCategory:index }

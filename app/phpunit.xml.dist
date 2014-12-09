@@ -20,7 +20,7 @@
             <directory>../src/*/Bundle/*Bundle/Tests</directory>
         </testsuite>
         <testsuite name="The project's test suite">
-            <directory>../src/GPI/OfferBundle/Tests</directory>
+            <directory>../src/GPI/AuctionBundle/Tests</directory>
         </testsuite>
     </testsuites>
     <php>

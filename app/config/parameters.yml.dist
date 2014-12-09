@@ -35,4 +35,4 @@ parameters:
     # Sonata Page Options
     sonata_page.varnish.command: if [ ! -r "/etc/varnish/secret" ]; then echo "VALID ERROR :/"; else varnishadm -S /etc/varnish/secret -T 127.0.0.1:6082 {{ COMMAND }} "{{ EXPRESSION }}"; fi; # you need to adapt this line to work with your configuration
 
-    gpi_offer.root_category_id: 305
+    gpi_auction.root_category_id: 305

@@ -37,7 +37,7 @@ source code.  And you must show them these terms so they know their
 rights.
 
   We protect your rights with two steps: (1) copyright the software, and
-(2) offer you this license which gives you legal permission to copy,
+(2) auction you this license which gives you legal permission to copy,
 distribute and/or modify the software.
 
   Also, for each author's protection and ours, we want to make certain
@@ -85,7 +85,7 @@ and give any other recipients of the Program a copy of this License
 along with the Program.
 
 You may charge a fee for the physical act of transferring a copy, and
-you may at your option offer warranty protection in exchange for a fee.
+you may at your option auction warranty protection in exchange for a fee.
 
   2. You may modify your copy or copies of the Program or any portion
 of it, thus forming a work based on the Program, and copy and
@@ -139,18 +139,18 @@ Sections 1 and 2 above provided that you also do one of the following:
     source code, which must be distributed under the terms of Sections
     1 and 2 above on a medium customarily used for software interchange; or,
 
-    b) Accompany it with a written offer, valid for at least three
+    b) Accompany it with a written auction, valid for at least three
     years, to give any third party, for a charge no more than your
     cost of physically performing source distribution, a complete
     machine-readable copy of the corresponding source code, to be
     distributed under the terms of Sections 1 and 2 above on a medium
     customarily used for software interchange; or,
 
-    c) Accompany it with the information you received as to the offer
+    c) Accompany it with the information you received as to the auction
     to distribute corresponding source code.  (This alternative is
     allowed only for noncommercial distribution and only if you
     received the program in object code or executable form with such
-    an offer, in accord with Subsection b above.)
+    an auction, in accord with Subsection b above.)
 
 The source code for a work means the preferred form of the work for
 making modifications to it.  For an executable work, complete source
@@ -163,8 +163,8 @@ form) with the major components (compiler, kernel, and so on) of the
 operating system on which the executable runs, unless that component
 itself accompanies the executable.
 
-If distribution of executable or object code is made by offering
-access to copy from a designated place, then offering equivalent
+If distribution of executable or object code is made by auctioning
+access to copy from a designated place, then auctioning equivalent
 access to copy the source code from the same place counts as
 distribution of the source code, even though third parties are not
 compelled to copy the source along with the object code.

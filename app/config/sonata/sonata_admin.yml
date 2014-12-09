@@ -40,7 +40,7 @@ sonata_admin:
 #            - { position: left, type: sonata.admin.block.admin_list }
 #            - { position: right, type: sonata.admin_doctrine_orm.block.audit}
             - { position: left, type: sonata.block.service.text, settings: { content: "<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'>Welcome!</h3></div><div class='panel-body'>You can customize this dashboard by editing the <code>sonata_admin.yml</code> file. The current dashboard presents the recent items from the NewsBundle and a non-statistical e-commerce information.</div></div>"} }
-#            - { position: left, type: gpi.block.service.offer, settings: { title: "uuuuuuuuuuuuuuu"} }
+#            - { position: left, type: gpi.block.service.auction, settings: { title: "uuuuuuuuuuuuuuu"} }
             # This block is disabled for now as the bundle generates an exception with composite key
 #            - { position: left, type: sonata.timeline.block.timeline, settings: { context: SONATA_ADMIN, max_per_page: 25 }}
             - { position: left, type: sonata.news.block.recent_posts, settings: { title: Recent Posts, number: 7, mode: admin }}
@@ -89,18 +89,18 @@ sonata_admin:
                     - sonata.page.admin.page
                     - sonata.page.admin.site
 
-            sonata.admin.group.offer_manager:
-                label:           Offer Manager
-                label_catalogue: SonataOfferBundle
+            sonata.admin.group.auction_manager:
+                label:           Auction Manager
+                label_catalogue: SonataAuctionBundle
                 icon:            '<i class="fa fa-puzzle-piece"></i>'
                 items:
-                    - gpi_offer.admin.offer
+                    - gpi_auction.admin.auction
             sonata.admin.group.document_manager:
                 label:           Documents Manager
-                label_catalogue: SonataOfferBundle
+                label_catalogue: SonataAuctionBundle
                 icon:            '<i class="fa fa-puzzle-piece"></i>'
                 items:
-                    - gpi_offer.admin.document
+                    - gpi_auction.admin.document
 
 
             sonata.admin.group.administration:

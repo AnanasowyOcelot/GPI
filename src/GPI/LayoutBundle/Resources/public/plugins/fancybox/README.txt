@@ -1,7 +1,7 @@
 fancyBox
 ========
 
-fancyBox is a tool that offers a nice and elegant way to add zooming functionality for images, html content and multi-media on your webpages.
+fancyBox is a tool that auctions a nice and elegant way to add zooming functionality for images, html content and multi-media on your webpages.
 
 More information and examples: http://www.fancyapps.com/fancybox/
 

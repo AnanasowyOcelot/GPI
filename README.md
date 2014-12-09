@@ -10,6 +10,9 @@ sometimes problems with downloading with composer classes:
 
 npm install
 
+php app/console sonata:page:update-core-routes --site=all
+php app/console sonata:page:create-snapshots --site=all
+
 Run
 ---
 
@@ -22,7 +25,7 @@ Tests
 
 To run the test suites, you can run the command:
 
-    phpunit -c app --bootstrap app\tests.bootstrap.php src\GPI\OfferBundle
+    phpunit -c app --bootstrap app\tests.bootstrap.php src\GPI\AuctionBundle
 
 To run continuous testing:
 

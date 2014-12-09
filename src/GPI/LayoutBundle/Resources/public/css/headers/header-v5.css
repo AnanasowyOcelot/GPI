@@ -959,8 +959,8 @@
     border-bottom: none;
 }
 
-/*Product Offers*/
-.header-v5 img.product-offers:hover {
+/*Product Auctions*/
+.header-v5 img.product-auctions:hover {
   opacity: 0.9;
 }
 

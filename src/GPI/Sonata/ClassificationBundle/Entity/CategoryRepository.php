@@ -7,11 +7,11 @@ use Doctrine\ORM\EntityRepository;
 
 class CategoryRepository extends EntityRepository
 {
-    private $offerRootCategoryId;
+    private $auctionRootCategoryId;
 
-    public function setOfferRootCategoryId($id)
+    public function setAuctionRootCategoryId($id)
     {
-        $this->offerRootCategoryId = $id;
+        $this->auctionRootCategoryId = $id;
     }
 
     public function findByParentId($id)
@@ -21,11 +21,11 @@ class CategoryRepository extends EntityRepository
         return $categories;
     }
 
-    public function offerCategoryTree($parentCatId = null)
+    public function auctionCategoryTree($parentCatId = null)
     {
         $parentId = $parentCatId;
         if ($parentCatId === null) {
-            $parentId = $this->offerRootCategoryId;
+            $parentId = $this->auctionRootCategoryId;
         }
 
         $categories = $this->findByParentId($parentId);
@@ -34,7 +34,7 @@ class CategoryRepository extends EntityRepository
         foreach ($categories as $category) {
             $tree[] = array(
                 'name' => $category->getName(),
-                'children' => $this->offerCategoryTree($category->getId()),
+                'children' => $this->auctionCategoryTree($category->getId()),
                 'slug' => $category->getSlug()
             );
         }

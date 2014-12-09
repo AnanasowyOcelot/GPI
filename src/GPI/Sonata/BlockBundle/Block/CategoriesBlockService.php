@@ -88,7 +88,7 @@ class CategoriesBlockService extends BaseBlockService
 
         $settings = $blockContext->getSettings();
         $categoryToBoldSlug = $this->request->get('categorySlug');
-        $categories = $this->catRepo->offerCategoryTree();
+        $categories = $this->catRepo->auctionCategoryTree();
 
         return $this->renderResponse($blockContext->getTemplate(), array(
             'categories' => $categories,

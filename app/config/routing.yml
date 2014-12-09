@@ -1,5 +1,5 @@
-gpi_offer:
-    resource: "@GPIOfferBundle/Resources/config/routing.yml"
+gpi_auction:
+    resource: "@GPIAuctionBundle/Resources/config/routing.yml"
     prefix:   /
 
 # Internal routing configuration to handle ESI

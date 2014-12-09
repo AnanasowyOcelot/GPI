@@ -4,7 +4,7 @@
 
 namespace Application\Sonata\UserBundle\Controller;
 
-use GPI\OfferBundle\Entity\OfferRepository;
+use GPI\AuctionBundle\Entity\AuctionRepository;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use Symfony\Component\HttpFoundation\Response;
 use FOS\UserBundle\Model\UserInterface;
@@ -33,12 +33,12 @@ class ProfileFOSUser1Controller extends BaseController
         }
 
 
-        $offers = $this->get('gpi_offer.offer_repository')->findBy(array('createdBy'=>$this->getUser()));
+        $auctions = $this->get('gpi_auction.auction_repository')->findBy(array('createdBy'=>$this->getUser()));
 
         return $this->render('SonataUserBundle:Profile:show.html.twig', array(
             'user'   => $user,
             'blocks' => $this->container->getParameter('sonata.user.configuration.profile_blocks'),
-            'offers'=>$offers
+            'auctions'=>$auctions
         ));
     }
 }

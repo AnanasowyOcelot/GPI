@@ -2,7 +2,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         phpunit: {
             classes: {
-                dir: 'src/GPI/OfferBundle/'
+                dir: 'src/GPI/AuctionBundle/'
             },
             options: {
                 bin: 'bin/phpunit',
@@ -14,7 +14,7 @@ module.exports = function(grunt) {
         phpcs: {
             application: {
                 dir: [
-                    'src/GPI/OfferBundle/**/*.php'
+                    'src/GPI/AuctionBundle/**/*.php'
                 ]
             },
             options: {
