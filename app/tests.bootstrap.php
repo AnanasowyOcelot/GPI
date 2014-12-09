@@ -7,4 +7,7 @@ if (isset($_ENV['BOOTSTRAP_CLEAR_CACHE_ENV'])) {
     ));
 }
 
+$_SERVER['env'] = 'test';
+$_SERVER['KERNEL_DIR'] = 'app';
+
 require __DIR__ . '/bootstrap.php.cache';

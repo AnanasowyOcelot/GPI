@@ -14,7 +14,8 @@ module.exports = function(grunt) {
         phpcs: {
             application: {
                 dir: [
-                    'src/GPI/AuctionBundle/**/*.php'
+                    'src/GPI/AuctionBundle/**/*.php',
+                    'src/GPI/CoreBundle/**/*.php'
                 ]
             },
             options: {
