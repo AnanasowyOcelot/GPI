@@ -87,6 +87,14 @@ class Offer extends \GPI\OfferBundle\Model\Offer
     protected $createdBy;
 
     /**
+     * @return \Application\Sonata\UserBundle\Entity\User
+     */
+    public function getCreatedBy()
+    {
+        return $this->createdBy;
+    }
+
+    /**
      * @var User $updatedBy
      *
      * @Gedmo\Blameable(on="update")

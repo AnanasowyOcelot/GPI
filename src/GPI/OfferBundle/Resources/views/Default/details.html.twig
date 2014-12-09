@@ -1,12 +1,18 @@
 <div class="container content">
     <div class="row">
         <div class="col-md-3">
+            <div class="margin-bottom-30">
+                <div class="headline"><h2>Kategoria</h2></div>
+                <p>{{ offer.category }}</p>
+            </div>
+            <div class="margin-bottom-30">
+                <div class="headline"><h2>Dodano przez</h2></div>
+                <p>{{ offer.getCreatedBy() }}</p>
+            </div>
         </div>
         <div class="col-md-9">
             <div class="headline"><h2>{{ offer.name }}</h2></div>
             <p>{{ offer.content|raw }}</p>
-
-            <div class="block-newsletter col-sm-12 well">Kategoria: {{ offer.category }}</div>
 
             <div class="container content">
 
