@@ -41,7 +41,7 @@ class AuctionType extends AbstractType
     {
         $resolver->setDefaults(
             array(
-                'data_class' => 'GPI\AuctionBundle\Model\Command\AddNewAuctionCommand',
+                'data_class' => 'GPI\CoreBundle\Model\Auction\AddNewAuctionCommand',
             )
         );
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace GPI\AuctionBundle\Model\Command;
+namespace GPI\CoreBundle\Model\Auction;
 
 use Symfony\Component\Validator\Constraints as Assert;
 use GPI\CoreBundle\Model\Document\Document;

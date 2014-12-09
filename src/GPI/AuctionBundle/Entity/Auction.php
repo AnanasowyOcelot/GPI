@@ -14,7 +14,7 @@ use Application\Sonata\UserBundle\Entity\User as User;
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="GPI\AuctionBundle\Entity\AuctionRepository")
  */
-class Auction extends \GPI\AuctionBundle\Model\Auction
+class Auction extends \GPI\CoreBundle\Model\Auction\Auction
 {
     /**
      * @var integer

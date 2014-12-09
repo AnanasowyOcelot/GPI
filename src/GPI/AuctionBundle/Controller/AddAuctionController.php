@@ -5,7 +5,7 @@ namespace GPI\AuctionBundle\Controller;
 use GPI\AuctionBundle\Entity\Document;
 use GPI\AuctionBundle\Entity\Auction;
 
-use GPI\AuctionBundle\Model\Command\AddNewAuctionCommand;
+use GPI\CoreBundle\Model\Auction\AddNewAuctionCommand;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 

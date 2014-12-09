@@ -1,9 +1,9 @@
 <?php
 
-namespace GPI\AuctionBundle\Tests\Entity;
+namespace GPI\CoreBundle\Tests\Model;
 
 use Application\Sonata\ClassificationBundle\Entity\Category;
-use GPI\AuctionBundle\Model\Auction;
+use GPI\CoreBundle\Model\Auction\Auction;
 
 class AuctionTest extends \PHPUnit_Framework_TestCase
 {

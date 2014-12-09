@@ -12,7 +12,7 @@ class UpdateAuctionType extends AuctionType
     {
         $resolver->setDefaults(
             array(
-                'data_class' => 'GPI\AuctionBundle\Model\Command\UpdateAuctionCommand',
+                'data_class' => 'GPI\CoreBundle\Model\Auction\UpdateAuctionCommand',
             )
         );
     }

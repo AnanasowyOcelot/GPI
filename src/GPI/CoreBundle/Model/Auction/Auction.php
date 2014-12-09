@@ -1,8 +1,9 @@
 <?php
 
-namespace GPI\AuctionBundle\Model;
+namespace GPI\CoreBundle\Model\Auction;
 
 use Application\Sonata\ClassificationBundle\Entity\Category;
+use GPI\AuctionBundle\Entity\Document;
 use GPI\CoreBundle\Model\Calendar\Calendar;
 use Symfony\Component\Validator\Constraints as Assert;
 
