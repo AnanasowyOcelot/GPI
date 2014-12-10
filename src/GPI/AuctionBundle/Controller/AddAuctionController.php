@@ -16,6 +16,8 @@ class AddAuctionController extends Controller
         $command = new AddNewAuctionCommand();
         $d1 = new Document();
         $command->addDocument($d1);
+        $d2 = new Document();
+        $command->addDocument($d2);
 
         $form = $this->createForm('auction', $command);
         $form->handleRequest($request);
@@ -28,13 +30,14 @@ class AddAuctionController extends Controller
                 new \DateTime('2014-12-30 14:01'),
                 $command->getName(),
                 $command->getContent(),
-                $command->getCategory()
+                $command->getCategories()
             );
+            $auction->setContent($command->getDocuments());
             foreach ($command->getDocuments() as $document) {
                 $auction->addDocument($document);
+                $document->upload();
+                $repo->persist($document);
             }
-
-            $d1->upload();
 
             $repo->persist($auction);
             $repo->flush();

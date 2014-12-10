@@ -17,16 +17,18 @@ class Auction
     protected $documents;
     protected $endTime;
     private $calendar;
-    protected $category;
+    protected $categories;
 
-    public function __construct(\DateTime $endTime, $name, $content, $category, Calendar $calendar = null)
+    public function __construct(\DateTime $endTime, $name, $content, $categories, Calendar $calendar = null)
     {
         $this->status = AuctionStatus::ACTIVE;
 
         $this->setEndTime($endTime);
         $this->setName($name);
         $this->setContent($content);
-        $this->setCategory($category);
+        foreach ($categories as $category) {
+            $this->addCategory($category);
+        }
         if ($calendar !== null) {
             $this->calendar = $calendar;
         } else {
@@ -34,9 +36,9 @@ class Auction
         }
     }
 
-    protected function setCategory(Category $category)
+    protected function setCategories(Category $categories)
     {
-        $this->category = $category;
+        $this->categories = $categories;
     }
 
     public function setEndTime(\DateTime $endTime)
@@ -70,10 +72,11 @@ class Auction
     public function addDocument(Document $document)
     {
         $this->documents[] = $document;
+    }
 
-        $document->setAuction($this);
-
-        return $this;
+    public function addCategory(Category $category)
+    {
+        $this->categories[] = $category;
     }
 
     public function removeDocument($document)
@@ -110,9 +113,19 @@ class Auction
         return $this->documents;
     }
 
-    public function getCategory()
+    /**
+     * @param mixed $documents
+     */
+    public function setDocuments($documents)
     {
-        return $this->category;
+        $this->documents = $documents;
+    }
+
+
+
+    public function getCategories()
+    {
+        return $this->categories;
     }
 
     /**

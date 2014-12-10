@@ -48,13 +48,14 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
     protected $content;
 
     /**
-     * @ORM\ManyToOne(targetEntity="\Application\Sonata\ClassificationBundle\Entity\Category")
+     * @var ArrayCollection $trainings
+     * @ORM\ManyToMany(targetEntity="\Application\Sonata\ClassificationBundle\Entity\Category")
      */
-    protected $category;
+    protected $categories;
 
     /**
      * @var ArrayCollection $trainings
-     * @ORM\OneToMany(targetEntity="\GPI\AuctionBundle\Entity\Document", mappedBy="auction", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="\GPI\AuctionBundle\Entity\Document")
      */
     protected $documents;
 

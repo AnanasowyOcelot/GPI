@@ -14,7 +14,10 @@ class DocumentType extends AbstractType
             ->add('description')
             ->add(
                 'file',
-                'file'
+                'file',
+                array(
+                    'multiple' => 'multiple'
+                )
             );
     }
 

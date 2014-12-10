@@ -10,22 +10,21 @@ class UpdateAuctionCommand
 {
     protected $name;
     protected $content;
-    protected $category;
+    protected $categories;
     protected $documents;
 
     public function addDocument(Document $document)
     {
         $this->documents[] = $document;
-        $document->setAuction($this);
         return $this;
     }
 
     /**
      * @return mixed
      */
-    public function getCategory()
+    public function getCategories()
     {
-        return $this->category;
+        return $this->categories;
     }
 
     /**
@@ -58,11 +57,11 @@ class UpdateAuctionCommand
     }
 
     /**
-     * @param mixed $category
+     * @param mixed $categories
      */
-    public function setCategory($category)
+    public function setCategories($categories)
     {
-        $this->category = $category;
+        $this->categories = $categories;
     }
 
     /**

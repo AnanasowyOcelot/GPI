@@ -30,7 +30,7 @@ class AuctionEditController extends Controller
         $command = new UpdateAuctionCommand();
         $command->setName($auction->getName());
         $command->setContent($auction->getContent());
-        $command->setCategory($auction->getCategory());
+        $command->setCategories($auction->getCategories());
         foreach ($auction->getDocuments() as $document) {
             $command->addDocument($document);
         }
@@ -45,7 +45,7 @@ class AuctionEditController extends Controller
                 new \DateTime('2014-12-30 14:01'),
                 $command->getName(),
                 $command->getContent(),
-                $command->getCategory()
+                $command->getCategories()
             );
             foreach ($command->getDocuments() as $document) {
                 $auction->addDocument($document);

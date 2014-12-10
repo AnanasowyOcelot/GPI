@@ -33,10 +33,6 @@ class Document extends BaseDocument
      */
     protected $description;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="\GPI\AuctionBundle\Entity\Auction", inversedBy="documents")
-     */
-    protected $auction;
     /////////////////////////////////////////////////////////////////
     /**
      * @var User $createdBy
@@ -86,22 +82,6 @@ class Document extends BaseDocument
     public function getContentChangedBy()
     {
         return $this->contentChangedBy;
-    }
-    /////////////////////////////////////////////////////////////////
-    /**
-     * @param mixed $auction
-     */
-    public function setAuction($auction)
-    {
-        $this->auction = $auction;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAuction()
-    {
-        return $this->auction;
     }
 
     /**

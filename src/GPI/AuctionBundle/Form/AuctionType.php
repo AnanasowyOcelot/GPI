@@ -49,14 +49,15 @@ class AuctionType extends AbstractType
     {
 
         $builder
-            ->add('name', 'text')
+            ->add('name', 'text', array('label' => "Tytuł:"))
             ->add('content', 'textarea')
             ->add(
-                'category',
+                'categories',
                 'entity',
                 array(
                     'class' => 'Application\Sonata\ClassificationBundle\Entity\Category',
-                    'choice_list' => $this->categoryChoiceList()
+                    'choice_list' => $this->categoryChoiceList(),
+                    'multiple' => true
                 )
             )
             ->add(
@@ -65,7 +66,7 @@ class AuctionType extends AbstractType
                 array(
                     'type' => 'document',
                     'allow_add' => true,
-                    'allow_delete' => true,
+                    'allow_delete' => true
                 )
             )
             ->add('submit', 'submit');

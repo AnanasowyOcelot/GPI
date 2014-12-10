@@ -61,6 +61,8 @@ services:
         class: GPI\AuctionBundle\Form\UpdateAuctionType
         tags:
             - { name: form.type, alias: auction_update }
+        arguments:
+            - @gpi_sonata.category_repository
     gpi_auction.form.document:
         class: GPI\AuctionBundle\Form\DocumentType
         tags:
