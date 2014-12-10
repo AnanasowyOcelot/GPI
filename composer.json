@@ -5,7 +5,9 @@
     "license": "MIT",
 
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-0": {
+            "": "src/"
+        }
     },
 
     "minimum-stability": "dev",
@@ -81,7 +83,9 @@
 
         "incenteev/composer-parameter-handler": "~2.0",
 
-        "bmatzner/fontawesome-bundle": "~4.2"
+        "bmatzner/fontawesome-bundle": "~4.2",
+
+        "lstrojny/functional-php": "1.0.*@dev"
     },
 
     "require-dev": {
@@ -136,21 +140,23 @@
         "branch-alias": {
             "dev-master": "2.3.x-dev"
         },
-        "incenteev-parameters": [{
-            "file": "app/config/parameters.yml",
-            "env-map": {
-                "database_driver":   "DATABASE_DRIVER",
-                "database_host":     "DATABASE_HOST",
-                "database_name":     "DATABASE_NAME",
-                "database_user":     "DATABASE_USER",
-                "database_password": "DATABASE_PASSWORD",
-                "mailer_transport":  "MAILER_TRANSPORT",
-                "mailer_host":       "MAILER_HOST",
-                "mailer_user":       "MAILER_USER",
-                "mailer_password":   "MAILER_PASSWORD",
+        "incenteev-parameters": [
+            {
+                "file": "app/config/parameters.yml",
+                "env-map": {
+                    "database_driver": "DATABASE_DRIVER",
+                    "database_host": "DATABASE_HOST",
+                    "database_name": "DATABASE_NAME",
+                    "database_user": "DATABASE_USER",
+                    "database_password": "DATABASE_PASSWORD",
+                    "mailer_transport": "MAILER_TRANSPORT",
+                    "mailer_host": "MAILER_HOST",
+                    "mailer_user": "MAILER_USER",
+                    "mailer_password": "MAILER_PASSWORD",
 
-                "sonata_media.cdn.host": "SONATA_MEDIA_CDN_HOST"
+                    "sonata_media.cdn.host": "SONATA_MEDIA_CDN_HOST"
+                }
             }
-        }]
+        ]
     }
 }

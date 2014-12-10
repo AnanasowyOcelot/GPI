@@ -35,7 +35,8 @@ class CategoryRepository extends EntityRepository
             $tree[] = array(
                 'name' => $category->getName(),
                 'children' => $this->auctionCategoryTree($category->getId()),
-                'slug' => $category->getSlug()
+                'slug' => $category->getSlug(),
+                'entity' => $category
             );
         }
 
