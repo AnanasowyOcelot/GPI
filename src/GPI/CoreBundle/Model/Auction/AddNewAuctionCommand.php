@@ -2,9 +2,9 @@
 
 namespace GPI\CoreBundle\Model\Auction;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Entity\Category;
 use Symfony\Component\Validator\Constraints as Assert;
-use GPI\CoreBundle\Model\Document\Document;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
 
 class AddNewAuctionCommand
@@ -14,10 +14,19 @@ class AddNewAuctionCommand
     protected $categories;
     protected $documents;
 
-    public function addDocument(Document $document)
+    public function __construct()
     {
-        $this->documents[] = $document;
-        $document->setAuction($this);
+        $this->documents = new ArrayCollection();
+    }
+
+    public function getDocuments()
+    {
+        return $this->documents;
+    }
+
+    public function setDocuments(ArrayCollection $documents)
+    {
+        $this->documents = $documents;
     }
 
     public function addCategory(Category $category)
@@ -57,13 +66,6 @@ class AddNewAuctionCommand
         return $this->name;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getDocuments()
-    {
-        return $this->documents;
-    }
 
     public static function loadValidatorMetadata(ClassMetadata $metadata)
     {

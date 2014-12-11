@@ -2,61 +2,117 @@
 {% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
 {% block sonata_profile_content %}
 
-<div class="headline"><h2>Dodaj nową aukcję</h2></div>
+    <script type="text/javascript">
+        var $collectionHolder;
 
-    {{ form_start(form) }}
+        // setup an "add a document" link
+        var $addDocumentLink = $('<a href="#" class="btn-u btn-u-blue">Dodaj kolejny dokument</a>');
+        var $newLinkLi = $('<li></li>').append($addDocumentLink);
 
-    {{ form_end(form) }}
-<script type="text/javascript">
-//    var $collectionHolder;
-//
-//    // setup an "add a tag" link
-//    var $addTagLink = $('<a href="#" class="add_tag_link">DUPA</a>');
-//    var $newLinkLi = $('<li></li>').append($addTagLink);
-//
-//    function addTagForm($collectionHolder, $newLinkLi) {
-//        // Get the data-prototype explained earlier
-//        var prototype = $collectionHolder.data('prototype');
-//
-//        // get the new index
-//        var index = $collectionHolder.data('index');
-//
-//        // Replace '$$name$$' in the prototype's HTML to
-//        // instead be a number based on how many items we have
-//        var newForm = prototype.replace(/\$\$name\$\$/g, index);
-//
-//        // increase the index with one for the next item
-//        $collectionHolder.data('index', index + 1);
-//
-//        // Display the form in the page in an li, before the "Add a tag" link li
-//        var $newFormLi = $('<li></li>').append(newForm);
-//        console.log($newFormLi);
-//        $newLinkLi.before($newFormLi);
-//    }
+        function addDocumentFormDeleteLink($documentFormLi) {
+            var $removeFormA = $('<div class="document-buttons"><a href="#" class="btn-u btn-u-blue">Usuń dokument</a></div>');
+            $documentFormLi.append($removeFormA);
 
-    console.log("dupa2222!");
-    $(document).ready(function() {
-        console.log("dupa!");
+            $removeFormA.on('click', function (e) {
+                // prevent the link from creating a "#" on the URL
+                e.preventDefault();
 
-//        // Get the ul that holds the collection of tags
-//        $collectionHolder = $('ul.tags');
-//
-//        // add the "add a tag" anchor and li to the tags ul
-//        $collectionHolder.append($newLinkLi);
-//
-//        // count the current form inputs we have (e.g. 2), use that as the new
-//        // index when inserting a new item (e.g. 2)
-//        $collectionHolder.data('index', $collectionHolder.find(':input').length);
-//
-//        $addTagLink.on('click', function(e) {
-//            // prevent the link from creating a "#" on the URL
-//            e.preventDefault();
-//
-//            // add a new tag form (see next code block)
-//            addTagForm($collectionHolder, $newLinkLi);
-//        });
-    });
-</script>
+                // remove the li for the document form
+                $documentFormLi.remove();
+            });
+        }
+
+        function addDocumentForm($collectionHolder, $newLinkLi) {
+            // Get the data-prototype explained earlier
+            var prototype = $collectionHolder.data('prototype');
+
+            // get the new index
+            var index = $collectionHolder.data('index');
+
+            // Replace '$$name$$' in the prototype's HTML to
+            // instead be a number based on how many items we have
+            var newForm = prototype.replace(/__name__/g, index);
+
+            // increase the index with one for the next item
+            $collectionHolder.data('index', index + 1);
+
+            // Display the form in the page in an li, before the "Add a document" link li
+            var $newFormLi = $('<li class="tag-box-v2"></li>').append(newForm);
+            $newLinkLi.before($newFormLi);
+            addDocumentFormDeleteLink($newFormLi);
+        }
+
+        jQuery(document).ready(function () {
+            // Get the ul that holds the collection of documents
+            $collectionHolder = $('ul.documents');
+
+            $collectionHolder.find('li').each(function () {
+                addDocumentFormDeleteLink($(this));
+            });
+
+            // add the "add a document" anchor and li to the documents ul
+            $collectionHolder.append($newLinkLi);
+
+            // count the current form inputs we have (e.g. 2), use that as the new
+            // index when inserting a new item (e.g. 2)
+            $collectionHolder.data('index', $collectionHolder.find(':input').length);
+
+            $addDocumentLink.on('click', function (e) {
+                // prevent the link from creating a "#" on the URL
+                e.preventDefault();
+
+                // add a new document form (see next code block)
+                addDocumentForm($collectionHolder, $newLinkLi);
+            });
+        });
+    </script>
+
+    <div class="tag-box tag-box-v3 form-page" style="overflow: hidden;">
+    <div class="headline"><h3>Dodaj nową aukcję</h3></div>
+
+    <form method="POST" {{ form_enctype(form) }} class="sky-form">
+        <fieldset>
+        {{ form_row(form.name) }}
+        </fieldset>
+        <hr />
+        <fieldset>
+        {{ form_row(form.content) }}
+        </fieldset>
+        <hr />
+        <fieldset>
+        {{ form_row(form.categories) }}
+        </fieldset>
+        <hr />
+        <fieldset>
+        <label class="col-sm-2 control-label">Dokumenty:</label>
+        <div class="col-sm-10">
+            <ul class="documents" data-prototype="{{ form_widget(form.documents.vars.prototype)|e }}">
+                {% for document in form.documents %}
+                    <li class="tag-box-v2">{{ form_row(document.description) }}{{ form_row(document.file) }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        </fieldset>
+        <hr />
+        <fieldset>
+        {{ form_rest(form) }}
+        </fieldset>
+    </form>
+    </div>
+
+    <style>
+        form ul.documents {
+            padding: 0;
+        }
+        form ul.documents li {
+            list-style: none;
+            margin-bottom: 8px;
+            padding: 5px;
+        }
+        form ul.documents li .document-buttons {
+            text-align: right;
+        }
+    </style>
 {% endblock %}
 
 

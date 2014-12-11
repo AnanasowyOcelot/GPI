@@ -3,9 +3,9 @@
 namespace GPI\CoreBundle\Model\Auction;
 
 use Application\Sonata\ClassificationBundle\Entity\Category;
-use GPI\AuctionBundle\Entity\Document;
 use GPI\CoreBundle\Model\Calendar\Calendar;
 use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\Common\Collections\ArrayCollection;
 
 class Auction
 {
@@ -22,6 +22,7 @@ class Auction
     public function __construct(\DateTime $endTime, $name, $content, $categories, Calendar $calendar = null)
     {
         $this->status = AuctionStatus::ACTIVE;
+        $this->documents = new ArrayCollection();
 
         $this->setEndTime($endTime);
         $this->setName($name);
@@ -34,6 +35,16 @@ class Auction
         } else {
             $this->calendar = new Calendar();
         }
+    }
+
+    public function getDocuments()
+    {
+        return $this->documents;
+    }
+
+    public function setDocuments(ArrayCollection $documents)
+    {
+        $this->documents = $documents;
     }
 
     protected function setCategories(Category $categories)
@@ -69,19 +80,9 @@ class Auction
         $this->status = AuctionStatus::DEACTIVATED;
     }
 
-    public function addDocument(Document $document)
-    {
-        $this->documents[] = $document;
-    }
-
     public function addCategory(Category $category)
     {
         $this->categories[] = $category;
-    }
-
-    public function removeDocument($document)
-    {
-        // TODO: zrobić!
     }
 
     public function setName($name)
@@ -104,24 +105,6 @@ class Auction
             return "/uploads/documents/default.jpg";
         }
     }
-
-    /**
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getDocuments()
-    {
-        return $this->documents;
-    }
-
-    /**
-     * @param mixed $documents
-     */
-    public function setDocuments($documents)
-    {
-        $this->documents = $documents;
-    }
-
-
 
     public function getCategories()
     {

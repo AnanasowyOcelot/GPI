@@ -11,13 +11,11 @@ class DocumentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('description')
+            ->add('description', 'text', array('label' => "Opis:"))
             ->add(
                 'file',
                 'file',
-                array(
-                    'multiple' => 'multiple'
-                )
+                array('label' => "Plik:")
             );
     }
 
