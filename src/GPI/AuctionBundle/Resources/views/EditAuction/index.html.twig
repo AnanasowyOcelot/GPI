@@ -1,12 +1,156 @@
-{% extends "GPIOfferBundle:EditAuction:index.html.twig" %}
-{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+{#{% extends "GPIAuctionBundle:EditAuction:index.html.twig" %}#}
 
+
+{#{% extends "SonataUserBundle:Profile:action.html.twig" %}#}
+{#{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}#}
+
+{#{% block sonata_profile_content %}#}
+
+    {#<div class="headline"><h2>Edytuj</h2></div>#}
+
+    {#{{ form_start(form) }}#}
+
+    {#{{ form_end(form) }}#}
+
+{#{% endblock %}#}
+
+{% extends "SonataUserBundle:Profile:action.html.twig" %}
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
 {% block sonata_profile_content %}
 
-    <div class="headline"><h2>Edytuj</h2></div>
+    <script type="text/javascript">
+        var $collectionHolder;
 
-    {{ form_start(form) }}
+        // setup an "add a document" link
+        var $addDocumentLink = $('<a href="#" class="btn-u btn-u-blue">Dodaj kolejny dokument</a>');
+        var $newLinkLi = $('<li></li>').append($addDocumentLink);
 
-    {{ form_end(form) }}
+        function addDocumentFormDeleteLink($documentFormLi) {
+            var $removeFormA = $('<div class="document-buttons"><a href="#" class="btn-u btn-u-blue">Usuń dokument</a></div>');
+            $documentFormLi.append($removeFormA);
 
+            $removeFormA.on('click', function (e) {
+                // prevent the link from creating a "#" on the URL
+                e.preventDefault();
+
+                // remove the li for the document form
+                $documentFormLi.remove();
+            });
+        }
+
+        function addDocumentForm($collectionHolder, $newLinkLi) {
+            // Get the data-prototype explained earlier
+            var prototype = $collectionHolder.data('prototype');
+
+            // get the new index
+            var index = $collectionHolder.data('index');
+
+            // Replace '$$name$$' in the prototype's HTML to
+            // instead be a number based on how many items we have
+            var newForm = prototype.replace(/__name__/g, index);
+
+            // increase the index with one for the next item
+            $collectionHolder.data('index', index + 1);
+
+            // Display the form in the page in an li, before the "Add a document" link li
+            var $newFormLi = $('<li class="tag-box-v2"></li>').append(newForm);
+            $newLinkLi.before($newFormLi);
+            addDocumentFormDeleteLink($newFormLi);
+        }
+
+        jQuery(document).ready(function () {
+            // Get the ul that holds the collection of documents
+            $collectionHolder = $('ul.documents');
+
+            $collectionHolder.find('li').each(function () {
+                addDocumentFormDeleteLink($(this));
+            });
+
+            // add the "add a document" anchor and li to the documents ul
+            $collectionHolder.append($newLinkLi);
+
+            // count the current form inputs we have (e.g. 2), use that as the new
+            // index when inserting a new item (e.g. 2)
+            $collectionHolder.data('index', $collectionHolder.find(':input').length);
+
+            $addDocumentLink.on('click', function (e) {
+                // prevent the link from creating a "#" on the URL
+                e.preventDefault();
+
+                // add a new document form (see next code block)
+                addDocumentForm($collectionHolder, $newLinkLi);
+            });
+        });
+    </script>
+
+    <div class="tag-box tag-box-v3 form-page" style="overflow: hidden;">
+        <div class="headline"><h3>Dodaj nową aukcję</h3></div>
+
+        <form method="POST" {{ form_enctype(form) }} class="sky-form">
+            <fieldset>
+                {{ form_row(form.name) }}
+            </fieldset>
+            <hr/>
+            <fieldset>
+                {{ form_row(form.content) }}
+            </fieldset>
+            <hr/>
+            <fieldset>
+                {{ form_row(form.maxPrice) }}
+            </fieldset>
+            <hr />
+            <fieldset>
+                {{ form_row(form.categories) }}
+            </fieldset>
+            <hr/>
+            <fieldset>
+                <label class="col-sm-2 control-label">Dokumenty:</label>
+
+                <div class="col-sm-10">
+                    <ul class="documents" data-prototype="{{ form_widget(form.documents.vars.prototype)|e }}">
+                        {% for document in form.documents %}
+                            <li class="tag-box-v2">
+                                <a href="/{{ document.vars.data.getWebPath() }}" target="_blank">
+                                    <img class="thumbnail" src="/{{ document.vars.data.getWebPath() }}" alt="">
+                                </a>
+                                {{ form_row(document.description) }}
+                                {{ form_row(document.file) }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </fieldset>
+            <hr/>
+            <fieldset>
+                {{ form_rest(form) }}
+            </fieldset>
+        </form>
+    </div>
+
+    <style>
+        form ul.documents {
+            padding: 0;
+        }
+
+        form ul.documents li {
+            list-style: none;
+            margin-bottom: 8px;
+            padding: 5px;
+        }
+
+        form ul.documents li .document-buttons {
+            text-align: right;
+        }
+
+        form ul.documents .thumbnail {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 50% !important;
+        }
+
+    </style>
 {% endblock %}
+
+

@@ -106,9 +106,12 @@ sonata_media:
 # to a specific format. (ie a controller render the file)
 #    more information can be found here : https://github.com/liip/LiipImagineBundle
 #
-#liip_imagine:
-#    filter_sets:
-#
+liip_imagine:
+    filter_sets:
+        image_upload_thumbnail:
+            data_loader: cmf_media_doctrine_phpcr
+            filters:
+                thumbnail: { size: [100, 100], mode: outbound }
 #        this configuration match the sonata_media configuration format definition
 #        product_catalog_preview:
 #            quality: 75

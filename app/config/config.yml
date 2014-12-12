@@ -73,7 +73,7 @@ framework:
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
-    cache:  false
+    cache:  true
     base_template_class: Sonata\CacheBundle\Twig\TwigTemplate14
 
     form:
@@ -81,7 +81,6 @@ twig:
             - 'SonataFormatterBundle:Form:formatter.html.twig'
             - 'SonataMediaBundle:Form:media_widgets.html.twig'
             - 'SonataCoreBundle:Form:datepicker.html.twig'
-
     exception_controller: 'FOS\RestBundle\Controller\ExceptionController::showAction'
 
 # Doctrine Configuration
@@ -181,3 +180,19 @@ stof_doctrine_extensions:
         default:
             tree: true
             blameable: true # not needed: listeners are not enabled by default
+
+liip_imagine:
+    resolvers:
+        default:
+            web_path:
+                web_root: %kernel.root_dir%/../web/img
+                # %kernel.root_dir%/../web/img is the folder where filtered images will be created!
+                cache_prefix: media/cache
+                # media/cache the prefix of folder where the cached images will be created
+
+    filter_sets:
+#        cache: ~
+        my_thumb:
+            quality: 75
+            filters:
+                thumbnail: { size: [120, 90], mode: outbound }

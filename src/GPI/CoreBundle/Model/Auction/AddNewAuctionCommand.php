@@ -11,6 +11,7 @@ class AddNewAuctionCommand
 {
     protected $name;
     protected $content;
+    protected $maxPrice;
     protected $categories;
     protected $documents;
 
@@ -18,6 +19,24 @@ class AddNewAuctionCommand
     {
         $this->documents = new ArrayCollection();
     }
+
+    /**
+     * @param mixed $maxPrice
+     */
+    public function setMaxPrice($maxPrice)
+    {
+        $this->maxPrice = $maxPrice;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMaxPrice()
+    {
+        return $this->maxPrice;
+    }
+
+
 
     public function getDocuments()
     {

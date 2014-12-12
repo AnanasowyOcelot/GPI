@@ -36,7 +36,8 @@
                             <img class="rounded-x" src="{{ auction.getMainPhoto() }}" alt="">
                         </td>
                         <td class="td-width">
-                            <h3><a href="{{ path('gpi_auction_details', {'id': auction.id }) }}">{{ auction.name }}</a></h3>
+                            <h3><a href="{{ path('gpi_auction_details', {'id': auction.id }) }}">{{ auction.name }}</a>
+                            </h3>
 
                             <p>{{ auction.getContentShort() }}</p>
                             <small class="hex">Zakończenie {{ auction.getEndTime() }}</small>
@@ -44,36 +45,9 @@
                         <td>
                             <span class="label label-success">Aktywna</span>
                         </td>
-                        <td>
-                            <ul class="list-inline s-icons">
-                                <li>
-                                    <a data-placement="top" data-toggle="tooltip" class="tooltips"
-                                       data-original-title="Facebook" href="/">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a data-placement="top" data-toggle="tooltip" class="tooltips"
-                                       data-original-title="Twitter" href="/">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a data-placement="top" data-toggle="tooltip" class="tooltips"
-                                       data-original-title="Dropbox" href="/">
-                                        <i class="fa fa-dropbox"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a data-placement="top" data-toggle="tooltip" class="tooltips"
-                                       data-original-title="Linkedin" href="/">
-                                        <i class="fa fa-linkedin"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <span><a href="#">info@example.com</a></span>
-                            <span><a href="#">www.htmlstream.com</a></span>
-                        </td>
+                        {#<td>#}
+                            {#<i class="glyphicon glyphicon-arrow-up"></i><span>{{ auction.getMaxPrice() }}</span>#}
+                        {#</td>#}
                     </tr>
                 {% endfor %}
 

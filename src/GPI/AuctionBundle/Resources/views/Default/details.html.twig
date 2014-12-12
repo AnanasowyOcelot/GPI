@@ -4,7 +4,7 @@
             <div class="margin-bottom-30">
                 <div class="headline"><h2>Kategoria</h2></div>
                 {% for category in auction.getCategories() %}
-                <p>{{ category }}</p>
+                    <p>{{ category }}</p>
                 {% endfor %}
             </div>
             <div class="margin-bottom-30">
@@ -15,7 +15,9 @@
         <div class="col-md-9">
             <div class="headline"><h2>{{ auction.name }}</h2></div>
             <p>{{ auction.content|raw }}</p>
-
+            {% if auction.getMaxPrice != null %}
+                <p>Cana maksymalna: {{ auction.getMaxPrice() }}</p>
+            {% endif %}
             <div class="container content">
 
                 <div class="col-md-12">
@@ -23,16 +25,16 @@
                     <div class="owl-carousel-v1 owl-work-v1">
 
                         <div class="owl-recent-works-v1">
-                            {% for ducument in auction.documents %}
+                            {% for document in auction.documents %}
 
 
                                 <div class="item">
-                                    <a href="/{{ ducument.getWebPath() }}" target="_blank">
+                                    <a href="/{{ document.getWebPath() }}" target="_blank">
                                         <em class="overflow-hidden">
-                                            <img class="img-responsive" src="/{{ ducument.getWebPath() }}" alt="">
+                                            <img class="img-responsive" src="/{{ document.getWebPath() }}" alt="">
                                         </em>
                                 <span>
-                                    <strong>{{ ducument.description }}</strong>
+                                    <strong>{{ document.description }}</strong>
                                     {#<i>Anim pariatur cliche reprehenderit</i>#}
                                 </span>
                                     </a>

@@ -2,22 +2,40 @@
 
 namespace GPI\CoreBundle\Model\Auction;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
-use GPI\CoreBundle\Model\Document\Document;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
 
 class UpdateAuctionCommand
 {
     protected $name;
     protected $content;
+    protected $maxPrice;
     protected $categories;
     protected $documents;
 
-    public function addDocument(Document $document)
+    public function __construct()
     {
-        $this->documents[] = $document;
-        return $this;
+        $this->documents = new ArrayCollection();
     }
+
+    /**
+     * @param mixed $maxPrice
+     */
+    public function setMaxPrice($maxPrice)
+    {
+        $this->maxPrice = $maxPrice;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMaxPrice()
+    {
+        return $this->maxPrice;
+    }
+
+
 
     /**
      * @return mixed
@@ -50,6 +68,16 @@ class UpdateAuctionCommand
     {
         return $this->documents;
     }
+
+    /**
+     * @param mixed $documents
+     */
+    public function setDocuments($documents)
+    {
+        $this->documents = $documents;
+    }
+
+
 
     public static function loadValidatorMetadata(ClassMetadata $metadata)
     {

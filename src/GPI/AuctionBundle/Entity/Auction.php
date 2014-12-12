@@ -42,6 +42,12 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
 
     /**
      * @var string
+     * @ORM\Column(name="max_price", type="decimal", scale=2, nullable=true)
+     */
+    protected $maxPrice;
+
+    /**
+     * @var string
      *
      * @ORM\Column(name="content", type="text")
      */

@@ -85,7 +85,8 @@
 
         "bmatzner/fontawesome-bundle": "~4.2",
 
-        "lstrojny/functional-php": "1.0.*@dev"
+        "lstrojny/functional-php": "1.0.*@dev",
+        "liip/imagine-bundle": "1.2.1"
     },
 
     "require-dev": {

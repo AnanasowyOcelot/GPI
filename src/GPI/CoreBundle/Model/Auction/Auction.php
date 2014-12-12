@@ -18,6 +18,7 @@ class Auction
     protected $endTime;
     private $calendar;
     protected $categories;
+    protected $maxPrice;
 
     public function __construct(\DateTime $endTime, $name, $content, $categories, Calendar $calendar = null)
     {
@@ -36,6 +37,24 @@ class Auction
             $this->calendar = new Calendar();
         }
     }
+
+    /**
+     * @param mixed $maxPrice
+     */
+    public function setMaxPrice($maxPrice)
+    {
+        $this->maxPrice = $maxPrice;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMaxPrice()
+    {
+        return $this->maxPrice;
+    }
+
+
 
     public function getDocuments()
     {

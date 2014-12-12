@@ -30,6 +30,7 @@ class AddAuctionController extends Controller
                 $command->getContent(),
                 $command->getCategories()
             );
+            $auction->setMaxPrice($command->getMaxPrice());
             foreach ($command->getDocuments() as $document) {
                 $auction->getDocuments()->add($document);
                 $document->upload();

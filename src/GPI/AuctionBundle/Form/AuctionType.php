@@ -52,6 +52,15 @@ class AuctionType extends AbstractType
             ->add('name', 'text', array('label' => "Tytuł:"))
             ->add('content', 'textarea', array('label' => "Treść:"))
             ->add(
+                'maxPrice',
+                'money',
+                array(
+                    'label' => "Cena maksymalna:",
+                    'currency' => "PLN",
+                    'required' => false
+                )
+            )
+            ->add(
                 'categories',
                 'entity',
                 array(
