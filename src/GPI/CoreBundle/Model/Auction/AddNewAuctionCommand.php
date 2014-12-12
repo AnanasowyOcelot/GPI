@@ -14,6 +14,7 @@ class AddNewAuctionCommand
     protected $maxPrice;
     protected $categories;
     protected $documents;
+    protected $timePeriod;
 
     public function __construct()
     {
@@ -35,6 +36,23 @@ class AddNewAuctionCommand
     {
         return $this->maxPrice;
     }
+
+    /**
+     * @param mixed $timePeriod
+     */
+    public function setTimePeriod($timePeriod)
+    {
+        $this->timePeriod = $timePeriod;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTimePeriod()
+    {
+        return $this->timePeriod;
+    }
+
 
 
 

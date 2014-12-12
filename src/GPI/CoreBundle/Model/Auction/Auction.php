@@ -16,6 +16,7 @@ class Auction
     protected $content;
     protected $documents;
     protected $endTime;
+    protected $startTime;
     private $calendar;
     protected $categories;
     protected $maxPrice;
@@ -36,6 +37,22 @@ class Auction
         } else {
             $this->calendar = new Calendar();
         }
+    }
+
+    /**
+     * @param \DateTime $startTime
+     */
+    public function setStartTime($startTime)
+    {
+        $this->startTime = $startTime;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getStartTime()
+    {
+        return $this->startTime;
     }
 
     /**

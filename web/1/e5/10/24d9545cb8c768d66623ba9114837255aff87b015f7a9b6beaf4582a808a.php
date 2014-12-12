@@ -108,19 +108,19 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
             echo "</p>
                             <small class=\"hex\">Zakończenie ";
             // line 43
-            echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "getEndTime", array(), "method"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["auction"], "getEndTime", array(), "method"), "format", array(0 => "Y-m-d H:i:s"), "method"), "html", null, true);
             echo "</small>
                         </td>
                         <td>
                             <span class=\"label label-success\">Aktywna</span>
                         </td>
-                        <td>
-                            <i class=\"glyphicon glyphicon-arrow-up\"></i><span>";
+                        ";
             // line 49
-            echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "getMaxPrice", array(), "method"), "html", null, true);
-            echo "</span>
-                        </td>
-                    </tr>
+            echo "                            ";
+            // line 50
+            echo "                        ";
+            // line 51
+            echo "                    </tr>
                 ";
         }
         $_parent = $context['_parent'];
@@ -153,6 +153,6 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
 
     public function getDebugInfo()
     {
-        return array (  142 => 62,  139 => 61,  130 => 53,  120 => 49,  111 => 43,  107 => 42,  99 => 39,  93 => 36,  88 => 33,  84 => 32,  69 => 19,  61 => 15,  54 => 14,  49 => 11,  40 => 5,  33 => 2,  30 => 1,  22 => 66,  20 => 1,);
+        return array (  142 => 62,  139 => 61,  130 => 53,  123 => 51,  121 => 50,  119 => 49,  111 => 43,  107 => 42,  99 => 39,  93 => 36,  88 => 33,  84 => 32,  69 => 19,  61 => 15,  54 => 14,  49 => 11,  40 => 5,  33 => 2,  30 => 1,  22 => 66,  20 => 1,);
     }
 }

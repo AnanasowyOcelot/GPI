@@ -108,7 +108,7 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
             echo "</p>
                             <small class=\"hex\">Zakończenie ";
             // line 43
-            echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "getEndTime", array(), "method"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["auction"], "getEndTime", array(), "method"), "format", array(0 => "Y-m-d H:i:s"), "method"), "html", null, true);
             echo "</small>
                         </td>
                         <td>

@@ -18,6 +18,7 @@
             {% if auction.getMaxPrice != null %}
                 <p>Cana maksymalna: {{ auction.getMaxPrice() }}</p>
             {% endif %}
+            <p>Data zakończenia: {{ auction.getEndTime().format('Y-m-d H:i:s') }}</p>
             <div class="container content">
 
                 <div class="col-md-12">

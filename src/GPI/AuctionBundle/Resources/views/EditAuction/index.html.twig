@@ -84,7 +84,7 @@
     </script>
 
     <div class="tag-box tag-box-v3 form-page" style="overflow: hidden;">
-        <div class="headline"><h3>Dodaj nową aukcję</h3></div>
+        <div class="headline"><h3>Edytuj aukcję</h3></div>
 
         <form method="POST" {{ form_enctype(form) }} class="sky-form">
             <fieldset>
@@ -97,6 +97,8 @@
             <hr/>
             <fieldset>
                 {{ form_row(form.maxPrice) }}
+                <br/>
+                <div class="note">Wypełnij jeśli znasz</div>
             </fieldset>
             <hr />
             <fieldset>

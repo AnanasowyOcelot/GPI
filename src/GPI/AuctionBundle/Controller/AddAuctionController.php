@@ -21,24 +21,9 @@ class AddAuctionController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            /** @var \Doctrine\ORM\EntityManager $repo */
-            $repo = $this->getDoctrine()->getManager();
-
-            $auction = new Auction(
-                new \DateTime('2014-12-30 14:01'),
-                $command->getName(),
-                $command->getContent(),
-                $command->getCategories()
-            );
-            $auction->setMaxPrice($command->getMaxPrice());
-            foreach ($command->getDocuments() as $document) {
-                $auction->getDocuments()->add($document);
-                $document->upload();
-                $repo->persist($document);
-            }
-
-            $repo->persist($auction);
-            $repo->flush();
+            $auctionService = $this->get('gpi_auction.service.auction');
+            $auction = $auctionService->createNewAuction($command);
+            $this->persistAuction($auction);
             return $this->redirect($this->generateUrl('sonata_user_profile_show'));
         }
 
@@ -48,5 +33,19 @@ class AddAuctionController extends Controller
                 'form' => $form->createView()
             )
         );
+    }
+
+    /**
+     * @param Auction $auction
+     */
+    private function persistAuction(Auction $auction)
+    {
+        /** @var \Doctrine\ORM\EntityManager $em */
+        $em = $this->getDoctrine()->getManager();
+        foreach ($auction->getDocuments() as $document) {
+            $em->persist($document);
+        }
+        $em->persist($auction);
+        $em->flush();
     }
 }

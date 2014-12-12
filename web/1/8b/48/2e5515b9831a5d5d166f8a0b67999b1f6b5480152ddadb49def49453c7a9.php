@@ -64,7 +64,10 @@ class __TwigTemplate_8b482e5515b9831a5d5d166f8a0b67999b1f6b5480152ddadb49def4945
             ";
         }
         // line 21
-        echo "            <div class=\"container content\">
+        echo "            <p>Data zakończenia: ";
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["auction"]) ? $context["auction"] : $this->getContext($context, "auction")), "getEndTime", array(), "method"), "format", array(0 => "Y-m-d H:i:s"), "method"), "html", null, true);
+        echo "</p>
+            <div class=\"container content\">
 
                 <div class=\"col-md-12\">
 
@@ -72,31 +75,31 @@ class __TwigTemplate_8b482e5515b9831a5d5d166f8a0b67999b1f6b5480152ddadb49def4945
 
                         <div class=\"owl-recent-works-v1\">
                             ";
-        // line 28
+        // line 29
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["auction"]) ? $context["auction"] : $this->getContext($context, "auction")), "documents", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
-            // line 29
+            // line 30
             echo "
 
                                 <div class=\"item\">
                                     <a href=\"/";
-            // line 32
+            // line 33
             echo twig_escape_filter($this->env, $this->getAttribute($context["document"], "getWebPath", array(), "method"), "html", null, true);
             echo "\" target=\"_blank\">
                                         <em class=\"overflow-hidden\">
                                             <img class=\"img-responsive\" src=\"/";
-            // line 34
+            // line 35
             echo twig_escape_filter($this->env, $this->getAttribute($context["document"], "getWebPath", array(), "method"), "html", null, true);
             echo "\" alt=\"\">
                                         </em>
                                 <span>
                                     <strong>";
-            // line 37
+            // line 38
             echo twig_escape_filter($this->env, $this->getAttribute($context["document"], "description", array()), "html", null, true);
             echo "</strong>
                                     ";
-            // line 39
+            // line 40
             echo "                                </span>
                                     </a>
                                 </div>
@@ -106,7 +109,7 @@ class __TwigTemplate_8b482e5515b9831a5d5d166f8a0b67999b1f6b5480152ddadb49def4945
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 44
+        // line 45
         echo "                        </div>
                     </div>
                 </div>
@@ -128,6 +131,6 @@ class __TwigTemplate_8b482e5515b9831a5d5d166f8a0b67999b1f6b5480152ddadb49def4945
 
     public function getDebugInfo()
     {
-        return array (  110 => 44,  100 => 39,  96 => 37,  90 => 34,  85 => 32,  80 => 29,  76 => 28,  67 => 21,  61 => 19,  59 => 18,  55 => 17,  51 => 16,  44 => 12,  39 => 9,  30 => 7,  26 => 6,  19 => 1,);
+        return array (  113 => 45,  103 => 40,  99 => 38,  93 => 35,  88 => 33,  83 => 30,  79 => 29,  67 => 21,  61 => 19,  59 => 18,  55 => 17,  51 => 16,  44 => 12,  39 => 9,  30 => 7,  26 => 6,  19 => 1,);
     }
 }

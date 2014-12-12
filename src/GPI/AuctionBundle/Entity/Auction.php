@@ -65,8 +65,15 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
      */
     protected $documents;
 
-
+    /**
+     * @ORM\Column(name="end_time", type="datetime")
+     */
     protected $endTime;
+
+    /**
+     * @ORM\Column(name="start_time", type="datetime")
+     */
+    protected $startTime;
 
     /**
      * @return mixed

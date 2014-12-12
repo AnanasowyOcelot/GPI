@@ -9,6 +9,10 @@ class Calendar
         return time();
     }
 
+    /**
+     * @param $timestamp
+     * @return \DateTime
+     */
     public function dateTimeFromTimestamp($timestamp)
     {
         $dt = new \DateTime();
@@ -16,8 +20,20 @@ class Calendar
         return $dt;
     }
 
+    /**
+     * @return \DateTime
+     */
     public function dateTimeNow()
     {
         return $this->dateTimeFromTimestamp($this->time());
+    }
+
+
+    public function dateTimeInNDays($daysFromNow)
+    {
+        $dateTimeNow = $this->dateTimeNow();
+        $interval = \DateInterval::createFromDateString((int)$daysFromNow.' days');
+        $futureDate = $dateTimeNow->add($interval);
+        return $futureDate;
     }
 }

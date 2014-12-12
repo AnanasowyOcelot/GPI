@@ -6,10 +6,9 @@ use GPI\Sonata\ClassificationBundle\Entity\CategoryRepository;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\ChoiceList\ChoiceList;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Functional as F;
 
-class AuctionType extends AbstractType
+abstract class AuctionType extends AbstractType
 {
     /**
      * @var CategoryRepository
@@ -47,7 +46,6 @@ class AuctionType extends AbstractType
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-
         $builder
             ->add('name', 'text', array('label' => "Tytuł:"))
             ->add('content', 'textarea', array('label' => "Treść:"))
@@ -59,7 +57,9 @@ class AuctionType extends AbstractType
                     'currency' => "PLN",
                     'required' => false
                 )
-            )
+            );
+        $this->addTimePeriodToForm($builder);
+        $builder
             ->add(
                 'categories',
                 'entity',
@@ -85,18 +85,19 @@ class AuctionType extends AbstractType
             ->add('submit', 'submit');
     }
 
+    abstract protected function addTimePeriodToForm($builder);
+//    {
+//        $builder->add('timePeriod', 'choice', array('label'=> "Długość aukcji:", 'choices'=>array(30=>'30 dni', 60=>'60 dni', 90=>'90 dni')));
+//    }
+
+    /**
+     * Returns the name of this type.
+     *
+     * @return string The name of this type
+     */
     public function getName()
     {
-        return 'auction';
-    }
-
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
-    {
-        $resolver->setDefaults(
-            array(
-                'data_class' => 'GPI\CoreBundle\Model\Auction\AddNewAuctionCommand',
-            )
-        );
+        // TODO: Implement getName() method.
     }
 
     /**

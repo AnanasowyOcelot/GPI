@@ -52,7 +52,7 @@ services:
         calls:
             - [setRequest, [@request_stack]]
     gpi_auction.form.auction:
-        class: GPI\AuctionBundle\Form\AuctionType
+        class: GPI\AuctionBundle\Form\AddAuctionType
         tags:
             - { name: form.type, alias: auction }
         arguments:
@@ -67,3 +67,10 @@ services:
         class: GPI\AuctionBundle\Form\DocumentType
         tags:
             - { name: form.type, alias: document }
+    gpi_auction.service.auction:
+        class: GPI\AuctionBundle\Service\Auction
+        arguments:
+            - @gpi_core.model.calendar.calendar
+            - %gpi_auction.allowedTimePeriods%
+    gpi_core.model.calendar.calendar:
+        class: GPI\CoreBundle\Model\Calendar\Calendar

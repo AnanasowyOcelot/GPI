@@ -19,4 +19,8 @@ class UpdateAuctionType extends AuctionType
     {
         return 'auction_update';
     }
+
+    protected function addTimePeriodToForm($builder)
+    {
+    }
 }

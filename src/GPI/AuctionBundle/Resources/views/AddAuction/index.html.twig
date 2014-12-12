@@ -68,51 +68,61 @@
     </script>
 
     <div class="tag-box tag-box-v3 form-page" style="overflow: hidden;">
-    <div class="headline"><h3>Dodaj nową aukcję</h3></div>
+        <div class="headline"><h3>Dodaj nową aukcję</h3></div>
 
-    <form method="POST" {{ form_enctype(form) }} class="sky-form">
-        <fieldset>
-        {{ form_row(form.name) }}
-        </fieldset>
-        <hr />
-        <fieldset>
-        {{ form_row(form.content) }}
-        </fieldset>
-        <hr />
-        <fieldset>
-        {{ form_row(form.maxPrice) }}
-        </fieldset>
-        <hr />
-        <fieldset>
-        {{ form_row(form.categories) }}
-        </fieldset>
-        <hr />
-        <fieldset>
-        <label class="col-sm-2 control-label">Dokumenty:</label>
-        <div class="col-sm-10">
-            <ul class="documents" data-prototype="{{ form_widget(form.documents.vars.prototype)|e }}">
-                {% for document in form.documents %}
-                    <li class="tag-box-v2">{{ form_row(document.description) }}{{ form_row(document.file) }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        </fieldset>
-        <hr />
-        <fieldset>
-        {{ form_rest(form) }}
-        </fieldset>
-    </form>
+        <form method="POST" {{ form_enctype(form) }} class="sky-form">
+            <fieldset>
+                {{ form_row(form.name) }}
+            </fieldset>
+            <hr/>
+            <fieldset>
+                {{ form_row(form.content) }}
+            </fieldset>
+            <hr/>
+            <fieldset>
+                {{ form_row(form.maxPrice) }}
+                <br/>
+
+                <div class="note">Wypełnij jeśli znasz</div>
+            </fieldset>
+            <hr/>
+            <fieldset>
+                {{ form_row(form.timePeriod) }}
+            </fieldset>
+            <hr/>
+            <fieldset>
+                {{ form_row(form.categories) }}
+            </fieldset>
+            <hr/>
+            <fieldset>
+                <label class="col-sm-2 control-label">Dokumenty:</label>
+
+                <div class="col-sm-10">
+                    <ul class="documents" data-prototype="{{ form_widget(form.documents.vars.prototype)|e }}">
+                        {% for document in form.documents %}
+                            <li class="tag-box-v2">{{ form_row(document.description) }}{{ form_row(document.file) }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </fieldset>
+            <hr/>
+            <fieldset>
+                {{ form_rest(form) }}
+            </fieldset>
+        </form>
     </div>
 
     <style>
         form ul.documents {
             padding: 0;
         }
+
         form ul.documents li {
             list-style: none;
             margin-bottom: 8px;
             padding: 5px;
         }
+
         form ul.documents li .document-buttons {
             text-align: right;
         }
