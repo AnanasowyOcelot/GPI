@@ -3,6 +3,7 @@
 namespace GPI\AuctionBundle\Form;
 
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\Form\FormBuilderInterface;
 
 class UpdateAuctionType extends AuctionType
 {
@@ -20,7 +21,11 @@ class UpdateAuctionType extends AuctionType
         return 'auction_update';
     }
 
-    protected function addTimePeriodToForm($builder)
+    protected function addTimePeriodToForm(FormBuilderInterface $builder)
+    {
+    }
+
+    protected function addPriceToForm(FormBuilderInterface $builder)
     {
     }
 }

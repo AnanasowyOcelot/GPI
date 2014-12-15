@@ -10,7 +10,6 @@ class UpdateAuctionCommand
 {
     protected $name;
     protected $content;
-    protected $maxPrice;
     protected $categories;
     protected $documents;
 
@@ -18,24 +17,6 @@ class UpdateAuctionCommand
     {
         $this->documents = new ArrayCollection();
     }
-
-    /**
-     * @param mixed $maxPrice
-     */
-    public function setMaxPrice($maxPrice)
-    {
-        $this->maxPrice = $maxPrice;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMaxPrice()
-    {
-        return $this->maxPrice;
-    }
-
-
 
     /**
      * @return mixed

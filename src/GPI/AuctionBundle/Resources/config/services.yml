@@ -68,7 +68,7 @@ services:
         tags:
             - { name: form.type, alias: document }
     gpi_auction.service.auction:
-        class: GPI\AuctionBundle\Service\Auction
+        class: GPI\CoreBundle\Model\Service\Auction
         arguments:
             - @gpi_core.model.calendar.calendar
             - %gpi_auction.allowedTimePeriods%

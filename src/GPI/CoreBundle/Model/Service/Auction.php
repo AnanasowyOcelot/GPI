@@ -1,8 +1,9 @@
 <?php
 
-namespace GPI\AuctionBundle\Service;
+namespace GPI\CoreBundle\Model\Service;
 
 use GPI\CoreBundle\Model\Auction\AddNewAuctionCommand;
+use GPI\CoreBundle\Model\Auction\UpdateAuctionCommand;
 use GPI\CoreBundle\Model\Calendar\Calendar;
 
 class Auction
@@ -32,12 +33,25 @@ class Auction
             $command->getContent(),
             $command->getCategories()
         );
+        $auction->setStartTime($dateTimeNow);
         $auction->setMaxPrice($command->getMaxPrice());
         foreach ($command->getDocuments() as $document) {
             $auction->getDocuments()->add($document);
             $document->upload();
         }
-        $auction->setStartTime($dateTimeNow);
+        return $auction;
+    }
+
+    public function editAuction(UpdateAuctionCommand $command, \GPI\AuctionBundle\Entity\Auction $auction){
+
+        $auction->setName($command->getName());
+        $auction->setContent($command->getContent());
+        $auction->setCategories($command->getCategories());
+
+        foreach ($command->getDocuments() as $document) {
+            $auction->getDocuments()->add($document);
+        }
+
         return $auction;
     }
 }

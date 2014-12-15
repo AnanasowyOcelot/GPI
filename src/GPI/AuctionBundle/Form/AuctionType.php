@@ -48,16 +48,9 @@ abstract class AuctionType extends AbstractType
     {
         $builder
             ->add('name', 'text', array('label' => "Tytuł:"))
-            ->add('content', 'textarea', array('label' => "Treść:"))
-            ->add(
-                'maxPrice',
-                'money',
-                array(
-                    'label' => "Cena maksymalna:",
-                    'currency' => "PLN",
-                    'required' => false
-                )
-            );
+            ->add('content', 'textarea', array('label' => "Treść:"));
+
+        $this->addPriceToForm($builder);
         $this->addTimePeriodToForm($builder);
         $builder
             ->add(
@@ -85,10 +78,9 @@ abstract class AuctionType extends AbstractType
             ->add('submit', 'submit');
     }
 
-    abstract protected function addTimePeriodToForm($builder);
-//    {
-//        $builder->add('timePeriod', 'choice', array('label'=> "Długość aukcji:", 'choices'=>array(30=>'30 dni', 60=>'60 dni', 90=>'90 dni')));
-//    }
+    abstract protected function addTimePeriodToForm(FormBuilderInterface $builder);
+
+    abstract protected function addPriceToForm(FormBuilderInterface $builder);
 
     /**
      * Returns the name of this type.

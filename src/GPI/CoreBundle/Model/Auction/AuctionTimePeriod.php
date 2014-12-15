@@ -9,4 +9,4 @@ class AuctionTimePeriod
     {
         return array(30, 60, 90);
     }
-} 
+}

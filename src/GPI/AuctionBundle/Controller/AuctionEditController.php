@@ -30,11 +30,7 @@ class AuctionEditController extends Controller
         $command = new UpdateAuctionCommand();
         $command->setName($auction->getName());
         $command->setContent($auction->getContent());
-        $command->setMaxPrice($auction->getMaxPrice());
         $command->setCategories($auction->getCategories());
-        foreach ($auction->getDocuments() as $document) {
-            $command->getDocuments()->add($document);
-        }
 
         $form = $this->createForm('auction_update', $command);
 
@@ -42,16 +38,11 @@ class AuctionEditController extends Controller
 
         if ($form->isValid()) {
 
-            $auction = new Auction(
-                new \DateTime('2014-12-30 14:01'),
-                $command->getName(),
-                $command->getContent(),
-                $command->getCategories()
-            );
-            $auction->setMaxPrice($command->getMaxPrice());
-            foreach ($command->getDocuments() as $document) {
-                $auction->getDocuments()->add($document);
-            }
+            /**
+             * @var $auctionService /GPI/AuctionBundle/Service/Auction
+             */
+            $auctionService = $this->get('gpi_auction.service.auction');
+            $auction = $auctionService->editAuction($command, $auction);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($auction);
@@ -59,6 +50,12 @@ class AuctionEditController extends Controller
             return $this->redirect($this->generateUrl('sonata_user_profile_show'));
         }
 
-        return $this->render('GPIAuctionBundle:EditAuction:index.html.twig', array('form' => $form->createView()));
+        return $this->render(
+            'GPIAuctionBundle:EditAuction:index.html.twig',
+            array(
+                'form' => $form->createView(),
+                'documents' => $auction->getDocuments()
+            )
+        );
     }
 }
