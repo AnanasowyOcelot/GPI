@@ -1,51 +1,67 @@
 <div class="container content">
-    <div class="row">
-        <div class="col-md-3">
-            <div class="margin-bottom-30">
-                <div class="headline"><h2>Kategoria</h2></div>
-                {% for category in auction.getCategories() %}
-                    <p>{{ category }}</p>
-                {% endfor %}
-            </div>
-            <div class="margin-bottom-30">
-                <div class="headline"><h2>Dodano przez</h2></div>
-                <p>{{ auction.getCreatedBy() }}</p>
-            </div>
-        </div>
-        <div class="col-md-9">
-            <div class="headline"><h2>{{ auction.name }}</h2></div>
-            <p>{{ auction.content|raw }}</p>
+
+
+    {#<p>Data zakończenia: </p>#}
+    {#<div class="container content">#}
+
+    {#<div class="col-md-12">#}
+
+    {#<div class="owl-carousel-v1 owl-work-v1">#}
+
+    {#<div class="owl-recent-works-v1">#}
+
+    {#</div>#}
+    {#</div>#}
+    {#</div>#}
+    {#</div>#}
+    {#</div>#}
+    {#</div>#}
+</div>
+
+<div class="row margin-bottom-60">
+    <div class="col-sm-8">
+        <div class="headline"><h2>{{ auction.name }}</h2></div>
+        <p>{{ auction.content|raw }}</p>
+    </div>
+    <div class="col-sm-4">
+        <div class="headline"><h2>Szczegóły</h2></div>
+        <ul class="list-unstyled project-details">
+            <li><strong>Dodano przez:</strong> {{ auction.getCreatedBy() }}</li>
+            <li><strong>Data dodania:</strong> {{ auction.getStartTime().format('Y-m-d H:i:s') }}</li>
+            <li><strong>Data zakończenia:</strong> {{ auction.getEndTime().format('Y-m-d H:i:s') }}</li>
+            <li><strong>Kategorie:</strong></li>
+            {% for category in auction.getCategories() %}
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;{{ category }}</li>
+            {% endfor %}
             {% if auction.getMaxPrice != null %}
-                <p>Cana maksymalna: {{ auction.getMaxPrice() }}</p>
+                <li><strong>Cena maksymalna:</strong> {{ auction.getMaxPrice() }}</li>
             {% endif %}
-            <p>Data zakończenia: {{ auction.getEndTime().format('Y-m-d H:i:s') }}</p>
-            <div class="container content">
 
-                <div class="col-md-12">
-
-                    <div class="owl-carousel-v1 owl-work-v1">
-
-                        <div class="owl-recent-works-v1">
-                            {% for document in auction.documents %}
-
-
-                                <div class="item">
-                                    <a href="/{{ document.getWebPath() }}" target="_blank">
-                                        <em class="overflow-hidden">
-                                            <img class="img-responsive" src="/{{ document.getWebPath() }}" alt="">
-                                        </em>
-                                <span>
-                                    <strong>{{ document.description }}</strong>
-                                    {#<i>Anim pariatur cliche reprehenderit</i>#}
-                                </span>
-                                    </a>
-                                </div>
-
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </ul>
     </div>
 </div>
+<div class="fusion-portfolio wrapper-portfolio-grid cbp-3-col">
+    <div id="grid-container" class="cbp-l-grid-gallery">
+        <ul>
+            {% for document in auction.documents %}
+            <li class="cbp-item motion">
+                <a href="" target="_blank" class="cbp-caption cbp-lightbox">
+                    <div class="cbp-caption-defaultWrap">
+                        <img src="/{{ document.getWebPath() }}" alt="" width="100%">
+                    </div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                {#<div class="cbp-l-caption-text">Dashboard</div>#}
+                                <p class="cbp-l-caption-desc">{{ document.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+    {% endfor %}
+
+    </ul>
+    </div>
+</div>
+
