@@ -40,13 +40,13 @@ class AddAuctionType extends AuctionType
     protected function addPriceToForm(FormBuilderInterface $builder)
     {
         $builder->add(
-        'maxPrice',
-        'money',
-        array(
-            'label' => "Cena maksymalna:",
-            'currency' => "PLN",
-            'required' => false
-        )
-    );
+            'maxPrice',
+            'money',
+            array(
+                'label' => "Cena maksymalna:",
+                'currency' => "PLN",
+                'required' => false
+            )
+        );
     }
 }

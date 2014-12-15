@@ -72,5 +72,6 @@ services:
         arguments:
             - @gpi_core.model.calendar.calendar
             - %gpi_auction.allowedTimePeriods%
+            - @gpi_auction.auction_repository
     gpi_core.model.calendar.calendar:
         class: GPI\CoreBundle\Model\Calendar\Calendar

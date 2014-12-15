@@ -42,7 +42,7 @@ class AuctionEditController extends Controller
              * @var $auctionService /GPI/AuctionBundle/Service/Auction
              */
             $auctionService = $this->get('gpi_auction.service.auction');
-            $auction = $auctionService->editAuction($command, $auction);
+            $auction = $auctionService->editAuction($command, $id);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($auction);

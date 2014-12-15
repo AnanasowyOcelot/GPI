@@ -48,8 +48,6 @@ class Auction
         $this->startTime = $startTime;
     }
 
-
-
     /**
      * @return \DateTime
      */
@@ -74,8 +72,6 @@ class Auction
         return $this->maxPrice;
     }
 
-
-
     public function getDocuments()
     {
         return $this->documents;
@@ -86,22 +82,22 @@ class Auction
         $this->documents = $documents;
     }
 
-        public function setCategories(PersistentCollection $categories)
+    public function setCategories(PersistentCollection $categories)
     {
         $this->categories = $categories;
     }
 
-        public function setEndTime(\DateTime $endTime)
+    public function setEndTime(\DateTime $endTime)
     {
         $this->endTime = $endTime;
     }
 
-        public function isCanceled()
+    public function isCanceled()
     {
         return $this->status === AuctionStatus::CANCELED;
     }
 
-        public function isActive()
+    public function isActive()
     {
         if ($this->endTime < $this->calendar->dateTimeNow()) {
             return false;
@@ -109,7 +105,7 @@ class Auction
         return $this->status === AuctionStatus::ACTIVE;
     }
 
-        public function cancel()
+    public function cancel()
     {
         $this->status = AuctionStatus::CANCELED;
     }
