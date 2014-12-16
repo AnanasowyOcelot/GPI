@@ -18,7 +18,7 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
     {
         // line 1
         $this->displayBlock('block', $context, $blocks);
-        // line 66
+        // line 64
         echo "
 
 
@@ -75,27 +75,26 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
                     <th></th>
                     <th class=\"hidden-sm\">Oferta</th>
                     <th>Status</th>
-                    <th>Kontakt</th>
                 </tr>
                 </thead>
                 <tbody>
                 ";
-        // line 32
+        // line 31
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         foreach ($context['_seq'] as $context["_key"] => $context["auction"]) {
-            // line 33
+            // line 32
             echo "
                     <tr>
                         <td>
                             <img class=\"rounded-x\" src=\"";
-            // line 36
+            // line 35
             echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "getMainPhoto", array(), "method"), "html", null, true);
             echo "\" alt=\"\">
                         </td>
                         <td class=\"td-width\">
                             <h3><a href=\"";
-            // line 39
+            // line 38
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_details", array("id" => $this->getAttribute($context["auction"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "name", array()), "html", null, true);
@@ -103,30 +102,32 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
                             </h3>
 
                             <p>";
-            // line 42
+            // line 41
             echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "getContentShort", array(), "method"), "html", null, true);
             echo "</p>
                             <small class=\"hex\">Zakończenie ";
-            // line 43
+            // line 42
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["auction"], "getEndTime", array(), "method"), "format", array(0 => "Y-m-d H:i:s"), "method"), "html", null, true);
             echo "</small>
                         </td>
                         <td>
-                            <span class=\"label label-success\">Aktywna</span>
+                            <span class=\"";
+            // line 45
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["auctionStatus"]) ? $context["auctionStatus"] : $this->getContext($context, "auctionStatus")), "label", array(0 => $this->getAttribute($context["auction"], "getStatus", array(), "method")), "method"), "html", null, true);
+            echo "\">
+                                ";
+            // line 46
+            echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "getStatusText", array(), "method"), "html", null, true);
+            echo "
+                            </span>
                         </td>
-                        ";
-            // line 49
-            echo "                            ";
-            // line 50
-            echo "                        ";
-            // line 51
-            echo "                    </tr>
+                    </tr>
                 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['auction'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 53
+        // line 51
         echo "
                 </tbody>
             </table>
@@ -135,10 +136,10 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
     <!--End Table Search v2-->
 
     ";
-        // line 61
+        // line 59
         echo "    <div class=\"navigation\">
         ";
-        // line 62
+        // line 60
         echo $this->env->getExtension('knp_pagination')->render((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         echo "
     </div>
@@ -153,6 +154,6 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
 
     public function getDebugInfo()
     {
-        return array (  142 => 62,  139 => 61,  130 => 53,  123 => 51,  121 => 50,  119 => 49,  111 => 43,  107 => 42,  99 => 39,  93 => 36,  88 => 33,  84 => 32,  69 => 19,  61 => 15,  54 => 14,  49 => 11,  40 => 5,  33 => 2,  30 => 1,  22 => 66,  20 => 1,);
+        return array (  143 => 60,  140 => 59,  131 => 51,  120 => 46,  116 => 45,  110 => 42,  106 => 41,  98 => 38,  92 => 35,  87 => 32,  83 => 31,  69 => 19,  61 => 15,  54 => 14,  49 => 11,  40 => 5,  33 => 2,  30 => 1,  22 => 64,  20 => 1,);
     }
 }

@@ -5,6 +5,7 @@
 namespace Application\Sonata\UserBundle\Controller;
 
 use GPI\AuctionBundle\Entity\AuctionRepository;
+use GPI\CoreBundle\Model\Auction\AuctionStatus;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use Symfony\Component\HttpFoundation\Response;
 use FOS\UserBundle\Model\UserInterface;
@@ -38,7 +39,9 @@ class ProfileFOSUser1Controller extends BaseController
         return $this->render('SonataUserBundle:Profile:show.html.twig', array(
             'user'   => $user,
             'blocks' => $this->container->getParameter('sonata.user.configuration.profile_blocks'),
-            'auctions'=>$auctions
+            'auctions'=>$auctions,
+            'auctionStatus' => new AuctionStatus()
+
         ));
     }
 }

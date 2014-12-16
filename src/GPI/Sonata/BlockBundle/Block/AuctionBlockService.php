@@ -7,6 +7,7 @@ namespace GPI\Sonata\BlockBundle\Block;
 use Doctrine\ORM\EntityManager;
 use GPI\AuctionBundle\Entity\AuctionFilterParams;
 use GPI\AuctionBundle\Entity\AuctionRepository;
+use GPI\CoreBundle\Model\Auction\AuctionStatus;
 use Knp\Bundle\PaginatorBundle\Definition\PaginatorAwareInterface;
 use Knp\Component\Pager\Paginator;
 use Sonata\BlockBundle\Block\BaseBlockService;
@@ -127,12 +128,12 @@ class AuctionBlockService extends BaseBlockService implements PaginatorAwareInte
             5
         );
 
-
         return $this->renderResponse($blockContext->getTemplate(), array(
             'pagination' => $pagination,
             'block' => $blockContext->getBlock(),
             'settings' => $settings,
-            'searchParam'=> $searchParams->getName()
+            'searchParam'=> $searchParams->getName(),
+            'auctionStatus' => new AuctionStatus()
         ), $response);
     }
 

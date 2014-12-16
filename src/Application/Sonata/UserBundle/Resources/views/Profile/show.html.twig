@@ -11,13 +11,53 @@ file that was distributed with this source code.
 
 {% extends "SonataUserBundle:Profile:action.html.twig" %}
 {% block sonata_profile_content %}
-    {% for auction in auctions %}
-        <div class="block-newsletter col-sm-12 well">
-            <h5 class="panel-title truncate">Name: {{ auction.name }}</h5>
-            <a href="{{ path('gpi_auction_details', {'id': auction.id }) }}">Details</a>
-            <a href="{{ path('gpi_auction_edit', {'id': auction.id }) }}">Edit</a>
-        </div>
-    {% endfor %}
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th></th>
+                <th class="hidden-sm">Oferta</th>
+                <th>Opcje</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for auction in auctions %}
+
+                <tr>
+                    <td>
+                        <img class="rounded-x" src="{{ auction.getMainPhoto() }}" alt="">
+                    </td>
+                    <td class="td-width">
+                        <h3>{{ auction.name }}</h3>
+
+                        <p>{{ auction.getContentShort() }}</p>
+                        <small class="hex">Zakończenie {{ auction.getEndTime().format('Y-m-d H:i:s') }}</small>
+                    </td>
+                    <td>
+
+                        <p><a href="{{ path('gpi_auction_details', {'id': auction.id }) }}">Szczegóły</a></p>
+                        {% if auction.isActive() %}
+                            <p><a href="{{ path('gpi_auction_edit', {'id': auction.id }) }}">Edytuj</a></p>
+
+                            <p><a href="{{ path('gpi_auction_cancel', {'id': auction.id }) }}">Anuluj</a></p>
+                        {% endif %}
+                    </td>
+                    <td>
+                            <span class="{{ auctionStatus.label(auction.getStatus()) }}">
+                                {{ auctionStatus.name(auction.getStatus()) }}
+                            </span>
+                    </td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+
     <div class="row row-fluid">
         {% set has_center = false %}
         {% for block in blocks %}

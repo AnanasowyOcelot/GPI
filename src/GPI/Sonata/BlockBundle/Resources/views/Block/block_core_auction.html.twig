@@ -25,7 +25,6 @@
                     <th></th>
                     <th class="hidden-sm">Oferta</th>
                     <th>Status</th>
-                    <th>Kontakt</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -43,11 +42,10 @@
                             <small class="hex">Zakończenie {{ auction.getEndTime().format('Y-m-d H:i:s') }}</small>
                         </td>
                         <td>
-                            <span class="label label-success">Aktywna</span>
+                            <span class="{{ auctionStatus.label(auction.getStatus()) }}">
+                                {{ auctionStatus.name(auction.getStatus()) }}
+                            </span>
                         </td>
-                        {#<td>#}
-                            {#<i class="glyphicon glyphicon-arrow-up"></i><span>{{ auction.getMaxPrice() }}</span>#}
-                        {#</td>#}
                     </tr>
                 {% endfor %}
 

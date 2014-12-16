@@ -13,6 +13,7 @@ use Application\Sonata\UserBundle\Entity\User as User;
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="GPI\AuctionBundle\Entity\AuctionRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Auction extends \GPI\CoreBundle\Model\Auction\Auction
 {
@@ -26,12 +27,18 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
     protected $id;
 
     /**
-     * @var integer
+     * @var boolean
      *
-     * @ORM\Column(name="status", type="integer")
+     * @ORM\Column(name="is_canceled", type="boolean")
      */
-    protected $status;
+    protected $isCanceled;
 
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="is_deactivated", type="boolean")
+     */
+    protected $isDeactivated;
     /**
      * @var string
      *
@@ -76,39 +83,6 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
     protected $startTime;
 
     /**
-     * @return mixed
-     */
-    public function getEndTime()
-    {
-        return $this->endTime;
-    }
-
-    /**
-     * @param int $status
-     */
-    public function setStatus($status)
-    {
-        $this->status = $status;
-    }
-
-    /**
-     * @var User $createdBy
-     *
-     * @Gedmo\Blameable(on="create")
-     * @ORM\ManyToOne(targetEntity="Application\Sonata\UserBundle\Entity\User")
-     * @ORM\JoinColumn(name="created_by", referencedColumnName="id")
-     */
-    protected $createdBy;
-
-    /**
-     * @return \Application\Sonata\UserBundle\Entity\User
-     */
-    public function getCreatedBy()
-    {
-        return $this->createdBy;
-    }
-
-    /**
      * @var User $updatedBy
      *
      * @Gedmo\Blameable(on="update")
@@ -125,6 +99,48 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
      * @ORM\JoinColumn(name="content_changed_by", referencedColumnName="id")
      */
     protected $contentChangedBy;
+
+    /**
+     * @var User $createdBy
+     *
+     * @Gedmo\Blameable(on="create")
+     * @ORM\ManyToOne(targetEntity="Application\Sonata\UserBundle\Entity\User")
+     * @ORM\JoinColumn(name="created_by", referencedColumnName="id")
+     */
+    protected $createdBy;
+
+    /**
+     * @ORM\PostLoad
+     */
+    public function postLoad()
+    {
+        /** @var $kernel \Symfony\Component\HttpKernel\Kernel */
+        global $kernel;
+        //        if ('AppCache' == get_class($kernel)) {
+        //            $kernel = $kernel->getKernel();
+        //        }
+        /** @var $calendar \GPI\CoreBundle\Model\Calendar\Calendar */
+        $calendar = $kernel->getContainer()->get('gpi_core.model.calendar.calendar');
+        $this->init(
+            $calendar
+        );
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEndTime()
+    {
+        return $this->endTime;
+    }
+
+    /**
+     * @return \Application\Sonata\UserBundle\Entity\User
+     */
+    public function getCreatedBy()
+    {
+        return $this->createdBy;
+    }
 
     /**
      * Get id

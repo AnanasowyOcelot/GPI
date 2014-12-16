@@ -12,7 +12,8 @@ class Auction
 {
     const MAX_FILES = 20;
 
-    protected $status;
+    protected $isCanceled;
+    protected $isDeactivated;
     protected $name;
     protected $content;
     protected $documents;
@@ -22,22 +23,30 @@ class Auction
     protected $categories;
     protected $maxPrice;
 
-    public function __construct(\DateTime $endTime, $name, $content, $categories, Calendar $calendar = null)
+    public function __construct(\DateTime $endTime, $name, $content, $categories, Calendar $inCalendar = null)
     {
-        $this->status = AuctionStatus::ACTIVE;
+        $this->isCanceled = false;
+        $this->isDeactivated = false;
         $this->documents = new ArrayCollection();
-
         $this->setEndTime($endTime);
         $this->setName($name);
         $this->setContent($content);
         foreach ($categories as $category) {
             $this->addCategory($category);
         }
-        if ($calendar !== null) {
-            $this->calendar = $calendar;
+
+        if ($inCalendar !== null) {
+            $calendar = $inCalendar;
         } else {
-            $this->calendar = new Calendar();
+            $calendar = new Calendar();
         }
+
+        $this->init($calendar);
+    }
+
+    public function init(Calendar $calendar)
+    {
+        $this->calendar = $calendar;
     }
 
     /**
@@ -72,6 +81,20 @@ class Auction
         return $this->maxPrice;
     }
 
+    /**
+     * @return int
+     */
+    public function getStatus()
+    {
+        if ($this->isActive()) {
+            return AuctionStatus::ACTIVE;
+        } else if($this->isCanceled()){
+            return AuctionStatus::CANCELED;
+        }else{
+            return AuctionStatus::DEACTIVATED;
+        }
+    }
+
     public function getDocuments()
     {
         return $this->documents;
@@ -94,25 +117,22 @@ class Auction
 
     public function isCanceled()
     {
-        return $this->status === AuctionStatus::CANCELED;
+        return $this->isCanceled;
+    }
+
+    private function hasEnded()
+    {
+        return $this->endTime < $this->calendar->dateTimeNow();
     }
 
     public function isActive()
     {
-        if ($this->endTime < $this->calendar->dateTimeNow()) {
-            return false;
-        }
-        return $this->status === AuctionStatus::ACTIVE;
+        return !$this->hasEnded() && !$this->isCanceled();
     }
 
     public function cancel()
     {
-        $this->status = AuctionStatus::CANCELED;
-    }
-
-    public function deactivate()
-    {
-        $this->status = AuctionStatus::DEACTIVATED;
+        $this->isCanceled = true;
     }
 
     public function addCategory(Category $category)
