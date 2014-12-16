@@ -15,10 +15,18 @@ class AuctionRepository extends EntityRepository implements \GPI\CoreBundle\Mode
 
     public function filterBy(AuctionFilterParams $params)
     {
+
+        $queryBuilder = $this->createQueryBuilder('auction', 'categories');
+        $queryBuilder->andWhere('auction.isPartiallyActive = true');
+        $queryBuilder->setParameter('now', new \DateTime());
+
+        $queryBuilder->andWhere($queryBuilder->expr()->gt('auction.endTime', ":now"));
+
         if ($params->getCategory() == null && $params->getName() == null) {
-            $auctions = $this->findAll();
+
+            $auctions = $queryBuilder->getQuery()->getResult();
         } else {
-            $queryBuilder = $this->createQueryBuilder('auction', 'categories');
+
             if ($params->getName() != null) {
                 $name = $params->getName();
                 $queryBuilder->andWhere('auction.name LIKE :pac');
@@ -34,5 +42,9 @@ class AuctionRepository extends EntityRepository implements \GPI\CoreBundle\Mode
         }
 
         return $auctions;
+    }
+
+    private function filterByDate()
+    {
     }
 }

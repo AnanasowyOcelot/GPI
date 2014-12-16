@@ -23,19 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Auction.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Auction.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/Auction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="25" selection-start="1384" selection-end="1389" vertical-scroll-proportion="2.4212122" vertical-offset="51" max-vertical-offset="3621">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuctionStatus.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/AuctionStatus.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="21" selection-start="92" selection-end="92" vertical-scroll-proportion="4.3076925" vertical-offset="231" max-vertical-offset="680">
+            <state line="128" column="25" selection-start="2822" selection-end="2822" vertical-scroll-proportion="-4.3846154" vertical-offset="1880" max-vertical-offset="3757">
               <folding />
             </state>
           </provider>
@@ -44,7 +35,34 @@
       <file leaf-file-name="Auction.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/Auction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="30" selection-start="3307" selection-end="3307" vertical-scroll-proportion="-0.65384614" vertical-offset="2176" max-vertical-offset="2992">
+            <state line="44" column="44" selection-start="964" selection-end="983" vertical-scroll-proportion="-6.5384617" vertical-offset="510" max-vertical-offset="3230">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuctionRepository.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AuctionRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="17" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.6640316" vertical-offset="208" max-vertical-offset="952">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/show.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="63" selection-start="1384" selection-end="1385" vertical-scroll-proportion="-11.384615" vertical-offset="418" max-vertical-offset="1683">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuctionBlockService.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Block/AuctionBlockService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="120" column="35" selection-start="3353" selection-end="3353" vertical-scroll-proportion="-1.8076923" vertical-offset="1687" max-vertical-offset="2346">
               <folding />
             </state>
           </provider>
@@ -96,7 +114,6 @@
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AuctionsByCategoryController.php" />
         <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/AuctionRepository.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/Default/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AuctionRepository.php" />
         <option value="$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/new_layout.html.twig" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/CancelAuction.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/Default/details.html.twig" />
@@ -111,6 +128,7 @@
         <option value="$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/show.html.twig" />
         <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/Auction.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/Auction.php" />
+        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AuctionRepository.php" />
       </list>
     </option>
   </component>
@@ -1079,7 +1097,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864675" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.262697" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.262697" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875606" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875606" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1287,13 +1305,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AuctionRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="49" selection-start="1068" selection-end="1068" vertical-scroll-proportion="-12.269231" vertical-offset="174" max-vertical-offset="748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Resources/views/Block/block_core_categories.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="8" selection-start="3" selection-end="8" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
@@ -1411,20 +1422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Block/AuctionBlockService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="45" selection-start="3832" selection-end="3883" vertical-scroll-proportion="-9.653846" vertical-offset="1738" max-vertical-offset="2346">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Resources/views/Block/block_core_auction.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="75" selection-start="1935" selection-end="1935" vertical-scroll-proportion="1.0284464" vertical-offset="295" max-vertical-offset="1241">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="75" column="36" selection-start="3088" selection-end="3120" vertical-scroll-proportion="0.7483731" vertical-offset="930" max-vertical-offset="1411">
@@ -1464,20 +1461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="63" selection-start="1384" selection-end="1385" vertical-scroll-proportion="-5.6923075" vertical-offset="418" max-vertical-offset="1683">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/Auction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="30" selection-start="3307" selection-end="3307" vertical-scroll-proportion="-0.65384614" vertical-offset="2176" max-vertical-offset="2992">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/AuctionStatus.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="21" selection-start="92" selection-end="92" vertical-scroll-proportion="4.3076925" vertical-offset="231" max-vertical-offset="680">
@@ -1485,9 +1468,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Resources/views/Block/block_core_auction.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="75" selection-start="1935" selection-end="1935" vertical-scroll-proportion="-14.153846" vertical-offset="397" max-vertical-offset="1241">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/Auction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="25" selection-start="1384" selection-end="1389" vertical-scroll-proportion="2.4212122" vertical-offset="51" max-vertical-offset="3621">
+        <state line="128" column="25" selection-start="2822" selection-end="2822" vertical-scroll-proportion="-4.3846154" vertical-offset="1880" max-vertical-offset="3757">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Sonata/UserBundle/Resources/views/Profile/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="63" selection-start="1384" selection-end="1385" vertical-scroll-proportion="-11.384615" vertical-offset="418" max-vertical-offset="1683">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/Auction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="44" selection-start="964" selection-end="983" vertical-scroll-proportion="-6.5384617" vertical-offset="510" max-vertical-offset="3230">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Block/AuctionBlockService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="35" selection-start="3353" selection-end="3353" vertical-scroll-proportion="-1.8076923" vertical-offset="1687" max-vertical-offset="2346">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AuctionRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="17" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.6640316" vertical-offset="208" max-vertical-offset="952">
           <folding />
         </state>
       </provider>

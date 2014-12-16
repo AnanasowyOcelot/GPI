@@ -125,9 +125,17 @@ class Auction
         return $this->endTime < $this->calendar->dateTimeNow();
     }
 
+    protected function isPartiallyActive(){
+        return !$this->isCanceled() && !$this->isDeactivated();
+    }
+
+    public function isDeactivated(){
+        return $this->isDeactivated;
+    }
+
     public function isActive()
     {
-        return !$this->hasEnded() && !$this->isCanceled();
+        return !$this->hasEnded() && $this->isPartiallyActive();
     }
 
     public function cancel()

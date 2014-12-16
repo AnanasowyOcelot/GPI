@@ -35,10 +35,16 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
 
     /**
      * @var boolean
-     *
      * @ORM\Column(name="is_deactivated", type="boolean")
      */
     protected $isDeactivated;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="is_partially_active", type="boolean")
+     */
+    protected $isPartiallyActive;
     /**
      * @var string
      *
@@ -110,15 +116,23 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
     protected $createdBy;
 
     /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function setPartiallyActive(){
+        $this->isPartiallyActive = $this->isPartiallyActive();
+    }
+
+    /**
      * @ORM\PostLoad
      */
     public function postLoad()
     {
         /** @var $kernel \Symfony\Component\HttpKernel\Kernel */
         global $kernel;
-        //        if ('AppCache' == get_class($kernel)) {
-        //            $kernel = $kernel->getKernel();
-        //        }
+                if ('AppCache' == get_class($kernel)) {
+                    $kernel = $kernel->getKernel();
+                }
         /** @var $calendar \GPI\CoreBundle\Model\Calendar\Calendar */
         $calendar = $kernel->getContainer()->get('gpi_core.model.calendar.calendar');
         $this->init(
