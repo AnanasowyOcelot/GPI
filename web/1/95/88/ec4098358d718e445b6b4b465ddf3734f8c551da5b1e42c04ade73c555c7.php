@@ -11,6 +11,7 @@ class __TwigTemplate_9588ec4098358d718e445b6b4b465ddf3734f8c551da5b1e42c04ade73c
 
         $this->blocks = array(
             'name' => array($this, 'block_name'),
+            'field' => array($this, 'block_field'),
         );
     }
 
@@ -21,34 +22,35 @@ class __TwigTemplate_9588ec4098358d718e445b6b4b465ddf3734f8c551da5b1e42c04ade73c
         $this->displayBlock('name', $context, $blocks);
         echo "</th>
 <td>
-    ";
+    <a href=\"/";
         // line 3
-        $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["object"]) ? $context["object"] : $this->getContext($context, "object")), "documents", array()));
-        foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
-            // line 4
-            echo "    <img style=\"width: 250px\" src=\"/";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["document"], "getWebPath", array(), "method"), "html", null, true);
-            echo "\" title=\"";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["document"], "getDescription", array(), "method"), "html", null, true);
-            echo "\" />
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["object"]) ? $context["object"] : $this->getContext($context, "object")), "getWebPath", array(), "method"), "html", null, true);
+        echo "\" target=\"_blank\">
+        <img style=\"width: 350px\" src=\"/";
+        // line 4
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["object"]) ? $context["object"] : $this->getContext($context, "object")), "getWebPath", array()), "html", null, true);
+        echo "\" title=\"";
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["object"]) ? $context["object"] : $this->getContext($context, "object")), "getDescription", array(), "method"), "html", null, true);
+        echo "\"/>
+    </a>
     <br/>
     ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
         // line 7
-        echo "    ";
+        $this->displayBlock('field', $context, $blocks);
         // line 8
-        echo "</td>
-";
+        echo "</td>";
     }
 
     // line 1
     public function block_name($context, array $blocks = array())
     {
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "trans", array(0 => $this->getAttribute((isset($context["field_description"]) ? $context["field_description"] : $this->getContext($context, "field_description")), "label", array())), "method"), "html", null, true);
+    }
+
+    // line 7
+    public function block_field($context, array $blocks = array())
+    {
+        echo nl2br(twig_escape_filter($this->env, (isset($context["value"]) ? $context["value"] : $this->getContext($context, "value")), "html", null, true));
     }
 
     public function getTemplateName()
@@ -63,6 +65,6 @@ class __TwigTemplate_9588ec4098358d718e445b6b4b465ddf3734f8c551da5b1e42c04ade73c
 
     public function getDebugInfo()
     {
-        return array (  49 => 1,  44 => 8,  42 => 7,  30 => 4,  26 => 3,  20 => 1,);
+        return array (  51 => 7,  45 => 1,  41 => 8,  39 => 7,  31 => 4,  27 => 3,  21 => 1,);
     }
 }

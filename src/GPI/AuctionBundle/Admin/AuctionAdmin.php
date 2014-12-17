@@ -6,6 +6,7 @@ use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Route\RouteCollection;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Knp\Menu\ItemInterface as MenuItemInterface;
 use Sonata\AdminBundle\Admin\AdminInterface;
@@ -39,12 +40,17 @@ class AuctionAdmin extends Admin
             ->add('categories', null, array('label' => "Kategorie"))
             ->add('startTime', null, array('label' => "Data wystawienia"))
             ->add('endTime', null, array('label' => "Data zakończenia"))
+            ->add('isCanceled', 'boolean', array('label' => "Usunięty przez użytkownika", "sortable" => false))
+            ->add('isNotDeactivated', 'boolean', array('label' => "Włączona"))
             ->add(
                 '_action',
                 'actions',
                 array(
                     'actions' => array(
                         'show' => array(),
+                        'Wyłącz' => array(
+                            'template' => 'GPIAuctionBundle:Admin:list__action_deactivate.html.twig'
+                        )
                         //                        'edit' => array(),
                         //                        'delete' => array(), TODO: deaktywacja i aktywacja aukcji
                     ),
@@ -102,7 +108,6 @@ class AuctionAdmin extends Admin
             ->add('categories', null, array('label' => "Kategorie"))
             ->add('documents', null, array(
                     'label' => "Pliki",
-                    //                    'template' => 'GPIAuctionBundle:Admin:image_preview.html.twig'
                 )
             );
     }
@@ -116,40 +121,17 @@ class AuctionAdmin extends Admin
         $admin = $this->isChild() ? $this->getParent() : $this;
 
         $id = $admin->getRequest()->get('id');
-        $auction = $this->getObject($id);
+        //        $auction = $this->getObject($id);
 
         $menu->addChild(
             $this->trans('Edycja', array(), 'SonataAuctionBundle'),
             array('uri' => $admin->generateUrl('edit', array('id' => $id)))
         );
+    }
 
-        //        $menu->addChild(
-        //            $this->trans('auction.sidemenu.view_categories', array(), 'SonataAuctionBundle'),
-        //            array('uri' => $admin->generateUrl('gpi_auction.admin.auction.category.list', array('id' => $id)))
-        //        );
-
-        //        $menu->addChild(
-        //            $this->trans('product.sidemenu.view_collections', array(), 'SonataProductBundle'),
-        //            array('uri' => $admin->generateUrl(
-        //                    'sonata.product.admin.product.collection.list',
-        //                    array('id' => $id))
-        //            )
-        //        );
-        //
-        //        $menu->addChild(
-        //            $this->trans('product.sidemenu.view_deliveries', array(), 'SonataProductBundle'),
-        //            array('uri' => $admin->generateUrl('sonata.product.admin.delivery.list', array('id' => $id)))
-        //        );
-        //
-        //        if (!$auction->isVariation() && $this->getCode() == 'sonata.product.admin.product') {
-        //            $menu->addChild(
-        //                $this->trans('product.sidemenu.view_variations'),
-        //                array('uri' => $admin->generateUrl(
-        //                        'sonata.product.admin.product.variation.list',
-        //                        array('id' => $id))
-        //                )
-        //            );
-        //
-        //        }
+    protected function configureRoutes(RouteCollection $collection)
+    {
+        $collection->add('deactivate', $this->getRouterIdParameter().'/deactivate');
+        $collection->add('activate', $this->getRouterIdParameter().'/activate');
     }
 }

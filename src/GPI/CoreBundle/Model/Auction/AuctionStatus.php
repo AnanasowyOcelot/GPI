@@ -11,7 +11,7 @@ class AuctionStatus
 
     private static $statusNames = array(
         self::ACTIVE => 'Aktywna',
-        self::CANCELED => 'Usunięte',
+        self::CANCELED => 'Usunięta',
         self::DEACTIVATED => 'Nieaktywna'
     );
 

@@ -25,7 +25,7 @@
         <ul>
             {% for document in auction.documents %}
             <li class="cbp-item motion">
-                <a href="" target="_blank" class="cbp-caption cbp-lightbox">
+                <a href="/{{ document.getWebPath() }}" target="_blank" class="cbp-caption cbp-lightbox">
                     <div class="cbp-caption-defaultWrap">
                         <img src="/{{ document.getWebPath() }}" alt="" width="100%">
                     </div>

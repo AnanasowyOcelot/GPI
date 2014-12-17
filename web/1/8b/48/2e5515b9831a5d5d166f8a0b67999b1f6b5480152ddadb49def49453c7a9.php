@@ -81,7 +81,10 @@ class __TwigTemplate_8b482e5515b9831a5d5d166f8a0b67999b1f6b5480152ddadb49def4945
         foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
             // line 27
             echo "            <li class=\"cbp-item motion\">
-                <a href=\"\" target=\"_blank\" class=\"cbp-caption cbp-lightbox\">
+                <a href=\"/";
+            // line 28
+            echo twig_escape_filter($this->env, $this->getAttribute($context["document"], "getWebPath", array(), "method"), "html", null, true);
+            echo "\" target=\"_blank\" class=\"cbp-caption cbp-lightbox\">
                     <div class=\"cbp-caption-defaultWrap\">
                         <img src=\"/";
             // line 30
@@ -127,6 +130,6 @@ class __TwigTemplate_8b482e5515b9831a5d5d166f8a0b67999b1f6b5480152ddadb49def4945
 
     public function getDebugInfo()
     {
-        return array (  110 => 43,  96 => 36,  88 => 30,  83 => 27,  79 => 26,  70 => 19,  64 => 17,  61 => 16,  52 => 14,  48 => 13,  43 => 11,  39 => 10,  35 => 9,  27 => 4,  23 => 3,  19 => 1,);
+        return array (  113 => 43,  99 => 36,  91 => 30,  86 => 28,  83 => 27,  79 => 26,  70 => 19,  64 => 17,  61 => 16,  52 => 14,  48 => 13,  43 => 11,  39 => 10,  35 => 9,  27 => 4,  23 => 3,  19 => 1,);
     }
 }

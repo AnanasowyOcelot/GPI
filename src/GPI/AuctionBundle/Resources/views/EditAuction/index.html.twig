@@ -1,3 +1,19 @@
+{#{% extends "GPIAuctionBundle:EditAuction:index.html.twig" %}#}
+
+
+{#{% extends "SonataUserBundle:Profile:action.html.twig" %}#}
+{#{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}#}
+
+{#{% block sonata_profile_content %}#}
+
+    {#<div class="headline"><h2>Edytuj</h2></div>#}
+
+    {#{{ form_start(form) }}#}
+
+    {#{{ form_end(form) }}#}
+
+{#{% endblock %}#}
+
 {% extends "SonataUserBundle:Profile:action.html.twig" %}
 {% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
 {% block sonata_profile_content %}
@@ -79,6 +95,7 @@
                 {{ form_row(form.content) }}
             </fieldset>
             <hr/>
+
             <fieldset>
                 {{ form_row(form.categories) }}
             </fieldset>

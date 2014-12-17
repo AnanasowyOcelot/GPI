@@ -33,7 +33,6 @@ class Document extends BaseDocument
      */
     protected $description;
 
-    /////////////////////////////////////////////////////////////////
     /**
      * @var User $createdBy
      *

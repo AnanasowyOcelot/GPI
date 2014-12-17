@@ -52,30 +52,30 @@ class DocumentAdmin extends Admin
      */
     protected function configureFormFields(FormMapper $formMapper)
     {
-        $formMapper
-            ->add(
-                'id',
-                null,
-                array(
-                    'read_only' => true
-                )
-            )
-            ->add('description', 'textarea')
-            ->add(
-                'WebPath',
-                'textarea',
-                array(
-                    'read_only' => true
-                )
-            )
-            ->add(
-                'createdBy',
-                null,
-                array(
-                    'read_only' => true,
-                    'disabled' => true,
-                )
-            );
+        //        $formMapper
+        //            ->add(
+        //                'id',
+        //                null,
+        //                array(
+        //                    'read_only' => true
+        //                )
+        //            )
+        //            ->add('description', 'textarea')
+        //            ->add(
+        //                'WebPath',
+        //                'textarea',
+        //                array(
+        //                    'read_only' => true
+        //                )
+        //            )
+        //            ->add(
+        //                'createdBy',
+        //                null,
+        //                array(
+        //                    'read_only' => true,
+        //                    'disabled' => true,
+        //                )
+        //            );
     }
 
     /**
@@ -85,18 +85,13 @@ class DocumentAdmin extends Admin
     {
         $showMapper
             ->add('id')
-            ->add('description')
-            ->add('WebPath')
-            ->add(
-                'createdBy',
-                null,
-                array(
-                    'sortable' => true,
-                    'sort_field_mapping' => array('fieldName' => 'name'),
-                    'sort_parent_association_mappings' => array(array('fieldName' => 'createdBy')
-                    )
-                )
-            );
+            ->add('description', null, array('label' => 'Opis'))
+            ->add('path', null, array('label' => 'Nazwa pliku'))
+            ->add('createdBy', null, array('label' => 'Dodano przez'))
+            ->add('Podglad', null, array(
+                'template' => 'GPIAuctionBundle:Admin:image_preview.html.twig',
+                'label' => 'Podgląd'
+            ));
     }
 
     protected function configureSideMenu(MenuItemInterface $menu, $action, AdminInterface $childAdmin = null)

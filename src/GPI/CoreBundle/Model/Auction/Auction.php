@@ -148,6 +148,19 @@ class Auction
     {
         $this->isCanceled = true;
     }
+    public function deactivate()
+    {
+        $this->isDeactivated = true;
+    }
+
+    public function activate()
+    {
+        $this->isDeactivated = false;
+    }
+
+    public function isNotDeactivated(){
+        return !$this->isDeactivated();
+    }
 
     public function addCategory(Category $category)
     {
