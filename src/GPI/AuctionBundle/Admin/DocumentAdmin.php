@@ -19,7 +19,8 @@ class DocumentAdmin extends Admin
     {
         $datagridMapper
             ->add('id')
-            ->add('description');
+            ->add('description', null, array('label' => 'Opis'))
+            ->add('createdBy', null, array('label' => 'Dodano przez'));
     }
 
     /**
@@ -29,27 +30,19 @@ class DocumentAdmin extends Admin
     {
         $listMapper
             ->add('id')
-            ->add('description')
-            ->add('WebPath')
-            ->add(
-                'createdBy',
-                null,
-                array(
-                    'sortable' => true,
-                    'sort_field_mapping' => array('fieldName' => 'name'),
-                    'sort_parent_association_mappings' => array(array('fieldName' => 'createdBy')
-                    )
-                )
-            )
+            ->add('description', null, array('label' => 'Opis'))
+            ->add('path', null, array('label' => 'Nazwa pliku'))
+            ->add('createdBy', null, array('label' => 'Dodano przez'))
             ->add(
                 '_action',
                 'actions',
                 array(
                     'actions' => array(
                         'show' => array(),
-                        'edit' => array(),
-                        'delete' => array(),
-                    )
+                        //                        'edit' => array(),
+                        //                        'delete' => array(),
+                    ),
+                    'label' => 'Opcje'
                 )
             );
     }

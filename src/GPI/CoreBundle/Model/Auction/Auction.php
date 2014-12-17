@@ -22,6 +22,7 @@ class Auction
     private $calendar;
     protected $categories;
     protected $maxPrice;
+    protected $createdBy;
 
     public function __construct(\DateTime $endTime, $name, $content, $categories, Calendar $inCalendar = null)
     {
@@ -118,6 +119,11 @@ class Auction
     public function isCanceled()
     {
         return $this->isCanceled;
+    }
+
+    public function ownerId()
+    {
+        return $this->createdBy;
     }
 
     private function hasEnded()

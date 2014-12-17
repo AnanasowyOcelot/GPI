@@ -19,8 +19,12 @@ class AuctionAdmin extends Admin
     {
         $datagridMapper
             ->add('id')
-            ->add('name')
-            ->add('content');
+            ->add('name', null, array('label' => "Tytuł"))
+            ->add('content', null, array('label' => "Treść"))
+            ->add('categories', null, array('label' => "Kategorie")) //TODO: to mogłoby być drzeffem
+            ->add('createdBy', null, array('label' => "Dodano przez"))
+            ->add('isCanceled', null, array('label' => "Skasowane"))
+            ->add('isDeactivated', null, array('label' => "Nieaktywne"));
     }
 
     /**
@@ -30,29 +34,21 @@ class AuctionAdmin extends Admin
     {
         $listMapper
             ->add('id')
-            ->add('name')
-            ->add(
-                'category',
-                null,
-                array(
-                    'sortable' => true,
-                    'sort_field_mapping' => array('fieldName' => 'name'),
-                    'sort_parent_association_mappings' => array(
-                        array('fieldName' => 'category')
-                    )
-                )
-            )
-            ->add('contentShort')
-            //            ->add('numFiles')
+            ->add('name', null, array('label' => "Tytuł"))
+            ->add('contentShort', null, array('label' => "Treść"))
+            ->add('categories', null, array('label' => "Kategorie"))
+            ->add('startTime', null, array('label' => "Data wystawienia"))
+            ->add('endTime', null, array('label' => "Data zakończenia"))
             ->add(
                 '_action',
                 'actions',
                 array(
                     'actions' => array(
                         'show' => array(),
-                        'edit' => array(),
-                        'delete' => array(),
-                    )
+                        //                        'edit' => array(),
+                        //                        'delete' => array(), TODO: deaktywacja i aktywacja aukcji
+                    ),
+                    'label' => "Opcje"
                 )
             );
     }
@@ -62,30 +58,27 @@ class AuctionAdmin extends Admin
      */
     protected function configureFormFields(FormMapper $formMapper)
     {
-        $formMapper
-            ->add('name')
-            ->add(
-                'content',
-                'textarea',
-                array(
-                    'attr' => array('class' => 'ckeditor')
-                )
-            )
-            ->add(
-                'category',
-                'sonata_type_model_list',
-                array(),
-                array()
-            )
-            ->add(
-                'documents',
-                'entity',
-                array(
-                    'class' => 'GPI\AuctionBundle\Entity\Document',
-                    'read_only' => true,
-                    'multiple' => true,
-                )
-            );
+        //        $formMapper
+        //            ->add('name')
+        //            ->add(
+        //                'content',
+        //                'textarea',
+        //                array(
+        //                    'attr' => array('class' => 'ckeditor')
+        //                )
+        //            )
+        //            ->add(
+        //                'categories'
+        //            )
+        //            ->add(
+        //                'documents',
+        //                'entity',
+        //                array(
+        //                    'class' => 'GPI\AuctionBundle\Entity\Document',
+        //                    'read_only' => true,
+        //                    'multiple' => true,
+        //                )
+        //            );
 
         //            ->add('webPath', 'url', array(
         //                'read_only'=>true
@@ -100,10 +93,18 @@ class AuctionAdmin extends Admin
     {
         $showMapper
             ->add('id')
-            ->add('name')
-            ->add('content')
-            ->add('category', 'sonata_type_model_list', array(), array())
-            ->add('documents', 'entity', array('class' => 'GPI\AuctionBundle\Entity\Document'));
+            ->add('name', null, array('label' => "Tytuł"))
+            ->add('createdBy', null, array('label' => "Dodano przez"))
+            ->add('content', null, array('label' => "Treść"))
+            ->add('startTime', null, array('label' => "Data wystawienia"))
+            ->add('endTime', null, array('label' => "Data zakończenia"))
+            ->add('maxPrice', null, array('label' => "Cena maksymalna"))
+            ->add('categories', null, array('label' => "Kategorie"))
+            ->add('documents', null, array(
+                    'label' => "Pliki",
+                    //                    'template' => 'GPIAuctionBundle:Admin:image_preview.html.twig'
+                )
+            );
     }
 
     protected function configureSideMenu(MenuItemInterface $menu, $action, AdminInterface $childAdmin = null)

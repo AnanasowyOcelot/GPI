@@ -112,6 +112,14 @@ class Document extends BaseDocument
      */
     private $path;
 
+    /**
+     * @return mixed
+     */
+    public function getPath()
+    {
+        return $this->path;
+    }
+
     public function getAbsolutePath()
     {
         return null === $this->path

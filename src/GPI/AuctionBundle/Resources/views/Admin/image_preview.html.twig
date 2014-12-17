@@ -1,0 +1,8 @@
+<th>{% block name %}{{ admin.trans(field_description.label) }}{% endblock %}</th>
+<td>
+    {% for document in object.documents %}
+    <img style="width: 250px" src="/{{ document.getWebPath() }}" title="{{ document.getDescription() }}" />
+    <br/>
+    {% endfor %}
+    {#{% block field %}{{ value }}{% endblock %}#}
+</td>

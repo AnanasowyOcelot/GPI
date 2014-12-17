@@ -6,18 +6,23 @@ use GPI\CoreBundle\Model\Auction\AddNewAuctionCommand;
 use GPI\CoreBundle\Model\Auction\AuctionRepository;
 use GPI\CoreBundle\Model\Auction\UpdateAuctionCommand;
 use GPI\CoreBundle\Model\Calendar\Calendar;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+use Symfony\Component\Security\Core\SecurityContext;
 
 class Auction
 {
     private $calendar;
     private $allowedTimePeriods;
     private $auctionRepository;
+    private $securityToken;
 
-    public function __construct(Calendar $calendar, array $allowedTimePeriods, AuctionRepository $auctionRepository)
+    public function __construct(Calendar $calendar, array $allowedTimePeriods, AuctionRepository $auctionRepository, TokenStorage $securityToken)
     {
         $this->calendar = $calendar;
         $this->allowedTimePeriods = $allowedTimePeriods;
         $this->auctionRepository = $auctionRepository;
+        $this->securityToken = $securityToken;
     }
 
     public function createNewAuction(AddNewAuctionCommand $command)
@@ -47,15 +52,26 @@ class Auction
 
     public function editAuction(UpdateAuctionCommand $command, $auctionId)
     {
+        /**
+         * @var $auction \GPI\CoreBundle\Model\Auction\Auction
+         */
         $auction = $this->auctionRepository->find($auctionId);
+
+        if (!$this->isOwner($auction)) {
+            throw new AccessDeniedException();
+        }
+
         $auction->setName($command->getName());
         $auction->setContent($command->getContent());
         $auction->setCategories($command->getCategories());
-
         foreach ($command->getDocuments() as $document) {
             $auction->getDocuments()->add($document);
         }
-
         return $auction;
+    }
+
+    private function isOwner(\GPI\CoreBundle\Model\Auction\Auction $auction)
+    {
+        return $auction->ownerId() === $this->securityToken->getToken()->getUser(); // TODO
     }
 }

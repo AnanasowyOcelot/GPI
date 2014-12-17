@@ -12,10 +12,8 @@ use Doctrine\ORM\EntityRepository;
  */
 class AuctionRepository extends EntityRepository implements \GPI\CoreBundle\Model\Auction\AuctionRepository
 {
-
     public function filterBy(AuctionFilterParams $params)
     {
-
         $queryBuilder = $this->createQueryBuilder('auction', 'categories');
         $queryBuilder->andWhere('auction.isPartiallyActive = true');
         $queryBuilder->setParameter('now', new \DateTime());
@@ -44,7 +42,4 @@ class AuctionRepository extends EntityRepository implements \GPI\CoreBundle\Mode
         return $auctions;
     }
 
-    private function filterByDate()
-    {
-    }
 }
