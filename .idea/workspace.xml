@@ -23,10 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AuctionAdmin.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Admin/AuctionAdmin.php">
+      <file leaf-file-name="CategoriesBlockService.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Block/CategoriesBlockService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="109" selection-start="1687" selection-end="1687" vertical-scroll-proportion="0.1904762" vertical-offset="499" max-vertical-offset="2312">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1632">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="block_core_categories.html.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Resources/views/Block/block_core_categories.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="33" selection-start="418" selection-end="418" vertical-scroll-proportion="0.30357143" vertical-offset="0" max-vertical-offset="731">
               <folding />
             </state>
           </provider>
@@ -42,8 +51,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/config/assetic.yml" />
-        <option value="$PROJECT_DIR$/src/GPI/LayoutBundle/Resources/public/plugins/bootstrap/js/bootstrap.min.js" />
         <option value="$PROJECT_DIR$/web/assetic/sonata_front_js.js" />
         <option value="$PROJECT_DIR$/app/config/sonata/sonata_admin.yml" />
         <option value="$PROJECT_DIR$/composer.json" />
@@ -93,6 +100,8 @@
         <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/Auction.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/Admin/list__action_deactivate.html.twig" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Admin/AuctionAdmin.php" />
+        <option value="$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Resources/views/Block/block_core_categories.html.twig" />
+        <option value="$PROJECT_DIR$/1/cd/2e/1beb42bb9a53988824c601a3ee8b152252f49ac0bdcdb0eb70e780ec0d29.php" />
       </list>
     </option>
   </component>
@@ -1052,22 +1061,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/DocumentType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="537" selection-end="537" vertical-scroll-proportion="0.36223507" vertical-offset="118" max-vertical-offset="663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/UpdateAuctionType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="688" selection-end="688" vertical-scroll-proportion="-13.269231" vertical-offset="148" max-vertical-offset="629">
-          <folding>
-            <element signature="e#42#105#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AuctionType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="40" selection-start="1478" selection-end="1478" vertical-scroll-proportion="-6.423077" vertical-offset="717" max-vertical-offset="1836">
@@ -1110,13 +1103,6 @@
     <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AuctionsByCategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Resources/views/Block/block_core_categories.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="8" selection-start="3" selection-end="8" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
           <folding />
         </state>
       </provider>
@@ -1385,7 +1371,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="16" selection-start="1249" selection-end="1249" vertical-scroll-proportion="0.33333334" vertical-offset="495" max-vertical-offset="1088">
           <folding>
-            <element signature="e#48#97#0" expanded="true" />
+            <element signature="e#48#97#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1427,7 +1413,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Admin/AuctionAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="109" selection-start="1687" selection-end="1687" vertical-scroll-proportion="0.1904762" vertical-offset="499" max-vertical-offset="2312">
+        <state line="42" column="109" selection-start="1687" selection-end="1687" vertical-scroll-proportion="-3.6923077" vertical-offset="499" max-vertical-offset="2312">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Block/CategoriesBlockService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1632">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1/cd/2e/1beb42bb9a53988824c601a3ee8b152252f49ac0bdcdb0eb70e780ec0d29.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="36" selection-start="2684" selection-end="2684" vertical-scroll-proportion="0.6130952" vertical-offset="830" max-vertical-offset="2193">
+          <folding>
+            <marker date="1418831082169" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418831082169" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418831082169" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Resources/views/Block/block_core_categories.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="33" selection-start="418" selection-end="418" vertical-scroll-proportion="0.30357143" vertical-offset="0" max-vertical-offset="731">
           <folding />
         </state>
       </provider>

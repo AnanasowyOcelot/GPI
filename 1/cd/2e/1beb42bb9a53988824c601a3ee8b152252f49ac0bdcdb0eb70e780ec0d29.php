@@ -63,7 +63,7 @@ class __TwigTemplate_cd2e1beb42bb9a53988824c601a3ee8b152252f49ac0bdcdb0eb70e780e
                 if (($this->getAttribute($context["category"], "slug", array()) != (isset($context["slug"]) ? $context["slug"] : $this->getContext($context, "slug")))) {
                     // line 5
                     echo "            <a href=\"";
-                    echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_auctions_by_cetegory", array("categorySlug" => $this->getAttribute($context["category"], "slug", array()))), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_auctions_by_category", array("categorySlug" => $this->getAttribute($context["category"], "slug", array()))), "html", null, true);
                     echo "\">";
                     echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
                     echo "</a>
@@ -71,7 +71,7 @@ class __TwigTemplate_cd2e1beb42bb9a53988824c601a3ee8b152252f49ac0bdcdb0eb70e780e
                 } else {
                     // line 7
                     echo "               <strong> <a href=\"";
-                    echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_auctions_by_cetegory", array("categorySlug" => $this->getAttribute($context["category"], "slug", array()))), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_auctions_by_category", array("categorySlug" => $this->getAttribute($context["category"], "slug", array()))), "html", null, true);
                     echo "\">";
                     echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
                     echo "</a></strong>

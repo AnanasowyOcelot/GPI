@@ -13,6 +13,6 @@ gpi_auction_edit:
     path:     /auction/edit/{id}
     defaults: { _controller: GPIAuctionBundle:AuctionEdit:edit }
 
-gpi_auction_auctions_by_cetegory:
+gpi_auction_auctions_by_category:
     path:     /category/{categorySlug}
     defaults: { _controller: GPIAuctionBundle:AuctionsByCategory:index }
