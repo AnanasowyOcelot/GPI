@@ -62,7 +62,7 @@ class Offer extends \GPI\CoreBundle\Model\Offer\Offer
     /**
      * @var \GPI\AuctionBundle\Entity\Auction $auction
      *
-     * @ORM\ManyToOne(targetEntity="\GPI\AuctionBundle\Entity\Auction", inversedBy="offers", fetch="EAGER")
+     * @ORM\ManyToOne(targetEntity="\GPI\AuctionBundle\Entity\Auction", inversedBy="offers")
      * @ORM\JoinColumn(name="auction", referencedColumnName="id")
      */
     protected $auction;

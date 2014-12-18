@@ -6,6 +6,7 @@ use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Route\RouteCollection;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Knp\Menu\ItemInterface as MenuItemInterface;
 use Sonata\AdminBundle\Admin\AdminInterface;
@@ -34,21 +35,21 @@ class OfferAdmin extends Admin
     {
         $listMapper
             ->add('id')
-            ->add('createdBy', null, array('label' => "Dodano przez"))
-            ->add('content', null, array('label' => "Treść"))
-            ->add('auction', null, array('label' => "Aukcja"))
+            ->add('createdBy', null, array('label' => "Dodano przez", "sortable" => false))
+            ->add('content', null, array('label' => "Treść", "sortable" => false))
+            ->add('auction', null, array('label' => "Aukcja", "sortable" => false))
             ->add('price', null, array('label' => "Cena"))
             ->add('isCanceled', null, array('label' => "Skasowane"))
-            ->add('isDeactivated', null, array('label' => "Nieaktywne"))
+            ->add('isNotDeactivated', 'boolean', array('label' => "Włączona"))
             ->add(
                 '_action',
                 'actions',
                 array(
                     'actions' => array(
                         'show' => array(),
-                        //                        'Wyłącz' => array(
-                        //                            'template' => 'GPIOfferBundle:Admin:list__action_deactivate.html.twig'
-                        //                        )
+                        'Wyłącz' => array(
+                            'template' => 'GPIOfferBundle:Admin:list__action_deactivate.html.twig'
+                        )
                     ),
                     'label' => "Opcje"
                 )
@@ -71,12 +72,12 @@ class OfferAdmin extends Admin
             ->add('id')
             ->add('createdBy', null, array('label' => "Dodano przez"))
             ->add('content', null, array('label' => "Treść"))
-            ->add('auction','entity',
-                array('class'   => 'GPI\AuctionBundle\Entity\Auction',
-                    'property'  => 'name'))
+            ->add('auction', 'entity',
+                array('class' => 'GPI\AuctionBundle\Entity\Auction',
+                    'property' => 'name'))
             ->add('price', null, array('label' => "Cena"))
             ->add('isCanceled', null, array('label' => "Skasowane"))
-            ->add('isDeactivated', null, array('label' => "Nieaktywne"))
+            ->add('isNotDeactivated', 'boolean', array('label' => "Włączona"))
             ->add('documents', null, array(
                     'label' => "Pliki",
                 )
@@ -93,16 +94,15 @@ class OfferAdmin extends Admin
 
         $id = $admin->getRequest()->get('id');
 
-
         $menu->addChild(
             $this->trans('Edycja', array(), 'SonataOfferBundle'),
             array('uri' => $admin->generateUrl('edit', array('id' => $id)))
         );
     }
 
-//    protected function configureRoutes(RouteCollection $collection)
-//    {
-//        $collection->add('deactivate', $this->getRouterIdParameter() . '/deactivate');
-//        $collection->add('activate', $this->getRouterIdParameter() . '/activate');
-//    }
+    protected function configureRoutes(RouteCollection $collection)
+    {
+        $collection->add('deactivate', $this->getRouterIdParameter() . '/deactivate');
+        $collection->add('activate', $this->getRouterIdParameter() . '/activate');
+    }
 }
