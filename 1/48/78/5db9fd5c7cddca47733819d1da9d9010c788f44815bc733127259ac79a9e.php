@@ -7,12 +7,12 @@ class __TwigTemplate_48785db9fd5c7cddca47733819d1da9d9010c788f44815bc733127259ac
     {
         parent::__construct($env);
 
-        // line 1
+        // line 17
         try {
             $this->parent = $this->env->loadTemplate("SonataUserBundle:Profile:action.html.twig");
         } catch (Twig_Error_Loader $e) {
             $e->setTemplateFile($this->getTemplateName());
-            $e->setTemplateLine(1);
+            $e->setTemplateLine(17);
 
             throw $e;
         }
@@ -29,16 +29,16 @@ class __TwigTemplate_48785db9fd5c7cddca47733819d1da9d9010c788f44815bc733127259ac
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        // line 2
+        // line 18
         $this->env->getExtension('form')->renderer->setTheme((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), array(0 => "bootstrap_3_horizontal_layout.html.twig"));
-        // line 1
+        // line 17
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 3
+    // line 19
     public function block_sonata_profile_content($context, array $blocks = array())
     {
-        // line 4
+        // line 20
         echo "
     <script type=\"text/javascript\">
         var \$collectionHolder;
@@ -109,26 +109,27 @@ class __TwigTemplate_48785db9fd5c7cddca47733819d1da9d9010c788f44815bc733127259ac
         <div class=\"headline\"><h3>Edytuj aukcję</h3></div>
 
         <form method=\"POST\" ";
-        // line 73
+        // line 89
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
         echo " class=\"sky-form\">
             <fieldset>
                 ";
-        // line 75
+        // line 91
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "name", array()), 'row');
         echo "
             </fieldset>
             <hr/>
             <fieldset>
                 ";
-        // line 79
+        // line 95
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "content", array()), 'row');
         echo "
             </fieldset>
             <hr/>
+
             <fieldset>
                 ";
-        // line 83
+        // line 100
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "categories", array()), 'row');
         echo "
             </fieldset>
@@ -136,16 +137,16 @@ class __TwigTemplate_48785db9fd5c7cddca47733819d1da9d9010c788f44815bc733127259ac
             <fieldset>
                 <label class=\"col-sm-2 control-label\">Dokumenty:</label>
                 ";
-        // line 88
+        // line 105
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["documents"]) ? $context["documents"] : $this->getContext($context, "documents")));
         foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
-            // line 89
+            // line 106
             echo "                    <a href=\"/";
             echo twig_escape_filter($this->env, $this->getAttribute($context["document"], "getWebPath", array(), "method"), "html", null, true);
             echo "\" target=\"_blank\">
                         <img class=\"thumbnail\" src=\"/";
-            // line 90
+            // line 107
             echo twig_escape_filter($this->env, $this->getAttribute($context["document"], "getWebPath", array(), "method"), "html", null, true);
             echo "\" alt=\"\">
                     </a>
@@ -154,26 +155,26 @@ class __TwigTemplate_48785db9fd5c7cddca47733819d1da9d9010c788f44815bc733127259ac
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 93
+        // line 110
         echo "                <div class=\"col-sm-10\">
                     <ul class=\"documents\" data-prototype=\"";
-        // line 94
+        // line 111
         echo twig_escape_filter($this->env, $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "documents", array()), "vars", array()), "prototype", array()), 'widget'));
         echo "\">
                         ";
-        // line 95
+        // line 112
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "documents", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
-            // line 96
+            // line 113
             echo "                            <li class=\"tag-box-v2\">
 
                                 ";
-            // line 98
+            // line 115
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["document"], "description", array()), 'row');
             echo "
                                 ";
-            // line 99
+            // line 116
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["document"], "file", array()), 'row');
             echo "
                             </li>
@@ -182,14 +183,14 @@ class __TwigTemplate_48785db9fd5c7cddca47733819d1da9d9010c788f44815bc733127259ac
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 102
+        // line 119
         echo "                    </ul>
                 </div>
             </fieldset>
             <hr/>
             <fieldset>
                 ";
-        // line 107
+        // line 124
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
             </fieldset>
@@ -234,6 +235,6 @@ class __TwigTemplate_48785db9fd5c7cddca47733819d1da9d9010c788f44815bc733127259ac
 
     public function getDebugInfo()
     {
-        return array (  193 => 107,  186 => 102,  177 => 99,  173 => 98,  169 => 96,  165 => 95,  161 => 94,  158 => 93,  149 => 90,  144 => 89,  140 => 88,  132 => 83,  125 => 79,  118 => 75,  113 => 73,  42 => 4,  39 => 3,  35 => 1,  33 => 2,  11 => 1,);
+        return array (  194 => 124,  187 => 119,  178 => 116,  174 => 115,  170 => 113,  166 => 112,  162 => 111,  159 => 110,  150 => 107,  145 => 106,  141 => 105,  133 => 100,  125 => 95,  118 => 91,  113 => 89,  42 => 20,  39 => 19,  35 => 17,  33 => 18,  11 => 17,);
     }
 }

@@ -25,8 +25,8 @@ module.exports = function(grunt) {
         },
         watch: {
             test: {
-                files: ['src/GPI/*.*'],
-                tasks: ['phpunit']
+                files: ['src/**/*.*'],
+                tasks: ['phpunit', 'phpcs']
             }
         }
     });

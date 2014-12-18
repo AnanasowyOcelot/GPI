@@ -117,7 +117,7 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
             echo "\">
                                 ";
             // line 46
-            echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "getStatusText", array(), "method"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["auctionStatus"]) ? $context["auctionStatus"] : $this->getContext($context, "auctionStatus")), "name", array(0 => $this->getAttribute($context["auction"], "getStatus", array(), "method")), "method"), "html", null, true);
             echo "
                             </span>
                         </td>

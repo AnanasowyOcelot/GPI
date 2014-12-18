@@ -89,6 +89,27 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
     protected $startTime;
 
     /**
+     * @ORM\OneToMany(targetEntity="\GPI\OfferBundle\Entity\Offer", mappedBy="auction")
+     **/
+    protected $offers;
+
+    /**
+     * @param mixed $offers
+     */
+    public function setOffers($offers)
+    {
+        $this->offers = $offers;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getOffers()
+    {
+        return $this->offers;
+    }
+
+    /**
      * @var User $updatedBy
      *
      * @Gedmo\Blameable(on="update")
@@ -115,12 +136,13 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
      */
     protected $createdBy;
 
-    /**
-     * @ORM\PrePersist
-     * @ORM\PreUpdate
-     */
-    public function setPartiallyActive(){
-        $this->isPartiallyActive = $this->isPartiallyActive();
+    public function __construct($endTime = null, $name = null, $content = null, $categories = null, $inCalendar = null)
+    {
+        if($endTime === null) {
+            $this->postLoad();
+        } else {
+            parent::__construct($endTime, $name, $content, $categories, $inCalendar);
+        }
     }
 
     /**
@@ -138,6 +160,14 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
         $this->init(
             $calendar
         );
+    }
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function setPartiallyActive(){
+        $this->isPartiallyActive = $this->isPartiallyActive();
     }
 
     /**
@@ -166,14 +196,6 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
         return $this->id;
     }
 
-    public function __get($param)
-    {
-        if (property_exists($this, $param)) {
-            return $this->$param;
-        }
-        throw new \InvalidArgumentException();
-    }
-
     /**
      * Get content short
      *
@@ -185,4 +207,13 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
         $string = strip_tags($this->content);
         return (strlen($string) > $maxLength) ? substr($string, 0, $maxLength) . '...' : $string;
     }
+
+    public function __get($param)
+    {
+        if (property_exists($this, $param)) {
+            return $this->$param;
+        }
+        throw new \InvalidArgumentException();
+    }
+
 }

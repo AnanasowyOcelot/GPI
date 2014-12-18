@@ -23,6 +23,7 @@ class Auction
     protected $categories;
     protected $maxPrice;
     protected $createdBy;
+    protected $offers;
 
     public function __construct(\DateTime $endTime, $name, $content, $categories, Calendar $inCalendar = null)
     {

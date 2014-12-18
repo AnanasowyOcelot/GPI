@@ -72,7 +72,7 @@ sonata_admin:
 #                    - sonata.product.admin.product
 
             sonata.admin.group.classification:
-                label:           sonata_classification
+                label:           Zarządzaj kategoriami
                 label_catalogue: SonataClassificationBundle
                 icon:            '<i class="fa fa-sitemap"></i>'
                 items:
@@ -90,17 +90,23 @@ sonata_admin:
                     - sonata.page.admin.site
 
             sonata.admin.group.auction_manager:
-                label:           Auction Manager
+                label:           Zarządzaj aukcjami
                 label_catalogue: SonataAuctionBundle
                 icon:            '<i class="fa fa-puzzle-piece"></i>'
                 items:
                     - gpi_auction.admin.auction
             sonata.admin.group.document_manager:
-                label:           Documents Manager
+                label:           Zarządzaj dokumentami
                 label_catalogue: SonataAuctionBundle
                 icon:            '<i class="fa fa-puzzle-piece"></i>'
                 items:
                     - gpi_auction.admin.document
+            sonata.admin.group.offer_manager:
+                label:           Zarządzaj ofertami
+                label_catalogue: SonataOfferBundle
+                icon:            '<i class="fa fa-puzzle-piece"></i>'
+                items:
+                    - gpi_offer.admin.offer
 
 
             sonata.admin.group.administration:

@@ -6,7 +6,6 @@ use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
-use Sonata\AdminBundle\Route\RouteCollection;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Knp\Menu\ItemInterface as MenuItemInterface;
 use Sonata\AdminBundle\Admin\AdminInterface;
@@ -20,10 +19,10 @@ class OfferAdmin extends Admin
     {
         $datagridMapper
             ->add('id')
-            ->add('name', null, array('label' => "Tytuł"))
-            ->add('content', null, array('label' => "Treść"))
-            ->add('categories', null, array('label' => "Kategorie")) //TODO: to mogłoby być drzeffem
             ->add('createdBy', null, array('label' => "Dodano przez"))
+            ->add('content', null, array('label' => "Treść"))
+            ->add('auction', null, array('label' => "Aukcja"))
+            ->add('price', null, array('label' => "Cena"))
             ->add('isCanceled', null, array('label' => "Skasowane"))
             ->add('isDeactivated', null, array('label' => "Nieaktywne"));
     }
@@ -35,24 +34,21 @@ class OfferAdmin extends Admin
     {
         $listMapper
             ->add('id')
-            ->add('name', null, array('label' => "Tytuł"))
-            ->add('contentShort', null, array('label' => "Treść"))
-            ->add('categories', null, array('label' => "Kategorie"))
-            ->add('startTime', null, array('label' => "Data wystawienia"))
-            ->add('endTime', null, array('label' => "Data zakończenia"))
-            ->add('isCanceled', 'boolean', array('label' => "Usunięty przez użytkownika", "sortable" => false))
-            ->add('isNotDeactivated', 'boolean', array('label' => "Włączona"))
+            ->add('createdBy', null, array('label' => "Dodano przez"))
+            ->add('content', null, array('label' => "Treść"))
+            ->add('auction', null, array('label' => "Aukcja"))
+            ->add('price', null, array('label' => "Cena"))
+            ->add('isCanceled', null, array('label' => "Skasowane"))
+            ->add('isDeactivated', null, array('label' => "Nieaktywne"))
             ->add(
                 '_action',
                 'actions',
                 array(
                     'actions' => array(
                         'show' => array(),
-                        'Wyłącz' => array(
-                            'template' => 'GPIOfferBundle:Admin:list__action_deactivate.html.twig'
-                        )
-                        //                        'edit' => array(),
-                        //                        'delete' => array(), TODO: deaktywacja i aktywacja aukcji
+                        //                        'Wyłącz' => array(
+                        //                            'template' => 'GPIOfferBundle:Admin:list__action_deactivate.html.twig'
+                        //                        )
                     ),
                     'label' => "Opcje"
                 )
@@ -64,32 +60,6 @@ class OfferAdmin extends Admin
      */
     protected function configureFormFields(FormMapper $formMapper)
     {
-        //        $formMapper
-        //            ->add('name')
-        //            ->add(
-        //                'content',
-        //                'textarea',
-        //                array(
-        //                    'attr' => array('class' => 'ckeditor')
-        //                )
-        //            )
-        //            ->add(
-        //                'categories'
-        //            )
-        //            ->add(
-        //                'documents',
-        //                'entity',
-        //                array(
-        //                    'class' => 'GPI\OfferBundle\Entity\Document',
-        //                    'read_only' => true,
-        //                    'multiple' => true,
-        //                )
-        //            );
-
-        //            ->add('webPath', 'url', array(
-        //                'read_only'=>true
-        //            ))
-        //            ->add('documents', 'entity', array('class'=>'GPI\OfferBundle\Entity\Document')
     }
 
     /**
@@ -99,13 +69,14 @@ class OfferAdmin extends Admin
     {
         $showMapper
             ->add('id')
-            ->add('name', null, array('label' => "Tytuł"))
             ->add('createdBy', null, array('label' => "Dodano przez"))
             ->add('content', null, array('label' => "Treść"))
-            ->add('startTime', null, array('label' => "Data wystawienia"))
-            ->add('endTime', null, array('label' => "Data zakończenia"))
-            ->add('maxPrice', null, array('label' => "Cena maksymalna"))
-            ->add('categories', null, array('label' => "Kategorie"))
+            ->add('auction','entity',
+                array('class'   => 'GPI\AuctionBundle\Entity\Auction',
+                    'property'  => 'name'))
+            ->add('price', null, array('label' => "Cena"))
+            ->add('isCanceled', null, array('label' => "Skasowane"))
+            ->add('isDeactivated', null, array('label' => "Nieaktywne"))
             ->add('documents', null, array(
                     'label' => "Pliki",
                 )
@@ -121,7 +92,7 @@ class OfferAdmin extends Admin
         $admin = $this->isChild() ? $this->getParent() : $this;
 
         $id = $admin->getRequest()->get('id');
-        //        $auction = $this->getObject($id);
+
 
         $menu->addChild(
             $this->trans('Edycja', array(), 'SonataOfferBundle'),
@@ -129,9 +100,9 @@ class OfferAdmin extends Admin
         );
     }
 
-    protected function configureRoutes(RouteCollection $collection)
-    {
-        $collection->add('deactivate', $this->getRouterIdParameter().'/deactivate');
-        $collection->add('activate', $this->getRouterIdParameter().'/activate');
-    }
+//    protected function configureRoutes(RouteCollection $collection)
+//    {
+//        $collection->add('deactivate', $this->getRouterIdParameter() . '/deactivate');
+//        $collection->add('activate', $this->getRouterIdParameter() . '/activate');
+//    }
 }

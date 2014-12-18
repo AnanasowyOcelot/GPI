@@ -60,10 +60,12 @@ class Offer extends \GPI\CoreBundle\Model\Offer\Offer
     protected $documents;
 
     /**
-     * @ORM\ManyToOne(targetEntity="\GPI\AuctionBundle\Entity\Auction")
+     * @var \GPI\AuctionBundle\Entity\Auction $auction
+     *
+     * @ORM\ManyToOne(targetEntity="\GPI\AuctionBundle\Entity\Auction", inversedBy="offers", fetch="EAGER")
+     * @ORM\JoinColumn(name="auction", referencedColumnName="id")
      */
     protected $auction;
-
 
     /**
      * @var User $updatedBy
@@ -91,6 +93,8 @@ class Offer extends \GPI\CoreBundle\Model\Offer\Offer
      * @ORM\JoinColumn(name="created_by", referencedColumnName="id")
      */
     protected $createdBy;
+
+
 
     /**
      * @return \Application\Sonata\UserBundle\Entity\User
@@ -128,5 +132,10 @@ class Offer extends \GPI\CoreBundle\Model\Offer\Offer
         $maxLength = 30;
         $string = strip_tags($this->content);
         return (strlen($string) > $maxLength) ? substr($string, 0, $maxLength) . '...' : $string;
+    }
+
+    public function getAuction()
+    {
+        return $this->auction;
     }
 }
