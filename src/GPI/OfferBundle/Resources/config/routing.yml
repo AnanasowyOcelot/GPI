@@ -1,0 +1,3 @@
+gpi_offer_homepage:
+    path:     /offer/add/{auctionId}
+    defaults: { _controller: GPIOfferBundle:AddOffer:index }

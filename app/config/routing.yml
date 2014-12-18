@@ -1,3 +1,7 @@
+gpi_offer:
+    resource: "@GPIOfferBundle/Resources/config/routing.yml"
+    prefix:   /
+
 gpi_auction:
     resource: "@GPIAuctionBundle/Resources/config/routing.yml"
     prefix:   /

@@ -1,0 +1,21 @@
+services:
+    gpi_offer.form.offer:
+        class: GPI\OfferBundle\Form\AddOfferType
+        tags:
+            - { name: form.type, alias: offer }
+    gpi_offer.service.offer:
+        class: GPI\CoreBundle\Model\Service\Offer
+        arguments:
+            - @gpi_offer.offer_repository
+            - @security.token_storage
+    gpi_offer.offer_repository:
+        class: GPI\OfferBundle\Entity\OfferRepository
+        factory_service: doctrine.orm.default_entity_manager
+        factory_method: getRepository
+        arguments:
+            - GPI\OfferBundle\Entity\Offer
+    gpi_offer.admin.offer:
+        class: GPI\OfferBundle\Admin\OfferAdmin
+        arguments: [~, GPI\OfferBundle\Entity\Offer, GPIOfferBundle:OfferAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Offer}

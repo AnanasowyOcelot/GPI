@@ -2,12 +2,13 @@
     {% for category in categories %}
         <li>
             {% set class = "" %}
-            {% if category.slug = slug %}
+            {% if category.slug == slug %}
                 {% set class = "active" %}
             {% endif %}
             <a class="{{ class }}" href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }}</a>
 
             {% if category.children %}
+                <div class="buttonToggle icon-arrow-down"></div>
                 <ul>
                     {{ _self.menu_categories(category.children, slug) }}
                 </ul>
@@ -23,15 +24,36 @@
         {{ _self.menu_categories(categories, slug) }}
     </ul>
 
+    {% verbatim %}
     <script type="application/javascript">
         jQuery(document).ready(function () {
-
+            var mainMenu = jQuery('.main-menu');
+            jQuery('.buttonToggle', mainMenu).click(function () {
+                jQuery(this).closest('li').find('> ul').toggle();
+            });
+            jQuery('ul', mainMenu).hide();
+            jQuery('a.active', mainMenu)
+                    .closest('ul').show()
+                    .closest('ul').show();
         });
     </script>
 
     <style>
-        .active{
+        .main-menu .active {
             font-weight: bold;
         }
+        .main-menu .buttonToggle {
+            cursor: pointer;
+            display: inline-block;
+        }
+        .main-menu ul {
+            display: none;
+        }
+        .main-menu li {
+            list-style-type: none;
+            position: relative;
+            left: -30px;
+        }
     </style>
+    {% endverbatim %}
 {% endblock %}

@@ -235,4 +235,8 @@ class Auction
         $string = strip_tags($this->content);
         return (strlen($string) > $maxLength) ? substr($string, 0, $maxLength) . '...' : $string;
     }
+
+    public function __toString(){
+        return $this->getName();
+    }
 }
