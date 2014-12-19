@@ -122,13 +122,13 @@ class __TwigTemplate_8b482e5515b9831a5d5d166f8a0b67999b1f6b5480152ddadb49def4945
 
     </div>
 </div>
-<div class=\"table-search-v2 margin-bottom-20\">
     <div class=\"table-responsive\">
         <table class=\"table table-hover\">
             <thead>
             <tr>
                 <th class=\"hidden-sm\">Złożył</th>
                 <th>Cena minimalna</th>
+                <th>Opcje</th>
                 <th>Status</th>
             </tr>
             </thead>
@@ -141,24 +141,38 @@ class __TwigTemplate_8b482e5515b9831a5d5d166f8a0b67999b1f6b5480152ddadb49def4945
             // line 64
             echo "                <tr>
                     <td class=\"td-width\">
-                        <h3>";
+                        ";
             // line 66
             echo twig_escape_filter($this->env, $this->getAttribute($context["offer"], "createdBy", array()), "html", null, true);
-            echo "</h3>
+            echo "
                     </td>
                     <td class=\"td-width\">
-                        <h3>";
+                        ";
             // line 69
             echo twig_escape_filter($this->env, $this->getAttribute($context["offer"], "price", array()), "html", null, true);
-            echo "</h3>
+            echo "
                     </td>
+                    <td class=\"td-width\">
+                        ";
+            // line 72
+            if ((($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "security", array()), "getToken", array(), "method"), "getUser", array(), "method") == $this->getAttribute($context["offer"], "createdBy", array(), "method")) || ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "security", array()), "getToken", array(), "method"), "getUser", array(), "method") == $this->getAttribute($this->getAttribute($context["offer"], "getAuction", array(), "method"), "createdBy", array(), "method")))) {
+                // line 73
+                echo "                        <a class=\"btn-u btn-u-blue\"
+                           href=\"";
+                // line 74
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_offer_details", array("id" => $this->getAttribute($context["offer"], "id", array()))), "html", null, true);
+                echo "\">Szczegóły</a>
+                        ";
+            }
+            // line 76
+            echo "                    </td>
                     <td>
                         <span class=\"";
-            // line 72
+            // line 78
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["offerStatus"]) ? $context["offerStatus"] : $this->getContext($context, "offerStatus")), "label", array(0 => $this->getAttribute($context["offer"], "getStatus", array(), "method")), "method"), "html", null, true);
             echo "\">
                         ";
-            // line 73
+            // line 79
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["offerStatus"]) ? $context["offerStatus"] : $this->getContext($context, "offerStatus")), "name", array(0 => $this->getAttribute($context["offer"], "getStatus", array(), "method")), "method"), "html", null, true);
             echo "
                         </span>
@@ -169,10 +183,9 @@ class __TwigTemplate_8b482e5515b9831a5d5d166f8a0b67999b1f6b5480152ddadb49def4945
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['offer'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 78
+        // line 84
         echo "            </tbody>
         </table>
-    </div>
 </div>
 ";
     }
@@ -189,6 +202,6 @@ class __TwigTemplate_8b482e5515b9831a5d5d166f8a0b67999b1f6b5480152ddadb49def4945
 
     public function getDebugInfo()
     {
-        return array (  173 => 78,  162 => 73,  158 => 72,  152 => 69,  146 => 66,  142 => 64,  138 => 63,  120 => 47,  107 => 40,  99 => 35,  94 => 33,  91 => 32,  87 => 31,  76 => 22,  70 => 20,  67 => 19,  58 => 17,  54 => 16,  49 => 14,  45 => 13,  41 => 12,  32 => 6,  27 => 4,  23 => 3,  19 => 1,);
+        return array (  187 => 84,  176 => 79,  172 => 78,  168 => 76,  163 => 74,  160 => 73,  158 => 72,  152 => 69,  146 => 66,  142 => 64,  138 => 63,  120 => 47,  107 => 40,  99 => 35,  94 => 33,  91 => 32,  87 => 31,  76 => 22,  70 => 20,  67 => 19,  58 => 17,  54 => 16,  49 => 14,  45 => 13,  41 => 12,  32 => 6,  27 => 4,  23 => 3,  19 => 1,);
     }
 }

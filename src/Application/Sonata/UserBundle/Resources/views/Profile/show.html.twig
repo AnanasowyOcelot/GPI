@@ -22,6 +22,7 @@
                         <h3 class="auction-name">{{ auction.name }}</h3>
 
                         <p>{{ auction.getContentShort() }}</p>
+                        <p>Liczba ofert: {{ auction.getNumberOfOffers() }}</p>
                         <small class="hex">Zakończenie {{ auction.getEndTime().format('Y-m-d H:i:s') }}</small>
                     </td>
                     <td>

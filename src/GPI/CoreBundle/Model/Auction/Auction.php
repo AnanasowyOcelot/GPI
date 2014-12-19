@@ -132,6 +132,10 @@ class Auction
         return $this->endTime < $this->calendar->dateTimeNow();
     }
 
+    public function getNumberOfOffers(){
+        return count($this->offers->toArray());
+    }
+
     protected function isPartiallyActive(){
         return !$this->isCanceled() && !$this->isDeactivated();
     }

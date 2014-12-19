@@ -49,13 +49,13 @@
 
     </div>
 </div>
-<div class="table-search-v2 margin-bottom-20">
     <div class="table-responsive">
         <table class="table table-hover">
             <thead>
             <tr>
                 <th class="hidden-sm">Złożył</th>
                 <th>Cena minimalna</th>
+                <th>Opcje</th>
                 <th>Status</th>
             </tr>
             </thead>
@@ -63,10 +63,16 @@
             {% for offer in auction.getActiveOffers() %}
                 <tr>
                     <td class="td-width">
-                        <h3>{{ offer.createdBy }}</h3>
+                        {{ offer.createdBy }}
                     </td>
                     <td class="td-width">
-                        <h3>{{ offer.price }}</h3>
+                        {{ offer.price }}
+                    </td>
+                    <td class="td-width">
+                        {% if app.security.getToken().getUser() == offer.createdBy() or app.security.getToken().getUser() == offer.getAuction().createdBy() %}
+                        <a class="btn-u btn-u-blue"
+                           href="{{ path('gpi_offer_details', {'id': offer.id}) }}">Szczegóły</a>
+                        {% endif %}
                     </td>
                     <td>
                         <span class="{{ offerStatus.label(offer.getStatus()) }}">
@@ -77,5 +83,4 @@
             {% endfor %}
             </tbody>
         </table>
-    </div>
 </div>
