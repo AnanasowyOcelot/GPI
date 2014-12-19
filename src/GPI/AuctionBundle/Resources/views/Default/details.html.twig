@@ -3,7 +3,9 @@
         <div class="headline"><h2>{{ auction.name }}</h2></div>
         <p>{{ auction.content|raw }}</p>
         <br/>
+        {% if not app.security.getToken().getUser() == auction.createdBy() and auction.isActive() %}
         <a class="btn-u" href="{{ path("gpi_offer_homepage", {'auctionId': auction.id }) }}">Dodaj nową ofertę</a>
+        {% endif %}
 
     </div>
     <div class="col-sm-4">

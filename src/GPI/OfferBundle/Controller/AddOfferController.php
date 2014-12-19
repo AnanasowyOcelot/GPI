@@ -10,6 +10,7 @@ use GPI\OfferBundle\Entity\Offer;
 use GPI\CoreBundle\Model\Offer\AddNewOfferCommand;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 class AddOfferController extends Controller
 {
@@ -28,6 +29,14 @@ class AddOfferController extends Controller
             throw $this->createNotFoundException(
                 'No Auction found for id ' . $auctionId
             );
+        }
+
+        $user = $this->container->get('security.context')->getToken()->getUser();
+        if ($user == $auction->getCreatedBy()) {
+            throw new AccessDeniedException('This user does not have access to this section.');
+        }
+        if(!$auction->isActive()){
+            throw new \Exception("Aukcja jest nie aktywna");
         }
 
         $command = new AddNewOfferCommand();
