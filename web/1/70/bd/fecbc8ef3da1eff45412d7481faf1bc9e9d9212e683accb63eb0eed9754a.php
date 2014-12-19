@@ -7,12 +7,12 @@ class __TwigTemplate_70bdfecbc8ef3da1eff45412d7481faf1bc9e9d9212e683accb63eb0eed
     {
         parent::__construct($env);
 
-        // line 12
+        // line 1
         try {
             $this->parent = $this->env->loadTemplate("SonataUserBundle:Profile:action.html.twig");
         } catch (Twig_Error_Loader $e) {
             $e->setTemplateFile($this->getTemplateName());
-            $e->setTemplateLine(12);
+            $e->setTemplateLine(1);
 
             throw $e;
         }
@@ -32,17 +32,17 @@ class __TwigTemplate_70bdfecbc8ef3da1eff45412d7481faf1bc9e9d9212e683accb63eb0eed
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 13
+    // line 2
     public function block_sonata_profile_content($context, array $blocks = array())
     {
-        // line 14
+        // line 3
         echo "
-    <div class=\"table-responsive\">
+    <div class=\"table-responsive auction-list\">
         <table class=\"table table-hover\">
             <thead>
             <tr>
                 <th></th>
-                <th class=\"hidden-sm\">Oferta</th>
+                <th class=\"hidden-sm\">Aukcja</th>
                 <th>Opcje</th>
                 <th>Status</th>
             </tr>
@@ -50,66 +50,64 @@ class __TwigTemplate_70bdfecbc8ef3da1eff45412d7481faf1bc9e9d9212e683accb63eb0eed
             <tbody>
 
             ";
-        // line 27
+        // line 16
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["auctions"]) ? $context["auctions"] : $this->getContext($context, "auctions")));
         foreach ($context['_seq'] as $context["_key"] => $context["auction"]) {
-            // line 28
-            echo "
-                <tr>
+            // line 17
+            echo "                <tr>
                     <td>
                         <img class=\"rounded-x\" src=\"";
-            // line 31
+            // line 19
             echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "getMainPhoto", array(), "method"), "html", null, true);
             echo "\" alt=\"\">
                     </td>
-                    <td class=\"td-width\">
-                        <h3>";
-            // line 34
+                    <td>
+                        <h3 class=\"auction-name\">";
+            // line 22
             echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "name", array()), "html", null, true);
             echo "</h3>
 
                         <p>";
-            // line 36
+            // line 24
             echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "getContentShort", array(), "method"), "html", null, true);
             echo "</p>
                         <small class=\"hex\">Zakończenie ";
-            // line 37
+            // line 25
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["auction"], "getEndTime", array(), "method"), "format", array(0 => "Y-m-d H:i:s"), "method"), "html", null, true);
             echo "</small>
                     </td>
                     <td>
-
-                        <p><a href=\"";
-            // line 41
+                        <p><a class=\"btn-u btn-u-blue\" href=\"";
+            // line 28
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_details", array("id" => $this->getAttribute($context["auction"], "id", array()))), "html", null, true);
             echo "\">Szczegóły</a></p>
                         ";
-            // line 42
+            // line 29
             if ($this->getAttribute($context["auction"], "isActive", array(), "method")) {
-                // line 43
-                echo "                            <p><a href=\"";
+                // line 30
+                echo "                            <p><a class=\"btn-u btn-u-blue\" href=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_edit", array("id" => $this->getAttribute($context["auction"], "id", array()))), "html", null, true);
                 echo "\">Edytuj</a></p>
 
-                            <p><a href=\"";
-                // line 45
+                            <p><a class=\"btn-u btn-u-red\" href=\"";
+                // line 32
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_cancel", array("id" => $this->getAttribute($context["auction"], "id", array()))), "html", null, true);
                 echo "\">Anuluj</a></p>
                         ";
             }
-            // line 47
+            // line 34
             echo "                    </td>
                     <td>
-                            <span class=\"";
-            // line 49
+                        <span class=\"";
+            // line 36
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["auctionStatus"]) ? $context["auctionStatus"] : $this->getContext($context, "auctionStatus")), "label", array(0 => $this->getAttribute($context["auction"], "getStatus", array(), "method")), "method"), "html", null, true);
             echo "\">
-                                ";
-            // line 50
+                            ";
+            // line 37
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["auctionStatus"]) ? $context["auctionStatus"] : $this->getContext($context, "auctionStatus")), "name", array(0 => $this->getAttribute($context["auction"], "getStatus", array(), "method")), "method"), "html", null, true);
             echo "
-                            </span>
+                        </span>
                     </td>
                 </tr>
             ";
@@ -117,7 +115,7 @@ class __TwigTemplate_70bdfecbc8ef3da1eff45412d7481faf1bc9e9d9212e683accb63eb0eed
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['auction'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 55
+        // line 42
         echo "
             </tbody>
         </table>
@@ -126,29 +124,29 @@ class __TwigTemplate_70bdfecbc8ef3da1eff45412d7481faf1bc9e9d9212e683accb63eb0eed
 
     <div class=\"row row-fluid\">
         ";
-        // line 62
+        // line 49
         $context["has_center"] = false;
-        // line 63
+        // line 50
         echo "        ";
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["blocks"]) ? $context["blocks"] : $this->getContext($context, "blocks")));
         foreach ($context['_seq'] as $context["_key"] => $context["block"]) {
-            // line 64
+            // line 51
             echo "            ";
             if (($this->getAttribute($context["block"], "position", array()) == "center")) {
-                // line 65
+                // line 52
                 echo "                ";
                 $context["has_center"] = true;
-                // line 66
+                // line 53
                 echo "            ";
             }
-            // line 67
+            // line 54
             echo "        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['block'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 68
+        // line 55
         echo "        <div class=\"";
         if ((isset($context["has_center"]) ? $context["has_center"] : $this->getContext($context, "has_center"))) {
             echo "span4 col-lg-4";
@@ -157,61 +155,61 @@ class __TwigTemplate_70bdfecbc8ef3da1eff45412d7481faf1bc9e9d9212e683accb63eb0eed
         }
         echo "\">
             ";
-        // line 69
+        // line 56
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["blocks"]) ? $context["blocks"] : $this->getContext($context, "blocks")));
         foreach ($context['_seq'] as $context["_key"] => $context["block"]) {
-            // line 70
+            // line 57
             echo "                ";
             if (($this->getAttribute($context["block"], "position", array()) == "left")) {
-                // line 71
+                // line 58
                 echo "                    ";
                 echo call_user_func_array($this->env->getFunction('sonata_block_render')->getCallable(), array(array("type" => $this->getAttribute($context["block"], "type", array()), "settings" => $this->getAttribute($context["block"], "settings", array()))));
                 echo "
                 ";
             }
-            // line 73
+            // line 60
             echo "            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['block'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 74
+        // line 61
         echo "        </div>
 
         ";
-        // line 76
+        // line 63
         if ((isset($context["has_center"]) ? $context["has_center"] : $this->getContext($context, "has_center"))) {
-            // line 77
+            // line 64
             echo "            <div class=\"span4 col-lg-4\">
                 ";
-            // line 78
+            // line 65
             $context['_parent'] = (array) $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["blocks"]) ? $context["blocks"] : $this->getContext($context, "blocks")));
             foreach ($context['_seq'] as $context["_key"] => $context["block"]) {
-                // line 79
+                // line 66
                 echo "                    ";
                 if (($this->getAttribute($context["block"], "position", array()) == "center")) {
-                    // line 80
+                    // line 67
                     echo "                        ";
                     echo call_user_func_array($this->env->getFunction('sonata_block_render')->getCallable(), array(array("type" => $this->getAttribute($context["block"], "type", array()), "settings" => $this->getAttribute($context["block"], "settings", array()))));
                     echo "
                     ";
                 }
-                // line 82
+                // line 69
                 echo "                ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['block'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 83
+            // line 70
             echo "            </div>
         ";
         }
-        // line 85
+        // line 72
         echo "
         <div class=\"";
-        // line 86
+        // line 73
         if ((isset($context["has_center"]) ? $context["has_center"] : $this->getContext($context, "has_center"))) {
             echo "span4 col-lg-4";
         } else {
@@ -219,26 +217,26 @@ class __TwigTemplate_70bdfecbc8ef3da1eff45412d7481faf1bc9e9d9212e683accb63eb0eed
         }
         echo "\">
             ";
-        // line 87
+        // line 74
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["blocks"]) ? $context["blocks"] : $this->getContext($context, "blocks")));
         foreach ($context['_seq'] as $context["_key"] => $context["block"]) {
-            // line 88
+            // line 75
             echo "                ";
             if (($this->getAttribute($context["block"], "position", array()) == "right")) {
-                // line 89
+                // line 76
                 echo "                    ";
                 echo call_user_func_array($this->env->getFunction('sonata_block_render')->getCallable(), array(array("type" => $this->getAttribute($context["block"], "type", array()), "settings" => $this->getAttribute($context["block"], "settings", array()))));
                 echo "
                 ";
             }
-            // line 91
+            // line 78
             echo "            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['block'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 92
+        // line 79
         echo "        </div>
     </div>
 ";
@@ -256,6 +254,6 @@ class __TwigTemplate_70bdfecbc8ef3da1eff45412d7481faf1bc9e9d9212e683accb63eb0eed
 
     public function getDebugInfo()
     {
-        return array (  242 => 92,  236 => 91,  230 => 89,  227 => 88,  223 => 87,  215 => 86,  212 => 85,  208 => 83,  202 => 82,  196 => 80,  193 => 79,  189 => 78,  186 => 77,  184 => 76,  180 => 74,  174 => 73,  168 => 71,  165 => 70,  161 => 69,  152 => 68,  146 => 67,  143 => 66,  140 => 65,  137 => 64,  132 => 63,  130 => 62,  121 => 55,  110 => 50,  106 => 49,  102 => 47,  97 => 45,  91 => 43,  89 => 42,  85 => 41,  78 => 37,  74 => 36,  69 => 34,  63 => 31,  58 => 28,  54 => 27,  39 => 14,  36 => 13,  11 => 12,);
+        return array (  240 => 79,  234 => 78,  228 => 76,  225 => 75,  221 => 74,  213 => 73,  210 => 72,  206 => 70,  200 => 69,  194 => 67,  191 => 66,  187 => 65,  184 => 64,  182 => 63,  178 => 61,  172 => 60,  166 => 58,  163 => 57,  159 => 56,  150 => 55,  144 => 54,  141 => 53,  138 => 52,  135 => 51,  130 => 50,  128 => 49,  119 => 42,  108 => 37,  104 => 36,  100 => 34,  95 => 32,  89 => 30,  87 => 29,  83 => 28,  77 => 25,  73 => 24,  68 => 22,  62 => 19,  58 => 17,  54 => 16,  39 => 3,  36 => 2,  11 => 1,);
     }
 }

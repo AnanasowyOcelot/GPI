@@ -3,7 +3,6 @@
 
 namespace GPI\AuctionBundle\Controller;
 
-use GPI\CoreBundle\Model\Auction\AuctionStatus;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -15,7 +14,7 @@ class CancelAuctionController extends Controller
         /** @var \GPI\AuctionBundle\Entity\Auction $auction */
         $auction = $repo->find($id);
 
-        if($auction->getStatus() == AuctionStatus::CANCELED){
+        if($auction->isCanceled()){
             return $this->render(
                 'GPIAuctionBundle:Default:cancel_info.html.twig',
                 array('auction' => $auction)

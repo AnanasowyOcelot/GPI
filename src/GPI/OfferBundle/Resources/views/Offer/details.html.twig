@@ -1,0 +1,40 @@
+<div class="row margin-bottom-60">
+    <div class="col-sm-8">
+        {#<div class="headline"><h2>{{ offer.name }}</h2></div>#}
+        <p>{{ offer.content|raw }}</p>
+        <br/>
+    </div>
+    <div class="col-sm-4">
+        <div class="headline"><h2>Szczegóły</h2></div>
+        <ul class="list-unstyled project-details">
+            <li><strong>Dodano przez:</strong> {{ offer.getCreatedBy() }}</li>
+            {#<li><strong>Data dodania:</strong> {{ offer.getStartTime().format('Y-m-d H:i:s') }}</li>#}
+            <li><strong>Cena maksymalna:</strong> {{ offer.price }}</li>
+
+        </ul>
+    </div>
+</div>
+
+
+<div class="fusion-portfolio wrapper-portfolio-grid cbp-3-col">
+    <div id="grid-container" class="cbp-l-grid-gallery">
+        <ul>
+            {% for document in offer.documents %}
+                <li class="cbp-item motion">
+                    <a href="/{{ document.getWebPath() }}" target="_blank" class="cbp-caption cbp-lightbox">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="/{{ document.getWebPath() }}" alt="" width="100%">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    <p class="cbp-l-caption-desc">{{ document.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

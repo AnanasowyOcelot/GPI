@@ -2,6 +2,9 @@
     <div class="col-sm-8">
         <div class="headline"><h2>{{ auction.name }}</h2></div>
         <p>{{ auction.content|raw }}</p>
+        <br/>
+        <a class="btn-u" href="{{ path("gpi_offer_homepage", {'auctionId': auction.id }) }}">Dodaj nową ofertę</a>
+
     </div>
     <div class="col-sm-4">
         <div class="headline"><h2>Szczegóły</h2></div>
@@ -20,6 +23,8 @@
         </ul>
     </div>
 </div>
+
+
 <div class="fusion-portfolio wrapper-portfolio-grid cbp-3-col">
     <div id="grid-container" class="cbp-l-grid-gallery">
         <ul>
@@ -32,7 +37,6 @@
                         <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignCenter">
                                 <div class="cbp-l-caption-body">
-                                    {#<div class="cbp-l-caption-text">Dashboard</div>#}
                                     <p class="cbp-l-caption-desc">{{ document.description }}</p>
                                 </div>
                             </div>

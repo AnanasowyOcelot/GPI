@@ -1,3 +1,12 @@
 gpi_offer_homepage:
     path:     /offer/add/{auctionId}
     defaults: { _controller: GPIOfferBundle:AddOffer:index }
+gpi_offer_list:
+    path:     /offers/
+    defaults: { _controller: GPIOfferBundle:ListOffers:show }
+gpi_offer_details:
+    path:     /offer/details/{id}
+    defaults: { _controller: GPIOfferBundle:OfferDetails:index }
+gpi_offer_cancel:
+    path:     /offer/cancel/{id}
+    defaults: { _controller: GPIOfferBundle:CancelOffer:index }
