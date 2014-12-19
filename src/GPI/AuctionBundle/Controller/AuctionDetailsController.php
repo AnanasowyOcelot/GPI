@@ -2,6 +2,7 @@
 
 namespace GPI\AuctionBundle\Controller;
 
+use GPI\CoreBundle\Model\Offer\OfferStatus;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class AuctionDetailsController extends Controller
@@ -15,7 +16,10 @@ class AuctionDetailsController extends Controller
 
         return $this->render(
             'GPIAuctionBundle:Default:details.html.twig',
-            array('auction' => $auction)
+            array(
+                'auction' => $auction,
+                'offerStatus' => new OfferStatus()
+            )
         );
 
     }

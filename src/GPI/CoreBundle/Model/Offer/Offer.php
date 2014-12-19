@@ -95,7 +95,7 @@ class Offer
         return $this->createdBy;
     }
 
-    protected function isActive(){
+    public function isActive(){
         return !$this->isCanceled() && !$this->isDeactivated();
     }
 

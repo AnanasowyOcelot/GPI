@@ -80,41 +80,93 @@ class __TwigTemplate_8b482e5515b9831a5d5d166f8a0b67999b1f6b5480152ddadb49def4945
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["auction"]) ? $context["auction"] : $this->getContext($context, "auction")), "documents", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
             // line 27
-            echo "            <li class=\"cbp-item motion\">
-                <a href=\"/";
+            echo "                <li class=\"cbp-item motion\">
+                    <a href=\"/";
             // line 28
             echo twig_escape_filter($this->env, $this->getAttribute($context["document"], "getWebPath", array(), "method"), "html", null, true);
             echo "\" target=\"_blank\" class=\"cbp-caption cbp-lightbox\">
-                    <div class=\"cbp-caption-defaultWrap\">
-                        <img src=\"/";
+                        <div class=\"cbp-caption-defaultWrap\">
+                            <img src=\"/";
             // line 30
             echo twig_escape_filter($this->env, $this->getAttribute($context["document"], "getWebPath", array(), "method"), "html", null, true);
             echo "\" alt=\"\" width=\"100%\">
-                    </div>
-                    <div class=\"cbp-caption-activeWrap\">
-                        <div class=\"cbp-l-caption-alignCenter\">
-                            <div class=\"cbp-l-caption-body\">
-                                ";
+                        </div>
+                        <div class=\"cbp-caption-activeWrap\">
+                            <div class=\"cbp-l-caption-alignCenter\">
+                                <div class=\"cbp-l-caption-body\">
+                                    ";
             // line 36
-            echo "                                <p class=\"cbp-l-caption-desc\">";
+            echo "                                    <p class=\"cbp-l-caption-desc\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["document"], "description", array()), "html", null, true);
             echo "</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </li>
-    ";
+                    </a>
+                </li>
+            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 43
         echo "
-    </ul>
+        </ul>
+
     </div>
 </div>
-
+<div class=\"table-search-v2 margin-bottom-20\">
+    <div class=\"table-responsive\">
+        <table class=\"table table-hover\">
+            <thead>
+            <tr>
+                <th class=\"hidden-sm\">Złożył</th>
+                <th>Cena minimalna</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            ";
+        // line 59
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["auction"]) ? $context["auction"] : $this->getContext($context, "auction")), "getActiveOffers", array(), "method"));
+        foreach ($context['_seq'] as $context["_key"] => $context["offer"]) {
+            // line 60
+            echo "                <tr>
+                    <td class=\"td-width\">
+                        <h3>";
+            // line 62
+            echo twig_escape_filter($this->env, $this->getAttribute($context["offer"], "createdBy", array()), "html", null, true);
+            echo "</h3>
+                    </td>
+                    <td class=\"td-width\">
+                        <h3>";
+            // line 65
+            echo twig_escape_filter($this->env, $this->getAttribute($context["offer"], "price", array()), "html", null, true);
+            echo "</h3>
+                    </td>
+                    <td>
+                        <span class=\"";
+            // line 68
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["offerStatus"]) ? $context["offerStatus"] : $this->getContext($context, "offerStatus")), "label", array(0 => $this->getAttribute($context["offer"], "getStatus", array(), "method")), "method"), "html", null, true);
+            echo "\">
+                        ";
+            // line 69
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["offerStatus"]) ? $context["offerStatus"] : $this->getContext($context, "offerStatus")), "name", array(0 => $this->getAttribute($context["offer"], "getStatus", array(), "method")), "method"), "html", null, true);
+            echo "
+                        </span>
+                    </td>
+                </tr>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['offer'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 74
+        echo "            </tbody>
+        </table>
+    </div>
+</div>
 ";
     }
 
@@ -130,6 +182,6 @@ class __TwigTemplate_8b482e5515b9831a5d5d166f8a0b67999b1f6b5480152ddadb49def4945
 
     public function getDebugInfo()
     {
-        return array (  113 => 43,  99 => 36,  91 => 30,  86 => 28,  83 => 27,  79 => 26,  70 => 19,  64 => 17,  61 => 16,  52 => 14,  48 => 13,  43 => 11,  39 => 10,  35 => 9,  27 => 4,  23 => 3,  19 => 1,);
+        return array (  166 => 74,  155 => 69,  151 => 68,  145 => 65,  139 => 62,  135 => 60,  131 => 59,  113 => 43,  99 => 36,  91 => 30,  86 => 28,  83 => 27,  79 => 26,  70 => 19,  64 => 17,  61 => 16,  52 => 14,  48 => 13,  43 => 11,  39 => 10,  35 => 9,  27 => 4,  23 => 3,  19 => 1,);
     }
 }

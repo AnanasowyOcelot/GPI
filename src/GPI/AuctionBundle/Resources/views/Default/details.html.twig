@@ -24,24 +24,54 @@
     <div id="grid-container" class="cbp-l-grid-gallery">
         <ul>
             {% for document in auction.documents %}
-            <li class="cbp-item motion">
-                <a href="/{{ document.getWebPath() }}" target="_blank" class="cbp-caption cbp-lightbox">
-                    <div class="cbp-caption-defaultWrap">
-                        <img src="/{{ document.getWebPath() }}" alt="" width="100%">
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                {#<div class="cbp-l-caption-text">Dashboard</div>#}
-                                <p class="cbp-l-caption-desc">{{ document.description }}</p>
+                <li class="cbp-item motion">
+                    <a href="/{{ document.getWebPath() }}" target="_blank" class="cbp-caption cbp-lightbox">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="/{{ document.getWebPath() }}" alt="" width="100%">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignCenter">
+                                <div class="cbp-l-caption-body">
+                                    {#<div class="cbp-l-caption-text">Dashboard</div>#}
+                                    <p class="cbp-l-caption-desc">{{ document.description }}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </li>
-    {% endfor %}
+                    </a>
+                </li>
+            {% endfor %}
 
-    </ul>
+        </ul>
+
     </div>
 </div>
-
+<div class="table-search-v2 margin-bottom-20">
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th class="hidden-sm">Złożył</th>
+                <th>Cena minimalna</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for offer in auction.getActiveOffers() %}
+                <tr>
+                    <td class="td-width">
+                        <h3>{{ offer.createdBy }}</h3>
+                    </td>
+                    <td class="td-width">
+                        <h3>{{ offer.price }}</h3>
+                    </td>
+                    <td>
+                        <span class="{{ offerStatus.label(offer.getStatus()) }}">
+                        {{ offerStatus.name(offer.getStatus()) }}
+                        </span>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

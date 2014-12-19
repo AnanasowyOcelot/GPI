@@ -3,6 +3,7 @@
 namespace GPI\AuctionBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use GPI\OfferBundle\Entity\Offer;
 use Symfony\Component\Validator\Constraints AS Assert;
 use Doctrine\Common\Collections\ArrayCollection;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -109,6 +110,16 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
         return $this->offers;
     }
 
+    public function getActiveOffers()
+    {
+        return array_filter(
+            $this->getOffers()->toArray(),
+            function (Offer $o) {
+                return $o->isActive();
+            }
+        );
+    }
+
     /**
      * @var User $updatedBy
      *
@@ -138,7 +149,7 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
 
     public function __construct($endTime = null, $name = null, $content = null, $categories = null, $inCalendar = null)
     {
-        if($endTime === null) {
+        if ($endTime === null) {
             $this->postLoad();
         } else {
             parent::__construct($endTime, $name, $content, $categories, $inCalendar);
@@ -152,9 +163,9 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
     {
         /** @var $kernel \Symfony\Component\HttpKernel\Kernel */
         global $kernel;
-                if ('AppCache' == get_class($kernel)) {
-                    $kernel = $kernel->getKernel();
-                }
+        if ('AppCache' == get_class($kernel)) {
+            $kernel = $kernel->getKernel();
+        }
         /** @var $calendar \GPI\CoreBundle\Model\Calendar\Calendar */
         $calendar = $kernel->getContainer()->get('gpi_core.model.calendar.calendar');
         $this->init(
@@ -166,7 +177,8 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
      * @ORM\PrePersist
      * @ORM\PreUpdate
      */
-    public function setPartiallyActive(){
+    public function setPartiallyActive()
+    {
         $this->isPartiallyActive = $this->isPartiallyActive();
     }
 
@@ -215,5 +227,4 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
         }
         throw new \InvalidArgumentException();
     }
-
 }
