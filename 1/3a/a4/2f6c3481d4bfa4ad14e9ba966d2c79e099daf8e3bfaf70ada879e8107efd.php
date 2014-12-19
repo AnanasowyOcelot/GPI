@@ -31,7 +31,7 @@ class __TwigTemplate_3aa42f6c3481d4bfa4ad14e9ba966d2c79e099daf8e3bfaf70ada879e81
         $this->displayBlock('sonata_profile_title', $context, $blocks);
         echo "</h2></div>
 
-<div class=\"sonata-user-show row row-fluid\">
+<div class=\"sonata-user-show row row-fluid user-profile\">
 
     <div class=\"span2 col-lg-2\" style=\"padding: 8px 0;\">
         ";

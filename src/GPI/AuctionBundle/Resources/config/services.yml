@@ -76,3 +76,9 @@ services:
             - @security.token_storage
     gpi_core.model.calendar.calendar:
         class: GPI\CoreBundle\Model\Calendar\Calendar
+    gpi_auction.entity.initializer:
+        class: GPI\AuctionBundle\EventListener\AuctionEntityInitializer
+        tags:
+            - { name: doctrine.event_listener, event: postLoad }
+        arguments:
+            - @gpi_core.model.calendar.calendar

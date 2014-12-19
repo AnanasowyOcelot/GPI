@@ -156,22 +156,6 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
         }
     }
 
-    /**
-     * @ORM\PostLoad
-     */
-    public function postLoad()
-    {
-        /** @var $kernel \Symfony\Component\HttpKernel\Kernel */
-        global $kernel;
-        if ('AppCache' == get_class($kernel)) {
-            $kernel = $kernel->getKernel();
-        }
-        /** @var $calendar \GPI\CoreBundle\Model\Calendar\Calendar */
-        $calendar = $kernel->getContainer()->get('gpi_core.model.calendar.calendar');
-        $this->init(
-            $calendar
-        );
-    }
 
     /**
      * @ORM\PrePersist
