@@ -122,11 +122,6 @@ class Auction
         return $this->isCanceled;
     }
 
-    public function ownerId()
-    {
-        return $this->createdBy;
-    }
-
     private function hasEnded()
     {
         return $this->endTime < $this->calendar->dateTimeNow();

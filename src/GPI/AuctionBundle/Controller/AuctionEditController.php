@@ -7,24 +7,27 @@ use GPI\AuctionBundle\Entity\Auction;
 use GPI\CoreBundle\Model\Auction\UpdateAuctionCommand;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 class AuctionEditController extends Controller
 {
     public function editAction($id, Request $request)
     {
-        /**
-         * @var $repo \GPI\AuctionBundle\Entity\AuctionRepository
-         */
+        /** @var $repo \GPI\AuctionBundle\Entity\AuctionRepository */
         $repo = $this->get('gpi_auction.auction_repository');
-        /**
-         * @var $auction \GPI\AuctionBundle\Entity\Auction
-         */
+
+        /** @var $auction \GPI\AuctionBundle\Entity\Auction */
         $auction = $repo->find($id);
 
         if (!$auction && !$request->isMethod('POST')) {
-            throw $this->createNotFoundException(
-                'No Auction found for id ' . $id
-            );
+            throw $this->createNotFoundException('No Auction found for id ' . $id . '.');
+        }
+        $user = $this->container->get('security.context')->getToken()->getUser();
+        if (!$auction->isOwner($user)) {
+            throw new AccessDeniedException('This user does not have access to this section.');
+        }
+        if (!$auction->isActive()) {
+            throw new \Exception('Aukcja jest nieaktywna.');
         }
 
         $command = new UpdateAuctionCommand();

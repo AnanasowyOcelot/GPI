@@ -95,6 +95,9 @@ class Offer extends \GPI\CoreBundle\Model\Offer\Offer
     protected $createdBy;
 
 
+    public function isOwner(User $user) {
+        return $this->getCreatedBy() === $user;
+    }
 
     /**
      * @return \Application\Sonata\UserBundle\Entity\User

@@ -94,6 +94,11 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
      **/
     protected $offers;
 
+
+    public function isOwner(User $user) {
+        return $this->getCreatedBy() === $user;
+    }
+
     /**
      * @param mixed $offers
      */

@@ -3,6 +3,7 @@
 namespace GPI\OfferBundle\Controller;
 
 use GPI\CoreBundle\Model\Offer\OfferStatus;
+use GPI\OfferBundle\Entity\Offer;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
@@ -16,8 +17,6 @@ class OfferDetailsController extends Controller
         $offer = $repo->find($id);
 
         $this->validateUser($offer);
-
-
 
         return $this->render(
             'GPIOfferBundle:Offer:details.html.twig',
@@ -33,10 +32,10 @@ class OfferDetailsController extends Controller
      * @param $offer
      * @throws \Symfony\Component\Security\Core\Exception\AccessDeniedException
      */
-    private function validateUser($offer)
+    private function validateUser(Offer $offer)
     {
         $user = $this->container->get('security.context')->getToken()->getUser();
-        if (!($user == $offer->getCreatedBy() || $user == $offer->getAuction()->getCreatedBy())) {
+        if (!$offer->isOwner($user) || $offer->getAuction()->isOwner($user)) {
             throw new AccessDeniedException('This user does not have access to this section.');
         }
     }

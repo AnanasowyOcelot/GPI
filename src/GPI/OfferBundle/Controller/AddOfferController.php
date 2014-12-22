@@ -16,13 +16,9 @@ class AddOfferController extends Controller
 {
     public function indexAction($auctionId, Request $request)
     {
-        /**
-         * @var $repo \GPI\AuctionBundle\Entity\AuctionRepository
-         */
+        /** @var $repo \GPI\AuctionBundle\Entity\AuctionRepository */
         $repo = $this->get('gpi_auction.auction_repository');
-        /**
-         * @var $auction \GPI\AuctionBundle\Entity\Auction
-         */
+        /** @var $auction \GPI\AuctionBundle\Entity\Auction */
         $auction = $repo->find($auctionId);
 
         if (!$auction && !$request->isMethod('POST')) {
@@ -30,12 +26,11 @@ class AddOfferController extends Controller
                 'No Auction found for id ' . $auctionId
             );
         }
-
         $user = $this->container->get('security.context')->getToken()->getUser();
-        if ($user == $auction->getCreatedBy()) {
+        if ($auction->isOwner($user)) {
             throw new AccessDeniedException('This user does not have access to this section.');
         }
-        if(!$auction->isActive()){
+        if (!$auction->isActive()) {
             throw new \Exception("Aukcja jest nie aktywna");
         }
 
@@ -51,7 +46,7 @@ class AddOfferController extends Controller
             $offerService = $this->get('gpi_offer.service.offer');
             $offer = $offerService->createNewOffer($command);
             $this->persistOffer($offer);
-            return $this->redirect($this->generateUrl('gpi_auction_details', array('id'=>$auctionId)));
+            return $this->redirect($this->generateUrl('gpi_auction_details', array('id' => $auctionId)));
         }
 
         return $this->render(

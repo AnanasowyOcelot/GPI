@@ -5,6 +5,7 @@ namespace GPI\OfferBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 class CancelOfferController extends Controller
 {
@@ -13,6 +14,11 @@ class CancelOfferController extends Controller
         $repo = $this->get('gpi_offer.offer_repository');
         /** @var \GPI\OfferBundle\Entity\Offer $offer */
         $offer = $repo->find($id);
+
+        $user = $this->container->get('security.context')->getToken()->getUser();
+        if (!$offer->isOwner($user)) {
+            throw new AccessDeniedException('This user does not have access to this section.');
+        }
 
         if($offer->isCanceled()){
             return $this->render(

@@ -57,10 +57,6 @@ class Auction
          */
         $auction = $this->auctionRepository->find($auctionId);
 
-        if (!$this->isOwner($auction)) {
-            throw new AccessDeniedException();
-        }
-
         $auction->setName($command->getName());
         $auction->setContent($command->getContent());
         $auction->setCategories($command->getCategories());
@@ -70,8 +66,4 @@ class Auction
         return $auction;
     }
 
-    private function isOwner(\GPI\CoreBundle\Model\Auction\Auction $auction)
-    {
-        return $auction->ownerId() === $this->securityToken->getToken()->getUser(); // TODO
-    }
 }
