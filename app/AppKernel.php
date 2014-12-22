@@ -76,21 +76,21 @@ class AppKernel extends Kernel
             new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
 
             // E-COMMERCE
-            new Sonata\BasketBundle\SonataBasketBundle(),
-            new Application\Sonata\BasketBundle\ApplicationSonataBasketBundle(),
-            new Sonata\CustomerBundle\SonataCustomerBundle(),
-            new Application\Sonata\CustomerBundle\ApplicationSonataCustomerBundle(),
-            new Sonata\DeliveryBundle\SonataDeliveryBundle(),
-            new Application\Sonata\DeliveryBundle\ApplicationSonataDeliveryBundle(),
-            new Sonata\InvoiceBundle\SonataInvoiceBundle(),
-            new Application\Sonata\InvoiceBundle\ApplicationSonataInvoiceBundle(),
-            new Sonata\OrderBundle\SonataOrderBundle(),
-            new Application\Sonata\OrderBundle\ApplicationSonataOrderBundle(),
-            new Sonata\PaymentBundle\SonataPaymentBundle(),
-            new Application\Sonata\PaymentBundle\ApplicationSonataPaymentBundle(),
-            new Sonata\ProductBundle\SonataProductBundle(),
-            new Application\Sonata\ProductBundle\ApplicationSonataProductBundle(),
-            new Sonata\PriceBundle\SonataPriceBundle(),
+//            new Sonata\BasketBundle\SonataBasketBundle(),
+//            new Application\Sonata\BasketBundle\ApplicationSonataBasketBundle(),
+//            new Sonata\CustomerBundle\SonataCustomerBundle(),
+//            new Application\Sonata\CustomerBundle\ApplicationSonataCustomerBundle(),
+//            new Sonata\DeliveryBundle\SonataDeliveryBundle(),
+//            new Application\Sonata\DeliveryBundle\ApplicationSonataDeliveryBundle(),
+//            new Sonata\InvoiceBundle\SonataInvoiceBundle(),
+//            new Application\Sonata\InvoiceBundle\ApplicationSonataInvoiceBundle(),
+//            new Sonata\OrderBundle\SonataOrderBundle(),
+//            new Application\Sonata\OrderBundle\ApplicationSonataOrderBundle(),
+//            new Sonata\PaymentBundle\SonataPaymentBundle(),
+//            new Application\Sonata\PaymentBundle\ApplicationSonataPaymentBundle(),
+//            new Sonata\ProductBundle\SonataProductBundle(),
+//            new Application\Sonata\ProductBundle\ApplicationSonataProductBundle(),
+//            new Sonata\PriceBundle\SonataPriceBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle($this),
             new FOS\CommentBundle\FOSCommentBundle(),
             new Sonata\CommentBundle\SonataCommentBundle(),
@@ -120,10 +120,6 @@ class AppKernel extends Kernel
 
             // CMF Integration
             new Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
-
-            // DEMO and QA - Can be deleted
-            new Sonata\Bundle\DemoBundle\SonataDemoBundle(),
-            new Sonata\Bundle\QABundle\SonataQABundle(),
 
             // Disable this if you don't want the timeline in the admin
             new Spy\TimelineBundle\SpyTimelineBundle(),
