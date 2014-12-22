@@ -1,6 +1,6 @@
 <?php
 
-namespace GPI\AuctionBundle\Entity;
+namespace GPI\DocumentBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace GPI\AuctionBundle\Entity;
+namespace GPI\DocumentBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -13,7 +13,7 @@ use GPI\CoreBundle\Model\Document\Document as BaseDocument;
  * Document
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="GPI\AuctionBundle\Entity\DocumentRepository")
+ * @ORM\Entity(repositoryClass="GPI\DocumentBundle\Entity\DocumentRepository")
  */
 class Document extends BaseDocument
 {

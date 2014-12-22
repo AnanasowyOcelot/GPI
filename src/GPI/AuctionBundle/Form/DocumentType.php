@@ -28,7 +28,7 @@ class DocumentType extends AbstractType
     {
         $resolver->setDefaults(
             array(
-                'data_class' => 'GPI\AuctionBundle\Entity\Document',
+                'data_class' => 'GPI\DocumentBundle\Entity\Document',
             )
         );
     }

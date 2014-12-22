@@ -2,7 +2,7 @@
 
 namespace GPI\AuctionBundle\Controller;
 
-use GPI\AuctionBundle\Entity\Document;
+use GPI\DocumentBundle\Entity\Document;
 use GPI\AuctionBundle\Entity\Auction;
 
 use GPI\CoreBundle\Model\Auction\AddNewAuctionCommand;

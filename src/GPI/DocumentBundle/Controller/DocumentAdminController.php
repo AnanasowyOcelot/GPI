@@ -1,6 +1,6 @@
 <?php
 
-namespace GPI\AuctionBundle\Controller;
+namespace GPI\DocumentBundle\Controller;
 
 use Sonata\AdminBundle\Controller\CRUDController;
 

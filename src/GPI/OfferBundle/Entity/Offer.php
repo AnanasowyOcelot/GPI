@@ -55,7 +55,7 @@ class Offer extends \GPI\CoreBundle\Model\Offer\Offer
 
     /**
      * @var ArrayCollection $trainings
-     * @ORM\ManyToMany(targetEntity="\GPI\AuctionBundle\Entity\Document")
+     * @ORM\ManyToMany(targetEntity="\GPI\DocumentBundle\Entity\Document")
      */
     protected $documents;
 

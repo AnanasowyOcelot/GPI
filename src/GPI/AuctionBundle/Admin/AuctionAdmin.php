@@ -80,7 +80,7 @@ class AuctionAdmin extends Admin
         //                'documents',
         //                'entity',
         //                array(
-        //                    'class' => 'GPI\AuctionBundle\Entity\Document',
+        //                    'class' => 'GPI\DocumentBundle\Entity\Document',
         //                    'read_only' => true,
         //                    'multiple' => true,
         //                )
@@ -89,7 +89,7 @@ class AuctionAdmin extends Admin
         //            ->add('webPath', 'url', array(
         //                'read_only'=>true
         //            ))
-        //            ->add('documents', 'entity', array('class'=>'GPI\AuctionBundle\Entity\Document')
+        //            ->add('documents', 'entity', array('class'=>'GPI\DocumentBundle\Entity\Document')
     }
 
     /**

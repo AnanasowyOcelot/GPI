@@ -4,7 +4,7 @@ namespace GPI\OfferBundle\Controller;
 
 namespace GPI\OfferBundle\Controller;
 
-use GPI\AuctionBundle\Entity\Document;
+use GPI\DocumentBundle\Entity\Document;
 use GPI\OfferBundle\Entity\Offer;
 
 use GPI\CoreBundle\Model\Offer\AddNewOfferCommand;

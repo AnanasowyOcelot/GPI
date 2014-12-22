@@ -1,6 +1,6 @@
 <?php
 
-namespace GPI\AuctionBundle\Admin;
+namespace GPI\DocumentBundle\Admin;
 
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;

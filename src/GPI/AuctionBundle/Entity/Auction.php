@@ -75,7 +75,7 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
 
     /**
      * @var ArrayCollection $trainings
-     * @ORM\ManyToMany(targetEntity="\GPI\AuctionBundle\Entity\Document")
+     * @ORM\ManyToMany(targetEntity="\GPI\DocumentBundle\Entity\Document")
      */
     protected $documents;
 

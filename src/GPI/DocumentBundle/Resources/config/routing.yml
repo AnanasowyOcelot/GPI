@@ -1,0 +1,3 @@
+gpi_document_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: GPIDocumentBundle:Default:index }

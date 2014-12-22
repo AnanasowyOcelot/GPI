@@ -8,8 +8,8 @@ services:
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: Auction}
     gpi_auction.admin.document:
-        class: GPI\AuctionBundle\Admin\DocumentAdmin
-        arguments: [~, GPI\AuctionBundle\Entity\Document, GPIAuctionBundle:DocumentAdmin]
+        class: GPI\DocumentBundle\Admin\DocumentAdmin
+        arguments: [~, GPI\DocumentBundle\Entity\Document, GPIDocumentBundle:DocumentAdmin]
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: Document}
     gpi_auction.auction_repository:
