@@ -1156,7 +1156,7 @@ class __TwigTemplate_83157e9272bf243da7a5026c862a69766152fef5dcd31adc4ab797ad788
         echo "<head ";
         echo $this->env->getExtension('sonata_seo')->getHeadAttributes();
         echo ">
-    <title>Unify | Welcome...</title>
+    <title>Giełda Projektów Inżynierskich</title>
     ";
         // line 11
         echo $this->env->getExtension('sonata_seo')->getTitle();
