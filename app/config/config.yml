@@ -100,8 +100,8 @@ doctrine:
                 auto_mapping: true
                 mappings: ~
 
-#            tree: true
-#            blameable: true # not needed: listeners are not enabled by default
+            tree: true
+            blameable: true # not needed: listeners are not enabled by default
 
 
 # Swiftmailer Configuration
