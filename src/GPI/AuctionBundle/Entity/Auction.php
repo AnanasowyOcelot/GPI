@@ -12,7 +12,7 @@ use Application\Sonata\UserBundle\Entity\User as User;
 /**
  * Auction
  *
- * @ORM\Table()
+ * @ORM\Table("auction")
  * @ORM\Entity(repositoryClass="GPI\AuctionBundle\Entity\AuctionRepository")
  * @ORM\HasLifecycleCallbacks()
  */

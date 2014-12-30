@@ -10,8 +10,14 @@ sometimes problems with downloading with composer classes:
 
 npm install
 
+--------------------------------------------
+composer install --prefer-dist
+
+php app/console sonata:page:site-create
 php app/console sonata:page:update-core-routes --site=all
 php app/console sonata:page:create-snapshots --site=all
+
+-------------------------------------------
 
 Run
 ---

@@ -11,7 +11,7 @@ use Application\Sonata\UserBundle\Entity\User as User;
 /**
  * Offer
  *
- * @ORM\Table()
+ * @ORM\Table("offer")
  * @ORM\Entity(repositoryClass="GPI\OfferBundle\Entity\OfferRepository")
  * @ORM\HasLifecycleCallbacks()
  */

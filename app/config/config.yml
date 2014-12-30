@@ -49,6 +49,7 @@ framework:
         enable_annotations:  true
     templating:
         engines:             ['twig']
+        assets_base_urls:    /
         #assets_version:      SomeVersionScheme
 
     default_locale:          pl

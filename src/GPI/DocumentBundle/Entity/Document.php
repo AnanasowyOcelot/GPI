@@ -12,7 +12,7 @@ use GPI\CoreBundle\Model\Document\Document as BaseDocument;
 /**
  * Document
  *
- * @ORM\Table()
+ * @ORM\Table("document")
  * @ORM\Entity(repositoryClass="GPI\DocumentBundle\Entity\DocumentRepository")
  */
 class Document extends BaseDocument
