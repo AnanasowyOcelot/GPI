@@ -18,4 +18,4 @@ services:
         class: GPI\OfferBundle\Admin\OfferAdmin
         arguments: [~, GPI\OfferBundle\Entity\Offer, GPIOfferBundle:OfferAdmin]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: admin, label: Offer}
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Lista ofert}

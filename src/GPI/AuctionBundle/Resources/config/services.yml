@@ -6,12 +6,12 @@ services:
         class: GPI\AuctionBundle\Admin\AuctionAdmin
         arguments: [~, GPI\AuctionBundle\Entity\Auction, GPIAuctionBundle:AuctionAdmin]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: admin, label: Auction}
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Lista aukcji}
     gpi_auction.admin.document:
         class: GPI\DocumentBundle\Admin\DocumentAdmin
         arguments: [~, GPI\DocumentBundle\Entity\Document, GPIDocumentBundle:DocumentAdmin]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: admin, label: Document}
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Lista dokumentów}
     gpi_auction.auction_repository:
         class: GPI\AuctionBundle\Entity\AuctionRepository
         factory_service: doctrine.orm.default_entity_manager
