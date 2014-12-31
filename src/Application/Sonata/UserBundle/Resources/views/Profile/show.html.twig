@@ -16,7 +16,7 @@
             {% for auction in auctions %}
                 <tr>
                     <td>
-                        <img class="rounded-x" src="{{ auction.getMainPhoto() }}" alt="">
+                        <img class="rounded-x" src="{{ asset(auction.getMainPhoto()) }}" alt="">
                     </td>
                     <td>
                         <h3 class="auction-name">{{ auction.name }}</h3>

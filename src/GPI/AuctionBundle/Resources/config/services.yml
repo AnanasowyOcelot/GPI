@@ -82,3 +82,4 @@ services:
             - { name: doctrine.event_listener, event: postLoad }
         arguments:
             - @gpi_core.model.calendar.calendar
+            - %gpi_auction.defaultImgPath%

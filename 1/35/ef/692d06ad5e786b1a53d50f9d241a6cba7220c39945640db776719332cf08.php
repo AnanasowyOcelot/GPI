@@ -53,57 +53,48 @@ class __TwigTemplate_35ef692d06ad5e786b1a53d50f9d241a6cba7220c39945640db77671933
             <div class=\"box-header\">
                 <h1 class=\"box-title\">
                     ";
-        // line 53
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "trans", array(0 => "tree_catalog_title", 1 => array(), 2 => $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "translationdomain", array())), "method"), "html", null, true);
-        echo "
-                    ";
         // line 54
-        if ( !$this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "get", array(0 => "hide_context"), "method")) {
-            // line 55
-            echo "                        <div class=\"btn-group\">
-                            <button type=\"button\" class=\"btn btn-default dropdown-toggle\" data-toggle=\"dropdown\">
-                                <strong class=\"text-info\">";
-            // line 57
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["current_context"]) ? $context["current_context"] : $this->getContext($context, "current_context")), "name", array()), "html", null, true);
-            echo "</strong> <span class=\"caret\"></span>
-                            </button>
-                            <ul class=\"dropdown-menu\" role=\"menu\">
-                                ";
-            // line 60
-            $context['_parent'] = (array) $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["root_categories"]) ? $context["root_categories"] : $this->getContext($context, "root_categories")));
-            foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
-                // line 61
-                echo "                                    <li>
-                                        <a href=\"";
-                // line 62
-                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "generateUrl", array(0 => "tree", 1 => array("context" => $this->getAttribute($this->getAttribute($context["category"], "context", array()), "id", array()))), "method"), "html", null, true);
-                echo "\">
-                                            ";
-                // line 63
-                if (((isset($context["current_context"]) ? $context["current_context"] : $this->getContext($context, "current_context")) && ($this->getAttribute($this->getAttribute($context["category"], "context", array()), "id", array()) == $this->getAttribute((isset($context["current_context"]) ? $context["current_context"] : $this->getContext($context, "current_context")), "id", array())))) {
-                    // line 64
-                    echo "                                                <span class=\"pull-right\">
-                                                    <i class=\"fa fa-check\"></i>
-                                                </span>
-                                            ";
-                }
-                // line 68
-                echo "                                            ";
-                echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
-                echo "
-                                        </a>
-                                    </li>
-                                ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 72
-            echo "                            </ul>
-                        </div>
-                    ";
-        }
+        echo "                    ";
+        // line 55
+        echo "                        ";
+        // line 56
+        echo "                            ";
+        // line 57
+        echo "                                ";
+        // line 58
+        echo "                            ";
+        // line 59
+        echo "                            ";
+        // line 60
+        echo "                                ";
+        // line 61
+        echo "                                    ";
+        // line 62
+        echo "                                        ";
+        // line 63
+        echo "                                            ";
+        // line 64
+        echo "                                                ";
+        // line 65
+        echo "                                                    ";
+        // line 66
+        echo "                                                ";
+        // line 67
+        echo "                                            ";
+        // line 68
+        echo "                                            ";
+        // line 69
+        echo "                                        ";
+        // line 70
+        echo "                                    ";
+        // line 71
+        echo "                                ";
+        // line 72
+        echo "                            ";
+        // line 73
+        echo "                        ";
+        // line 74
+        echo "                    ";
         // line 75
         echo "                </h1>
             </div>
@@ -226,6 +217,6 @@ class __TwigTemplate_35ef692d06ad5e786b1a53d50f9d241a6cba7220c39945640db77671933
 
     public function getDebugInfo()
     {
-        return array (  206 => 37,  199 => 35,  193 => 33,  191 => 32,  187 => 30,  180 => 29,  173 => 28,  169 => 26,  162 => 25,  158 => 24,  152 => 23,  147 => 22,  143 => 21,  136 => 20,  122 => 19,  113 => 78,  108 => 75,  103 => 72,  92 => 68,  86 => 64,  84 => 63,  80 => 62,  77 => 61,  73 => 60,  67 => 57,  63 => 55,  61 => 54,  57 => 53,  51 => 49,  48 => 48,  43 => 41,  40 => 40,  36 => 16,  34 => 18,  11 => 16,);
+        return array (  197 => 37,  190 => 35,  184 => 33,  182 => 32,  178 => 30,  171 => 29,  164 => 28,  160 => 26,  153 => 25,  149 => 24,  143 => 23,  138 => 22,  134 => 21,  127 => 20,  113 => 19,  104 => 78,  99 => 75,  97 => 74,  95 => 73,  93 => 72,  91 => 71,  89 => 70,  87 => 69,  85 => 68,  83 => 67,  81 => 66,  79 => 65,  77 => 64,  75 => 63,  73 => 62,  71 => 61,  69 => 60,  67 => 59,  65 => 58,  63 => 57,  61 => 56,  59 => 55,  57 => 54,  51 => 49,  48 => 48,  43 => 41,  40 => 40,  36 => 16,  34 => 18,  11 => 16,);
     }
 }

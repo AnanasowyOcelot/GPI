@@ -37,3 +37,4 @@ parameters:
 
     gpi_auction.root_category_id: 305
     gpi_auction.allowedTimePeriods: [30, 60, 90]
+    gpi_auction.defaultImgPath: /uploads/documents/default.jpg

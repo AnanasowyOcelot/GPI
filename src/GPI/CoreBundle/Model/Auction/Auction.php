@@ -19,13 +19,15 @@ class Auction
     protected $documents;
     protected $endTime;
     protected $startTime;
-    private $calendar;
     protected $categories;
     protected $maxPrice;
     protected $createdBy;
     protected $offers;
 
-    public function __construct(\DateTime $endTime, $name, $content, $categories, Calendar $inCalendar = null)
+    private $calendar;
+    private $defaultImgPath;
+
+    public function __construct(\DateTime $endTime, $name, $content, $categories, Calendar $inCalendar = null, $defaultImgPath = null)
     {
         $this->isCanceled = false;
         $this->isDeactivated = false;
@@ -43,12 +45,13 @@ class Auction
             $calendar = new Calendar();
         }
 
-        $this->init($calendar);
+        $this->init($calendar, $defaultImgPath);
     }
 
-    public function init(Calendar $calendar)
+    public function init(Calendar $calendar, $defaultImgPath)
     {
         $this->calendar = $calendar;
+        $this->defaultImgPath = $defaultImgPath;
     }
 
     /**
@@ -184,7 +187,7 @@ class Auction
         if (!$this->getDocuments()->isEmpty()) {
             return $this->getDocuments()->get(0)->getWebPath();
         } else {
-            return "/uploads/documents/default.jpg";
+            return $this->defaultImgPath;
         }
     }
 

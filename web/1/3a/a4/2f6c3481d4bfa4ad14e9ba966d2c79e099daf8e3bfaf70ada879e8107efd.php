@@ -11,7 +11,6 @@ class __TwigTemplate_3aa42f6c3481d4bfa4ad14e9ba966d2c79e099daf8e3bfaf70ada879e81
 
         $this->blocks = array(
             'sonata_page_breadcrumb' => array($this, 'block_sonata_page_breadcrumb'),
-            'sonata_profile_title' => array($this, 'block_sonata_profile_title'),
             'sonata_profile_menu' => array($this, 'block_sonata_profile_menu'),
             'sonata_profile_content' => array($this, 'block_sonata_profile_content'),
         );
@@ -26,11 +25,9 @@ class __TwigTemplate_3aa42f6c3481d4bfa4ad14e9ba966d2c79e099daf8e3bfaf70ada879e81
         $this->displayBlock('sonata_page_breadcrumb', $context, $blocks);
         // line 20
         echo "
-<div class=\"headline\"><h2>";
-        // line 21
-        $this->displayBlock('sonata_profile_title', $context, $blocks);
-        echo "</h2></div>
-
+";
+        // line 22
+        echo "
 <div class=\"sonata-user-show row row-fluid user-profile\">
 
     <div class=\"span2 col-lg-2\" style=\"padding: 8px 0;\">
@@ -78,12 +75,6 @@ class __TwigTemplate_3aa42f6c3481d4bfa4ad14e9ba966d2c79e099daf8e3bfaf70ada879e81
 ";
     }
 
-    // line 21
-    public function block_sonata_profile_title($context, array $blocks = array())
-    {
-        echo $this->env->getExtension('translator')->getTranslator()->trans("sonata_profile_title", array(), "SonataUserBundle");
-    }
-
     // line 26
     public function block_sonata_profile_menu($context, array $blocks = array())
     {
@@ -112,6 +103,6 @@ class __TwigTemplate_3aa42f6c3481d4bfa4ad14e9ba966d2c79e099daf8e3bfaf70ada879e81
 
     public function getDebugInfo()
     {
-        return array (  98 => 34,  91 => 27,  88 => 26,  82 => 21,  75 => 17,  72 => 16,  69 => 15,  66 => 14,  63 => 13,  60 => 12,  53 => 35,  51 => 34,  48 => 33,  46 => 32,  41 => 29,  39 => 26,  31 => 21,  28 => 20,  26 => 12,  23 => 11,);
+        return array (  89 => 34,  82 => 27,  79 => 26,  72 => 17,  69 => 16,  66 => 15,  63 => 14,  60 => 13,  57 => 12,  50 => 35,  48 => 34,  45 => 33,  43 => 32,  38 => 29,  36 => 26,  30 => 22,  27 => 20,  25 => 12,  22 => 11,);
     }
 }

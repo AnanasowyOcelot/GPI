@@ -103,8 +103,8 @@
             <fieldset>
                 <label class="col-sm-2 control-label">Dokumenty:</label>
                 {% for document in documents %}
-                    <a href="/{{ document.getWebPath() }}" target="_blank">
-                        <img class="thumbnail" src="/{{ document.getWebPath() }}" alt="">
+                    <a href="/{{ asset(document.getWebPath()) }}" target="_blank">
+                        <img class="thumbnail" src="/{{ asset(document.getWebPath()) }}" alt="">
                     </a>
                 {% endfor %}
                 <div class="col-sm-10">
