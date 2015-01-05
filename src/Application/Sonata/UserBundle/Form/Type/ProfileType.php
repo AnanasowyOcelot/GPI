@@ -61,6 +61,8 @@ class ProfileType extends AbstractType
             ->add('website', 'url', array(
                 'label'    => 'form.label_website',
                 'required' => false,
+                'trim'     => true,
+                'help_block'     => 'adres strony powinien zaczynać się od <strong>http://</strong>'
             ))
             ->add('biography', 'textarea', array(
                 'label'    => 'Opis',
