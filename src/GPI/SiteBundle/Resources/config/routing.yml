@@ -1,0 +1,6 @@
+gpi_site_regulations:
+    path:     /regulamin
+    defaults: { _controller: GPISiteBundle:Regulations:index }
+gpi_site_faq:
+    path:     /faq
+    defaults: { _controller: GPISiteBundle:FAQ:index }

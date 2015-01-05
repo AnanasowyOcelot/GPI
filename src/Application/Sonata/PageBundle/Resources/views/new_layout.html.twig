@@ -15,13 +15,13 @@
         {{ sonata_seo_metadatas() }}
 
         <!-- Meta -->
-        <meta http-equiv="content-type" content="text/html" charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta http-equiv="content-type" content="text/html" charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
 
         <!-- Favicon -->
-        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="shortcut icon" href="favicon.ico"/>
 
         <!-- CSS Global Compulsory -->
         <link rel="stylesheet" href="{{ asset("/bundles/gpilayout/plugins/bootstrap/css/bootstrap.min.css") }}">
@@ -31,9 +31,12 @@
         <link rel="stylesheet" href="{{ asset("/bundles/gpilayout/plugins/line-icons/line-icons.css") }}">
         <link rel="stylesheet" href="{{ asset("/bundles/gpilayout/plugins/font-awesome/css/font-awesome.min.css") }}">
         <link rel="stylesheet" href="{{ asset("/bundles/gpilayout/plugins/flexslider/flexslider.css") }}">
-        <link rel="stylesheet" href="{{ asset("/bundles/gpilayout/plugins/owl-carousel/owl-carousel/owl.carousel.css") }}">
-        <link rel="stylesheet" href="{{ asset("/bundles/gpilayout/plugins/sky-forms/version-2.0.1/css/custom-sky-forms.css") }}">
-        <link rel="stylesheet" href="{{ asset("/bundles/gpilayout/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.css") }}">
+        <link rel="stylesheet"
+              href="{{ asset("/bundles/gpilayout/plugins/owl-carousel/owl-carousel/owl.carousel.css") }}">
+        <link rel="stylesheet"
+              href="{{ asset("/bundles/gpilayout/plugins/sky-forms/version-2.0.1/css/custom-sky-forms.css") }}">
+        <link rel="stylesheet"
+              href="{{ asset("/bundles/gpilayout/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.css") }}">
 
 
         <!-- CSS Theme -->
@@ -103,41 +106,46 @@
                         </ul>
                         <!-- End Topbar Navigation -->
                     </div>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="visible-md" style="text-align: center; font-size: 11px; color: #818181">
+                                Nowatorski serwis "aukcyjno-ogłoszeniowy" o tematyce inżynierskiej.<br/>
+                                Zleceniodawca określa ile może zapłacić za projekt, a Ofertujący wie ile wynosi
+                                najniższa
+                                oferta.<br/>
+                                Takie podejście daje możliwość Ofertującym bycia konkurencyjnym,<br/>
+                                a Zleceniodawcy pewność, że nie przepłacił za projekt.
+                            </div>
 
-                    <div class="visible-md" style="text-align: center; font-size: 11px; color: #818181">
-                        Nowatorski serwis "aukcyjno-ogłoszeniowy" o tematyce inżynierskiej.<br/>
-                        Zleceniodawca określa ile może zapłacić za projekt, a Ofertujący wie ile wynosi najniższa
-                        oferta.<br/>
-                        Takie podejście daje możliwość Ofertującym bycia konkurencyjnym,<br/>
-                        a Zleceniodawcy pewność, że nie przepłacił za projekt.
+                            <div class="visible-lg" style="text-align: center; color: #818181">
+                                Nowatorski serwis "aukcyjno-ogłoszeniowy" o tematyce inżynierskiej.<br/>
+                                Zleceniodawca określa ile może zapłacić za projekt, a Ofertujący wie ile wynosi
+                                najniższa
+                                oferta.<br/>
+                                Takie podejście daje możliwość Ofertującym bycia konkurencyjnym,<br/>
+                                a Zleceniodawcy pewność, że nie przepłacił za projekt.
+                            </div>
+                        </div>
                     </div>
-                    <div class="visible-lg" style="text-align: center; color: #818181">
-                        Nowatorski serwis "aukcyjno-ogłoszeniowy" o tematyce inżynierskiej.<br/>
-                        Zleceniodawca określa ile może zapłacić za projekt, a Ofertujący wie ile wynosi najniższa
-                        oferta.<br/>
-                        Takie podejście daje możliwość Ofertującym bycia konkurencyjnym,<br/>
-                        a Zleceniodawcy pewność, że nie przepłacił za projekt.
-                    </div>
+
+
+                    {#<div style="display:inline;">#}
+
+                    {#</div>#}
+
+
                 </div>
             </div>
-
-
-            {#<div style="display:inline;">#}
-
-            {#</div>#}
-
-
         </div>
     </div>
     <!-- End Topbar -->
 
     <!-- Navbar -->
-    <div class="navbar navbar-default" role="navigation">
+    <div class="navbar navbar-default mega-menu" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                        data-target=".navbar-responsive-collapse">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="fa fa-bars"></span>
                 </button>
@@ -148,34 +156,29 @@
                 <ul class="nav navbar-nav">
                     <!-- Home -->
                     <li>
-                        <a href="/">Home</a>
+                        <a href="/">Strona główna</a>
                     </li>
                     <!-- End Home -->
 
-                    <!-- FAQs Pages -->
-                    <li><a href="faq.html">FAQ</a></li>
-                    <!-- End FAQs Pages -->
-
                     <!-- Privacy Policy -->
-                    <li><a href="page_privacy.html">Privacy Policy</a></li>
+                    <li><a href="{{ path('gpi_site_regulations') }}">Regulamin</a></li>
                     <!-- End Privacy Policy -->
 
-                    <!-- Terms Of Service -->
-                    <li><a href="page_terms.html">Terms Of Service</a></li>
-                    <!-- End Terms Of Service -->
-
+                    <!-- FAQs Pages -->
+                    <li><a href="{{ path('gpi_site_faq') }}">FAQ</a></li>
+                    <!-- End FAQs Pages -->
                     <!-- Search Block -->
                     {#<li>#}
-                        {#<i class="search fa fa-search search-btn"></i>#}
+                    {#<i class="search fa fa-search search-btn"></i>#}
 
-                        {#<div class="search-open">#}
-                            {#<div class="input-group animated fadeInDown">#}
-                                {#<input type="text" class="form-control" placeholder="Search"/>#}
-                                {#<span class="input-group-btn">#}
-                                    {#<button class="btn-u" type="button">Go</button>#}
-                                {#</span>#}
-                            {#</div>#}
-                        {#</div>#}
+                    {#<div class="search-open">#}
+                    {#<div class="input-group animated fadeInDown">#}
+                    {#<input type="text" class="form-control" placeholder="Search"/>#}
+                    {#<span class="input-group-btn">#}
+                    {#<button class="btn-u" type="button">Go</button>#}
+                    {#</span>#}
+                    {#</div>#}
+                    {#</div>#}
                     {#</li>#}
                     <!-- End Search Block -->
                 </ul>
@@ -694,8 +697,10 @@
 <script type="text/javascript" src="{{ asset("/bundles/gpilayout/plugins/bootstrap/js/bootstrap.min.js") }}"></script>
 <!-- JS Implementing Plugins -->
 <script type="text/javascript" src="{{ asset("/bundles/gpilayout/plugins/back-to-top.js") }}"></script>
-<script type="text/javascript" src="{{ asset("/bundles/gpilayout/plugins/flexslider/jquery.flexslider-min.js") }}"></script>
-<script type="text/javascript" src="{{ asset("/bundles/gpilayout/plugins/owl-carousel/owl-carousel/owl.carousel.js") }}"></script>
+<script type="text/javascript"
+        src="{{ asset("/bundles/gpilayout/plugins/flexslider/jquery.flexslider-min.js") }}"></script>
+<script type="text/javascript"
+        src="{{ asset("/bundles/gpilayout/plugins/owl-carousel/owl-carousel/owl.carousel.js") }}"></script>
 <!-- JS Customization -->
 <script type="text/javascript" src="{{ asset("/bundles/gpilayout/js/custom.js") }}"></script>
 <!-- JS Page Level -->
@@ -711,7 +716,8 @@
 
 <!-- JS Implementing Plugins -->
 <script type="text/javascript" src="{{ asset("/bundles/gpilayout/plugins/back-to-top.js") }}"></script>
-<script type="text/javascript" src="{{ asset("/bundles/gpilayout/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js") }}"></script>
+<script type="text/javascript"
+        src="{{ asset("/bundles/gpilayout/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js") }}"></script>
 <!-- JS Customization -->
 <script type="text/javascript" src="{{ asset("/bundles/gpilayout/js/custom.js") }}"></script>
 <!-- JS Page Level -->
@@ -726,7 +732,11 @@
 
 <!--[if lt IE 9]>
 <script type="text/javascript" src="{{ asset("/bundles/gpilayout/plugins/respond.js") }}"></script>
-<script type="text/javascript" src="{{ asset("/bundles/gpilayout/plugins/html5shiv.js") }}"></script>
+<
+script
+type = "text/javascript"
+src = "{{ asset(" / bundles / gpilayout / plugins / html5shiv.js
+") }}" ></script>
 <script type="text/javascript" src="{{ asset("/bundles/gpilayout/js/plugins/placeholder-IE-fixes.js") }}"></script>
 <![endif]-->
 

@@ -137,6 +137,7 @@ class AppKernel extends Kernel
             new Liip\ImagineBundle\LiipImagineBundle(),
             new GPI\OfferBundle\GPIOfferBundle(),
             new GPI\DocumentBundle\GPIDocumentBundle(),
+            new GPI\SiteBundle\GPISiteBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

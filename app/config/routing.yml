@@ -1,3 +1,7 @@
+gpi_site:
+    resource: "@GPISiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
 gpi_document:
     resource: "@GPIDocumentBundle/Resources/config/routing.yml"
     prefix:   /

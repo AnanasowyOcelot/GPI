@@ -30,15 +30,21 @@ class __TwigTemplate_cd2e1beb42bb9a53988824c601a3ee8b152252f49ac0bdcdb0eb70e780e
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["settings"]) ? $context["settings"] : $this->getContext($context, "settings")), "title", array()), "html", null, true);
         echo "</h2></div>
 
-    <ul class=\"main-menu\">
+
+    <button type=\"button\" class=\"navbar navbar-default mega-menu navbar-toggle\" data-toggle=\"collapse\" data-target=\".main-menu\">
+        <span class=\"sr-only\">Toggle navigation</span>
+        <span class=\"fa fa-bars\"></span>
+    </button>
+
+    <ul class=\"main-menu collapse navbar-collapse navbar-responsive-collapse\">
         ";
-        // line 24
+        // line 30
         echo $this->getAttribute($this, "menu_categories", array(0 => (isset($context["categories"]) ? $context["categories"] : $this->getContext($context, "categories")), 1 => (isset($context["slug"]) ? $context["slug"] : $this->getContext($context, "slug"))), "method");
         echo "
     </ul>
 
     ";
-        // line 58
+        // line 64
         echo "
     <script type=\"application/javascript\">
         jQuery(document).ready(function () {
@@ -156,6 +162,6 @@ class __TwigTemplate_cd2e1beb42bb9a53988824c601a3ee8b152252f49ac0bdcdb0eb70e780e
 
     public function getDebugInfo()
     {
-        return array (  132 => 16,  126 => 13,  122 => 11,  120 => 10,  110 => 8,  107 => 7,  104 => 6,  101 => 5,  99 => 4,  96 => 3,  91 => 2,  79 => 1,  42 => 58,  36 => 24,  29 => 21,  23 => 20,  20 => 19,);
+        return array (  138 => 16,  132 => 13,  128 => 11,  126 => 10,  116 => 8,  113 => 7,  110 => 6,  107 => 5,  105 => 4,  102 => 3,  97 => 2,  85 => 1,  48 => 64,  42 => 30,  29 => 21,  23 => 20,  20 => 19,);
     }
 }
