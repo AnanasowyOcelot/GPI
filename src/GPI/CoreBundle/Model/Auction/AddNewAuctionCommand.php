@@ -2,8 +2,8 @@
 
 namespace GPI\CoreBundle\Model\Auction;
 
+use Application\Sonata\ClassificationBundle\Entity\Category;
 use Doctrine\Common\Collections\ArrayCollection;
-use Entity\Category;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
 
@@ -125,4 +125,10 @@ class AddNewAuctionCommand
     {
         $this->name = $name;
     }
+
+    public function toString(){
+        return "Name: " . $this->getName() . " Content: " . $this->getContent() . " Category: " . $this->getCategories()->getName();
+    }
+
+
 }

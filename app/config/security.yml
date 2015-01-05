@@ -33,7 +33,7 @@ security:
         dev:
             pattern:  ^/(_(profiler|wdt)|css|images|js|admin/_(wdt|profiler)|api/_(wdt|profiler))/
             security: false
-
+            http_basic: ~
         # This firewall is used to handle the admin login area
         # This part is handled by the Sonata User Bundle
         admin:

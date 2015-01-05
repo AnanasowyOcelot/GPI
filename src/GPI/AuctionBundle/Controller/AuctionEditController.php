@@ -22,10 +22,7 @@ class AuctionEditController extends Controller
         if (!$auction && !$request->isMethod('POST')) {
             throw $this->createNotFoundException('No Auction found for id ' . $id . '.');
         }
-        $user = $this->container->get('security.context')->getToken()->getUser();
-        if (!$auction->isOwner($user)) {
-            throw new AccessDeniedException('This user does not have access to this section.');
-        }
+        $this->validateUser($auction);
         if (!$auction->isActive()) {
             throw new \Exception('Aukcja jest nieaktywna.');
         }
@@ -60,5 +57,20 @@ class AuctionEditController extends Controller
                 'documents' => $auction->getDocuments()
             )
         );
+    }
+
+    /**
+     * @param $auction
+     * @throws \Symfony\Component\Security\Core\Exception\AccessDeniedException
+     */
+    private function validateUser($auction)
+    {
+        if (!$this->container->get('security.context')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
+            throw new AccessDeniedException('You have to be logged');
+        }
+        $user = $this->container->get('security.context')->getToken()->getUser();
+        if (!$auction->isOwner($user)) {
+            throw new AccessDeniedException('This user does not have access to this section.');
+        }
     }
 }

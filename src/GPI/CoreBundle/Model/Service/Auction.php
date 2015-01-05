@@ -41,6 +41,7 @@ class Auction
             $command->getContent(),
             $command->getCategories()
         );
+
         $auction->setStartTime($dateTimeNow);
         $auction->setMaxPrice($command->getMaxPrice());
         foreach ($command->getDocuments() as $document) {

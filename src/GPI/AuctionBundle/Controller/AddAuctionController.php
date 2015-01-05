@@ -8,11 +8,15 @@ use GPI\AuctionBundle\Entity\Auction;
 use GPI\CoreBundle\Model\Auction\AddNewAuctionCommand;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 class AddAuctionController extends Controller
 {
     public function indexAction(Request $request)
     {
+        if (!$this->container->get('security.context')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
+            throw new AccessDeniedException('You have to be logged');
+        }
         $command = new AddNewAuctionCommand();
         $d1 = new Document();
         $command->getDocuments()->add($d1);
@@ -48,4 +52,5 @@ class AddAuctionController extends Controller
         $em->persist($auction);
         $em->flush();
     }
+
 }

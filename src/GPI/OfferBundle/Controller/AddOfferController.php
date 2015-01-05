@@ -26,6 +26,9 @@ class AddOfferController extends Controller
                 'No Auction found for id ' . $auctionId
             );
         }
+        if (!$this->container->get('security.context')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
+            throw new AccessDeniedException('You have to be logged');
+        }
         $user = $this->container->get('security.context')->getToken()->getUser();
         if ($auction->isOwner($user)) {
             throw new AccessDeniedException('This user does not have access to this section.');

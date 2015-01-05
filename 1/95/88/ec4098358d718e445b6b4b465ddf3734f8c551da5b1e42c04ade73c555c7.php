@@ -28,7 +28,7 @@ class __TwigTemplate_9588ec4098358d718e445b6b4b465ddf3734f8c551da5b1e42c04ade73c
         echo "\" target=\"_blank\">
         <img style=\"width: 350px\" src=\"/";
         // line 4
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["object"]) ? $context["object"] : $this->getContext($context, "object")), "getWebPath", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute((isset($context["object"]) ? $context["object"] : $this->getContext($context, "object")), "getWebPath", array())), "html", null, true);
         echo "\" title=\"";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["object"]) ? $context["object"] : $this->getContext($context, "object")), "getDescription", array(), "method"), "html", null, true);
         echo "\"/>

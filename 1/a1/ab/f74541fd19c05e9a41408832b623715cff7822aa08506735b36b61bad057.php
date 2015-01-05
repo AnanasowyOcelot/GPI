@@ -53,14 +53,14 @@ class __TwigTemplate_a1abf74541fd19c05e9a41408832b623715cff7822aa08506735b36b61b
         foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
             // line 23
             echo "                <li class=\"cbp-item motion\">
-                    <a href=\"/";
+                    <a href=\"";
             // line 24
-            echo twig_escape_filter($this->env, $this->getAttribute($context["document"], "getWebPath", array(), "method"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute($context["document"], "getWebPath", array(), "method")), "html", null, true);
             echo "\" target=\"_blank\" class=\"cbp-caption cbp-lightbox\">
                         <div class=\"cbp-caption-defaultWrap\">
-                            <img src=\"/";
+                            <img src=\"";
             // line 26
-            echo twig_escape_filter($this->env, $this->getAttribute($context["document"], "getWebPath", array(), "method"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute($context["document"], "getWebPath", array(), "method")), "html", null, true);
             echo "\" alt=\"\" width=\"100%\">
                         </div>
                         <div class=\"cbp-caption-activeWrap\">

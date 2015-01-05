@@ -16,6 +16,9 @@ class CancelOfferController extends Controller
         $offer = $repo->find($id);
 
         $user = $this->container->get('security.context')->getToken()->getUser();
+        if (!$this->container->get('security.context')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
+            throw new AccessDeniedException('You have to be logged');
+        }
         if (!$offer->isOwner($user)) {
             throw new AccessDeniedException('This user does not have access to this section.');
         }

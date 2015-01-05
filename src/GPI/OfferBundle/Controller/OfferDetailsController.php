@@ -34,6 +34,9 @@ class OfferDetailsController extends Controller
      */
     private function validateUser(Offer $offer)
     {
+        if (!$this->container->get('security.context')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
+            throw new AccessDeniedException('You have to be logged');
+        }
         $user = $this->container->get('security.context')->getToken()->getUser();
         if (!$offer->isOwner($user) || $offer->getAuction()->isOwner($user)) {
             throw new AccessDeniedException('This user does not have access to this section.');

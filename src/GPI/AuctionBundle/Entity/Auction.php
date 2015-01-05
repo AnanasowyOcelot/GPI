@@ -152,16 +152,6 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
      */
     protected $createdBy;
 
-//    public function __construct($endTime = null, $name = null, $content = null, $categories = null, $inCalendar = null)
-//    {
-//        if ($endTime === null) {
-//            $this->postLoad();
-//        } else {
-//            parent::__construct($endTime, $name, $content, $categories, $inCalendar);
-//        }
-//    }
-
-
     /**
      * @ORM\PrePersist
      * @ORM\PreUpdate
