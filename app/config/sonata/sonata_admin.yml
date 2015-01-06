@@ -81,12 +81,12 @@ sonata_admin:
 #                    - sonata.classification.admin.collection
 #                    - sonata.classification.admin.context
 
-#            sonata.admin.group.site_builder:
-#                label:           sonata_site_builder
-#                label_catalogue: SonataDemoBundle
-#                icon:            '<i class="fa fa-puzzle-piece"></i>'
-#                items:
-#                    - sonata.page.admin.page
+            sonata.admin.group.site_builder:
+                label:           sonata_site_builder
+                label_catalogue: SonataDemoBundle
+                icon:            '<i class="fa fa-puzzle-piece"></i>'
+                items:
+                    - sonata.page.admin.page
 #                    - sonata.page.admin.site
 
             sonata.admin.group.auction_manager:
