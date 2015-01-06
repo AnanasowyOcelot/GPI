@@ -81,12 +81,12 @@ sonata_admin:
 #                    - sonata.classification.admin.collection
 #                    - sonata.classification.admin.context
 
-            sonata.admin.group.site_builder:
-                label:           sonata_site_builder
-                label_catalogue: SonataDemoBundle
-                icon:            '<i class="fa fa-puzzle-piece"></i>'
-                items:
-                    - sonata.page.admin.page
+#            sonata.admin.group.site_builder:
+#                label:           sonata_site_builder
+#                label_catalogue: SonataDemoBundle
+#                icon:            '<i class="fa fa-puzzle-piece"></i>'
+#                items:
+#                    - sonata.page.admin.page
 #                    - sonata.page.admin.site
 
             sonata.admin.group.auction_manager:
@@ -95,6 +95,9 @@ sonata_admin:
                 icon:            '<i class="fa fa-puzzle-piece"></i>'
                 items:
                     - gpi_auction.admin.auction
+
+
+
             sonata.admin.group.offer_manager:
                 label:           Oferty
                 label_catalogue: SonataOfferBundle
@@ -108,7 +111,12 @@ sonata_admin:
                 items:
                     - gpi_auction.admin.document
 
-
+            sonata.admin.group.site_manager:
+                label:           Podstrony
+                label_catalogue: SonataSiteBundle
+                icon:            '<i class="fa fa-cogs"></i>'
+                items:
+                    - gpi_site.admin.site
 
             sonata.admin.group.administration:
                 label:           Użytkownicy

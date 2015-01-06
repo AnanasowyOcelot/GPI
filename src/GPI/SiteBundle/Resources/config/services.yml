@@ -1,4 +1,12 @@
 services:
-#    gpi_site.example:
-#        class: GPI\SiteBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    gpi_site.site_repository:
+        class: GPI\SiteBundle\Entity\SiteRepository
+        factory_service: doctrine.orm.default_entity_manager
+        factory_method: getRepository
+        arguments:
+            - GPI\SiteBundle\Entity\Site
+    gpi_site.admin.site:
+        class: GPI\SiteBundle\Admin\SiteAdmin
+        arguments: [~, GPI\SiteBundle\Entity\Site, GPISiteBundle:SiteAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Lista podstron}

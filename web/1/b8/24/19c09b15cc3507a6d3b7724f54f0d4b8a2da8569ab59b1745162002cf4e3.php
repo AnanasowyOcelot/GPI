@@ -1,7 +1,7 @@
 <?php
 
 /* SonataAdminBundle:CRUD:list__batch.html.twig */
-class __TwigTemplate_ec1bfe323698be3a7b01b7cabdcad4d669229f4f059738bb5a88e87d14e56509 extends Sonata\CacheBundle\Twig\TwigTemplate14
+class __TwigTemplate_b82419c09b15cc3507a6d3b7724f54f0d4b8a2da8569ab59b1745162002cf4e3 extends Sonata\CacheBundle\Twig\TwigTemplate14
 {
     public function __construct(Twig_Environment $env)
     {

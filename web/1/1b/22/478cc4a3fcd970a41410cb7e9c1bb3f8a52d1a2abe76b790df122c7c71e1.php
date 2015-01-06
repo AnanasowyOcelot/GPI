@@ -1,7 +1,7 @@
 <?php
 
-/* GPISiteBundle:Default:faq.html.twig */
-class __TwigTemplate_4578a7251754db7514d24a40eb0920f14ae2e56ab7c7585ce4badc282bf453b0 extends Sonata\CacheBundle\Twig\TwigTemplate14
+/* GPISiteBundle:Default:site.html.twig */
+class __TwigTemplate_1b22478cc4a3fcd970a41410cb7e9c1bb3f8a52d1a2abe76b790df122c7c71e1 extends Sonata\CacheBundle\Twig\TwigTemplate14
 {
     public function __construct(Twig_Environment $env)
     {
@@ -26,7 +26,7 @@ class __TwigTemplate_4578a7251754db7514d24a40eb0920f14ae2e56ab7c7585ce4badc282bf
 
     public function getTemplateName()
     {
-        return "GPISiteBundle:Default:faq.html.twig";
+        return "GPISiteBundle:Default:site.html.twig";
     }
 
     public function isTraitable()

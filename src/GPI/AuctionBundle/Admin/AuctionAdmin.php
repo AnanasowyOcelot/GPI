@@ -51,8 +51,6 @@ class AuctionAdmin extends Admin
                         'Wyłącz' => array(
                             'template' => 'GPIAuctionBundle:Admin:list__action_deactivate.html.twig'
                         )
-                        //                        'edit' => array(),
-                        //                        'delete' => array(), TODO: deaktywacja i aktywacja aukcji
                     ),
                     'label' => "Opcje"
                 )
@@ -64,32 +62,6 @@ class AuctionAdmin extends Admin
      */
     protected function configureFormFields(FormMapper $formMapper)
     {
-        //        $formMapper
-        //            ->add('name')
-        //            ->add(
-        //                'content',
-        //                'textarea',
-        //                array(
-        //                    'attr' => array('class' => 'ckeditor')
-        //                )
-        //            )
-        //            ->add(
-        //                'categories'
-        //            )
-        //            ->add(
-        //                'documents',
-        //                'entity',
-        //                array(
-        //                    'class' => 'GPI\DocumentBundle\Entity\Document',
-        //                    'read_only' => true,
-        //                    'multiple' => true,
-        //                )
-        //            );
-
-        //            ->add('webPath', 'url', array(
-        //                'read_only'=>true
-        //            ))
-        //            ->add('documents', 'entity', array('class'=>'GPI\DocumentBundle\Entity\Document')
     }
 
     /**
