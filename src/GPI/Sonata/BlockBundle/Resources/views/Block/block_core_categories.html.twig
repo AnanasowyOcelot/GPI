@@ -1,16 +1,16 @@
-{% macro menu_categories(categories, slug) %}
+{% macro menu_categories(categories, slug, numbersDict) %}
     {% for category in categories %}
         <li>
             {% set class = "" %}
             {% if category.slug == slug %}
                 {% set class = "active" %}
             {% endif %}
-            <a class="{{ class }}" href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }}</a>
+            <a class="{{ class }}" href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }} ({{ numbersDict[category.entity.id] }})</a>
 
             {% if category.children %}
                 <div class="buttonToggle icon-arrow-down"></div>
                 <ul>
-                    {{ _self.menu_categories(category.children, slug) }}
+                    {{ _self.menu_categories(category.children, slug, numbersDict) }}
                 </ul>
             {% endif %}
         </li>
@@ -27,7 +27,7 @@
     </button>
 
     <ul class="main-menu collapse navbar-collapse navbar-responsive-collapse">
-        {{ _self.menu_categories(categories, slug) }}
+        {{ _self.menu_categories(categories, slug, numbersDict) }}
     </ul>
 
     {% verbatim %}

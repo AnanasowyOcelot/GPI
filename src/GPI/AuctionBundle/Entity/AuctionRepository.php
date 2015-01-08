@@ -33,7 +33,7 @@ class AuctionRepository extends EntityRepository implements \GPI\CoreBundle\Mode
             if ($params->getCategory() != null) {
                 $queryBuilder->leftJoin('auction.categories', 'category');
                 $category = $params->getCategory();
-                $queryBuilder->andWhere('category = :cat');
+                $queryBuilder->andWhere('category = :cat OR category.parent = :cat');
                 $queryBuilder->setParameter('cat', $category);
             }
             $auctions = $queryBuilder->getQuery()->getResult();
