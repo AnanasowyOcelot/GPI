@@ -100,6 +100,24 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
     }
 
     /**
+     * @param \Application\Sonata\UserBundle\Entity\User $updatedBy
+     */
+    public function setUpdatedBy($updatedBy)
+    {
+        $this->updatedBy = $updatedBy;
+    }
+
+    /**
+     * @param \Application\Sonata\UserBundle\Entity\User $createdBy
+     */
+    public function setCreatedBy($createdBy)
+    {
+        $this->createdBy = $createdBy;
+    }
+
+
+
+    /**
      * @param mixed $offers
      */
     public function setOffers($offers)

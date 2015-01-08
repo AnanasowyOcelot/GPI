@@ -36,23 +36,25 @@ class PopulateAuctionsCommand extends ContainerAwareCommand
         $userRepo = $this->getContainer()->get('doctrine')->getManager()->getRepository('ApplicationSonataUserBundle:User');
         $users = $userRepo->findAll();
 
-        //for ($i = 0; $i < $numberOfAuctions; $i++) {
+        for ($i = 0; $i < $numberOfAuctions; $i++) {
 
-//            $command = new AddNewAuctionCommand();
-//            $command->setName("Test");
-//            $command->setContent("Test");
-//            $command->setMaxPrice(20);
-//            $command->setTimePeriod(30);
-//
-//            $category = $categories[0];
-//            $command->addCategory($category);
-//
-//            $auction = $auctionService->createNewAuction($command);
-//
-//            $user = $users[0];
-//            $auction->createdBy = $user;
-//            $this->persistAuction($auction);
-        //}
+        $command = new AddNewAuctionCommand();
+        $command->setName("Przykładowa nazwa oferty " . ($i + 1));
+        $command->setContent("Test, test, test, test, test, test, test, test, test, test, test, test, test, test, test.");
+        $command->setMaxPrice(20);
+        $command->setTimePeriod(30);
+
+        $category = $categories[0];
+        $command->addCategory($category);
+
+        /** @var Auction $auction */
+        $auction = $auctionService->createNewAuction($command);
+
+        $user = $users[0];
+        $auction->setUpdatedBy($user);
+        $auction->setCreatedBy($user);
+        $this->persistAuction($auction);
+        }
 
         $output->writeln("Dodano " . $numberOfAuctions . " aukcji.");
     }
@@ -64,9 +66,9 @@ class PopulateAuctionsCommand extends ContainerAwareCommand
     {
         /** @var \Doctrine\ORM\EntityManager $em */
         $em = $this->getContainer()->get('doctrine')->getManager();
-//        foreach ($auction->getDocuments() as $document) {
-//            $em->persist($document);
-//        }
+        //        foreach ($auction->getDocuments() as $document) {
+        //            $em->persist($document);
+        //        }
         //var_dump(get_class($auction));
 
         $em->persist($auction);

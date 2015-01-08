@@ -39,7 +39,7 @@ class __TwigTemplate_cd2e1beb42bb9a53988824c601a3ee8b152252f49ac0bdcdb0eb70e780e
     <ul class=\"main-menu collapse navbar-collapse navbar-responsive-collapse\">
         ";
         // line 30
-        echo $this->getAttribute($this, "menu_categories", array(0 => (isset($context["categories"]) ? $context["categories"] : $this->getContext($context, "categories")), 1 => (isset($context["slug"]) ? $context["slug"] : $this->getContext($context, "slug"))), "method");
+        echo $this->getAttribute($this, "menu_categories", array(0 => (isset($context["categories"]) ? $context["categories"] : $this->getContext($context, "categories")), 1 => (isset($context["slug"]) ? $context["slug"] : $this->getContext($context, "slug")), 2 => (isset($context["numbersDict"]) ? $context["numbersDict"] : $this->getContext($context, "numbersDict"))), "method");
         echo "
     </ul>
 
@@ -82,11 +82,12 @@ class __TwigTemplate_cd2e1beb42bb9a53988824c601a3ee8b152252f49ac0bdcdb0eb70e780e
     }
 
     // line 1
-    public function getmenu_categories($__categories__ = null, $__slug__ = null)
+    public function getmenu_categories($__categories__ = null, $__slug__ = null, $__numbersDict__ = null)
     {
         $context = $this->env->mergeGlobals(array(
             "categories" => $__categories__,
             "slug" => $__slug__,
+            "numbersDict" => $__numbersDict__,
         ));
 
         $blocks = array();
@@ -119,7 +120,9 @@ class __TwigTemplate_cd2e1beb42bb9a53988824c601a3ee8b152252f49ac0bdcdb0eb70e780e
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_auctions_by_category", array("categorySlug" => $this->getAttribute($context["category"], "slug", array()))), "html", null, true);
                 echo "\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
-                echo "</a>
+                echo " (";
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["numbersDict"]) ? $context["numbersDict"] : $this->getContext($context, "numbersDict")), $this->getAttribute($this->getAttribute($context["category"], "entity", array()), "id", array()), array(), "array"), "html", null, true);
+                echo ")</a>
 
             ";
                 // line 10
@@ -129,7 +132,7 @@ class __TwigTemplate_cd2e1beb42bb9a53988824c601a3ee8b152252f49ac0bdcdb0eb70e780e
                 <ul>
                     ";
                     // line 13
-                    echo $this->getAttribute($this, "menu_categories", array(0 => $this->getAttribute($context["category"], "children", array()), 1 => (isset($context["slug"]) ? $context["slug"] : $this->getContext($context, "slug"))), "method");
+                    echo $this->getAttribute($this, "menu_categories", array(0 => $this->getAttribute($context["category"], "children", array()), 1 => (isset($context["slug"]) ? $context["slug"] : $this->getContext($context, "slug")), 2 => (isset($context["numbersDict"]) ? $context["numbersDict"] : $this->getContext($context, "numbersDict"))), "method");
                     echo "
                 </ul>
             ";
@@ -162,6 +165,6 @@ class __TwigTemplate_cd2e1beb42bb9a53988824c601a3ee8b152252f49ac0bdcdb0eb70e780e
 
     public function getDebugInfo()
     {
-        return array (  138 => 16,  132 => 13,  128 => 11,  126 => 10,  116 => 8,  113 => 7,  110 => 6,  107 => 5,  105 => 4,  102 => 3,  97 => 2,  85 => 1,  48 => 64,  42 => 30,  29 => 21,  23 => 20,  20 => 19,);
+        return array (  141 => 16,  135 => 13,  131 => 11,  129 => 10,  117 => 8,  114 => 7,  111 => 6,  108 => 5,  106 => 4,  103 => 3,  98 => 2,  85 => 1,  48 => 64,  42 => 30,  29 => 21,  23 => 20,  20 => 19,);
     }
 }
