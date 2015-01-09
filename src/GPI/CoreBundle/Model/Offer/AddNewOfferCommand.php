@@ -12,6 +12,7 @@ class AddNewOfferCommand
     protected $price;
     protected $documents;
     protected $auction;
+    protected $bidPercent;
 
     public function __construct()
     {
@@ -40,6 +41,22 @@ class AddNewOfferCommand
     public function getAuction()
     {
         return $this->auction;
+    }
+
+    /**
+     * @param mixed $bidPercent
+     */
+    public function setBidPercent($bidPercent)
+    {
+        $this->bidPercent = $bidPercent;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBidPercent()
+    {
+        return $this->bidPercent;
     }
 
 

@@ -20,6 +20,7 @@ class Offer
 
     protected $price;
     protected $actualPrice;
+    protected $bidPercent;
 
     protected $createdBy;
     protected $updatedBy;
@@ -43,6 +44,22 @@ class Offer
     public function setActualPrice($actualPrice)
     {
         $this->actualPrice = $actualPrice;
+    }
+
+    /**
+     * @param mixed $bidPercent
+     */
+    public function setBidPercent($bidPercent)
+    {
+        $this->bidPercent = $bidPercent;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBidPercent()
+    {
+        return $this->bidPercent;
     }
 
     /**

@@ -31,6 +31,7 @@ class Offer
             $command->getAuction()
         );
         $offer->setActualPrice($offer->getPrice());
+        $offer->setBidPercent($command->getBidPercent());
         foreach ($command->getDocuments() as $document) {
             $offer->getDocuments()->add($document);
             $document->upload();
@@ -47,9 +48,22 @@ class Offer
         if(count($offers) > 1){
             /** @var OfferEntity $winningOffer */
             $winningOffer = $offers[0];
+            $winningOfferPrice = $winningOffer->getPrice();
             /** @var OfferEntity $penultimateOffer */
             $penultimateOffer = $offers[1];
-            $winningOffer->setActualPrice($penultimateOffer->getPrice()-1);
+            $penultimateOfferPrice  = $penultimateOffer->getPrice();
+
+            $bidPercentValue = $winningOffer->getBidPercent();
+            if($bidPercentValue !== null){
+                $newWinningOfferPrice = $penultimateOfferPrice - $penultimateOfferPrice * $bidPercentValue;
+                while($newWinningOfferPrice < $winningOfferPrice){
+                    $newWinningOfferPrice++;
+                }
+                $winningOffer->setActualPrice($newWinningOfferPrice);
+            }else{
+                $winningOffer->setActualPrice($penultimateOfferPrice - 1);
+            }
+
         }
         foreach($offers as $offer){
             $this->em->persist($offer);

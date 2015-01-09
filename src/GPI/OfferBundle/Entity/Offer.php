@@ -54,6 +54,12 @@ class Offer extends \GPI\CoreBundle\Model\Offer\Offer
 
     /**
      * @var string
+     * @ORM\Column(name="bid_percent", type="decimal", scale=2, nullable=true)
+     */
+    protected $bidPercent;
+
+    /**
+     * @var string
      *
      * @ORM\Column(name="content", type="text")
      */

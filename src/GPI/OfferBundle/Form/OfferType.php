@@ -21,6 +21,16 @@ abstract class OfferType extends AbstractType
                     'required' => true
                 )
             )
+            ->add(
+                'bidPercent',
+                'percent',
+                array(
+                    'label' => "Procent przebicia oferty",
+                    'required' => false,
+                    'help_block'     => 'Wypełnij to pole, jeśli chcesz '
+                )
+            )
+
             ->add('auction', 'entity', array(
                     'class' => 'GPI\AuctionBundle\Entity\Auction',
                     'label' => 'Aukcja:',

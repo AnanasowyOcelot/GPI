@@ -41,12 +41,22 @@ class __TwigTemplate_a1abf74541fd19c05e9a41408832b623715cff7822aa08506735b36b61b
         // line 13
         if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "security", array()), "getToken", array(), "method"), "getUser", array(), "method") == $this->getAttribute((isset($context["offer"]) ? $context["offer"] : $this->getContext($context, "offer")), "createdBy", array(), "method"))) {
             // line 14
-            echo "            <li><strong>Dolny limit ceny:</strong> ";
+            echo "                <li><strong>Dolny limit ceny:</strong> ";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["offer"]) ? $context["offer"] : $this->getContext($context, "offer")), "price", array()), "html", null, true);
             echo "</li>
-            ";
+                ";
+            // line 15
+            if ( !(null === $this->getAttribute((isset($context["offer"]) ? $context["offer"] : $this->getContext($context, "offer")), "bidPercent", array()))) {
+                // line 16
+                echo "                    <li><strong>Procent przebicia:</strong> ";
+                echo twig_escape_filter($this->env, ($this->getAttribute((isset($context["offer"]) ? $context["offer"] : $this->getContext($context, "offer")), "bidPercent", array()) * 100), "html", null, true);
+                echo " %</li>
+                ";
+            }
+            // line 18
+            echo "            ";
         }
-        // line 16
+        // line 19
         echo "        </ul>
     </div>
 </div>
@@ -56,19 +66,19 @@ class __TwigTemplate_a1abf74541fd19c05e9a41408832b623715cff7822aa08506735b36b61b
     <div id=\"grid-container\" class=\"cbp-l-grid-gallery\">
         <ul>
             ";
-        // line 24
+        // line 27
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["offer"]) ? $context["offer"] : $this->getContext($context, "offer")), "documents", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
-            // line 25
+            // line 28
             echo "                <li class=\"cbp-item motion\">
                     <a href=\"";
-            // line 26
+            // line 29
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute($context["document"], "getWebPath", array(), "method")), "html", null, true);
             echo "\" target=\"_blank\" class=\"cbp-caption cbp-lightbox\">
                         <div class=\"cbp-caption-defaultWrap\">
                             <img src=\"";
-            // line 28
+            // line 31
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute($context["document"], "getWebPath", array(), "method")), "html", null, true);
             echo "\" alt=\"\" width=\"100%\">
                         </div>
@@ -76,7 +86,7 @@ class __TwigTemplate_a1abf74541fd19c05e9a41408832b623715cff7822aa08506735b36b61b
                             <div class=\"cbp-l-caption-alignCenter\">
                                 <div class=\"cbp-l-caption-body\">
                                     <p class=\"cbp-l-caption-desc\">";
-            // line 33
+            // line 36
             echo twig_escape_filter($this->env, $this->getAttribute($context["document"], "description", array()), "html", null, true);
             echo "</p>
                                 </div>
@@ -89,7 +99,7 @@ class __TwigTemplate_a1abf74541fd19c05e9a41408832b623715cff7822aa08506735b36b61b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 40
+        // line 43
         echo "        </ul>
     </div>
 </div>";
@@ -107,6 +117,6 @@ class __TwigTemplate_a1abf74541fd19c05e9a41408832b623715cff7822aa08506735b36b61b
 
     public function getDebugInfo()
     {
-        return array (  93 => 40,  80 => 33,  72 => 28,  67 => 26,  64 => 25,  60 => 24,  50 => 16,  44 => 14,  42 => 13,  37 => 12,  33 => 10,  23 => 4,  19 => 1,);
+        return array (  103 => 43,  90 => 36,  82 => 31,  77 => 29,  74 => 28,  70 => 27,  60 => 19,  57 => 18,  51 => 16,  49 => 15,  44 => 14,  42 => 13,  37 => 12,  33 => 10,  23 => 4,  19 => 1,);
     }
 }
