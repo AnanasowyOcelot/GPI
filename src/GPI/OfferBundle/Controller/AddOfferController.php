@@ -46,9 +46,11 @@ class AddOfferController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+           /** @var \GPI\CoreBundle\Model\Service\Offer $offerService */
             $offerService = $this->get('gpi_offer.service.offer');
             $offer = $offerService->createNewOffer($command);
             $this->persistOffer($offer);
+            $offerService->updateActualPrices($auction);
             return $this->redirect($this->generateUrl('gpi_auction_details', array('id' => $auctionId)));
         }
 

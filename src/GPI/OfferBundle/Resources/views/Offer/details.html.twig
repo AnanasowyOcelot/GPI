@@ -9,8 +9,10 @@
         <ul class="list-unstyled project-details">
             <li><strong>Dodano przez:</strong> {{ offer.getCreatedBy() }}</li>
             {#<li><strong>Data dodania:</strong> {{ offer.getStartTime().format('Y-m-d H:i:s') }}</li>#}
-            <li><strong>Cena maksymalna:</strong> {{ offer.price }}</li>
-
+            <li><strong>Cena minimalna:</strong> {{ offer.actualPrice }}</li>
+            {% if app.security.getToken().getUser() == offer.createdBy() %}
+            <li><strong>Dolny limit ceny:</strong> {{ offer.price }}</li>
+            {% endif %}
         </ul>
     </div>
 </div>

@@ -7,6 +7,7 @@
                 <tr>
                     <th class="hidden-sm">Nazwa aukcji</th>
                     <th>Cena minimalna</th>
+                    <th>Dolny limit ceny:</th>
                     <th>Opcje</th>
                     <th>Status</th>
                 </tr>
@@ -16,6 +17,9 @@
                     <tr>
                         <td class="td-width">
                             {{ offer.auction }}
+                        </td>
+                        <td class="td-width">
+                            {{ offer.actualPrice }}
                         </td>
                         <td class="td-width">
                             {{ offer.price }}

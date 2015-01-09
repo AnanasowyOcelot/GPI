@@ -19,6 +19,7 @@ class Offer
     protected $documents;
 
     protected $price;
+    protected $actualPrice;
 
     protected $createdBy;
     protected $updatedBy;
@@ -34,6 +35,22 @@ class Offer
         $this->setContent($content);
         $this->setPrice($price);
         $this->setAuction($auction);
+    }
+
+    /**
+     * @param mixed $actualPrice
+     */
+    public function setActualPrice($actualPrice)
+    {
+        $this->actualPrice = $actualPrice;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getActualPrice()
+    {
+        return $this->actualPrice;
     }
 
     /**

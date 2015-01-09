@@ -72,7 +72,7 @@
                         {{ offer.createdBy }}
                     </td>
                     <td class="td-width">
-                        {{ offer.price }}
+                        {{ offer.actualPrice }}
                     </td>
                     <td class="td-width">
                         {% if app.security.getToken().getUser() == offer.createdBy() or app.security.getToken().getUser() == offer.getAuction().createdBy() %}

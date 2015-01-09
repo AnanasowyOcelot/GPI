@@ -48,6 +48,12 @@ class Offer extends \GPI\CoreBundle\Model\Offer\Offer
 
     /**
      * @var string
+     * @ORM\Column(name="actual_price", type="decimal", scale=2, nullable=false)
+     */
+    protected $actualPrice;
+
+    /**
+     * @var string
      *
      * @ORM\Column(name="content", type="text")
      */
