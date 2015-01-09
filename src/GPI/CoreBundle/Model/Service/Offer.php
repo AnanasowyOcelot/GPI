@@ -40,6 +40,8 @@ class Offer
     }
 
     public function updateActualPrices(AuctionEntity $auction){
+
+        //TODO: oferty są posortowane bo doctrine, ale to nie fajnie
         $offers = $auction->getActiveOffers();
         foreach($offers as $offer){
             /** @var OfferEntity $offer */

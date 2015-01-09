@@ -136,12 +136,12 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
 
     public function getActiveOffers()
     {
-        return array_filter(
+        return array_values(array_filter(
             $this->getOffers()->toArray(),
             function (Offer $o) {
                 return $o->isActive();
             }
-        );
+        ));
     }
 
     /**
