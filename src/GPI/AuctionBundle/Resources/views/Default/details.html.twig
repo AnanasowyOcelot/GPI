@@ -57,13 +57,17 @@
             <tr>
                 <th class="hidden-sm">Złożył</th>
                 <th>Cena minimalna</th>
-                <th>Opcje</th>
+                <th></th>
                 <th>Status</th>
             </tr>
             </thead>
             <tbody>
             {% for offer in auction.getActiveOffers() %}
-                <tr>
+                {% if loop.first %}
+                <tr style="background-color: #88de73">
+                {% else %}
+                    <tr>
+                {% endif %}
                     <td class="td-width">
                         {{ offer.createdBy }}
                     </td>

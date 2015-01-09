@@ -91,6 +91,7 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
 
     /**
      * @ORM\OneToMany(targetEntity="\GPI\OfferBundle\Entity\Offer", mappedBy="auction")
+     * @ORM\OrderBy({"price" = "DESC"})
      **/
     protected $offers;
 
