@@ -22,93 +22,7 @@
     <favorites_list name="sandbox" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="PopulateAuctionsCommand.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Command/PopulateAuctionsCommand.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="32" selection-start="1906" selection-end="1906" vertical-scroll-proportion="0.4912892" vertical-offset="721" max-vertical-offset="3454">
-              <folding>
-                <element signature="e#46#94#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auctionFixtures.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/DataFixtures/auctionFixtures.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="32" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="814">
-              <folding>
-                <marker date="1420734682333" expanded="true" signature="15:611" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoadFixturesCommand.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Command/LoadFixturesCommand.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="8" selection-start="993" selection-end="1118" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1078">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auctionFixtures.csv" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/DataFixtures/auctionFixtures.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="29" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="198">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuctionCommandFactory.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/DataFixtures/AuctionCommandFactory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="52" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="594">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Offer.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Entity/Offer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="0" selection-start="2770" selection-end="2770" vertical-scroll-proportion="0.0" vertical-offset="2442" max-vertical-offset="3652">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddNewOfferCommand.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Offer/AddNewOfferCommand.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="20" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="2002">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Offer.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Service/Offer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="24" selection-start="879" selection-end="879" vertical-scroll-proportion="0.0" vertical-offset="638" max-vertical-offset="1012">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddOfferController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/AddOfferController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="39" selection-start="1797" selection-end="1859" vertical-scroll-proportion="0.0" vertical-offset="1078" max-vertical-offset="1804">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -750,7 +664,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1918" y="0" width="1225" height="1080" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864675" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -759,7 +673,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24884793" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875606" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18817204" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23907454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23907454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864675" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -1053,7 +967,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="32" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="814">
           <folding>
-            <marker date="1420734682333" expanded="true" signature="15:611" placeholder="..." />
+            <marker date="1420734682333" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1067,7 +981,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Command/PopulateAuctionsCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="32" selection-start="1906" selection-end="1906" vertical-scroll-proportion="0.4912892" vertical-offset="721" max-vertical-offset="3454">
+        <state line="45" column="69" selection-start="1879" selection-end="1879" vertical-scroll-proportion="0.3317757" vertical-offset="706" max-vertical-offset="3344">
           <folding>
             <element signature="e#46#94#0" expanded="true" />
           </folding>

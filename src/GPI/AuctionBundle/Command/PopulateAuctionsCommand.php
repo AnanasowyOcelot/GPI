@@ -33,11 +33,6 @@ class PopulateAuctionsCommand extends ContainerAwareCommand
             $numberOfAuctions = 1;
         }
 
-
-        
-
-
-
         /** @var \GPI\Sonata\ClassificationBundle\Entity\CategoryRepository $categoryRepo */
         $categoryRepo = $this->getContainer()->get('gpi_sonata.category_repository');
         $categories = $categoryRepo->findAll();
@@ -48,7 +43,7 @@ class PopulateAuctionsCommand extends ContainerAwareCommand
         $documentsRepo = $this->getContainer()->get('doctrine')->getManager()->getRepository('GPIDocumentBundle:Document');
         $documents = $documentsRepo->findAll();
 
-        foreach ($numberOfAuctions as $auction) {
+        for($auctions = 0; $auctions < $numberOfAuctions; $auctions++) {
 
             $command = $this->createCommand($documents, $categories);
             $auctionService = $this->getContainer()->get('gpi_auction.service.auction');
@@ -145,7 +140,7 @@ class PopulateAuctionsCommand extends ContainerAwareCommand
 
         $command->setDocuments($arrayOfDocuments);
 
-        $category = $categories[rand(1, count($categories) - 1)];
+        $category = $categories[rand(2, count($categories) - 1)];
         $command->addCategory($category);
         return $command;
     }
