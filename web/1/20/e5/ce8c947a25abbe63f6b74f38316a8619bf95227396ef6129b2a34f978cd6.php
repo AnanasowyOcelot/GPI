@@ -43,53 +43,60 @@ class __TwigTemplate_20e5ce8c947a25abbe63f6b74f38316a8619bf95227396ef6129b2a34f9
                 <tr>
                     <th class=\"hidden-sm\">Nazwa aukcji</th>
                     <th>Cena minimalna</th>
+                    <th>Dolny limit ceny:</th>
                     <th>Opcje</th>
                     <th>Status</th>
                 </tr>
                 </thead>
                 <tbody>
                 ";
-        // line 15
+        // line 16
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["offers"]) ? $context["offers"] : $this->getContext($context, "offers")));
         foreach ($context['_seq'] as $context["_key"] => $context["offer"]) {
-            // line 16
+            // line 17
             echo "                    <tr>
                         <td class=\"td-width\">
                             ";
-            // line 18
+            // line 19
             echo twig_escape_filter($this->env, $this->getAttribute($context["offer"], "auction", array()), "html", null, true);
             echo "
                         </td>
                         <td class=\"td-width\">
                             ";
-            // line 21
+            // line 22
+            echo twig_escape_filter($this->env, $this->getAttribute($context["offer"], "actualPrice", array()), "html", null, true);
+            echo "
+                        </td>
+                        <td class=\"td-width\">
+                            ";
+            // line 25
             echo twig_escape_filter($this->env, $this->getAttribute($context["offer"], "price", array()), "html", null, true);
             echo "
                         </td>
                         <td>
                             <p><a class=\"btn-u btn-u-blue\" href=\"";
-            // line 24
+            // line 28
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_offer_details", array("id" => $this->getAttribute($context["offer"], "id", array()))), "html", null, true);
             echo "\">Szczegóły</a></p>
                             ";
-            // line 25
+            // line 29
             if ($this->getAttribute($context["offer"], "isActive", array(), "method")) {
-                // line 26
+                // line 30
                 echo "                                <p><a class=\"btn-u btn-u-red\" href=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_offer_cancel", array("id" => $this->getAttribute($context["offer"], "id", array()))), "html", null, true);
                 echo "\">Anuluj</a></p>
                             ";
             }
-            // line 28
+            // line 32
             echo "                        </td>
                         <td>
                         <span class=\"";
-            // line 30
+            // line 34
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["offerStatus"]) ? $context["offerStatus"] : $this->getContext($context, "offerStatus")), "label", array(0 => $this->getAttribute($context["offer"], "getStatus", array(), "method")), "method"), "html", null, true);
             echo "\">
                         ";
-            // line 31
+            // line 35
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["offerStatus"]) ? $context["offerStatus"] : $this->getContext($context, "offerStatus")), "name", array(0 => $this->getAttribute($context["offer"], "getStatus", array(), "method")), "method"), "html", null, true);
             echo "
                         </span>
@@ -100,7 +107,7 @@ class __TwigTemplate_20e5ce8c947a25abbe63f6b74f38316a8619bf95227396ef6129b2a34f9
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['offer'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 36
+        // line 40
         echo "                </tbody>
             </table>
     </div>
@@ -119,6 +126,6 @@ class __TwigTemplate_20e5ce8c947a25abbe63f6b74f38316a8619bf95227396ef6129b2a34f9
 
     public function getDebugInfo()
     {
-        return array (  104 => 36,  93 => 31,  89 => 30,  85 => 28,  79 => 26,  77 => 25,  73 => 24,  67 => 21,  61 => 18,  57 => 16,  53 => 15,  39 => 3,  36 => 2,  11 => 1,);
+        return array (  111 => 40,  100 => 35,  96 => 34,  92 => 32,  86 => 30,  84 => 29,  80 => 28,  74 => 25,  68 => 22,  62 => 19,  58 => 17,  54 => 16,  39 => 3,  36 => 2,  11 => 1,);
     }
 }

@@ -22,7 +22,8 @@ class OfferDetailsController extends Controller
             'GPIOfferBundle:Offer:details.html.twig',
             array(
                 'offer' => $offer,
-                'offerStatus' => new OfferStatus()
+                'offerStatus' => new OfferStatus(),
+                'isActive'    => $offer->isActive()
             )
         );
 

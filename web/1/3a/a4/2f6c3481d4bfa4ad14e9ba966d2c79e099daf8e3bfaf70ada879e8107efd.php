@@ -66,13 +66,11 @@ class __TwigTemplate_3aa42f6c3481d4bfa4ad14e9ba966d2c79e099daf8e3bfaf70ada879e81
             echo "    ";
         }
         // line 16
-        echo "    <div class=\"row-fluid clearfix\">
-        ";
+        echo "    ";
         // line 17
-        echo call_user_func_array($this->env->getFunction('sonata_block_render_event')->getCallable(), array("breadcrumb", array("context" => (isset($context["breadcrumb_context"]) ? $context["breadcrumb_context"] : $this->getContext($context, "breadcrumb_context")), "current_uri" => $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "requestUri", array()))));
-        echo "
-    </div>
-";
+        echo "        ";
+        // line 18
+        echo "    ";
     }
 
     // line 26
@@ -103,6 +101,6 @@ class __TwigTemplate_3aa42f6c3481d4bfa4ad14e9ba966d2c79e099daf8e3bfaf70ada879e81
 
     public function getDebugInfo()
     {
-        return array (  89 => 34,  82 => 27,  79 => 26,  72 => 17,  69 => 16,  66 => 15,  63 => 14,  60 => 13,  57 => 12,  50 => 35,  48 => 34,  45 => 33,  43 => 32,  38 => 29,  36 => 26,  30 => 22,  27 => 20,  25 => 12,  22 => 11,);
+        return array (  87 => 34,  80 => 27,  77 => 26,  73 => 18,  71 => 17,  69 => 16,  66 => 15,  63 => 14,  60 => 13,  57 => 12,  50 => 35,  48 => 34,  45 => 33,  43 => 32,  38 => 29,  36 => 26,  30 => 22,  27 => 20,  25 => 12,  22 => 11,);
     }
 }

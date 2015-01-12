@@ -1,3 +1,6 @@
+{% if not isActive %}
+    <div class="alert alert-warning fade in">Aukcja jest nieaktywna.</div>
+{% endif %}
 <div class="row margin-bottom-60">
     <div class="col-sm-8">
         {#<div class="headline"><h2>{{ offer.name }}</h2></div>#}

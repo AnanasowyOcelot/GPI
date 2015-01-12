@@ -24,7 +24,7 @@
                 <tr>
                     <th></th>
                     <th class="hidden-sm">Oferta</th>
-                    <th>Status</th>
+                    <th>Czas zakończenia</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -39,12 +39,9 @@
                             </h3>
 
                             <p>{{ auction.getContentShort() }}</p>
-                            <small class="hex">Zakończenie {{ auction.getEndTime().format('Y-m-d H:i:s') }}</small>
                         </td>
                         <td>
-                            <span class="{{ auctionStatus.label(auction.getStatus()) }}">
-                                {{ auctionStatus.name(auction.getStatus()) }}
-                            </span>
+                            <h3>{{ auction.getEndTime().format('Y-m-d H:i:s') }}</h3>
                         </td>
                     </tr>
                 {% endfor %}

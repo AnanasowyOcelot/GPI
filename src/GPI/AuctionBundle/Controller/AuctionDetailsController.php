@@ -18,7 +18,8 @@ class AuctionDetailsController extends Controller
             'GPIAuctionBundle:Default:details.html.twig',
             array(
                 'auction' => $auction,
-                'offerStatus' => new OfferStatus()
+                'offerStatus' => new OfferStatus(),
+                'isActive' => $auction->isActive()
             )
         );
 

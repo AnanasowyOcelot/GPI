@@ -55,6 +55,14 @@ class Offer
     }
 
     /**
+     * @return int
+     */
+    public function getAuctionId()
+    {
+        return $this->auction->getId();
+    }
+
+    /**
      * @return mixed
      */
     public function getBidPercent()
