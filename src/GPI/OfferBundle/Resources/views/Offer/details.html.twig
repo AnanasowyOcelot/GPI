@@ -13,7 +13,9 @@
             {% if app.security.getToken().getUser() == offer.createdBy() %}
                 <li><strong>Dolny limit ceny:</strong> {{ offer.price }}</li>
                 {% if offer.bidPercent is not null %}
-                    <li><strong>Procent przebicia:</strong> {{ offer.bidPercent * 100}}%</li>
+                    <li><strong>Procent przebicia:</strong> {{ offer.bidPercent * 100 }}%</li>
+                {% else %}
+                    <li><strong>Procent przebicia:</strong> Nie ustalono </li>
                 {% endif %}
             {% endif %}
         </ul>

@@ -76,6 +76,8 @@ class OfferAdmin extends Admin
                 array('class' => 'GPI\AuctionBundle\Entity\Auction',
                     'property' => 'name'))
             ->add('price', null, array('label' => "Cena"))
+            ->add('actualPrice', null, array('label' => "Cena aktualna"))
+            ->add('bidPercent', null, array('label' => "Procent przebicia oferty"))
             ->add('isCanceled', null, array('label' => "Skasowane"))
             ->add('isNotDeactivated', 'boolean', array('label' => "Włączona"))
             ->add('documents', null, array(

@@ -4,6 +4,7 @@ namespace GPI\OfferBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+
 use Functional as F;
 
 abstract class OfferType extends AbstractType
@@ -16,9 +17,11 @@ abstract class OfferType extends AbstractType
                 'price',
                 'money',
                 array(
-                    'label' => "Cena maksymalna:",
+                    'label' => "Cena minimalna:",
                     'currency' => "PLN",
-                    'required' => true
+                    'required' => true,
+                    'help_block' => 'Minimalna cena za jaką możesz wykonać zlecenie'
+
                 )
             )
             ->add(
@@ -27,7 +30,7 @@ abstract class OfferType extends AbstractType
                 array(
                     'label' => "Procent przebicia oferty",
                     'required' => false,
-                    'help_block'     => 'Wypełnij to pole, jeśli chcesz '
+                    'help_block' => 'W przypadku nie wypełnienia pola konkurencyjna oferta przebijana będzie o 1zł.'
                 )
             )
 
