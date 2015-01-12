@@ -9,6 +9,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 class Offer
 {
     const MAX_FILES = 20;
+    protected $id;
 
     protected $isCanceled;
     protected $isDeactivated;
@@ -53,6 +54,16 @@ class Offer
     {
         $this->bidPercent = $bidPercent;
     }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
 
     /**
      * @return int
@@ -174,6 +185,16 @@ class Offer
         }
         $this->content = $content;
     }
+
+    /**
+     * @return Auction
+     */
+    public function getAuction()
+    {
+        return $this->auction;
+    }
+
+
 
     /**
      * Get content

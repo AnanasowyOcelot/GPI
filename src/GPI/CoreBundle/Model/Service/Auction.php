@@ -6,6 +6,7 @@ use GPI\CoreBundle\Model\Auction\AddNewAuctionCommand;
 use GPI\CoreBundle\Model\Auction\AuctionRepository;
 use GPI\CoreBundle\Model\Auction\UpdateAuctionCommand;
 use GPI\CoreBundle\Model\Calendar\Calendar;
+use GPI\OfferBundle\Entity\Offer;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use Symfony\Component\Security\Core\SecurityContext;
@@ -51,6 +52,20 @@ class Auction
         return $auction;
     }
 
+    public function getOfferCurrentPosition(\GPI\CoreBundle\Model\Offer\Offer $offer, \GPI\CoreBundle\Model\Auction\Auction $auction)
+    {
+        $offers = $auction->getActiveOffers();
+        usort($offers, function (Offer $o1, Offer $o2) {
+            if ($o1->getActualPrice() > $o2->getActualPrice()) {
+                return -1;
+            } else if ($o1->getActualPrice() > $o2->getActualPrice()) {
+                return 1;
+            }
+            return 0;
+        });
+        return array_search($offer, $offers);
+    }
+
     public function editAuction(UpdateAuctionCommand $command, $auctionId)
     {
         /**
@@ -66,5 +81,4 @@ class Auction
         }
         return $auction;
     }
-
 }

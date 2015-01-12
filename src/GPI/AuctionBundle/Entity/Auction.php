@@ -80,6 +80,11 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
     protected $documents;
 
     /**
+     * @ORM\Column(name="max_realization_date", type="datetime")
+     */
+    protected $maxRealizationDate;
+
+    /**
      * @ORM\Column(name="end_time", type="datetime")
      */
     protected $endTime;
@@ -134,15 +139,7 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
         return $this->offers;
     }
 
-    public function getActiveOffers()
-    {
-        return array_values(array_filter(
-            $this->getOffers()->toArray(),
-            function (Offer $o) {
-                return $o->isActive();
-            }
-        ));
-    }
+
 
     /**
      * @var User $updatedBy

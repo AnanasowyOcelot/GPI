@@ -165,8 +165,4 @@ class Offer extends \GPI\CoreBundle\Model\Offer\Offer
         return (strlen($string) > $maxLength) ? substr($string, 0, $maxLength) . '...' : $string;
     }
 
-    public function getAuction()
-    {
-        return $this->auction;
-    }
 }

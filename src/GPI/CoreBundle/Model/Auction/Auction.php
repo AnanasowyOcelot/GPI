@@ -5,6 +5,7 @@ namespace GPI\CoreBundle\Model\Auction;
 use Application\Sonata\ClassificationBundle\Entity\Category;
 use Doctrine\ORM\PersistentCollection;
 use GPI\CoreBundle\Model\Calendar\Calendar;
+use GPI\CoreBundle\Model\Offer\Offer;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Common\Collections\ArrayCollection;
 
@@ -23,6 +24,7 @@ class Auction
     protected $maxPrice;
     protected $createdBy;
     protected $offers;
+    protected $maxRealizationDate;
 
     private $calendar;
     private $defaultImgPath;
@@ -54,6 +56,22 @@ class Auction
         $this->defaultImgPath = $defaultImgPath;
     }
 
+    /**
+     * @param \DateTime $maxRealizationDate
+     */
+    public function setMaxRealizationDate($maxRealizationDate)
+    {
+        $this->maxRealizationDate = $maxRealizationDate;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getMaxRealizationDate()
+    {
+        return $this->maxRealizationDate;
+    }
+     
     /**
      * @param \DateTime $startTime
      */
@@ -242,4 +260,24 @@ class Auction
     public function __toString(){
         return $this->getName();
     }
+
+    /**
+     * @return mixed
+     */
+    public function getOffers()
+    {
+        return $this->offers;
+    }
+
+    public function getActiveOffers()
+    {
+        return array_values(array_filter(
+            $this->getOffers()->toArray(),
+            function (Offer $o) {
+                return $o->isActive();
+            }
+        ));
+    }
+
+
 }

@@ -42,10 +42,21 @@ class ListOffersController extends BaseController
                 return $statusOrder[$a->getStatus()] - $statusOrder[$b->getStatus()];
             }
         );
+        /** @var \GPI\CoreBundle\Model\Service\Auction $auctionService */
+        $auctionService = $this->get('gpi_auction.service.auction');
+
+        $offersViewModels = array_map(
+            function (Offer $offer) use ($auctionService) {
+                $offerView = new \GPI\OfferBundle\ViewModel\Offer($offer);
+                $offerView->setCurrentPosition($auctionService->getOfferCurrentPosition($offer, $offer->getAuction())+1);
+                return $offerView;
+            },
+            $offers
+        );
 
         return $this->render('GPIOfferBundle:Profile:show.html.twig', array(
             'user' => $user,
-            'offers' => $offers,
+            'offers' => $offersViewModels,
             'offerStatus' => new OfferStatus()
         ));
     }

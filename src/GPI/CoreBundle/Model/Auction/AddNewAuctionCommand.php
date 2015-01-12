@@ -15,11 +15,14 @@ class AddNewAuctionCommand
     protected $categories;
     protected $documents;
     protected $timePeriod;
+    protected $maxRealizationDate;
 
     public function __construct()
     {
         $this->documents = new ArrayCollection();
     }
+
+
 
     /**
      * @param mixed $maxPrice

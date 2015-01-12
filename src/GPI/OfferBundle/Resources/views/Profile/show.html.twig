@@ -1,43 +1,49 @@
 {% extends "SonataUserBundle:Profile:action.html.twig" %}
 {% block sonata_profile_content %}
 
-        <div class="table-responsive">
-            <table class="table table-hover">
-                <thead>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th class="hidden-sm">Nazwa aukcji</th>
+                <th>Cena minimalna</th>
+                <th>Dolny limit ceny:</th>
+                <th>Opcje</th>
+                <th>Status</th>
+                <th>Aktualna pozycja</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for offer in offers %}
                 <tr>
-                    <th class="hidden-sm">Nazwa aukcji</th>
-                    <th>Cena minimalna</th>
-                    <th>Dolny limit ceny:</th>
-                    <th>Opcje</th>
-                    <th>Status</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for offer in offers %}
-                    <tr>
-                        <td class="td-width">
-                            {{ offer.auction }}
-                        </td>
-                        <td class="td-width">
-                            {{ offer.actualPrice }}
-                        </td>
-                        <td class="td-width">
-                            {{ offer.price }}
-                        </td>
-                        <td>
-                            <p><a class="btn-u btn-u-blue" href="{{ path('gpi_offer_details', {'id': offer.id }) }}">Szczegóły</a></p>
-                            {% if offer.isActive() %}
-                                <p><a class="btn-u btn-u-red" href="{{ path('gpi_offer_cancel', {'id': offer.id }) }}">Anuluj</a></p>
-                            {% endif %}
-                        </td>
-                        <td>
-                        <span class="{{ offerStatus.label(offer.getStatus()) }}">
-                        {{ offerStatus.name(offer.getStatus()) }}
+                    <td class="td-width">
+                        {{ offer.auctionName }}
+                    </td>
+                    <td class="td-width">
+                        {{ offer.actualPrice }}
+                    </td>
+                    <td class="td-width">
+                        {{ offer.price }}
+                    </td>
+                    <td>
+                        <p><a class="btn-u btn-u-blue" href="{{ path('gpi_offer_details', {'id': offer.id }) }}">Szczegóły</a>
+                        </p>
+                        {% if offer.isActive %}
+                            <p><a class="btn-u btn-u-red" href="{{ path('gpi_offer_cancel', {'id': offer.id }) }}">Anuluj</a>
+                            </p>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <span class="{{ offerStatus.label(offer.status) }}">
+                        {{ offerStatus.name(offer.status) }}
                         </span>
-                        </td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
+                    </td>
+                    <td>
+                     {{ offer.currentPosition }}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
 {% endblock %}
