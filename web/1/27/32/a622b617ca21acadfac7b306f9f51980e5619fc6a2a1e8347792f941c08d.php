@@ -133,19 +133,29 @@ class __TwigTemplate_2732a622b617ca21acadfac7b306f9f51980e5619fc6a2a1e8347792f94
         echo "
                 <br/>
 
-                <div class=\"note\">Wypełnij jeśli znasz</div>
+                <div class=\"note\">Pole opcjonalne</div>
+            </fieldset>
+
+            <fieldset>
+                ";
+        // line 90
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "maxRealizationDate", array()), 'row');
+        echo "
+                <br/>
+
+                <div class=\"note\">Pole opcjonalne</div>
             </fieldset>
             <hr/>
             <fieldset>
                 ";
-        // line 90
+        // line 97
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "timePeriod", array()), 'row');
         echo "
             </fieldset>
             <hr/>
             <fieldset>
                 ";
-        // line 94
+        // line 101
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "categories", array()), 'row');
         echo "
             </fieldset>
@@ -155,15 +165,15 @@ class __TwigTemplate_2732a622b617ca21acadfac7b306f9f51980e5619fc6a2a1e8347792f94
 
                 <div class=\"col-sm-10\">
                     <ul class=\"documents\" data-prototype=\"";
-        // line 101
+        // line 108
         echo twig_escape_filter($this->env, $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "documents", array()), "vars", array()), "prototype", array()), 'widget'));
         echo "\">
                         ";
-        // line 102
+        // line 109
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "documents", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
-            // line 103
+            // line 110
             echo "                            <li class=\"tag-box-v2\">";
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["document"], "description", array()), 'row');
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["document"], "file", array()), 'row');
@@ -173,14 +183,14 @@ class __TwigTemplate_2732a622b617ca21acadfac7b306f9f51980e5619fc6a2a1e8347792f94
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 105
+        // line 112
         echo "                    </ul>
                 </div>
             </fieldset>
             <hr/>
             <fieldset>
                 ";
-        // line 110
+        // line 117
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
             </fieldset>
@@ -217,6 +227,6 @@ class __TwigTemplate_2732a622b617ca21acadfac7b306f9f51980e5619fc6a2a1e8347792f94
 
     public function getDebugInfo()
     {
-        return array (  184 => 110,  177 => 105,  167 => 103,  163 => 102,  159 => 101,  149 => 94,  142 => 90,  132 => 83,  125 => 79,  118 => 75,  113 => 73,  42 => 4,  39 => 3,  35 => 1,  33 => 2,  11 => 1,);
+        return array (  194 => 117,  187 => 112,  177 => 110,  173 => 109,  169 => 108,  159 => 101,  152 => 97,  142 => 90,  132 => 83,  125 => 79,  118 => 75,  113 => 73,  42 => 4,  39 => 3,  35 => 1,  33 => 2,  11 => 1,);
     }
 }

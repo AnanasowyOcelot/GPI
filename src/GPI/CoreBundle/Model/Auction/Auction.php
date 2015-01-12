@@ -71,7 +71,7 @@ class Auction
     {
         return $this->maxRealizationDate;
     }
-     
+
     /**
      * @param \DateTime $startTime
      */

@@ -12,10 +12,27 @@ class UpdateAuctionCommand
     protected $content;
     protected $categories;
     protected $documents;
+    protected $maxRealizationDate;
 
     public function __construct()
     {
         $this->documents = new ArrayCollection();
+    }
+
+    /**
+     * @param \DateTime $maxRealizationDate
+     */
+    public function setMaxRealizationDate($maxRealizationDate)
+    {
+        $this->maxRealizationDate = $maxRealizationDate;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getMaxRealizationDate()
+    {
+        return $this->maxRealizationDate;
     }
 
     /**

@@ -48,7 +48,15 @@ abstract class AuctionType extends AbstractType
     {
         $builder
             ->add('name', 'text', array('label' => "Tytuł:"))
-            ->add('content', 'textarea', array('label' => "Treść:"));
+            ->add('content', 'textarea', array('label' => "Treść:"))
+            ->add('maxRealizationDate', 'date', array(
+                'attr' => array(
+                    'data-sonata-select2' => 'false',
+                ),
+                'label' => "Maksymalny termin wykonania:",
+                'input' => 'datetime',
+                'widget' => 'choice',
+            ));
 
         $this->addPriceToForm($builder);
         $this->addTimePeriodToForm($builder);

@@ -3,3 +3,6 @@ ALTER TABLE offer_audit ADD actual_price NUMERIC(10, 2) NOT NULL;
 
 ALTER TABLE offer ADD bid_percent NUMERIC(10, 2) DEFAULT NULL;
 ALTER TABLE offer_audit ADD bid_percent NUMERIC(10, 2) DEFAULT NULL;
+
+ALTER TABLE auction ADD max_realization_date DATETIME DEFAULT NULL;
+

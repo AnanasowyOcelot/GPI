@@ -80,7 +80,7 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
     protected $documents;
 
     /**
-     * @ORM\Column(name="max_realization_date", type="datetime")
+     * @ORM\Column(name="max_realization_date", type="datetime", nullable=true)
      */
     protected $maxRealizationDate;
 

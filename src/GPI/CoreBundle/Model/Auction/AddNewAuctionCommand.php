@@ -22,7 +22,21 @@ class AddNewAuctionCommand
         $this->documents = new ArrayCollection();
     }
 
+    /**
+     * @param \DateTime $maxRealizationDate
+     */
+    public function setMaxRealizationDate($maxRealizationDate)
+    {
+        $this->maxRealizationDate = $maxRealizationDate;
+    }
 
+    /**
+     * @return \DateTime
+     */
+    public function getMaxRealizationDate()
+    {
+        return $this->maxRealizationDate;
+    }
 
     /**
      * @param mixed $maxPrice

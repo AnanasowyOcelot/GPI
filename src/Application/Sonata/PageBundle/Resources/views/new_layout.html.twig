@@ -65,6 +65,7 @@
                 {% endfor %}
             {% endblock %}
         {% endblock %}
+
     </head>
 {% endblock %}
 
@@ -692,7 +693,6 @@
 <!--/wrapper-->
 
 <!-- JS Global Compulsory -->
-<script type="text/javascript" src="{{ asset("/bundles/gpilayout/plugins/jquery/jquery.min.js") }}"></script>
 <script type="text/javascript" src="{{ asset("/bundles/gpilayout/plugins/jquery/jquery-migrate.min.js") }}"></script>
 <script type="text/javascript" src="{{ asset("/bundles/gpilayout/plugins/bootstrap/js/bootstrap.min.js") }}"></script>
 <!-- JS Implementing Plugins -->
@@ -706,6 +706,8 @@
 <!-- JS Page Level -->
 <script type="text/javascript" src="{{ asset("/bundles/gpilayout/js/app.js") }}"></script>
 <script type="text/javascript" src="{{ asset("/bundles/gpilayout/js/plugins/owl-recent-works.js") }}"></script>
+{#<script type="text/javascript" src="{{ asset("/assetic/sonata_admin_js.js") }}"></script>#}
+{#<script type="text/javascript" src="{{ asset("/assetic/sonata_front_js.js") }}"></script>#}
 <script type="text/javascript">
     jQuery(document).ready(function () {
         App.init();
