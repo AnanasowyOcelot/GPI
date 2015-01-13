@@ -64,10 +64,20 @@ services:
             - { name: form.type, alias: auction_update }
         arguments:
             - @gpi_sonata.category_repository
+    gpi_auction.form.auction_partly_update:
+        class: GPI\AuctionBundle\Form\PartlyUpdateAuctionType
+        tags:
+            - { name: form.type, alias: auction_partly_update }
+        arguments:
+            - @gpi_sonata.category_repository
     gpi_auction.form.document:
         class: GPI\AuctionBundle\Form\DocumentType
         tags:
             - { name: form.type, alias: document }
+    gpi_auction.form.comment:
+        class: GPI\AuctionBundle\Form\CommentType
+        tags:
+            - { name: form.type, alias: comment }
     gpi_auction.service.auction:
         class: GPI\CoreBundle\Model\Service\Auction
         arguments:
@@ -75,6 +85,8 @@ services:
             - %gpi_auction.allowedTimePeriods%
             - @gpi_auction.auction_repository
             - @security.token_storage
+            - @doctrine.orm.entity_manager
+
     gpi_core.model.calendar.calendar:
         class: GPI\CoreBundle\Model\Calendar\Calendar
     gpi_auction.entity.initializer:

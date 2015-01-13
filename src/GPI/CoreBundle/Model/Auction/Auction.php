@@ -25,6 +25,7 @@ class Auction
     protected $createdBy;
     protected $offers;
     protected $maxRealizationDate;
+    protected $comments;
 
     private $calendar;
     private $defaultImgPath;
@@ -34,6 +35,7 @@ class Auction
         $this->isCanceled = false;
         $this->isDeactivated = false;
         $this->documents = new ArrayCollection();
+        $this->comments = new ArrayCollection();
         $this->setEndTime($endTime);
         $this->setName($name);
         $this->setContent($content);
@@ -48,6 +50,22 @@ class Auction
         }
 
         $this->init($calendar, $defaultImgPath);
+    }
+
+    /**
+     * @param mixed $comments
+     */
+    public function setComments(ArrayCollection $comments)
+    {
+        $this->comments = $comments;
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getComments()
+    {
+        return $this->comments;
     }
 
     public function init(Calendar $calendar, $defaultImgPath)
@@ -111,9 +129,9 @@ class Auction
     {
         if ($this->isActive()) {
             return AuctionStatus::ACTIVE;
-        } else if($this->isCanceled()){
+        } else if ($this->isCanceled()) {
             return AuctionStatus::CANCELED;
-        }else{
+        } else {
             return AuctionStatus::DEACTIVATED;
         }
     }
@@ -148,15 +166,18 @@ class Auction
         return $this->endTime < $this->calendar->dateTimeNow();
     }
 
-    public function getNumberOfOffers(){
+    public function getNumberOfOffers()
+    {
         return count($this->offers->toArray());
     }
 
-    protected function isPartiallyActive(){
+    protected function isPartiallyActive()
+    {
         return !$this->isCanceled() && !$this->isDeactivated();
     }
 
-    public function isDeactivated(){
+    public function isDeactivated()
+    {
         return $this->isDeactivated;
     }
 
@@ -169,6 +190,7 @@ class Auction
     {
         $this->isCanceled = true;
     }
+
     public function deactivate()
     {
         $this->isDeactivated = true;
@@ -179,7 +201,8 @@ class Auction
         $this->isDeactivated = false;
     }
 
-    public function isNotDeactivated(){
+    public function isNotDeactivated()
+    {
         return !$this->isDeactivated();
     }
 
@@ -198,6 +221,11 @@ class Auction
         }
         $this->name = $name;
         return $this;
+    }
+
+    public function canBeEdittedFully()
+    {
+        return $this->getNumberOfOffers() == 0;
     }
 
     public function getMainPhoto()
@@ -257,7 +285,8 @@ class Auction
         return (strlen($string) > $maxLength) ? substr($string, 0, $maxLength) . '...' : $string;
     }
 
-    public function __toString(){
+    public function __toString()
+    {
         return $this->getName();
     }
 
@@ -278,6 +307,4 @@ class Auction
             }
         ));
     }
-
-
 }

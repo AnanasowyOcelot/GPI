@@ -148,10 +148,10 @@ class __TwigTemplate_48785db9fd5c7cddca47733819d1da9d9010c788f44815bc733127259ac
         $context['_seq'] = twig_ensure_traversable((isset($context["documents"]) ? $context["documents"] : $this->getContext($context, "documents")));
         foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
             // line 109
-            echo "                    <a href=\"/";
+            echo "                    <a href=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute($context["document"], "getWebPath", array(), "method")), "html", null, true);
             echo "\" target=\"_blank\">
-                        <img class=\"thumbnail\" src=\"/";
+                        <img class=\"thumbnail\" src=\"";
             // line 110
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute($context["document"], "getWebPath", array(), "method")), "html", null, true);
             echo "\" alt=\"\">

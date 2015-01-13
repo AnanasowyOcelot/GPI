@@ -34,7 +34,7 @@ abstract class AuctionType extends AbstractType
     /**
      * @return ChoiceList
      */
-    private function categoryChoiceList()
+    protected  function categoryChoiceList()
     {
         $tree = $this->catRepo->auctionCategoryTree();
         $treeMap = $this->categoryTreeMap($tree);

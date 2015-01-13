@@ -5,7 +5,16 @@
     <div class="col-sm-8">
         <div class="headline"><h2>{{ auction.name }}</h2></div>
         <p>{{ auction.content|raw }}</p>
+        {% if auction.comments|length > 0 %}
         <br/>
+        <fieldset>
+            <label>Dodatkowe uwagi:</label>
+            <br/>
+            {% for comment in auction.comments %}
+                <div><strong>{{ comment.created.format('Y-m-d H:i:s') }}:</strong> {{ comment.content }}</div>
+            {% endfor %}
+        </fieldset>
+        {% endif %}
         {% if not (app.security.getToken().getUser() == auction.createdBy()) and auction.isActive() %}
         <a class="btn-u" href="{{ path("gpi_offer_homepage", {'auctionId': auction.id }) }}">Dodaj nową ofertę</a>
         {% endif %}

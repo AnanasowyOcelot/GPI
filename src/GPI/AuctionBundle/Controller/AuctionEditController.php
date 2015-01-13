@@ -4,7 +4,10 @@
 namespace GPI\AuctionBundle\Controller;
 
 use GPI\AuctionBundle\Entity\Auction;
+use GPI\AuctionBundle\Entity\AuctionComments;
+use GPI\CoreBundle\Model\Auction\PartlyUpdateAuctionCommand;
 use GPI\CoreBundle\Model\Auction\UpdateAuctionCommand;
+use GPI\DocumentBundle\Entity\Document;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
@@ -27,13 +30,23 @@ class AuctionEditController extends Controller
             throw new \Exception('Aukcja jest nieaktywna.');
         }
 
-        $command = new UpdateAuctionCommand();
-        $command->setName($auction->getName());
-        $command->setContent($auction->getContent());
-        $command->setCategories($auction->getCategories());
-        $command->setMaxRealizationDate($auction->getMaxRealizationDate());
-
-        $form = $this->createForm('auction_update', $command);
+        if ($auction->canBeEdittedFully()) {
+            $command = new UpdateAuctionCommand();
+            $command->setName($auction->getName());
+            $command->setContent($auction->getContent());
+            $command->setCategories($auction->getCategories());
+            $command->setMaxRealizationDate($auction->getMaxRealizationDate());
+            $d1 = new Document();
+            $command->getDocuments()->add($d1);
+            $form = $this->createForm('auction_update', $command);
+        } else {
+            $command = new PartlyUpdateAuctionCommand();
+            $command->setName($auction->getName());
+            $command->setContent($auction->getContent());
+            $command->setCategories($auction->getCategories());
+            $command->setMaxRealizationDate($auction->getMaxRealizationDate());
+            $form = $this->createForm('auction_partly_update', $command);
+        }
 
         $form->handleRequest($request);
 
@@ -43,19 +56,34 @@ class AuctionEditController extends Controller
              * @var $auctionService /GPI/AuctionBundle/Service/Auction
              */
             $auctionService = $this->get('gpi_auction.service.auction');
-            $auction = $auctionService->editAuction($command, $id);
+
+            if($auction->canBeEdittedFully()){
+                $auction = $auctionService->editAuction($command, $id);
+            }else{
+                $auction = $auctionService->partlyEditAuction($command, $id);
+            }
 
             $em = $this->getDoctrine()->getManager();
+            foreach ($auction->getDocuments() as $document) {
+                $em->persist($document);
+            }
             $em->persist($auction);
             $em->flush();
             return $this->redirect($this->generateUrl('sonata_user_profile_show'));
         }
 
+        if ($auction->canBeEdittedFully()) {
+            $twigUrl = 'GPIAuctionBundle:EditAuction:index.html.twig';
+        } else {
+            $twigUrl = 'GPIAuctionBundle:EditAuction:partly.html.twig';
+        }
+
         return $this->render(
-            'GPIAuctionBundle:EditAuction:index.html.twig',
+            $twigUrl,
             array(
                 'form' => $form->createView(),
-                'documents' => $auction->getDocuments()
+                'documents' => $auction->getDocuments(),
+                'comments' => $auction->getComments()
             )
         );
     }

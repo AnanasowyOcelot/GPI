@@ -3,7 +3,6 @@
 namespace GPI\AuctionBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use GPI\OfferBundle\Entity\Offer;
 use Symfony\Component\Validator\Constraints AS Assert;
 use Doctrine\Common\Collections\ArrayCollection;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -74,7 +73,7 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
     protected $categories;
 
     /**
-     * @var ArrayCollection $trainings
+     * @var ArrayCollection $documents
      * @ORM\ManyToMany(targetEntity="\GPI\DocumentBundle\Entity\Document")
      */
     protected $documents;
@@ -99,6 +98,13 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
      * @ORM\OrderBy({"price" = "ASC"})
      **/
     protected $offers;
+
+    /**
+     * @ORM\OneToMany(targetEntity="\GPI\AuctionBundle\Entity\AuctionComments", mappedBy="auction")
+     * @var ArrayCollection $comments
+     * @ORM\OrderBy({"created" = "ASC"})
+     **/
+    protected $comments;
 
 
     public function isOwner(User $user) {

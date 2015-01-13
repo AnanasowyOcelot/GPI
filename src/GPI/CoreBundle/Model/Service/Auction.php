@@ -2,14 +2,16 @@
 
 namespace GPI\CoreBundle\Model\Service;
 
+use GPI\AuctionBundle\Entity\AuctionComments;
 use GPI\CoreBundle\Model\Auction\AddNewAuctionCommand;
 use GPI\CoreBundle\Model\Auction\AuctionRepository;
+use GPI\CoreBundle\Model\Auction\PartlyUpdateAuctionCommand;
 use GPI\CoreBundle\Model\Auction\UpdateAuctionCommand;
 use GPI\CoreBundle\Model\Calendar\Calendar;
 use GPI\OfferBundle\Entity\Offer;
+use Doctrine\ORM\EntityManager;
+
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
-use Symfony\Component\Security\Core\Exception\AccessDeniedException;
-use Symfony\Component\Security\Core\SecurityContext;
 
 class Auction
 {
@@ -17,13 +19,16 @@ class Auction
     private $allowedTimePeriods;
     private $auctionRepository;
     private $securityToken;
+    private $em;
 
-    public function __construct(Calendar $calendar, array $allowedTimePeriods, AuctionRepository $auctionRepository, TokenStorage $securityToken)
+    public function __construct(Calendar $calendar, array $allowedTimePeriods, AuctionRepository $auctionRepository, TokenStorage $securityToken, EntityManager $em)
     {
         $this->calendar = $calendar;
         $this->allowedTimePeriods = $allowedTimePeriods;
         $this->auctionRepository = $auctionRepository;
         $this->securityToken = $securityToken;
+        $this->em = $em;
+
     }
 
     public function createNewAuction(AddNewAuctionCommand $command)
@@ -67,20 +72,40 @@ class Auction
         return array_search($offer, $offers);
     }
 
-    public function editAuction(UpdateAuctionCommand $command, $auctionId)
+    public function editAuction(UpdateAuctionCommand $c, $auctionId)
     {
-        /**
-         * @var $auction \GPI\CoreBundle\Model\Auction\Auction
-         */
-        $auction = $this->auctionRepository->find($auctionId);
-
-        $auction->setName($command->getName());
-        $auction->setContent($command->getContent());
-        $auction->setCategories($command->getCategories());
-        $auction->setMaxRealizationDate($command->getMaxRealizationDate());
-        foreach ($command->getDocuments() as $document) {
-            $auction->getDocuments()->add($document);
+        $a = $this->findAuction($auctionId);
+        $a->setName($c->getName());
+        $a->setContent($c->getContent());
+        $a->setCategories($c->getCategories());
+        $a->setMaxRealizationDate($c->getMaxRealizationDate());
+        foreach ($c->getDocuments() as $document) {
+            $a->getDocuments()->add($document);
+            $document->upload();
         }
+        return $a;
+    }
+
+    public function partlyEditAuction(PartlyUpdateAuctionCommand $command, $auctionId)
+    {
+        $auction = $this->findAuction($auctionId);
+        $comment = new AuctionComments();
+        $comment->setAuction($auction);
+        $comment->setContent($command->getComment());
+        $comment->setCreated($this->calendar->dateTimeNow());
+        $auction->getComments()->add($comment);
+        $this->em->persist($comment);
+        $this->em->flush();
+
         return $auction;
+    }
+
+    /**
+     * @param int $auctionId
+     * @return \GPI\CoreBundle\Model\Auction\Auction
+     */
+    private function findAuction($auctionId)
+    {
+        return $this->auctionRepository->find($auctionId);
     }
 }

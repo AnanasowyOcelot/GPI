@@ -1,0 +1,79 @@
+{% extends "SonataUserBundle:Profile:action.html.twig" %}
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+{% block sonata_profile_content %}
+
+    <div class="alert alert-warning fade in">Do aukcji dodane zostały już oferty. Edycja została wyłączona. Można
+        jedynie dodać uwagi.
+    </div>
+    <div class="tag-box tag-box-v3 form-page" style="overflow: hidden;">
+        <div class="headline"><h3>Edytuj aukcję</h3></div>
+        <form method="POST" {{ form_enctype(form) }} class="sky-form">
+            <fieldset>
+                {{ form_row(form.name) }}
+            </fieldset>
+            <hr/>
+            <fieldset>
+                {{ form_row(form.content) }}
+            </fieldset>
+            <hr/>
+            <fieldset>
+                <label>Dodatkowe uwagi:</label>
+                <br/>
+                {% for comment in comments %}
+                    <div><strong>{{ comment.created.format('Y-m-d H:i:s') }}:</strong> {{ comment.content }}</div>
+                {% endfor %}
+            </fieldset>
+            <hr/>
+            <fieldset>
+                {{ form_row(form.comment) }}
+            </fieldset>
+            <hr/>
+            <fieldset>
+                {{ form_row(form.maxRealizationDate) }}
+            </fieldset>
+            <hr/>
+            <fieldset>
+                {{ form_row(form.categories) }}
+            </fieldset>
+            <hr/>
+            <fieldset>
+                <label class="col-sm-2 control-label">Dokumenty:</label>
+                {% for document in documents %}
+                    <a href="{{ asset(document.getWebPath()) }}" target="_blank">
+                        <img class="thumbnail" src="{{ asset(document.getWebPath()) }}" alt="">
+                    </a>
+                {% endfor %}
+            </fieldset>
+            <hr/>
+            <fieldset>
+                {{ form_rest(form) }}
+            </fieldset>
+        </form>
+    </div>
+
+    <style>
+        form ul.documents {
+            padding: 0;
+        }
+
+        form ul.documents li {
+            list-style: none;
+            margin-bottom: 8px;
+            padding: 5px;
+        }
+
+        form ul.documents li .document-buttons {
+            text-align: right;
+        }
+
+        form .thumbnail {
+            width: 90px;
+            height: 90px;
+            margin-left: 10px;
+            display: inline;
+        }
+
+    </style>
+{% endblock %}
+
+
