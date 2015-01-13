@@ -54,7 +54,9 @@ abstract class AuctionType extends AbstractType
                     'data-sonata-select2' => 'false',
                 ),
                 'label' => "Maksymalny termin wykonania:",
+                'required'    => false,
                 'input' => 'datetime',
+                'empty_data'  => null,
                 'widget' => 'choice',
             ));
 

@@ -15,12 +15,22 @@
         <div class="headline"><h2>Szczegóły</h2></div>
         <ul class="list-unstyled project-details">
             <li><strong>Dodano przez:</strong> {{ auction.getCreatedBy() }}</li>
+            {%  if auction.maxRealizationDate is not null %}
+                <li><strong>Maksymalna data realizacji zlecenia: </strong> {{ auction.maxRealizationDate.format('Y-m-d') }}</li>
+            {% endif %}
+            <br/>
+            <br/>
+            <li>Czas trwania aukcji: </li>
             <li><strong>Data dodania:</strong> {{ auction.getStartTime().format('Y-m-d H:i:s') }}</li>
             <li><strong>Data zakończenia:</strong> {{ auction.getEndTime().format('Y-m-d H:i:s') }}</li>
+            <br/>
+            <br/>
             <li><strong>Kategorie:</strong></li>
             {% for category in auction.getCategories() %}
                 <li>&nbsp;&nbsp;&nbsp;&nbsp;{{ category }}</li>
             {% endfor %}
+            <br/>
+            <br/>
             {% if auction.getMaxPrice != null and app.user%}
                 <li><strong>Cena maksymalna:</strong> {{ auction.getMaxPrice() }}</li>
             {% endif %}

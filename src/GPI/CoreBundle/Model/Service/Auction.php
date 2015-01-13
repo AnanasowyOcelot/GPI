@@ -45,6 +45,7 @@ class Auction
 
         $auction->setStartTime($dateTimeNow);
         $auction->setMaxPrice($command->getMaxPrice());
+        $auction->setMaxRealizationDate($command->getMaxRealizationDate());
         foreach ($command->getDocuments() as $document) {
             $auction->getDocuments()->add($document);
             $document->upload();
@@ -76,6 +77,7 @@ class Auction
         $auction->setName($command->getName());
         $auction->setContent($command->getContent());
         $auction->setCategories($command->getCategories());
+        $auction->setMaxRealizationDate($command->getMaxRealizationDate());
         foreach ($command->getDocuments() as $document) {
             $auction->getDocuments()->add($document);
         }
