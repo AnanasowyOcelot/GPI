@@ -79,5 +79,8 @@ class AuctionComments
         return $this->content;
     }
 
+    public function __toString(){
+        return $this->getCreated()->format('Y-m-d H:i:s'). " - " . $this->getContent();
+    }
 
 }
