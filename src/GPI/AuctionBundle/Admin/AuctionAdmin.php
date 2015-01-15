@@ -77,6 +77,8 @@ class AuctionAdmin extends Admin
             ->add('startTime', null, array('label' => "Data wystawienia"))
             ->add('endTime', null, array('label' => "Data zakończenia"))
             ->add('maxPrice', null, array('label' => "Cena maksymalna"))
+            ->add('actualPrice', null, array('label' => "Aktualnie oferowana cena"))
+            ->add('maxRealizationDate', null, array('label' => "Maksymalna data realizacji"))
             ->add('categories', null, array('label' => "Kategorie"))
             ->add('documents', null, array(
                     'label' => "Pliki",

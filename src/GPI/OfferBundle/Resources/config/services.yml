@@ -6,8 +6,6 @@ services:
     gpi_offer.service.offer:
         class: GPI\CoreBundle\Model\Service\Offer
         arguments:
-            - @gpi_offer.offer_repository
-            - @security.token_storage
             - @doctrine.orm.entity_manager
     gpi_offer.offer_repository:
         class: GPI\OfferBundle\Entity\OfferRepository

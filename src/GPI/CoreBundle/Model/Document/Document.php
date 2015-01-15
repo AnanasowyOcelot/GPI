@@ -6,7 +6,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
-class Document
+abstract class Document
 {
     protected $auction;
 
@@ -42,4 +42,6 @@ class Document
             )
         );
     }
+
+    abstract public function upload();
 }

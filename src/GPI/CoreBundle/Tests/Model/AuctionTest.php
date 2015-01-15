@@ -172,4 +172,5 @@ class AuctionTest extends \PHPUnit_Framework_TestCase
         } catch (\Exception $e) {
         }
     }
+
 }

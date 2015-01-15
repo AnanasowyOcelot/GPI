@@ -8,7 +8,7 @@ use GPI\CoreBundle\Model\Auction\AuctionRepository;
 use GPI\CoreBundle\Model\Auction\PartlyUpdateAuctionCommand;
 use GPI\CoreBundle\Model\Auction\UpdateAuctionCommand;
 use GPI\CoreBundle\Model\Calendar\Calendar;
-use GPI\OfferBundle\Entity\Offer;
+use GPI\OfferBundle\Entity\Offer as OfferEntity;
 use Doctrine\ORM\EntityManager;
 
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
@@ -53,6 +53,7 @@ class Auction
         $auction->setMaxRealizationDate($command->getMaxRealizationDate());
         foreach ($command->getDocuments() as $document) {
             $auction->getDocuments()->add($document);
+            /** @var $document \GPI\CoreBundle\Model\Document\Document */
             $document->upload();
         }
         return $auction;
@@ -60,15 +61,8 @@ class Auction
 
     public function getOfferCurrentPosition(\GPI\CoreBundle\Model\Offer\Offer $offer, \GPI\CoreBundle\Model\Auction\Auction $auction)
     {
-        $offers = $auction->getActiveOffers();
-        usort($offers, function (Offer $o1, Offer $o2) {
-            if ($o1->getActualPrice() > $o2->getActualPrice()) {
-                return -1;
-            } else if ($o1->getActualPrice() > $o2->getActualPrice()) {
-                return 1;
-            }
-            return 0;
-        });
+        $offers = $auction->getSortedActiveOffers();
+
         return array_search($offer, $offers);
     }
 

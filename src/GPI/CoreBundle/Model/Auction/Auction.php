@@ -36,6 +36,7 @@ class Auction
         $this->isDeactivated = false;
         $this->documents = new ArrayCollection();
         $this->comments = new ArrayCollection();
+        $this->offers = new ArrayCollection();
         $this->setEndTime($endTime);
         $this->setName($name);
         $this->setContent($content);
@@ -223,6 +224,10 @@ class Auction
         return $this;
     }
 
+    public function addOffer(Offer $offer){
+        $this->offers->add($offer);
+    }
+
     public function canBeEdittedFully()
     {
         return $this->getNumberOfOffers() == 0;
@@ -306,5 +311,21 @@ class Auction
                 return $o->isActive();
             }
         ));
+    }
+
+    public function getSortedActiveOffers()
+    {
+        $offers = $this->getActiveOffers();
+
+        usort($offers, function (Offer $o1, Offer $o2) {
+            if ($o1->getActualPrice() < $o2->getActualPrice()) {
+                return -1;
+            } else if ($o1->getActualPrice() > $o2->getActualPrice()) {
+                return 1;
+            }
+            return 0;
+        });
+
+        return $offers;
     }
 }

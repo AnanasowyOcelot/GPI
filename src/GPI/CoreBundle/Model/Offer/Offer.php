@@ -28,7 +28,7 @@ class Offer
     protected $contentChangedBy;
 
 
-    public function __construct($content, $price, Auction $auction)
+    public function __construct($content, $price, $auction)
     {
         $this->isCanceled = false;
         $this->isDeactivated = false;
@@ -48,10 +48,14 @@ class Offer
     }
 
     /**
-     * @param mixed $bidPercent
+     * @param $bidPercent
+     * @throws \InvalidArgumentException
      */
     public function setBidPercent($bidPercent)
     {
+        if($bidPercent > 1 || $bidPercent < 0.01){
+            throw new \InvalidArgumentException();
+        }
         $this->bidPercent = $bidPercent;
     }
 
@@ -149,7 +153,7 @@ class Offer
     }
 
     public function isActive(){
-        return !$this->isCanceled() && !$this->isDeactivated();
+        return !$this->isCanceled() && !$this->isDeactivated() && $this->getAuction()->isActive();
     }
 
     public function isDeactivated(){

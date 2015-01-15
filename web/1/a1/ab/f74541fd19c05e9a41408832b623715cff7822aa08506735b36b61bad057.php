@@ -18,7 +18,7 @@ class __TwigTemplate_a1abf74541fd19c05e9a41408832b623715cff7822aa08506735b36b61b
         // line 1
         if ( !(isset($context["isActive"]) ? $context["isActive"] : $this->getContext($context, "isActive"))) {
             // line 2
-            echo "    <div class=\"alert alert-warning fade in\">Aukcja jest nieaktywna.</div>
+            echo "    <div class=\"alert alert-warning fade in\">Oferta jest nieaktywna.</div>
 ";
         }
         // line 4

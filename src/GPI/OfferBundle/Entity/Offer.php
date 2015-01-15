@@ -55,6 +55,9 @@ class Offer extends \GPI\CoreBundle\Model\Offer\Offer
     /**
      * @var string
      * @ORM\Column(name="bid_percent", type="decimal", scale=2, nullable=true)
+     * @Assert\Range(
+     *      min = 1,
+     *      max = 100)
      */
     protected $bidPercent;
 

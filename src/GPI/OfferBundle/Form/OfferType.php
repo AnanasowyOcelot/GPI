@@ -26,11 +26,21 @@ abstract class OfferType extends AbstractType
             )
             ->add(
                 'bidPercent',
-                'percent',
+                'choice',
                 array(
+                    'choices' => array(
+                        '0.01' => '1%',
+                        '0.02' => '2%',
+                        '0.05' => '5%',
+                        '0.1' => '10%',
+                        '0.2' => '20%'
+                    ,),
+//                    'expanded' => true,
+                    'multiple' => false,
+                    'empty_data'=>true,
                     'label' => "Procent przebicia oferty",
                     'required' => false,
-                    'help_block' => 'W przypadku nie wypełnienia pola konkurencyjna oferta przebijana będzie o 1zł.'
+                    'help_block' => 'W przypadku nie wypełnienia pola konkurencyjna oferta przebijana będzie o 1zł.',
                 )
             )
 

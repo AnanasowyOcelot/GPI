@@ -18,7 +18,7 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
     {
         // line 1
         $this->displayBlock('block', $context, $blocks);
-        // line 64
+        // line 61
         echo "
 
 
@@ -74,7 +74,7 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
                 <tr>
                     <th></th>
                     <th class=\"hidden-sm\">Oferta</th>
-                    <th>Status</th>
+                    <th>Czas zakończenia</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -105,21 +105,12 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
             // line 41
             echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "getContentShort", array(), "method"), "html", null, true);
             echo "</p>
-                            <small class=\"hex\">Zakończenie ";
-            // line 42
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["auction"], "getEndTime", array(), "method"), "format", array(0 => "Y-m-d H:i:s"), "method"), "html", null, true);
-            echo "</small>
                         </td>
                         <td>
-                            <span class=\"";
-            // line 45
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["auctionStatus"]) ? $context["auctionStatus"] : $this->getContext($context, "auctionStatus")), "label", array(0 => $this->getAttribute($context["auction"], "getStatus", array(), "method")), "method"), "html", null, true);
-            echo "\">
-                                ";
-            // line 46
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["auctionStatus"]) ? $context["auctionStatus"] : $this->getContext($context, "auctionStatus")), "name", array(0 => $this->getAttribute($context["auction"], "getStatus", array(), "method")), "method"), "html", null, true);
-            echo "
-                            </span>
+                            <h3>";
+            // line 44
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["auction"], "getEndTime", array(), "method"), "format", array(0 => "Y-m-d H:i:s"), "method"), "html", null, true);
+            echo "</h3>
                         </td>
                     </tr>
                 ";
@@ -127,7 +118,7 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['auction'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 51
+        // line 48
         echo "
                 </tbody>
             </table>
@@ -136,10 +127,10 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
     <!--End Table Search v2-->
 
     ";
-        // line 59
+        // line 56
         echo "    <div class=\"navigation\">
         ";
-        // line 60
+        // line 57
         echo $this->env->getExtension('knp_pagination')->render((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         echo "
     </div>
@@ -154,6 +145,6 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
 
     public function getDebugInfo()
     {
-        return array (  143 => 60,  140 => 59,  131 => 51,  120 => 46,  116 => 45,  110 => 42,  106 => 41,  98 => 38,  92 => 35,  87 => 32,  83 => 31,  69 => 19,  61 => 15,  54 => 14,  49 => 11,  40 => 5,  33 => 2,  30 => 1,  22 => 64,  20 => 1,);
+        return array (  134 => 57,  131 => 56,  122 => 48,  112 => 44,  106 => 41,  98 => 38,  92 => 35,  87 => 32,  83 => 31,  69 => 19,  61 => 15,  54 => 14,  49 => 11,  40 => 5,  33 => 2,  30 => 1,  22 => 61,  20 => 1,);
     }
 }
