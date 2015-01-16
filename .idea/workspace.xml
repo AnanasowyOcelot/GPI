@@ -23,74 +23,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AuctionAdminController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AuctionAdminController.php">
+      <file leaf-file-name="OfferAdminController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/OfferAdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="49" selection-start="1129" selection-end="1129" vertical-scroll-proportion="-13.741936" vertical-offset="256" max-vertical-offset="1936">
+            <state line="26" column="17" selection-start="778" selection-end="778" vertical-scroll-proportion="-4.129032" vertical-offset="444" max-vertical-offset="1892">
               <folding>
-                <element signature="e#48#98#0" expanded="true" />
+                <element signature="e#46#92#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuctionDetailsController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AuctionDetailsController.php">
+      <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="30" selection-start="696" selection-end="709" vertical-scroll-proportion="-14.193548" vertical-offset="0" max-vertical-offset="748">
+            <state line="3" column="0" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Auction.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/Auction.php">
+      <file leaf-file-name="ListOffersController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/ListOffersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="220" column="45" selection-start="4872" selection-end="4872" vertical-scroll-proportion="-15.903226" vertical-offset="4237" max-vertical-offset="7832">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="details.html.twig" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/Default/details.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="48" selection-start="179" selection-end="179" vertical-scroll-proportion="0.07349666" vertical-offset="0" max-vertical-offset="2728">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_disable_reason.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/EditAuction/add_disable_reason.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="61" selection-end="125" vertical-scroll-proportion="-0.7096774" vertical-offset="0" max-vertical-offset="594">
-              <folding>
-                <marker date="1421408780658" expanded="true" signature="221:238" placeholder="..." />
-                <marker date="1421408780658" expanded="true" signature="239:521" placeholder="..." />
-                <marker date="1421408780658" expanded="true" signature="394:506" placeholder="..." />
-                <marker date="1421408780658" expanded="true" signature="421:486" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="empty_layout.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/empty_layout.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="28" selection-start="288" selection-end="328" vertical-scroll-proportion="-9.225806" vertical-offset="0" max-vertical-offset="880">
-              <folding>
-                <marker date="1415784936045" expanded="true" signature="507:600" placeholder="..." />
-                <marker date="1415784936045" expanded="true" signature="526:588" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DisableAuctionType.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/DisableAuctionType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="709" selection-end="709" vertical-scroll-proportion="-15.193548" vertical-offset="35" max-vertical-offset="1056">
+            <state line="50" column="37" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.9054878" vertical-offset="396" max-vertical-offset="1408">
               <folding />
             </state>
           </provider>
@@ -106,14 +62,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Resources/views/Profile/show.html.twig" />
-        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Controller/ListOffersController.php" />
-        <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/AddNewAuctionCommand.php" />
-        <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/UpdateAuctionCommand.php" />
-        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/AddAuction/index.html.twig" />
-        <option value="$PROJECT_DIR$/web/assetic/sonata_front_js.js" />
-        <option value="$PROJECT_DIR$/dupa.txt" />
-        <option value="$PROJECT_DIR$/app/config/assetic.yml" />
         <option value="$PROJECT_DIR$/web/bundles/sonatacore/vendor/select2/select2.js" />
         <option value="$PROJECT_DIR$/web/bundles/sonatacore/js/base.js" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AuctionType.php" />
@@ -126,13 +74,9 @@
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AuctionEditController.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Form/PartlyUpdateAuctionType.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/EditAuction/partly.html.twig" />
-        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Resources/views/Offer/details.html.twig" />
-        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Document/Document.php" />
         <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Service/Auction.php" />
-        <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Offer/Offer.php" />
         <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Service/Offer.php" />
-        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Entity/Offer.php" />
         <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Tests/Model/OfferTest.php" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Resources/views/Offer/add.html.twig" />
         <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Form/OfferType.php" />
@@ -147,7 +91,6 @@
         <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/AuctionDisableReason.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AuctionDisableReason.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/Auction.php" />
-        <option value="$PROJECT_DIR$/app/db/v3.sql" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AuctionDisableType.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Form/DisableAuctionType.php" />
@@ -157,6 +100,19 @@
         <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/Auction.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AuctionDetailsController.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/Default/details.html.twig" />
+        <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Offer/OfferDisableReason.php" />
+        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Entity/OfferDisableReason.php" />
+        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Entity/Offer.php" />
+        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Admin/OfferAdmin.php" />
+        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Resources/views/Offer/add_disable_reason.html.twig" />
+        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Form/DisableOfferType.php" />
+        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Offer/Offer.php" />
+        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Controller/OfferDetailsController.php" />
+        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Resources/views/Offer/details.html.twig" />
+        <option value="$PROJECT_DIR$/app/db/v3.sql" />
+        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Controller/OfferAdminController.php" />
+        <option value="$PROJECT_DIR$/app/config/sonata/sonata_user.yml" />
       </list>
     </option>
   </component>
@@ -265,8 +221,26 @@
               <option name="myItemId" value="GPI" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Sonata" />
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OfferBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -288,459 +262,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Sonata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sonata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sonata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CRUD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sonata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoreBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoreBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoreBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Auction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AuctionBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AuctionBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EditAuction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AuctionBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AuctionBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AuctionBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AuctionBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AuctionBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Form" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AuctionBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AuctionBundle" />
+              <option name="myItemId" value="OfferBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -762,65 +284,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="GPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AuctionBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -846,11 +310,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sandbox\src\GPI\OfferBundle\Form" />
+      <recent name="C:\xampp\htdocs\sandbox\src\GPI\OfferBundle\Resources\views\Offer" />
+      <recent name="C:\xampp\htdocs\sandbox\src\GPI\OfferBundle\Entity" />
+      <recent name="C:\xampp\htdocs\sandbox\src\GPI\CoreBundle\Model\Offer" />
       <recent name="C:\xampp\htdocs\sandbox\src\GPI\AuctionBundle\Resources\views\EditAuction" />
-      <recent name="C:\xampp\htdocs\sandbox\src\GPI\AuctionBundle\Form" />
-      <recent name="C:\xampp\htdocs\sandbox\app\db" />
-      <recent name="C:\xampp\htdocs\sandbox\src\GPI\CoreBundle\Model\Auction" />
-      <recent name="C:\xampp\htdocs\sandbox\src\GPI\AuctionBundle\Entity" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\sandbox\web\assetic" />
@@ -918,20 +382,20 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864675" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26342976" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875606" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24884793" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286479" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18817204" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18370607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864675" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24884793" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18370607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26342976" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -977,85 +441,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Command/PopulateAuctionsCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="19" selection-start="3120" selection-end="3120" vertical-scroll-proportion="0.35505617" vertical-offset="1448" max-vertical-offset="3190" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/AddOfferController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="19" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.16245884" vertical-offset="578" max-vertical-offset="1716" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Form/AddOfferType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="942" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Service/Offer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="24" selection-start="717" selection-end="717" vertical-scroll-proportion="-16.612904" vertical-offset="79" max-vertical-offset="1760" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Form/OfferType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="27" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.5554336" vertical-offset="198" max-vertical-offset="1760" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/views/Offer/add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="0" selection-start="4877" selection-end="4877" vertical-scroll-proportion="0.6520307" vertical-offset="2178" max-vertical-offset="3806" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Entity/Offer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="19" selection-start="505" selection-end="505" vertical-scroll-proportion="0.3819978" vertical-offset="92" max-vertical-offset="3894" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Offer/Offer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="7" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.30845225" vertical-offset="819" max-vertical-offset="5016" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Service/Auction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="41" selection-start="2312" selection-end="2312" vertical-scroll-proportion="0.13585746" vertical-offset="1066" max-vertical-offset="2244" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="245" selection-end="245" vertical-scroll-proportion="0.18683651" vertical-offset="0" max-vertical-offset="942" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Tests/Controller/AuctionDetailsControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="911" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Tests/Controller/DefaultControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="911" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Tests/Controller/AddAuctionControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="462" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Tests/Controller/DefaultControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="942" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Tests/Model/OfferTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="13" selection-start="3082" selection-end="3082" vertical-scroll-proportion="0.39626783" vertical-offset="1685" max-vertical-offset="3410">
-          <folding>
-            <element signature="e#46#106#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/SiteBundle/Tests/Page/RegulaminTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="41" selection-start="267" selection-end="267" vertical-scroll-proportion="0.31394073" vertical-offset="0" max-vertical-offset="911" />
@@ -1190,77 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="56" selection-start="3223" selection-end="3241" vertical-scroll-proportion="0.4267101" vertical-offset="1301" max-vertical-offset="2266">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/DisableAuctionType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="709" selection-end="709" vertical-scroll-proportion="-15.193548" vertical-offset="35" max-vertical-offset="1056">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/db/v3.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="37" selection-start="127" selection-end="127" vertical-scroll-proportion="0.11677282" vertical-offset="0" max-vertical-offset="942">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/empty_layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="28" selection-start="288" selection-end="328" vertical-scroll-proportion="-9.225806" vertical-offset="0" max-vertical-offset="880">
-          <folding>
-            <marker date="1415784936045" expanded="true" signature="507:600" placeholder="..." />
-            <marker date="1415784936045" expanded="true" signature="526:588" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/EditAuction/add_disable_reason.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="61" selection-end="125" vertical-scroll-proportion="-0.7096774" vertical-offset="0" max-vertical-offset="594">
-          <folding>
-            <marker date="1421408780658" expanded="true" signature="221:238" placeholder="..." />
-            <marker date="1421408780658" expanded="true" signature="239:521" placeholder="..." />
-            <marker date="1421408780658" expanded="true" signature="394:506" placeholder="..." />
-            <marker date="1421408780658" expanded="true" signature="421:486" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/Auction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="28" selection-start="2732" selection-end="2745" vertical-scroll-proportion="0.6033708" vertical-offset="1861" max-vertical-offset="5280">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AuctionDisableReason.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="7" selection-start="520" selection-end="520" vertical-scroll-proportion="0.43033707" vertical-offset="123" max-vertical-offset="1034">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Admin/AuctionAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="76" selection-start="3323" selection-end="3323" vertical-scroll-proportion="0.48298573" vertical-offset="1232" max-vertical-offset="2464">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/AuctionDisableReason.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="175" selection-end="175" vertical-scroll-proportion="-1.1011236" vertical-offset="1090" max-vertical-offset="1980">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/Admin/list__action_deactivate.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="80" selection-start="89" selection-end="112" vertical-scroll-proportion="0.024149286" vertical-offset="0" max-vertical-offset="911">
@@ -1268,32 +582,202 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/empty_layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="28" selection-start="288" selection-end="328" vertical-scroll-proportion="0.31394073" vertical-offset="0" max-vertical-offset="911">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Offer/OfferDisableReason.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="7" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.41053787" vertical-offset="1056" max-vertical-offset="1980">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/AuctionDisableReason.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="175" selection-end="175" vertical-scroll-proportion="-1.0186608" vertical-offset="1038" max-vertical-offset="1980">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Entity/OfferDisableReason.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="20" selection-start="720" selection-end="726" vertical-scroll-proportion="0.79548025" vertical-offset="0" max-vertical-offset="1012">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AuctionDisableReason.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="7" selection-start="520" selection-end="520" vertical-scroll-proportion="0.45444566" vertical-offset="92" max-vertical-offset="1034">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Entity/Offer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="96" selection-start="2866" selection-end="2866" vertical-scroll-proportion="0.50713503" vertical-offset="1914" max-vertical-offset="3960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/Auction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="0" selection-start="2510" selection-end="2746" vertical-scroll-proportion="0.4687157" vertical-offset="1861" max-vertical-offset="5280">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Admin/OfferAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="0" selection-start="3140" selection-end="3140" vertical-scroll-proportion="0.82107574" vertical-offset="924" max-vertical-offset="2420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Admin/AuctionAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="20" selection-start="3247" selection-end="3327" vertical-scroll-proportion="0.48298573" vertical-offset="1232" max-vertical-offset="2464">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/views/Offer/add_disable_reason.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="35" selection-start="163" selection-end="163" vertical-scroll-proportion="0.120746434" vertical-offset="0" max-vertical-offset="911">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AuctionAdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="49" selection-start="1129" selection-end="1129" vertical-scroll-proportion="-13.741936" vertical-offset="256" max-vertical-offset="1936">
+        <state line="12" column="53" selection-start="408" selection-end="424" vertical-scroll-proportion="-0.14489572" vertical-offset="396" max-vertical-offset="1936">
           <folding>
             <element signature="e#48#98#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/EditAuction/add_disable_reason.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="61" selection-end="125" vertical-scroll-proportion="0.024149286" vertical-offset="0" max-vertical-offset="911">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/DisableAuctionType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="709" selection-end="709" vertical-scroll-proportion="-12.645162" vertical-offset="114" max-vertical-offset="1056">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Form/DisableOfferType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="61" selection-start="433" selection-end="433" vertical-scroll-proportion="0.2983051" vertical-offset="0" max-vertical-offset="1056">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="45" selection-start="938" selection-end="938" vertical-scroll-proportion="0.537155" vertical-offset="0" max-vertical-offset="942">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="2" selection-start="3147" selection-end="3316" vertical-scroll-proportion="0.48726115" vertical-offset="1301" max-vertical-offset="2266">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/Auction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="220" column="45" selection-start="4872" selection-end="4872" vertical-scroll-proportion="-15.903226" vertical-offset="4237" max-vertical-offset="7832">
+        <state line="218" column="0" selection-start="4779" selection-end="4878" vertical-scroll-proportion="0.34796926" vertical-offset="4369" max-vertical-offset="7832">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Offer/Offer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="24" selection-start="1449" selection-end="1449" vertical-scroll-proportion="0.41053787" vertical-offset="1056" max-vertical-offset="5104">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AuctionDetailsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="30" selection-start="696" selection-end="709" vertical-scroll-proportion="-14.193548" vertical-offset="0" max-vertical-offset="748">
+        <state line="21" column="31" selection-start="679" selection-end="750" vertical-scroll-proportion="0.48298573" vertical-offset="0" max-vertical-offset="911">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/OfferDetailsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="40" selection-start="946" selection-end="946" vertical-scroll-proportion="0.57958287" vertical-offset="0" max-vertical-offset="1100">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/Default/details.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="48" selection-start="179" selection-end="179" vertical-scroll-proportion="0.07349666" vertical-offset="0" max-vertical-offset="2728">
+        <state line="0" column="0" selection-start="0" selection-end="318" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/views/Offer/details.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="10" selection-start="510" selection-end="510" vertical-scroll-proportion="-9.225806" vertical-offset="0" max-vertical-offset="1320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/db/v3.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="113" selection-start="510" selection-end="915" vertical-scroll-proportion="0.6772824" vertical-offset="0" max-vertical-offset="942">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/views/Admin/list__action_deactivate.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="656">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/sonata/sonata_user.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="38" selection-start="1857" selection-end="1871" vertical-scroll-proportion="0.37982196" vertical-offset="602" max-vertical-offset="1276">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/OfferAdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="17" selection-start="778" selection-end="778" vertical-scroll-proportion="-4.129032" vertical-offset="444" max-vertical-offset="1892">
+          <folding>
+            <element signature="e#46#92#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/OfferBundle/Controller/ListOffersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="37" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.9054878" vertical-offset="396" max-vertical-offset="1408">
           <folding />
         </state>
       </provider>

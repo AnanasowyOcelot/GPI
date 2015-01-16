@@ -1,27 +1,27 @@
 {% if isDeactivated %}
     <div class="alert alert-danger fade in"><strong>Aukcja została wyłączona przez administratora
-    <br/>
-        Powód:</strong> {{ disableReason.content }}
+            <br/>
+            Powód:</strong> {{ disableReason.content }}
     </div>
 {% elseif not isActive %}
-<div class="alert alert-warning fade in">Aukcja jest nieaktywna.</div>
+    <div class="alert alert-warning fade in">Aukcja jest nieaktywna.</div>
 {% endif %}
 <div class="row margin-bottom-60">
     <div class="col-sm-8">
         <div class="headline"><h2>{{ auction.name }}</h2></div>
         <p>{{ auction.content|raw }}</p>
         {% if auction.comments|length > 0 %}
-        <br/>
-        <fieldset>
-            <label>Dodatkowe uwagi:</label>
             <br/>
-            {% for comment in auction.comments %}
-                <div><strong>{{ comment.created.format('Y-m-d H:i:s') }}:</strong> {{ comment.content }}</div>
-            {% endfor %}
-        </fieldset>
+            <fieldset>
+                <label>Dodatkowe uwagi:</label>
+                <br/>
+                {% for comment in auction.comments %}
+                    <div><strong>{{ comment.created.format('Y-m-d H:i:s') }}:</strong> {{ comment.content }}</div>
+                {% endfor %}
+            </fieldset>
         {% endif %}
         {% if not (app.security.getToken().getUser() == auction.createdBy()) and auction.isActive() %}
-        <a class="btn-u" href="{{ path("gpi_offer_homepage", {'auctionId': auction.id }) }}">Dodaj nową ofertę</a>
+            <a class="btn-u" href="{{ path("gpi_offer_homepage", {'auctionId': auction.id }) }}">Dodaj nową ofertę</a>
         {% endif %}
 
     </div>
@@ -29,12 +29,13 @@
         <div class="headline"><h2>Szczegóły</h2></div>
         <ul class="list-unstyled project-details">
             <li><strong>Dodano przez:</strong> {{ auction.getCreatedBy() }}</li>
-            {%  if auction.maxRealizationDate is not null %}
-                <li><strong>Maksymalna data realizacji zlecenia: </strong> {{ auction.maxRealizationDate.format('Y-m-d') }}</li>
+            {% if auction.maxRealizationDate is not null %}
+                <li><strong>Maksymalna data realizacji
+                        zlecenia: </strong> {{ auction.maxRealizationDate.format('Y-m-d') }}</li>
             {% endif %}
             <br/>
             <br/>
-            <li>Czas trwania aukcji: </li>
+            <li>Czas trwania aukcji:</li>
             <li><strong>Data dodania:</strong> {{ auction.getStartTime().format('Y-m-d H:i:s') }}</li>
             <li><strong>Data zakończenia:</strong> {{ auction.getEndTime().format('Y-m-d H:i:s') }}</li>
             <br/>
@@ -45,7 +46,7 @@
             {% endfor %}
             <br/>
             <br/>
-            {% if auction.getMaxPrice != null and app.user%}
+            {% if auction.getMaxPrice != null and app.user %}
                 <li><strong>Cena maksymalna:</strong> {{ auction.getMaxPrice() }}</li>
             {% endif %}
         </ul>
@@ -77,42 +78,42 @@
 
     </div>
 </div>
-    <div class="table-responsive">
-        <table class="table table-hover">
-            <thead>
-            <tr>
-                <th class="hidden-sm">Złożył</th>
-                <th>Cena minimalna</th>
-                <th></th>
-                <th>Status</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for offer in auction.getActiveOffers() %}
-                {% if loop.first %}
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th class="hidden-sm">Złożył</th>
+            <th>Cena minimalna</th>
+            <th></th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for offer in auction.getActiveOffers() %}
+            {% if loop.first %}
                 <tr style="background-color: #88de73">
-                {% else %}
-                    <tr>
+            {% else %}
+                <tr>
+            {% endif %}
+            <td class="td-width">
+                {{ offer.createdBy }}
+            </td>
+            <td class="td-width">
+                {{ offer.actualPrice }}
+            </td>
+            <td class="td-width">
+                {% if app.security.getToken().getUser() == offer.createdBy() or app.security.getToken().getUser() == offer.getAuction().createdBy() %}
+                    <a class="btn-u btn-u-blue"
+                       href="{{ path('gpi_offer_details', {'id': offer.id}) }}">Szczegóły</a>
                 {% endif %}
-                    <td class="td-width">
-                        {{ offer.createdBy }}
-                    </td>
-                    <td class="td-width">
-                        {{ offer.actualPrice }}
-                    </td>
-                    <td class="td-width">
-                        {% if app.security.getToken().getUser() == offer.createdBy() or app.security.getToken().getUser() == offer.getAuction().createdBy() %}
-                        <a class="btn-u btn-u-blue"
-                           href="{{ path('gpi_offer_details', {'id': offer.id}) }}">Szczegóły</a>
-                        {% endif %}
-                    </td>
-                    <td>
+            </td>
+            <td>
                         <span class="{{ offerStatus.label(offer.getStatus()) }}">
                         {{ offerStatus.name(offer.getStatus()) }}
                         </span>
-                    </td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+            </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </div>

@@ -1,4 +1,9 @@
-{% if not isActive %}
+{% if isDeactivated %}
+    <div class="alert alert-danger fade in"><strong>Oferta została wyłączona przez administratora
+            <br/>
+            Powód:</strong> {{ disableReason.content }}
+    </div>
+{% elseif not isActive %}
     <div class="alert alert-warning fade in">Oferta jest nieaktywna.</div>
 {% endif %}
 <div class="row margin-bottom-60">

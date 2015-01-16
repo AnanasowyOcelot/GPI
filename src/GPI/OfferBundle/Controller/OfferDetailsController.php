@@ -23,10 +23,11 @@ class OfferDetailsController extends Controller
             array(
                 'offer' => $offer,
                 'offerStatus' => new OfferStatus(),
-                'isActive'    => $offer->isActive()
+                'isActive' => $offer->isActive(),
+                'isDeactivated' => $offer->isDeactivated(),
+                'disableReason'=> $offer->getCurrentDisableReason(),
             )
         );
-
     }
 
     /**

@@ -33,6 +33,7 @@ class Offer
         $this->isCanceled = false;
         $this->isDeactivated = false;
         $this->documents = new ArrayCollection();
+        $this->disableReason = new ArrayCollection();
 
         $this->setContent($content);
         $this->setPrice($price);
@@ -68,6 +69,9 @@ class Offer
     }
 
 
+    public function getCurrentDisableReason(){
+        return $this->disableReason->first();
+    }
 
     /**
      * @return int

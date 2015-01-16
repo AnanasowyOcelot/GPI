@@ -110,6 +110,13 @@ class Offer extends \GPI\CoreBundle\Model\Offer\Offer
     protected $createdBy;
 
     /**
+     * @ORM\OneToMany(targetEntity="\GPI\OfferBundle\Entity\OfferDisableReason", mappedBy="offer")
+     * @var ArrayCollection $disableReason
+     * @ORM\OrderBy({"created" = "DESC"})
+     **/
+    protected $disableReason;
+
+    /**
      * @param \Application\Sonata\UserBundle\Entity\User $createdBy
      */
     public function setCreatedBy($createdBy)

@@ -18,3 +18,7 @@ services:
         arguments: [~, GPI\OfferBundle\Entity\Offer, GPIOfferBundle:OfferAdmin]
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: Lista ofert}
+    gpi_offer.form.offer_disable:
+        class: GPI\OfferBundle\Form\DisableOfferType
+        tags:
+            - { name: form.type, alias: offer_disable }

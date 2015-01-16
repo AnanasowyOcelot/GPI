@@ -80,6 +80,7 @@ class OfferAdmin extends Admin
             ->add('bidPercent', null, array('label' => "Procent przebicia oferty"))
             ->add('isCanceled', null, array('label' => "Skasowane"))
             ->add('isNotDeactivated', 'boolean', array('label' => "Włączona"))
+            ->add('disableReason', null, array('label' => "Powody wyłączenia"))
             ->add('documents', null, array(
                     'label' => "Pliki",
                 )
