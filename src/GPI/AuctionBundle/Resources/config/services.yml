@@ -74,10 +74,10 @@ services:
         class: GPI\AuctionBundle\Form\DocumentType
         tags:
             - { name: form.type, alias: document }
-    gpi_auction.form.comment:
-        class: GPI\AuctionBundle\Form\CommentType
+    gpi_auction.form.auction_disable:
+        class: GPI\AuctionBundle\Form\DisableAuctionType
         tags:
-            - { name: form.type, alias: comment }
+            - { name: form.type, alias: auction_disable }
     gpi_auction.service.auction:
         class: GPI\CoreBundle\Model\Service\Auction
         arguments:

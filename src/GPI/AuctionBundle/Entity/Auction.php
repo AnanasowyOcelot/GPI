@@ -106,6 +106,13 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
      **/
     protected $comments;
 
+    /**
+     * @ORM\OneToMany(targetEntity="\GPI\AuctionBundle\Entity\AuctionDisableReason", mappedBy="auction")
+     * @var ArrayCollection $disableReason
+     * @ORM\OrderBy({"created" = "DESC"})
+     **/
+    protected $disableReason;
+
 
     public function isOwner(User $user) {
         return $this->getCreatedBy() === $user;

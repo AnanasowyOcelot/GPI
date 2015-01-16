@@ -26,6 +26,7 @@ class Auction
     protected $offers;
     protected $maxRealizationDate;
     protected $comments;
+    protected $disableReason;
 
     private $calendar;
     private $defaultImgPath;
@@ -36,6 +37,7 @@ class Auction
         $this->isDeactivated = false;
         $this->documents = new ArrayCollection();
         $this->comments = new ArrayCollection();
+        $this->disableReason = new ArrayCollection();
         $this->offers = new ArrayCollection();
         $this->setEndTime($endTime);
         $this->setName($name);
@@ -68,6 +70,24 @@ class Auction
     {
         return $this->comments;
     }
+
+    /**
+     * @param \Doctrine\Common\Collections\ArrayCollection $disableReason
+     */
+    public function setDisableReason($disableReason)
+    {
+        $this->disableReason = $disableReason;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\ArrayCollection
+     */
+    public function getDisableReason()
+    {
+        return $this->disableReason;
+    }
+
+
 
     public function init(Calendar $calendar, $defaultImgPath)
     {
@@ -195,6 +215,10 @@ class Auction
     public function deactivate()
     {
         $this->isDeactivated = true;
+    }
+
+    public function getCurrentDisableReason(){
+        return $this->disableReason->first();
     }
 
     public function activate()

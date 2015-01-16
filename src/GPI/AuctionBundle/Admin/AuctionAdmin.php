@@ -81,6 +81,7 @@ class AuctionAdmin extends Admin
             ->add('maxRealizationDate', null, array('label' => "Maksymalna data realizacji"))
             ->add('categories', null, array('label' => "Kategorie"))
             ->add('comments', null, array('label' => "Uwagi"))
+            ->add('disableReason', null, array('label' => "Powody wyłączenia"))
             ->add('documents', null, array(
                     'label' => "Pliki",
                 )

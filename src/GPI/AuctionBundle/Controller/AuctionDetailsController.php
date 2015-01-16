@@ -19,7 +19,9 @@ class AuctionDetailsController extends Controller
             array(
                 'auction' => $auction,
                 'offerStatus' => new OfferStatus(),
-                'isActive' => $auction->isActive()
+                'disableReason'=> $auction->getCurrentDisableReason(),
+                'isActive' => $auction->isActive(),
+                'isDeactivated' => $auction->isDeactivated()
             )
         );
 
