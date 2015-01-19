@@ -22,6 +22,9 @@ class CancelOfferController extends Controller
         if (!$offer->isOwner($user)) {
             throw new AccessDeniedException('This user does not have access to this section.');
         }
+        if ($offer->hasWon()) {
+            throw new AccessDeniedException('You can not remove this offer');
+        }
 
         if($offer->isCanceled()){
             return $this->render(

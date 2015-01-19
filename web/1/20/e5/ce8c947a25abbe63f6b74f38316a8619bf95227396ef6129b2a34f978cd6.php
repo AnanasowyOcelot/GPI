@@ -41,7 +41,7 @@ class __TwigTemplate_20e5ce8c947a25abbe63f6b74f38316a8619bf95227396ef6129b2a34f9
         <table class=\"table table-hover\">
             <thead>
             <tr>
-                <th class=\"hidden-sm\">Nazwa oferty</th>
+                <th class=\"hidden-sm\">Nazwa aukcji, której dotyczy oferta</th>
                 <th>Cena minimalna</th>
                 <th>Dolny limit ceny:</th>
                 <th>Opcje</th>
@@ -56,7 +56,11 @@ class __TwigTemplate_20e5ce8c947a25abbe63f6b74f38316a8619bf95227396ef6129b2a34f9
         $context['_seq'] = twig_ensure_traversable((isset($context["offers"]) ? $context["offers"] : $this->getContext($context, "offers")));
         foreach ($context['_seq'] as $context["_key"] => $context["offer"]) {
             // line 18
-            echo "                <tr>
+            echo "                <tr";
+            if (($this->getAttribute($context["offer"], "isActive", array()) && ($this->getAttribute($context["offer"], "currentPosition", array()) == 1))) {
+                echo " style=\"background-color: #b9ffa2\" ";
+            }
+            echo ">
                     <td class=\"td-width\">
                         ";
             // line 20
@@ -83,7 +87,7 @@ class __TwigTemplate_20e5ce8c947a25abbe63f6b74f38316a8619bf95227396ef6129b2a34f9
                         </p>
                         ";
             // line 31
-            if ($this->getAttribute($context["offer"], "isActive", array())) {
+            if (($this->getAttribute($context["offer"], "isActive", array()) &&  !$this->getAttribute($context["offer"], "hasWon", array()))) {
                 // line 32
                 echo "                            <p><a class=\"btn-u btn-u-red\" href=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_offer_cancel", array("id" => $this->getAttribute($context["offer"], "id", array()))), "html", null, true);
@@ -135,6 +139,6 @@ class __TwigTemplate_20e5ce8c947a25abbe63f6b74f38316a8619bf95227396ef6129b2a34f9
 
     public function getDebugInfo()
     {
-        return array (  120 => 46,  110 => 42,  103 => 38,  99 => 37,  95 => 35,  88 => 32,  86 => 31,  81 => 29,  75 => 26,  69 => 23,  63 => 20,  59 => 18,  55 => 17,  39 => 3,  36 => 2,  11 => 1,);
+        return array (  124 => 46,  114 => 42,  107 => 38,  103 => 37,  99 => 35,  92 => 32,  90 => 31,  85 => 29,  79 => 26,  73 => 23,  67 => 20,  59 => 18,  55 => 17,  39 => 3,  36 => 2,  11 => 1,);
     }
 }

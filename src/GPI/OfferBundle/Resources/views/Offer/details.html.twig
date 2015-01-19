@@ -1,3 +1,4 @@
+
 {% if isDeactivated %}
     <div class="alert alert-danger fade in"><strong>Oferta została wyłączona przez administratora
             <br/>
@@ -6,17 +7,17 @@
 {% elseif not isActive %}
     <div class="alert alert-warning fade in">Oferta jest nieaktywna.</div>
 {% endif %}
+
 <div class="row margin-bottom-60">
     <div class="col-sm-8">
-        {#<div class="headline"><h2>{{ offer.name }}</h2></div>#}
         <p>{{ offer.content|raw }}</p>
         <br/>
     </div>
     <div class="col-sm-4">
         <div class="headline"><h2>Szczegóły</h2></div>
         <ul class="list-unstyled project-details">
+            <li><strong>Aukcja:</strong><a class="active" href="{{ path('gpi_auction_details', {'id': offer.getAuction().id }) }}">{{ offer.getAuction().getName() }}</a></li>
             <li><strong>Dodano przez:</strong> {{ offer.getCreatedBy() }}</li>
-            {#<li><strong>Data dodania:</strong> {{ offer.getStartTime().format('Y-m-d H:i:s') }}</li>#}
             <li><strong>Cena minimalna:</strong> {{ offer.actualPrice }}</li>
             {% if app.security.getToken().getUser() == offer.createdBy() %}
                 <li><strong>Dolny limit ceny:</strong> {{ offer.price }}</li>

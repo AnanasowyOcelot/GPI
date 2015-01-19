@@ -21,9 +21,63 @@ class ListOffersController extends BaseController
     public function showAction()
     {
         $user = $this->container->get('security.context')->getToken()->getUser();
-        if (!is_object($user) || !$user instanceof UserInterface) {
-            throw new AccessDeniedException('This user does not have access to this section.');
-        }
+        $this->validateUser($user);
+
+        $offers = $this->get('gpi_offer.offer_repository')->findBy(array('createdBy' => $this->getUser()));
+
+        $offers = array_filter($offers, function(Offer $offer){
+            return $offer->isActive() && !$offer->hasWon();
+        });
+
+        /** @var \GPI\CoreBundle\Model\Service\Auction $auctionService */
+        $auctionService = $this->get('gpi_auction.service.auction');
+
+        $offersViewModels = $this->createOfferViewModelsArray($auctionService, $offers);
+
+        return $this->render('GPIOfferBundle:Profile:show.html.twig', array(
+            'user' => $user,
+            'offers' => $offersViewModels,
+            'offerStatus' => new OfferStatus()
+        ));
+    }
+    /**
+     * @return Response
+     *
+     * @throws AccessDeniedException
+     */
+    public function showWinnersAction()
+    {
+        $user = $this->container->get('security.context')->getToken()->getUser();
+        $this->validateUser($user);
+
+        $offers = $this->get('gpi_offer.offer_repository')->findBy(array('createdBy' => $this->getUser()));
+
+        $offers = array_filter($offers, function(Offer $offer){
+            return $offer->hasWon();
+        });
+
+        /** @var \GPI\CoreBundle\Model\Service\Auction $auctionService */
+        $auctionService = $this->get('gpi_auction.service.auction');
+
+        $offersViewModels = $this->createOfferViewModelsArray($auctionService, $offers);
+
+        return $this->render('GPIOfferBundle:Profile:show.html.twig', array(
+            'user' => $user,
+            'offers' => $offersViewModels,
+            'offerStatus' => new OfferStatus()
+        ));
+    }
+
+    /**
+     * @return Response
+     *
+     * @throws AccessDeniedException
+     */
+    public function showNotActiveAction()
+    {
+        $user = $this->container->get('security.context')->getToken()->getUser();
+        $this->validateUser($user);
+
 
         $offers = $this->get('gpi_offer.offer_repository')->findBy(array('createdBy' => $this->getUser()));
 
@@ -36,28 +90,56 @@ class ListOffersController extends BaseController
         usort(
             $offers,
             function (Offer $a, Offer $b) use ($statusOrder) {
-                if ($a->getAuctionId() !== $b->getAuctionId()) {
-                    return $a->getAuctionId() - $b->getAuctionId();
+                if ($statusOrder[$a->getStatus()] !== $statusOrder[$b->getStatus()]) {
+                    return $statusOrder[$a->getStatus()] - $statusOrder[$b->getStatus()];
                 }
-                return $statusOrder[$a->getStatus()] - $statusOrder[$b->getStatus()];
+                return $a->getAuctionId() - $b->getAuctionId();
             }
         );
+
+        $offers = array_filter($offers, function(Offer $offer){
+            return !$offer->isActive();
+        });
+
         /** @var \GPI\CoreBundle\Model\Service\Auction $auctionService */
         $auctionService = $this->get('gpi_auction.service.auction');
 
-        $offersViewModels = array_map(
-            function (Offer $offer) use ($auctionService) {
-                $offerView = new \GPI\OfferBundle\ViewModel\Offer($offer);
-                $offerView->setCurrentPosition($auctionService->getOfferCurrentPosition($offer, $offer->getAuction())+1);
-                return $offerView;
-            },
-            $offers
-        );
+        $offersViewModels = $this->createOfferViewModelsArray($auctionService, $offers);
 
         return $this->render('GPIOfferBundle:Profile:show.html.twig', array(
             'user' => $user,
             'offers' => $offersViewModels,
             'offerStatus' => new OfferStatus()
         ));
+    }
+
+    /**
+     * @param $user
+     * @throws \Symfony\Component\Security\Core\Exception\AccessDeniedException
+     */
+    private function validateUser($user)
+    {
+        if (!is_object($user) || !$user instanceof UserInterface) {
+            throw new AccessDeniedException('This user does not have access to this section.');
+        }
+    }
+
+    /**
+     * @param $auctionService
+     * @param $offers
+     * @return array
+     */
+    private function createOfferViewModelsArray($auctionService, $offers)
+    {
+        $offersViewModels = array_map(
+            function (Offer $offer) use ($auctionService) {
+                $offerView = new \GPI\OfferBundle\ViewModel\Offer($offer);
+                $offerView->setCurrentPosition($auctionService->getOfferCurrentPosition($offer, $offer->getAuction()) + 1);
+                $offerView->hasWon = $offer->hasWon();
+                return $offerView;
+            },
+            $offers
+        );
+        return $offersViewModels;
     }
 }

@@ -14,6 +14,7 @@ class Offer {
     public $status;
     public $isActive;
     public $currentPosition;
+    public $hasWon;
 
     function __construct(OfferEntity $offer)
     {

@@ -20,3 +20,7 @@ gpi_auction_auctions_by_category:
 gpi_auction_list_ended:
     path:     /auctions_ended/
     defaults: { _controller: GPIAuctionBundle:ListProperlyEndedAuctions:show }
+
+gpi_auction_list_not_active:
+    path:     /auctions_not_active/
+    defaults: { _controller: GPIAuctionBundle:ListNotActiveAuctions:show }

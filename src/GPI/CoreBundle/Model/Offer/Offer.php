@@ -157,7 +157,16 @@ class Offer
     }
 
     public function isActive(){
-        return !$this->isCanceled() && !$this->isDeactivated() && $this->getAuction()->isActive();
+        return !$this->isCanceled() && !$this->isDeactivated() && ($this->getAuction()->isActive() || $this->getAuction()->hasProperlyEnded());
+    }
+
+    public function getPosition(){
+        $offers = $this->getAuction()->getSortedActiveOffers();
+        return array_search($this, $offers);
+    }
+
+    public function hasWon(){
+        return $this->getPosition() == 0 && $this->getAuction()->hasProperlyEnded();
     }
 
     public function isDeactivated(){
