@@ -207,6 +207,10 @@ class Auction
         return !$this->hasEnded() && $this->isPartiallyActive();
     }
 
+    public function hasProperlyEnded(){
+        return $this->hasEnded() && $this->isPartiallyActive();
+    }
+
     public function cancel()
     {
         $this->isCanceled = true;

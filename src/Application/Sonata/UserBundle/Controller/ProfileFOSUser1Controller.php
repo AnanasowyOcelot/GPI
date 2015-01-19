@@ -5,6 +5,7 @@
 namespace Application\Sonata\UserBundle\Controller;
 
 use GPI\AuctionBundle\Entity\AuctionRepository;
+use GPI\CoreBundle\Model\Auction\Auction;
 use GPI\CoreBundle\Model\Auction\AuctionStatus;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use Symfony\Component\HttpFoundation\Response;
@@ -35,6 +36,16 @@ class ProfileFOSUser1Controller extends BaseController
 
 
         $auctions = $this->get('gpi_auction.auction_repository')->findBy(array('createdBy'=>$this->getUser()));
+        $auctions = array_filter($auctions, function(Auction $auction){
+            return !$auction->hasProperlyEnded();
+        });
+        usort($auctions, function(Auction $a1, Auction $a2){
+            if($a1->getStatus() == $a2->getStatus()){
+                return  $a1->getStartTime() > $a2->getStartTime();
+            }else{
+                return $a1->getStatus() - $a2->getStatus();
+            }
+        });
 
         return $this->render('SonataUserBundle:Profile:show.html.twig', array(
             'user'   => $user,

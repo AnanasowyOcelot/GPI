@@ -21,7 +21,8 @@ class AuctionDetailsController extends Controller
                 'offerStatus' => new OfferStatus(),
                 'disableReason'=> $auction->getCurrentDisableReason(),
                 'isActive' => $auction->isActive(),
-                'isDeactivated' => $auction->isDeactivated()
+                'isDeactivated' => $auction->isDeactivated(),
+                'hasProperlyEnded' => $auction->hasProperlyEnded()
             )
         );
 

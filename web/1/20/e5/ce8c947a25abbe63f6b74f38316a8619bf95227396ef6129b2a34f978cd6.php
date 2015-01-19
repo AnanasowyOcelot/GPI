@@ -41,7 +41,7 @@ class __TwigTemplate_20e5ce8c947a25abbe63f6b74f38316a8619bf95227396ef6129b2a34f9
         <table class=\"table table-hover\">
             <thead>
             <tr>
-                <th class=\"hidden-sm\">Nazwa aukcji</th>
+                <th class=\"hidden-sm\">Nazwa oferty</th>
                 <th>Cena minimalna</th>
                 <th>Dolny limit ceny:</th>
                 <th>Opcje</th>

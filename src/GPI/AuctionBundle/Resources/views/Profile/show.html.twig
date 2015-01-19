@@ -1,0 +1,38 @@
+{% extends "SonataUserBundle:Profile:action.html.twig" %}
+{% block sonata_profile_content %}
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th class="hidden-sm">Nazwa aukcji</th>
+                <th>Opcje</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for auction in auctions %}
+                <tr>
+                    <td>
+                        <img class="rounded-x" src="{{ asset(auction.getMainPhoto()) }}" alt="">
+                    </td>
+                    <td>
+                        <h3 class="auction-name">{{ auction.name }}</h3>
+
+                        <p>{{ auction.getContentShort() }}</p>
+                        <p>Liczba ofert: {{ auction.getNumberOfOffers() }}</p>
+                        <small class="hex">Zakończenie {{ auction.getEndTime().format('Y-m-d H:i:s') }}</small>
+                    </td>
+                    <td>
+                        <p><a class="btn-u btn-u-blue" href="{{ path('gpi_auction_details', {'id': auction.id }) }}">Szczegóły</a></p>
+                        {% if auction.isActive() %}
+                            <p><a class="btn-u btn-u-blue" href="{{ path('gpi_auction_edit', {'id': auction.id }) }}">Edytuj</a></p>
+
+                            <p><a class="btn-u btn-u-red" href="{{ path('gpi_auction_cancel', {'id': auction.id }) }}">Anuluj</a></p>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

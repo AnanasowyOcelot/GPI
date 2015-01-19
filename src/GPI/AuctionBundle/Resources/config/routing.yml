@@ -16,3 +16,7 @@ gpi_auction_edit:
 gpi_auction_auctions_by_category:
     path:     /category/{categorySlug}
     defaults: { _controller: GPIAuctionBundle:AuctionsByCategory:index }
+
+gpi_auction_list_ended:
+    path:     /auctions_ended/
+    defaults: { _controller: GPIAuctionBundle:ListProperlyEndedAuctions:show }

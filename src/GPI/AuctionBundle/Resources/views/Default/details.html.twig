@@ -3,6 +3,10 @@
             <br/>
             Powód:</strong> {{ disableReason.content }}
     </div>
+{% elseif hasProperlyEnded %}
+
+<div class="alert alert-success fade in">Aukcja jest zakończona.</div>
+
 {% elseif not isActive %}
     <div class="alert alert-warning fade in">Aukcja jest nieaktywna.</div>
 {% endif %}

@@ -37,6 +37,7 @@ sonata_user:
 #                - { position: right, type: sonata.news.block.recent_comments, settings: { title: Recent Comments, number: 5, mode: public }}
         menu:
             - { route: 'sonata_user_profile_show', label: 'Moje aukcje', domain: 'SonataUserBundle'}
+            - { route: 'gpi_auction_list_ended', label: 'Zakończone aukcje', domain: 'GPIAuctionBundle'}
             - { route: 'gpi_offer_list', label: 'Moje oferty', domain: 'GPIOfferBundle'}
             - { route: 'sonata_user_profile_edit', label: 'link_edit_profile', domain: 'SonataUserBundle'}
 #            - { route: 'sonata_customer_addresses', label: 'link_list_addresses', domain: 'SonataCustomerBundle'}
