@@ -51,18 +51,11 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
         </div>
         ";
         // line 14
-        echo "        <div";
-        if ($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "isSorted", array(0 => "a.name"), "method")) {
-            echo " class=\"sorted\"";
-        }
-        echo ">Sortuj
-            po: ";
+        echo "        ";
         // line 15
-        echo $this->env->getExtension('knp_pagination')->sortable((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "Nazwa", "a.name");
-        echo "  ";
-        echo $this->env->getExtension('knp_pagination')->sortable((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "Id", "a.id");
-        echo "</div>
-    </div>
+        echo "            ";
+        // line 16
+        echo "    </div>
 
     ";
         // line 19
@@ -145,6 +138,6 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
 
     public function getDebugInfo()
     {
-        return array (  134 => 57,  131 => 56,  122 => 48,  112 => 44,  106 => 41,  98 => 38,  92 => 35,  87 => 32,  83 => 31,  69 => 19,  61 => 15,  54 => 14,  49 => 11,  40 => 5,  33 => 2,  30 => 1,  22 => 61,  20 => 1,);
+        return array (  127 => 57,  124 => 56,  115 => 48,  105 => 44,  99 => 41,  91 => 38,  85 => 35,  80 => 32,  76 => 31,  62 => 19,  58 => 16,  56 => 15,  54 => 14,  49 => 11,  40 => 5,  33 => 2,  30 => 1,  22 => 61,  20 => 1,);
     }
 }

@@ -11,8 +11,8 @@
             Całkowita ilość aukcji: {{ pagination.getTotalItemCount }}
         </div>
         {# sorting of properties based on query components #}
-        <div{% if pagination.isSorted('a.name') %} class="sorted"{% endif %}>Sortuj
-            po: {{ knp_pagination_sortable(pagination, 'Nazwa', 'a.name') }}  {{ knp_pagination_sortable(pagination, 'Id', 'a.id') }}</div>
+        {#<div{% if pagination.isSorted('a.name') %} class="sorted"{% endif %}>Sortuj#}
+            {#po: {{ knp_pagination_sortable(pagination, 'Nazwa', 'a.name') }}  {{ knp_pagination_sortable(pagination, 'Id', 'a.id') }}</div>#}
     </div>
 
     {# table body #}

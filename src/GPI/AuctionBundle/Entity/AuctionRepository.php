@@ -21,7 +21,7 @@ class AuctionRepository extends EntityRepository implements \GPI\CoreBundle\Mode
         $queryBuilder->andWhere($queryBuilder->expr()->gt('auction.endTime', ":now"));
 
         if ($params->getCategory() == null && $params->getName() == null) {
-
+            $queryBuilder->orderBy('auction.endTime', 'ASC');
             $auctions = $queryBuilder->getQuery()->getResult();
         } else {
 
@@ -36,6 +36,7 @@ class AuctionRepository extends EntityRepository implements \GPI\CoreBundle\Mode
                 $queryBuilder->andWhere('category = :cat OR category.parent = :cat');
                 $queryBuilder->setParameter('cat', $category);
             }
+            $queryBuilder->orderBy('auction.endTime', 'ASC');
             $auctions = $queryBuilder->getQuery()->getResult();
         }
 
