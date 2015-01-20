@@ -35,15 +35,7 @@ class AuctionAdminController extends CRUDController
 
             if ($form->isValid()) {
                 $auction->deactivate();
-
-                /** @var \GPI\CoreBundle\Model\Service\Mail $mailService */
-                $mailService = $this->get('gpi_auction.service.mail');
-                $mailTemplate = $this->renderView('GPIAuctionBundle:Mail:disable_auction.html.twig', array(
-                    'name' => $auction->getCreatedBy()->getUsername(),
-                    'auction_name' => $auction->getName(),
-                    'reason' => $disableReason->getContent()
-                ));
-                $mailService->sendMail($auction->getCreatedBy()->getEmail(), $mailTemplate, "GPI: Blokada aukcji");
+                $this->sendMailAboutAuctionDeactivation($auction, $disableReason);
 
                 $this->flush($disableReason, $auction);
                 $this->addFlash('sonata_flash_success', 'Wyłączono "' . $auction->getName() . '"');
@@ -79,14 +71,7 @@ class AuctionAdminController extends CRUDController
             $this->addFlash('sonata_flash_error', 'Aukcja "' . $object->getName() . '" jest już włłączona.');
         } else {
             $object->activate();
-
-            /** @var \GPI\CoreBundle\Model\Service\Mail $mailService */
-            $mailService = $this->get('gpi_auction.service.mail');
-            $mailTemplate = $this->renderView('GPIAuctionBundle:Mail:enable_auction.html.twig', array(
-                'name' => $object->getCreatedBy()->getUsername(),
-                'auction_name' => $object->getName(),
-            ));
-            $mailService->sendMail($object->getCreatedBy()->getEmail(), $mailTemplate, "GPI: Odblokowanie aukcji");
+            $this->sendMailAboutAuctionActivation($object);
 
             $this->getDoctrine()->getManager()->flush($object);
             $this->addFlash('sonata_flash_success', 'Włączono "' . $object->getName() . '"');
@@ -116,5 +101,35 @@ class AuctionAdminController extends CRUDController
         $this->getDoctrine()->getManager()->persist($disableReason);
         $this->getDoctrine()->getManager()->persist($auction);
         $this->getDoctrine()->getManager()->flush();
+    }
+
+    /**
+     * @param $object
+     */
+    private function sendMailAboutAuctionActivation($object)
+    {
+        /** @var \GPI\CoreBundle\Model\Service\Mail $mailService */
+        $mailService = $this->get('gpi_auction.service.mail');
+        $mailTemplate = $this->renderView('GPIAuctionBundle:Mail:enable_auction.html.twig', array(
+            'name' => $object->getCreatedBy()->getUsername(),
+            'auction_name' => $object->getName(),
+        ));
+        $mailService->sendMail($object->getCreatedBy()->getEmail(), $mailTemplate, "GPI: Odblokowanie aukcji");
+    }
+
+    /**
+     * @param $auction
+     * @param $disableReason
+     */
+    private function sendMailAboutAuctionDeactivation($auction, $disableReason)
+    {
+        /** @var \GPI\CoreBundle\Model\Service\Mail $mailService */
+        $mailService = $this->get('gpi_auction.service.mail');
+        $mailTemplate = $this->renderView('GPIAuctionBundle:Mail:disable_auction.html.twig', array(
+            'name' => $auction->getCreatedBy()->getUsername(),
+            'auction_name' => $auction->getName(),
+            'reason' => $disableReason->getContent()
+        ));
+        $mailService->sendMail($auction->getCreatedBy()->getEmail(), $mailTemplate, "GPI: Blokada aukcji");
     }
 }
