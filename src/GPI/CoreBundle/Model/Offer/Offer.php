@@ -183,6 +183,14 @@ class Offer
         $this->isDeactivated = true;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getCreatedBy()
+    {
+        return $this->createdBy;
+    }
+
     public function activate()
     {
         $this->isDeactivated = false;

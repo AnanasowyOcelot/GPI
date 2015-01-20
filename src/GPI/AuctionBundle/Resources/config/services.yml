@@ -86,6 +86,9 @@ services:
             - @gpi_auction.auction_repository
             - @security.token_storage
             - @doctrine.orm.entity_manager
+            - @gpi_core.service.mail
+            - @templating
+            - %gpi.system_user_id%
 
     gpi_core.model.calendar.calendar:
         class: GPI\CoreBundle\Model\Calendar\Calendar
@@ -96,8 +99,12 @@ services:
         arguments:
             - @gpi_core.model.calendar.calendar
             - %gpi_auction.defaultImgPath%
-    gpi_auction.service.mail:
+    gpi_core.service.mail:
         class: GPI\CoreBundle\Model\Service\Mail
         arguments:
             - @mailer
+    gpi_core.service.cron:
+        class: GPI\CoreBundle\Model\Service\Cron
+        arguments:
+            - @gpi_auction.service.auction
 

@@ -23,10 +23,12 @@ class Auction
     protected $categories;
     protected $maxPrice;
     protected $createdBy;
+    protected $updatedBy;
     protected $offers;
     protected $maxRealizationDate;
     protected $comments;
     protected $disableReason;
+    protected $isFinished = false;
 
     private $calendar;
     private $defaultImgPath;
@@ -63,6 +65,7 @@ class Auction
         $this->comments = $comments;
     }
 
+
     /**
      * @return ArrayCollection
      */
@@ -78,6 +81,16 @@ class Auction
     {
         $this->disableReason = $disableReason;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCreatedBy()
+    {
+        return $this->createdBy;
+    }
+
+
 
     /**
      * @return \Doctrine\Common\Collections\ArrayCollection
@@ -252,6 +265,10 @@ class Auction
         return $this;
     }
 
+    public function finish(){
+        $this->isFinished = true;
+    }
+
     public function addOffer(Offer $offer){
         $this->offers->add($offer);
     }
@@ -268,6 +285,14 @@ class Auction
         } else {
             return $this->defaultImgPath;
         }
+    }
+
+    /**
+     * @param \Application\Sonata\UserBundle\Entity\User $updatedBy
+     */
+    public function setUpdatedBy($updatedBy)
+    {
+        $this->updatedBy = $updatedBy;
     }
 
     public function getCategories()
@@ -341,6 +366,9 @@ class Auction
         ));
     }
 
+    /**
+     * @return array
+     */
     public function getSortedActiveOffers()
     {
         $offers = $this->getActiveOffers();

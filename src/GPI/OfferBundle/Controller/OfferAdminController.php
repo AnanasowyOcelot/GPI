@@ -107,7 +107,7 @@ class OfferAdminController extends CRUDController
     private function sendMailAboutOfferActivation($object)
     {
         /** @var \GPI\CoreBundle\Model\Service\Mail $mailService */
-        $mailService = $this->get('gpi_auction.service.mail');
+        $mailService = $this->get('gpi_core.service.mail');
         $mailTemplate = $this->renderView('GPIOfferBundle:Mail:enable_offer.html.twig', array(
             'name' => $object->getCreatedBy()->getUsername(),
             'offer_name' => $object->getAuction()->getName(),
@@ -122,7 +122,7 @@ class OfferAdminController extends CRUDController
     private function sendMailAboutOfferDeactivation($offer, $disableReason)
     {
         /** @var \GPI\CoreBundle\Model\Service\Mail $mailService */
-        $mailService = $this->get('gpi_auction.service.mail');
+        $mailService = $this->get('gpi_core.service.mail');
         $mailTemplate = $this->renderView('GPIOfferBundle:Mail:disable_offer.html.twig', array(
             'name' => $offer->getCreatedBy()->getUsername(),
             'offer_name' => $offer->getAuction()->getName(),

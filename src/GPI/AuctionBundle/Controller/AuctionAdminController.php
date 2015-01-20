@@ -3,6 +3,7 @@
 namespace GPI\AuctionBundle\Controller;
 
 use GPI\AuctionBundle\Entity\AuctionDisableReason;
+use GPI\CoreBundle\Model\Auction\Auction;
 use Sonata\AdminBundle\Controller\CRUDController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -106,10 +107,10 @@ class AuctionAdminController extends CRUDController
     /**
      * @param $object
      */
-    private function sendMailAboutAuctionActivation($object)
+    private function sendMailAboutAuctionActivation(Auction $object)
     {
         /** @var \GPI\CoreBundle\Model\Service\Mail $mailService */
-        $mailService = $this->get('gpi_auction.service.mail');
+        $mailService = $this->get('gpi_core.service.mail');
         $mailTemplate = $this->renderView('GPIAuctionBundle:Mail:enable_auction.html.twig', array(
             'name' => $object->getCreatedBy()->getUsername(),
             'auction_name' => $object->getName(),
@@ -121,10 +122,10 @@ class AuctionAdminController extends CRUDController
      * @param $auction
      * @param $disableReason
      */
-    private function sendMailAboutAuctionDeactivation($auction, $disableReason)
+    private function sendMailAboutAuctionDeactivation(Auction $auction, \GPI\CoreBundle\Model\Auction\AuctionDisableReason $disableReason)
     {
         /** @var \GPI\CoreBundle\Model\Service\Mail $mailService */
-        $mailService = $this->get('gpi_auction.service.mail');
+        $mailService = $this->get('gpi_core.service.mail');
         $mailTemplate = $this->renderView('GPIAuctionBundle:Mail:disable_auction.html.twig', array(
             'name' => $auction->getCreatedBy()->getUsername(),
             'auction_name' => $auction->getName(),

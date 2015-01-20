@@ -54,6 +54,13 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
     protected $name;
 
     /**
+     * @var boolean
+     *
+     * @ORM\Column(name="is_finished", type="boolean")
+     */
+    protected $isFinished = false;
+
+    /**
      * @var string
      * @ORM\Column(name="max_price", type="decimal", scale=2, nullable=true)
      */
@@ -113,47 +120,6 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
      **/
     protected $disableReason;
 
-
-    public function isOwner(User $user) {
-        return $this->getCreatedBy() === $user;
-    }
-
-    /**
-     * @param \Application\Sonata\UserBundle\Entity\User $updatedBy
-     */
-    public function setUpdatedBy($updatedBy)
-    {
-        $this->updatedBy = $updatedBy;
-    }
-
-    /**
-     * @param \Application\Sonata\UserBundle\Entity\User $createdBy
-     */
-    public function setCreatedBy($createdBy)
-    {
-        $this->createdBy = $createdBy;
-    }
-
-
-
-    /**
-     * @param mixed $offers
-     */
-    public function setOffers($offers)
-    {
-        $this->offers = $offers;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getOffers()
-    {
-        return $this->offers;
-    }
-
-
-
     /**
      * @var User $updatedBy
      *
@@ -205,6 +171,39 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
     {
         return $this->createdBy;
     }
+
+    public function isOwner(User $user) {
+        return $this->getCreatedBy() === $user;
+    }
+
+
+
+    /**
+     * @param \Application\Sonata\UserBundle\Entity\User $createdBy
+     */
+    public function setCreatedBy($createdBy)
+    {
+        $this->createdBy = $createdBy;
+    }
+
+
+
+    /**
+     * @param mixed $offers
+     */
+    public function setOffers($offers)
+    {
+        $this->offers = $offers;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getOffers()
+    {
+        return $this->offers;
+    }
+
 
     /**
      * Get id
