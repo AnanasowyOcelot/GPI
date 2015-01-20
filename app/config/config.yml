@@ -66,7 +66,8 @@ twig:
     strict_variables: %kernel.debug%
     cache:  true
     base_template_class: Sonata\CacheBundle\Twig\TwigTemplate14
-
+    globals:
+        mailer_user: %mailer_user%
     form:
         resources:
             - 'SonataFormatterBundle:Form:formatter.html.twig'
@@ -107,10 +108,12 @@ doctrine:
 # Swiftmailer Configuration
 swiftmailer:
     transport: %mailer_transport%
+    encryption: %mailer_encryption%
+    auth_mode:  %mailer_auth_mode%
     host:      %mailer_host%
     username:  %mailer_user%
     password:  %mailer_password%
-
+    spool:     { type: memory }
 jms_security_extra:
     secure_all_services: false
 

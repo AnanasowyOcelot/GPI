@@ -96,3 +96,8 @@ services:
         arguments:
             - @gpi_core.model.calendar.calendar
             - %gpi_auction.defaultImgPath%
+    gpi_auction.service.mail:
+        class: GPI\CoreBundle\Model\Service\Mail
+        arguments:
+            - @mailer
+

@@ -7,8 +7,8 @@ parameters:
 
     mailer_transport:   smtp
     mailer_host:        localhost
-    mailer_user:
-    mailer_password:
+    mailer_user:        poczta@gpi.bitgrind.pl
+    mailer_password:    qCX2,q_DIiQK
 
     locale:             en
 
