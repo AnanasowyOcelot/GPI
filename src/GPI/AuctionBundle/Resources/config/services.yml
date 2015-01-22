@@ -7,6 +7,16 @@ services:
         arguments: [~, GPI\AuctionBundle\Entity\Auction, GPIAuctionBundle:AuctionAdmin]
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: Lista aukcji}
+    gpi_auction.admin.auction_attributes_group:
+        class: GPI\AuctionBundle\Admin\AuctionAttributesAdmin
+        arguments: [~, GPI\AuctionBundle\Entity\AuctionAttributesGroup, GPIAuctionBundle:AuctionAttributesAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Atrybuty aukcji}
+    gpi_auction.admin.auction_attribute:
+        class: GPI\AuctionBundle\Admin\AuctionAttributeAdmin
+        arguments: [~, GPI\AuctionBundle\Entity\AuctionAttribute, GPIAuctionBundle:AuctionAttributeAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Atrybuty aukcji}
     gpi_auction.admin.document:
         class: GPI\DocumentBundle\Admin\DocumentAdmin
         arguments: [~, GPI\DocumentBundle\Entity\Document, GPIDocumentBundle:DocumentAdmin]

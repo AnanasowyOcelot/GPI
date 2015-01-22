@@ -95,6 +95,12 @@ sonata_admin:
                 icon:            '<i class="fa fa-puzzle-piece"></i>'
                 items:
                     - gpi_auction.admin.auction
+            sonata.admin.group.auction_attributes_manager:
+                label:           Atrybuty aukcji
+                label_catalogue: SonataAuctionBundle
+                icon:            '<i class="fa fa-puzzle-piece"></i>'
+                items:
+                    - gpi_auction.admin.auction_attributes_group
 
 
 
