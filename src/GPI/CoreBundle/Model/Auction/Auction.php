@@ -280,11 +280,11 @@ class Auction
 
     public function getMainPhoto()
     {
-        if (!$this->getDocuments()->isEmpty()) {
-            return $this->getDocuments()->get(0)->getWebPath();
-        } else {
+//        if (!$this->getDocuments()->isEmpty()) {
+//            return $this->getDocuments()->get(0)->getWebPath();
+//        } else {
             return $this->defaultImgPath;
-        }
+//        }
     }
 
     /**

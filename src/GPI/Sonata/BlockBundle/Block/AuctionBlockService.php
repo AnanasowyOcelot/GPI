@@ -88,17 +88,6 @@ class AuctionBlockService extends BaseBlockService implements PaginatorAwareInte
         ));
     }
 
-    public function validateBlock(ErrorElement $errorElement, BlockInterface $block)
-    {
-//        $errorElement
-//            ->with('settings.title')
-//            ->assertNotNull(array())
-//            ->assertNotBlank()
-//            ->assertMaxLength(array('limit' => 50))
-//            ->end();
-    }
-
-
 
     /**
      * @var \Symfony\Component\HttpFoundation\Request
