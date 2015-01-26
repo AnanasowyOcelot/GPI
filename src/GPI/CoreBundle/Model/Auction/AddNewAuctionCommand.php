@@ -6,9 +6,11 @@ use Application\Sonata\ClassificationBundle\Entity\Category;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
+use Application\Sonata\UserBundle\Entity\User as User;
 
 class AddNewAuctionCommand
 {
+    protected $id;
     protected $name;
     protected $content;
     protected $maxPrice;
@@ -16,10 +18,29 @@ class AddNewAuctionCommand
     protected $documents;
     protected $timePeriod;
     protected $maxRealizationDate;
+    protected $createdBy;
+    protected $attributeValues;
 
     public function __construct()
     {
         $this->documents = new ArrayCollection();
+        $this->attributeValues = new ArrayCollection();
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 
     /**
@@ -78,7 +99,7 @@ class AddNewAuctionCommand
         return $this->documents;
     }
 
-    public function setDocuments(ArrayCollection $documents)
+    public function setDocuments($documents)
     {
         $this->documents = $documents;
     }
@@ -86,6 +107,11 @@ class AddNewAuctionCommand
     public function addCategory(Category $category)
     {
         $this->categories[] = $category;
+    }
+
+    public function addAttributeValue($attributeValue)
+    {
+        $this->attributeValues[] = $attributeValue;
     }
 
     /**
@@ -120,12 +146,21 @@ class AddNewAuctionCommand
         return $this->name;
     }
 
-
-    public static function loadValidatorMetadata(ClassMetadata $metadata)
+    /**
+     * @param mixed $createdBy
+     */
+    public function setCreatedBy($createdBy)
     {
-        $metadata->addPropertyConstraint('documents', new Assert\Valid());
+        $this->createdBy = $createdBy;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getCreatedBy()
+    {
+        return $this->createdBy;
+    }
 
     /**
      * @param mixed $content
@@ -145,6 +180,26 @@ class AddNewAuctionCommand
 
     public function toString(){
         return "Name: " . $this->getName() . " Content: " . $this->getContent() . " Category: " . $this->getCategories()->getName();
+    }
+
+    public function isOwner(User $user) {
+        return $this->getCreatedBy() === $user;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\ArrayCollection $attributeValues
+     */
+    public function setAttributeValues($attributeValues)
+    {
+        $this->attributeValues = $attributeValues;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\ArrayCollection
+     */
+    public function getAttributeValues()
+    {
+        return $this->attributeValues;
     }
 
 

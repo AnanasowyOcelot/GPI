@@ -10,6 +10,8 @@ use Functional as F;
 class AddAuctionType extends AuctionType
 {
 
+    protected $disableCategories = true;
+
     public function getName()
     {
         return 'auction';
@@ -46,6 +48,19 @@ class AddAuctionType extends AuctionType
                 'label' => "Cena maksymalna:",
                 'currency' => "PLN",
                 'required' => false
+            )
+        );
+    }
+
+    protected function addAttributesToForm(FormBuilderInterface $builder)
+    {
+        $builder->add(
+            'attributeValues',
+            'collection',
+            array(
+                'type' => 'auction_attribute',
+                'by_reference' => false,
+                'label' => "Dodatkowe atrybuty:"
             )
         );
     }

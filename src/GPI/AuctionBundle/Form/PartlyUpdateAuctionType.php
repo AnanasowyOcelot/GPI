@@ -75,4 +75,8 @@ class PartlyUpdateAuctionType extends AuctionType
     protected function addPriceToForm(FormBuilderInterface $builder)
     {
     }
+
+    protected function addAttributesToForm(FormBuilderInterface $builder)
+    {
+    }
 }

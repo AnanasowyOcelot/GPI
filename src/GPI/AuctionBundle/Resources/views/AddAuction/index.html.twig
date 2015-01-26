@@ -100,6 +100,17 @@
             <fieldset>
                 {{ form_row(form.categories) }}
             </fieldset>
+            {% for attributeValue in form.attributeValues %}
+                <hr/>
+                <fieldset>
+                    <label class="col-sm-2 control-label">{{ attributeValue.vars.value }}</label>
+
+                    <div class="col-sm-10">
+                        {{ form_widget(attributeValue.name) }}
+                        {{ form_widget(attributeValue.value) }}
+                    </div>
+                </fieldset>
+            {% endfor %}
             <hr/>
             <fieldset>
                 <label class="col-sm-2 control-label">Dokumenty:</label>
@@ -112,8 +123,10 @@
                     </ul>
                 </div>
             </fieldset>
-            <hr/>
+
+
             <fieldset>
+                {#{{ form_row(form.submit) }}#}
                 {{ form_rest(form) }}
             </fieldset>
         </form>

@@ -9,10 +9,23 @@ class AuctionDetailsController extends Controller
 {
     public function indexAction($id)
     {
-        /** @var \Doctrine\Common\Persistence\ObjectRepository $repo */
-        $repo = $this->get('gpi_auction.auction_repository');
+        /** @var \Doctrine\Common\Persistence\ObjectRepository $auctionRepo */
+        $auctionRepo = $this->get('gpi_auction.auction_repository');
         /** @var \GPI\AuctionBundle\Entity\Auction $auction */
-        $auction = $repo->find($id);
+        $auction = $auctionRepo->find($id);
+
+
+//        /** @var \GPI\Sonata\ClassificationBundle\Entity\CategoryRepository $categoriesRepo */
+//        $categoriesRepo = $this->get('gpi_sonata.category_repository');
+//        $auctionCategories = $auction->getCategories();
+//        foreach($auctionCategories as $category){
+//            /** @var  $category */
+//            $parentCategories = $categoriesRepo->findByParentId($category->getId());
+//
+//        }
+        // kategorie i wszystkie parenty, dla nich grupy atrybutów
+
+
 
         return $this->render(
             'GPIAuctionBundle:Default:details.html.twig',

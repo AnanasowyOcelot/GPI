@@ -14,6 +14,7 @@ abstract class AuctionType extends AbstractType
      * @var CategoryRepository
      */
     private $catRepo;
+    protected $disableCategories = false;
 
     private function categoryTreeMap($tree, $depth = 0)
     {
@@ -62,6 +63,7 @@ abstract class AuctionType extends AbstractType
 
         $this->addPriceToForm($builder);
         $this->addTimePeriodToForm($builder);
+        $this->addAttributesToForm($builder);
         $builder
             ->add(
                 'categories',
@@ -70,8 +72,11 @@ abstract class AuctionType extends AbstractType
                     'class' => 'Application\Sonata\ClassificationBundle\Entity\Category',
                     'choice_list' => $this->categoryChoiceList(),
                     'multiple' => true,
-                    'attr' => array('data-sonata-select2' => 'false'),
-                    'label' => "Kategorie:"
+                    'attr' => array(
+                        'data-sonata-select2' => 'false',
+                        'disabled' => $this->disableCategories
+                    ),
+                    'label' => "Kategorie:",
                 )
             )
             ->add(
@@ -91,6 +96,8 @@ abstract class AuctionType extends AbstractType
     abstract protected function addTimePeriodToForm(FormBuilderInterface $builder);
 
     abstract protected function addPriceToForm(FormBuilderInterface $builder);
+
+    abstract protected function addAttributesToForm(FormBuilderInterface $builder);
 
     /**
      * Returns the name of this type.

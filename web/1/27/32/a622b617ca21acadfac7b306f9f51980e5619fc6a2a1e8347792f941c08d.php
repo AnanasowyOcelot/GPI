@@ -159,21 +159,51 @@ class __TwigTemplate_2732a622b617ca21acadfac7b306f9f51980e5619fc6a2a1e8347792f94
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "categories", array()), 'row');
         echo "
             </fieldset>
-            <hr/>
+            ";
+        // line 103
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "attributeValues", array()));
+        foreach ($context['_seq'] as $context["_key"] => $context["attributeValue"]) {
+            // line 104
+            echo "                <hr/>
+                <fieldset>
+                    <label class=\"col-sm-2 control-label\">";
+            // line 106
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["attributeValue"], "vars", array()), "value", array()), "html", null, true);
+            echo "</label>
+
+                    <div class=\"col-sm-10\">
+                        ";
+            // line 109
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["attributeValue"], "name", array()), 'widget');
+            echo "
+                        ";
+            // line 110
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["attributeValue"], "value", array()), 'widget');
+            echo "
+                    </div>
+                </fieldset>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['attributeValue'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 114
+        echo "            <hr/>
             <fieldset>
                 <label class=\"col-sm-2 control-label\">Dokumenty:</label>
 
                 <div class=\"col-sm-10\">
                     <ul class=\"documents\" data-prototype=\"";
-        // line 108
+        // line 119
         echo twig_escape_filter($this->env, $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "documents", array()), "vars", array()), "prototype", array()), 'widget'));
         echo "\">
                         ";
-        // line 109
+        // line 120
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "documents", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
-            // line 110
+            // line 121
             echo "                            <li class=\"tag-box-v2\">";
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["document"], "description", array()), 'row');
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["document"], "file", array()), 'row');
@@ -183,14 +213,16 @@ class __TwigTemplate_2732a622b617ca21acadfac7b306f9f51980e5619fc6a2a1e8347792f94
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 112
+        // line 123
         echo "                    </ul>
                 </div>
             </fieldset>
-            <hr/>
+
+
             <fieldset>
                 ";
-        // line 117
+        // line 130
+        echo "                ";
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
             </fieldset>
@@ -227,6 +259,6 @@ class __TwigTemplate_2732a622b617ca21acadfac7b306f9f51980e5619fc6a2a1e8347792f94
 
     public function getDebugInfo()
     {
-        return array (  194 => 117,  187 => 112,  177 => 110,  173 => 109,  169 => 108,  159 => 101,  152 => 97,  142 => 90,  132 => 83,  125 => 79,  118 => 75,  113 => 73,  42 => 4,  39 => 3,  35 => 1,  33 => 2,  11 => 1,);
+        return array (  225 => 130,  217 => 123,  207 => 121,  203 => 120,  199 => 119,  192 => 114,  182 => 110,  178 => 109,  172 => 106,  168 => 104,  164 => 103,  159 => 101,  152 => 97,  142 => 90,  132 => 83,  125 => 79,  118 => 75,  113 => 73,  42 => 4,  39 => 3,  35 => 1,  33 => 2,  11 => 1,);
     }
 }

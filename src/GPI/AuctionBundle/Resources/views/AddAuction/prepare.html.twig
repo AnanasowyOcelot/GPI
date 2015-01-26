@@ -1,0 +1,28 @@
+{% extends "SonataUserBundle:Profile:action.html.twig" %}
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+{% block sonata_profile_content %}
+
+
+
+    <div class="tag-box tag-box-v3 form-page" style="overflow: hidden;">
+        <div class="headline"><h3>Wybierz kategorie dla aukcji</h3></div>
+
+        <form method="POST" {{ form_enctype(form) }} class="sky-form">
+
+
+            <fieldset>
+                {{ form_row(form.categories) }}
+            </fieldset>
+            <hr/>
+
+            <hr/>
+            <fieldset>
+                {{ form_rest(form) }}
+            </fieldset>
+        </form>
+    </div>
+
+
+{% endblock %}
+
+

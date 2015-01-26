@@ -68,6 +68,12 @@ services:
             - { name: form.type, alias: auction }
         arguments:
             - @gpi_sonata.category_repository
+    gpi_auction.form.prepare_auction:
+        class: GPI\AuctionBundle\Form\PrepareAuctionType
+        tags:
+            - { name: form.type, alias: prepare_auction }
+        arguments:
+            - @gpi_sonata.category_repository
     gpi_auction.form.auction_update:
         class: GPI\AuctionBundle\Form\UpdateAuctionType
         tags:
@@ -84,6 +90,10 @@ services:
         class: GPI\AuctionBundle\Form\DocumentType
         tags:
             - { name: form.type, alias: document }
+    gpi_auction.form.auction_attribute:
+        class: GPI\AuctionBundle\Form\AuctionAttributeType
+        tags:
+            - { name: form.type, alias: auction_attribute }
     gpi_auction.form.auction_disable:
         class: GPI\AuctionBundle\Form\DisableAuctionType
         tags:
