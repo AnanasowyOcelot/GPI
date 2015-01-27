@@ -36,6 +36,7 @@ class AuctionEditController extends Controller
             $command->setContent($auction->getContent());
             $command->setCategories($auction->getCategories());
             $command->setMaxRealizationDate($auction->getMaxRealizationDate());
+            $command->setAttributeValues($auction->getAttributeValues());
             $d1 = new Document();
             $command->getDocuments()->add($d1);
             $form = $this->createForm('auction_update', $command);
@@ -45,6 +46,8 @@ class AuctionEditController extends Controller
             $command->setContent($auction->getContent());
             $command->setCategories($auction->getCategories());
             $command->setMaxRealizationDate($auction->getMaxRealizationDate());
+            $command->setAttributeValues($auction->getAttributeValues());
+
             $form = $this->createForm('auction_partly_update', $command);
         }
 

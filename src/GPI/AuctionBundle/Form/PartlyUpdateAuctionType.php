@@ -21,25 +21,27 @@ class PartlyUpdateAuctionType extends AuctionType
         $builder
             ->add('name', 'text', array(
                 'label' => "Tytuł:",
-                'disabled'    => true,
+                'disabled' => true,
             ))
             ->add('content', 'textarea', array('label' => "Treść:",
-                'disabled'    => true,
+                'disabled' => true,
             ))
             ->add('maxRealizationDate', 'date', array(
                 'attr' => array(
                     'data-sonata-select2' => 'false',
                 ),
                 'label' => "Maksymalny termin wykonania:",
-                'required'    => false,
-                'disabled'    => true,
+                'required' => false,
+                'disabled' => true,
                 'input' => 'datetime',
-                'empty_data'  => null,
+                'empty_data' => null,
                 'widget' => 'choice',
             ));
 
         $this->addPriceToForm($builder);
         $this->addTimePeriodToForm($builder);
+        $this->addAttributesToForm($builder);
+
         $builder
             ->add(
                 'categories',
@@ -48,7 +50,7 @@ class PartlyUpdateAuctionType extends AuctionType
                     'class' => 'Application\Sonata\ClassificationBundle\Entity\Category',
                     'choice_list' => parent::categoryChoiceList(),
                     'multiple' => true,
-                    'disabled'    => true,
+                    'disabled' => true,
 
                     'attr' => array('data-sonata-select2' => 'false'),
                     'label' => "Kategorie:"
@@ -59,7 +61,7 @@ class PartlyUpdateAuctionType extends AuctionType
                 'text',
                 array(
                     'label' => 'Dodaj uwagę: '
-            ))
+                ))
             ->add('submit', 'submit');
     }
 
@@ -78,5 +80,15 @@ class PartlyUpdateAuctionType extends AuctionType
 
     protected function addAttributesToForm(FormBuilderInterface $builder)
     {
+        $builder->add(
+            'attributeValues',
+            'collection',
+            array(
+                'type' => 'auction_attribute_edit',
+                'by_reference' => false,
+                'label' => " ",
+                'disabled' => true,
+            )
+        );
     }
 }

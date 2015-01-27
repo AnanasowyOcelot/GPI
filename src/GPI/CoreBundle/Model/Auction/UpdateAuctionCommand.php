@@ -13,10 +13,12 @@ class UpdateAuctionCommand
     protected $categories;
     protected $documents;
     protected $maxRealizationDate;
+    protected $attributeValues;
 
     public function __construct()
     {
         $this->documents = new ArrayCollection();
+        $this->attributeValues = new ArrayCollection();
     }
 
     /**
@@ -73,6 +75,22 @@ class UpdateAuctionCommand
     public function setDocuments($documents)
     {
         $this->documents = $documents;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\ArrayCollection $attributeValues
+     */
+    public function setAttributeValues($attributeValues)
+    {
+        $this->attributeValues = $attributeValues;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\ArrayCollection
+     */
+    public function getAttributeValues()
+    {
+        return $this->attributeValues;
     }
 
 

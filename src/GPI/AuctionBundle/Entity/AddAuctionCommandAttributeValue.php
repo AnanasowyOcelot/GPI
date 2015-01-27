@@ -49,19 +49,19 @@ class AddAuctionCommandAttributeValue
     }
 
     /**
-     * @param int $commandId
+     * @param $commandId
      */
-    public function setCommandId($commandId)
+    public function setCommand($commandId)
     {
-        $this->commandId = $commandId;
+        $this->command = $commandId;
     }
 
     /**
      * @return int
      */
-    public function getCommandId()
+    public function getCommand()
     {
-        return $this->commandId;
+        return $this->command;
     }
 
     /**

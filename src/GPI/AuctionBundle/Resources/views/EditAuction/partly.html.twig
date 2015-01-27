@@ -15,6 +15,7 @@
             <fieldset>
                 {{ form_row(form.content) }}
             </fieldset>
+
             <hr/>
             <fieldset>
                 <label>Dodatkowe uwagi:</label>
@@ -23,7 +24,20 @@
                     <div><strong>{{ comment.created.format('Y-m-d H:i:s') }}:</strong> {{ comment.content }}</div>
                 {% endfor %}
             </fieldset>
+            {% for attributeValue in form.attributeValues %}
+
+                <hr/>
+                <fieldset>
+                    <label class="col-sm-2 control-label">{{ attributeValue.vars.value }}</label>
+
+                    <div class="col-sm-10">
+                        {{ form_widget(attributeValue.name) }}
+                        {{ form_widget(attributeValue.value) }}
+                    </div>
+                </fieldset>
+            {% endfor %}
             <hr/>
+
             <fieldset>
                 {{ form_row(form.comment) }}
             </fieldset>

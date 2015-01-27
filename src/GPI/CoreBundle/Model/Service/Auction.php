@@ -98,6 +98,7 @@ class Auction
         $a->setContent($c->getContent());
         $a->setCategories($c->getCategories());
         $a->setMaxRealizationDate($c->getMaxRealizationDate());
+        $a->setAttributeValues($c->getAttributeValues());
         foreach ($c->getDocuments() as $document) {
             $a->getDocuments()->add($document);
             $document->upload();

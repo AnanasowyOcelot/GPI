@@ -7,6 +7,9 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 class UpdateAuctionType extends AuctionType
 {
+
+    protected $disableCategories = true;
+
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(
@@ -31,5 +34,14 @@ class UpdateAuctionType extends AuctionType
 
     protected function addAttributesToForm(FormBuilderInterface $builder)
     {
+        $builder->add(
+            'attributeValues',
+            'collection',
+            array(
+                'type' => 'auction_attribute_edit',
+                'by_reference' => false,
+                'label' => " "
+            )
+        );
     }
 }

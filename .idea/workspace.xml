@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AddAuctionController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AddAuctionController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AddAuctionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="0" selection-start="1994" selection-end="1994" vertical-scroll-proportion="-25.709677" vertical-offset="391" max-vertical-offset="2596">
+            <state line="56" column="0" selection-start="2095" selection-end="2095" vertical-scroll-proportion="0.44444445" vertical-offset="828" max-vertical-offset="2706">
               <folding>
                 <element signature="e#48#68#0" expanded="true" />
               </folding>
@@ -34,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Auction.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Auction.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Service/Auction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="69" selection-start="2758" selection-end="2758" vertical-scroll-proportion="0.67766774" vertical-offset="1034" max-vertical-offset="4620">
+            <state line="100" column="57" selection-start="3624" selection-end="3624" vertical-scroll-proportion="-37.612904" vertical-offset="1034" max-vertical-offset="4642">
               <folding>
                 <element signature="e#48#99#0" expanded="true" />
               </folding>
@@ -45,13 +45,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddAuctionCommandAttributeValue.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AddAuctionCommandAttributeValue.php">
+      <file leaf-file-name="AddAuctionType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AddAuctionType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="12" selection-start="289" selection-end="289" vertical-scroll-proportion="-1.4193548" vertical-offset="264" max-vertical-offset="2706">
+            <state line="12" column="0" selection-start="242" selection-end="242" vertical-scroll-proportion="-6.193548" vertical-offset="72" max-vertical-offset="1584">
               <folding>
-                <element signature="e#44#76#0" expanded="true" />
+                <element signature="e#43#91#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuctionType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AuctionType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="29" selection-start="2347" selection-end="2347" vertical-scroll-proportion="-20.580645" vertical-offset="990" max-vertical-offset="2772">
+              <folding>
+                <element signature="e#42#104#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuctionAttributeEditType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AuctionAttributeEditType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="17" selection-start="447" selection-end="447" vertical-scroll-proportion="-3.548387" vertical-offset="176" max-vertical-offset="836">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PartlyUpdateAuctionType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/PartlyUpdateAuctionType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="17" selection-start="657" selection-end="657" vertical-scroll-proportion="-9.935484" vertical-offset="176" max-vertical-offset="2178">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,13 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AuctionAdminController.php" />
-        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Resources/views/Mail/won_offer.html.twig" />
-        <option value="$PROJECT_DIR$/src/GPI/OfferBundle/Controller/OfferAdminController.php" />
-        <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Service/Cron.php" />
-        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Command/FinishUnfinishedAuctionsCommand.php" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/GPI/Sonata/BlockBundle/Block/AuctionBlockService.php" />
         <option value="$PROJECT_DIR$/web/app_dev.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
@@ -91,7 +113,6 @@
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AuctionAttributesGroup.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Admin/AuctionAttributeAdmin.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Admin/AuctionAttributesAdmin.php" />
-        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AuctionDetailsController.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Form/PrepareAuctionType.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/AddAuction/prepare.html.twig" />
         <option value="$PROJECT_DIR$/src/Application/Sonata/PageBundle/Resources/views/new_layout.html.twig" />
@@ -101,22 +122,30 @@
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AuctionAttributesType.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/CommandAttributeValueValue.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/CommandAttributeValue.php" />
-        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Form/PartlyUpdateAuctionType.php" />
-        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Form/UpdateAuctionType.php" />
-        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AuctionType.php" />
         <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/AddNewAuctionCommand.php" />
-        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AddAuctionCommandAttributeValue.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AddNewAuctionCommand.php" />
-        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AuctionAttributeType.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/AddAuction/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AddAuctionType.php" />
-        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AddAuctionController.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AuctionAttributeValue.php" />
         <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/Auction.php" />
         <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/Auction.php" />
         <option value="$PROJECT_DIR$/app/db/v4.sql" />
+        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AuctionDetailsController.php" />
+        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/Default/details.html.twig" />
+        <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/UpdateAuctionCommand.php" />
+        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/EditAuction/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AuctionAttributeEditType.php" />
         <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Service/Auction.php" />
+        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Form/UpdateAuctionType.php" />
+        <option value="$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/PartlyUpdateAuctionCommand.php" />
+        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AuctionEditController.php" />
+        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/EditAuction/partly.html.twig" />
+        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Form/PartlyUpdateAuctionType.php" />
+        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AddAuctionCommandAttributeValue.php" />
+        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AddAuctionType.php" />
+        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AuctionType.php" />
+        <option value="$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AddAuctionController.php" />
       </list>
     </option>
   </component>
@@ -478,6 +507,74 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="EditAuction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuctionBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuctionBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="AddAuction" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -714,8 +811,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\sandbox\src\GPI\AuctionBundle\Entity" />
       <recent name="C:\xampp\htdocs\sandbox\src\GPI\AuctionBundle\Form" />
+      <recent name="C:\xampp\htdocs\sandbox\src\GPI\AuctionBundle\Entity" />
       <recent name="C:\xampp\htdocs\sandbox\src\GPI\AuctionBundle\Resources\views\AddAuction" />
       <recent name="C:\xampp\htdocs\sandbox\src\GPI\AuctionBundle\Controller" />
       <recent name="C:\xampp\htdocs\sandbox\src\GPI\AuctionBundle\Admin" />
@@ -786,7 +883,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864675" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42696628" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42650104" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875606" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286479" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18817204" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -796,7 +893,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24884793" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14323749" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20021299" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -845,36 +942,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/bundles/gpilayout/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="0" selection-end="37069" vertical-scroll-proportion="-0.278481" vertical-offset="660" max-vertical-offset="49544" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/sonata/sonata_seo.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="68" selection-start="342" selection-end="342" vertical-scroll-proportion="0.35541195" vertical-offset="0" max-vertical-offset="1122" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AuctionComments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="44" selection-end="170" vertical-scroll-proportion="0.14642262" vertical-offset="0" max-vertical-offset="1078" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Admin/AuctionAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.7106711" vertical-offset="1555" max-vertical-offset="2464" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/sonata/sonata_admin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="64" selection-start="5615" selection-end="5615" vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="5016" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AuctionAdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="4" selection-start="52" selection-end="52" vertical-scroll-proportion="-0.1210121" vertical-offset="198" max-vertical-offset="3124" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/AuctionAttribute.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="4" selection-start="564" selection-end="564" vertical-scroll-proportion="0.83058304" vertical-offset="213" max-vertical-offset="1122" />
@@ -900,11 +967,6 @@
         <state line="2" column="42" selection-start="49" selection-end="49" vertical-scroll-proportion="4.967742" vertical-offset="198" max-vertical-offset="1122">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AuctionDetailsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="10" selection-start="831" selection-end="831" vertical-scroll-proportion="-14.903226" vertical-offset="0" max-vertical-offset="1056" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/AddAuction/prepare.html.twig">
@@ -957,13 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AuctionEditController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="14" selection-start="3442" selection-end="3442" vertical-scroll-proportion="0.35738832" vertical-offset="1706" max-vertical-offset="2288">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/AuctionDisableReason.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1980">
@@ -990,27 +1045,6 @@
     <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/DocumentType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="5" selection-start="606" selection-end="606" vertical-scroll-proportion="0.58347106" vertical-offset="131" max-vertical-offset="858">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/PartlyUpdateAuctionType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="0" selection-start="2371" selection-end="2371" vertical-scroll-proportion="0.8545455" vertical-offset="1221" max-vertical-offset="1914">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/PrepareAuctionType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="7" selection-start="767" selection-end="767" vertical-scroll-proportion="0.94545454" vertical-offset="0" max-vertical-offset="1958">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/UpdateAuctionType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="775" selection-end="775" vertical-scroll-proportion="0.8545455" vertical-offset="187" max-vertical-offset="880">
           <folding />
         </state>
       </provider>
@@ -1078,48 +1112,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/AddAuction/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="0" selection-start="3803" selection-end="3803" vertical-scroll-proportion="0.19361936" vertical-offset="2068" max-vertical-offset="3520">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AuctionAttributesGroup.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="28" selection-start="321" selection-end="343" vertical-scroll-proportion="0.29042906" vertical-offset="0" max-vertical-offset="924">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AddAuctionType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="242" selection-end="242" vertical-scroll-proportion="-0.45214522" vertical-offset="675" max-vertical-offset="1584">
-          <folding>
-            <element signature="e#43#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AuctionAttributeType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="196" selection-end="196" vertical-scroll-proportion="0.1210121" vertical-offset="0" max-vertical-offset="909">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AuctionType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="24" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.29042906" vertical-offset="660" max-vertical-offset="2750">
-          <folding>
-            <element signature="e#42#104#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="57" selection-start="4192" selection-end="4192" vertical-scroll-proportion="0.39059082" vertical-offset="1733" max-vertical-offset="2992">
           <folding />
         </state>
       </provider>
@@ -1150,31 +1145,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/Auction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="32" selection-start="3764" selection-end="3767" vertical-scroll-proportion="0.33295584" vertical-offset="2918" max-vertical-offset="5390">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/AddNewAuctionCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="20" selection-start="3830" selection-end="3830" vertical-scroll-proportion="0.71947193" vertical-offset="3724" max-vertical-offset="4664">
-          <folding>
-            <element signature="e#48#108#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AddAuctionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="1994" selection-end="1994" vertical-scroll-proportion="-25.709677" vertical-offset="391" max-vertical-offset="2596">
-          <folding>
-            <element signature="e#48#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AuctionAttributeValue.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="28" selection-start="492" selection-end="492" vertical-scroll-proportion="0.41144115" vertical-offset="154" max-vertical-offset="2706">
@@ -1182,20 +1152,161 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/Default/details.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="81" selection-start="2662" selection-end="2662" vertical-scroll-proportion="0.78571427" vertical-offset="594" max-vertical-offset="2992">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AuctionDetailsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="991" selection-end="991" vertical-scroll-proportion="0.50165015" vertical-offset="116" max-vertical-offset="1078">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="58" selection-start="4298" selection-end="4298" vertical-scroll-proportion="0.43634385" vertical-offset="1733" max-vertical-offset="3080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AuctionAttributeType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="196" selection-end="196" vertical-scroll-proportion="0.1210121" vertical-offset="0" max-vertical-offset="909">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/AddAuction/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="24" selection-start="3813" selection-end="4264" vertical-scroll-proportion="-14.193548" vertical-offset="2068" max-vertical-offset="3520">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/Auction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="25" selection-start="3915" selection-end="3947" vertical-scroll-proportion="0.9768977" vertical-offset="2390" max-vertical-offset="5390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/EditAuction/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="24" selection-start="3705" selection-end="4154" vertical-scroll-proportion="0.65346533" vertical-offset="1848" max-vertical-offset="3850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/UpdateAuctionType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="738" selection-end="1071" vertical-scroll-proportion="0.54015404" vertical-offset="235" max-vertical-offset="1144">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Entity/AddAuctionCommandAttributeValue.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="12" selection-start="289" selection-end="289" vertical-scroll-proportion="-1.4193548" vertical-offset="264" max-vertical-offset="2706">
+        <state line="51" column="14" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.29592958" vertical-offset="853" max-vertical-offset="2706">
           <folding>
             <element signature="e#44#76#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AuctionEditController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="9" selection-start="1692" selection-end="1692" vertical-scroll-proportion="0.2876557" vertical-offset="516" max-vertical-offset="2354">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/UpdateAuctionCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="22" selection-start="493" selection-end="549" vertical-scroll-proportion="0.43564355" vertical-offset="0" max-vertical-offset="2860">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/PartlyUpdateAuctionCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="777" selection-end="777" vertical-scroll-proportion="0.53245324" vertical-offset="132" max-vertical-offset="3212">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Resources/views/EditAuction/partly.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="24" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.8954896" vertical-offset="0" max-vertical-offset="2178">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Auction/AddNewAuctionCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="199" column="20" selection-start="3830" selection-end="3830" vertical-scroll-proportion="0.9372937" vertical-offset="3526" max-vertical-offset="4664">
+          <folding>
+            <element signature="e#48#108#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/PrepareAuctionType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="7" selection-start="767" selection-end="767" vertical-scroll-proportion="0.4840484" vertical-offset="132" max-vertical-offset="1958">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AuctionAttributeEditType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="17" selection-start="447" selection-end="447" vertical-scroll-proportion="-3.548387" vertical-offset="176" max-vertical-offset="836">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/PartlyUpdateAuctionType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="17" selection-start="657" selection-end="657" vertical-scroll-proportion="-9.935484" vertical-offset="176" max-vertical-offset="2178">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AuctionType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="29" selection-start="2347" selection-end="2347" vertical-scroll-proportion="-20.580645" vertical-offset="990" max-vertical-offset="2772">
+          <folding>
+            <element signature="e#42#104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Form/AddAuctionType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="242" selection-end="242" vertical-scroll-proportion="-6.193548" vertical-offset="72" max-vertical-offset="1584">
+          <folding>
+            <element signature="e#43#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GPI/CoreBundle/Model/Service/Auction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="69" selection-start="2758" selection-end="2758" vertical-scroll-proportion="0.67766774" vertical-offset="1034" max-vertical-offset="4620">
+        <state line="100" column="57" selection-start="3624" selection-end="3624" vertical-scroll-proportion="-37.612904" vertical-offset="1034" max-vertical-offset="4642">
           <folding>
             <element signature="e#48#99#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GPI/AuctionBundle/Controller/AddAuctionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="0" selection-start="2095" selection-end="2095" vertical-scroll-proportion="0.44444445" vertical-offset="828" max-vertical-offset="2706">
+          <folding>
+            <element signature="e#48#68#0" expanded="true" />
           </folding>
         </state>
       </provider>

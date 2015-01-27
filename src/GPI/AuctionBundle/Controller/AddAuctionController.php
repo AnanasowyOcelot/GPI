@@ -39,7 +39,7 @@ class AddAuctionController extends Controller
         $mapAttrToField = function (AuctionAttribute $aa) use ($command) {
             $f = new AddAuctionCommandAttributeValue();
             $f->setName($aa->getName());
-            $f->setCommandId($command->getId());
+            $f->setCommand($command);
             return $f;
         };
         // F -> ...
@@ -54,10 +54,12 @@ class AddAuctionController extends Controller
 
         ///////////////////////////////////////////////
         $form = $this->createForm('auction', $command);
+
         $form->handleRequest($request);
 
         if ($form->isValid()) {
             $auctionService = $this->get('gpi_auction.service.auction');
+
             $auction = $auctionService->createNewAuction($command);
             $this->persistAuction($auction);
 
@@ -81,6 +83,9 @@ class AddAuctionController extends Controller
         $attrGroupRepo = $auctionAttributesGroup = $this->getDoctrine()
             ->getRepository('GPIAuctionBundle:AuctionAttributesGroup');
         $group = $attrGroupRepo->findOneBy(['category' => $category]);
+        if (!$group) {
+            return [];
+        }
         return $group->getAuctionAttributes()->toArray();
     }
 

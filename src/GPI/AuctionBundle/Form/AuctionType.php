@@ -72,9 +72,10 @@ abstract class AuctionType extends AbstractType
                     'class' => 'Application\Sonata\ClassificationBundle\Entity\Category',
                     'choice_list' => $this->categoryChoiceList(),
                     'multiple' => true,
+                    'disabled' => $this->disableCategories,
                     'attr' => array(
                         'data-sonata-select2' => 'false',
-                        'disabled' => $this->disableCategories
+
                     ),
                     'label' => "Kategorie:",
                 )

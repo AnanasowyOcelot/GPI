@@ -53,6 +53,13 @@
             {% if auction.getMaxPrice != null and app.user %}
                 <li><strong>Cena maksymalna:</strong> {{ auction.getMaxPrice() }}</li>
             {% endif %}
+            <br/>
+            <br/>
+            {% if auction.getAttributeValues() != null %}
+                {% for attribute in auction.getAttributeValues() %}
+                    <li><strong>{{ attribute.name }}:</strong> {{ attribute.value }}</li>
+                {% endfor %}
+            {% endif %}
         </ul>
     </div>
 </div>

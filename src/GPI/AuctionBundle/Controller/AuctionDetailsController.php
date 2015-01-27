@@ -27,6 +27,7 @@ class AuctionDetailsController extends Controller
 
 
 
+
         return $this->render(
             'GPIAuctionBundle:Default:details.html.twig',
             array(

@@ -94,6 +94,10 @@ services:
         class: GPI\AuctionBundle\Form\AuctionAttributeType
         tags:
             - { name: form.type, alias: auction_attribute }
+    gpi_auction.form.auction_attribute_edit:
+        class: GPI\AuctionBundle\Form\AuctionAttributeEditType
+        tags:
+            - { name: form.type, alias: auction_attribute_edit }
     gpi_auction.form.auction_disable:
         class: GPI\AuctionBundle\Form\DisableAuctionType
         tags:

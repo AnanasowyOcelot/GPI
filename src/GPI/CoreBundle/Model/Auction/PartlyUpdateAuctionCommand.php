@@ -14,6 +14,7 @@ class PartlyUpdateAuctionCommand
     protected $documents;
     protected $maxRealizationDate;
     protected $comment = '';
+    protected $attributeValues;
 
     public function __construct()
     {
@@ -26,7 +27,25 @@ class PartlyUpdateAuctionCommand
     public function setMaxRealizationDate($maxRealizationDate)
     {
         $this->maxRealizationDate = $maxRealizationDate;
+        $this->attributeValues = new ArrayCollection();
     }
+
+    /**
+     * @param \Doctrine\Common\Collections\ArrayCollection $attributeValues
+     */
+    public function setAttributeValues($attributeValues)
+    {
+        $this->attributeValues = $attributeValues;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\ArrayCollection
+     */
+    public function getAttributeValues()
+    {
+        return $this->attributeValues;
+    }
+
 
     /**
      * @return \DateTime
