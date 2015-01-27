@@ -8,6 +8,7 @@ use GPI\CoreBundle\Model\Offer\Offer as OfferEntity;
 class Offer {
 
     public $auctionName;
+    public $auctionId;
     public $actualPrice;
     public $price;
     public $id;
@@ -20,6 +21,7 @@ class Offer {
     {
         $this->actualPrice = $offer->getActualPrice();
         $this->auctionName = $offer->getAuction()->getName();
+        $this->auctionId = $offer->getAuction()->getId();
         $this->id = $offer->getId();
         $this->price = $offer->getPrice();
         $this->status = $offer->getStatus();

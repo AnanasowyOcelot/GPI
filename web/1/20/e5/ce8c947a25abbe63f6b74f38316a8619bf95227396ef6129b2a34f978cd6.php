@@ -82,8 +82,8 @@ class __TwigTemplate_20e5ce8c947a25abbe63f6b74f38316a8619bf95227396ef6129b2a34f9
                     <td>
                         <p><a class=\"btn-u btn-u-blue\" href=\"";
             // line 29
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_offer_details", array("id" => $this->getAttribute($context["offer"], "id", array()))), "html", null, true);
-            echo "\">Szczegóły</a>
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_details", array("id" => $this->getAttribute($context["offer"], "auctionId", array()))), "html", null, true);
+            echo "\">Przejdź do aukcji</a>
                         </p>
                         ";
             // line 31

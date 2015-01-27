@@ -26,7 +26,7 @@
                         {{ offer.price }}
                     </td>
                     <td>
-                        <p><a class="btn-u btn-u-blue" href="{{ path('gpi_offer_details', {'id': offer.id }) }}">Szczegóły</a>
+                        <p><a class="btn-u btn-u-blue" href="{{ path('gpi_auction_details', {'id': offer.auctionId }) }}">Przejdź do aukcji</a>
                         </p>
                         {% if offer.isActive  and not offer.hasWon %}
                             <p><a class="btn-u btn-u-red" href="{{ path('gpi_offer_cancel', {'id': offer.id }) }}">Anuluj</a>
