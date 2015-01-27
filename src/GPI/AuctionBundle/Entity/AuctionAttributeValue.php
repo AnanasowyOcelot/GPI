@@ -114,6 +114,4 @@ class AuctionAttributeValue
         return $this->value;
     }
 
-
-
 }

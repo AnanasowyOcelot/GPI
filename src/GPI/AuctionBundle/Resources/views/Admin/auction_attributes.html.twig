@@ -1,0 +1,13 @@
+<td colspan="2">
+{% block name %}{% endblock %}
+{% if object.getAttributeValues() != null %}
+    <table class="table table-bordered">
+    {% for attribute in object.getAttributeValues() %}
+        <tr>
+            <th>{{ attribute.name }}</th>
+            <td>{{ attribute.value }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endif %}
+</td>

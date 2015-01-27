@@ -85,6 +85,14 @@ class AuctionAdmin extends Admin
             ->add('documents', null, array(
                     'label' => "Pliki",
                 )
+            )->add(
+                'attributeValues',
+                null,
+                array(
+                    'template' => 'GPIAuctionBundle:Admin:auction_attributes.html.twig',
+//                    'by_reference' => false,
+                    'label' => "Dodatkowe pola"
+                )
             );
     }
 
