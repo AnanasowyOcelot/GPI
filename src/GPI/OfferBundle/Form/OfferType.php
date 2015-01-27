@@ -35,12 +35,11 @@ abstract class OfferType extends AbstractType
                         '0.1' => '10%',
                         '0.2' => '20%'
                     ,),
-//                    'expanded' => true,
                     'multiple' => false,
-                    'empty_data'=>true,
+                    'empty_value' => false,
                     'label' => "Procent przebicia oferty",
                     'required' => false,
-                    'help_block' => 'W przypadku nie wypełnienia pola konkurencyjna oferta przebijana będzie o 1zł.',
+                    //                    'help_block' => 'W przypadku nie wypełnienia pola konkurencyjna oferta przebijana będzie o 1zł.',
                 )
             )
 
