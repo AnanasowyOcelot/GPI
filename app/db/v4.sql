@@ -109,5 +109,12 @@ CREATE TABLE aucition_command_add_attribute_value (id INT AUTO_INCREMENT NOT NUL
 ALTER TABLE aucition_command_add_attribute_value ADD CONSTRAINT FK_3183585933E1689A FOREIGN KEY (command_id) REFERENCES add_auction_command (id);
 
 
+CREATE TABLE aucition_attribute_value (id INT AUTO_INCREMENT NOT NULL, auction_id INT DEFAULT NULL, name VARCHAR(255) NOT NULL, value VARCHAR(255) NOT NULL, INDEX IDX_BD8EEEF557B8F0DE (auction_id), PRIMARY KEY (id))
+  DEFAULT CHARACTER SET utf8
+  COLLATE utf8_unicode_ci
+  ENGINE = InnoDB;
+ALTER TABLE aucition_attribute_value ADD CONSTRAINT FK_BD8EEEF557B8F0DE FOREIGN
+KEY (auction_id) REFERENCES auction (id);
+
 
 

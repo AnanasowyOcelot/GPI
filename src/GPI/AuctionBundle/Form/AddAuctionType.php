@@ -5,7 +5,6 @@ namespace GPI\AuctionBundle\Form;
 
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
-use Functional as F;
 
 class AddAuctionType extends AuctionType
 {
@@ -60,7 +59,7 @@ class AddAuctionType extends AuctionType
             array(
                 'type' => 'auction_attribute',
                 'by_reference' => false,
-                'label' => "Dodatkowe atrybuty:"
+                'label' => " "
             )
         );
     }

@@ -2,6 +2,7 @@
 
 namespace GPI\CoreBundle\Model\Service;
 
+use GPI\AuctionBundle\Entity\AuctionAttributeValue;
 use GPI\AuctionBundle\Entity\AuctionComments;
 use GPI\CoreBundle\Model\Auction\AddNewAuctionCommand;
 use GPI\CoreBundle\Model\Auction\AuctionRepository;
@@ -65,6 +66,16 @@ class Auction
         $auction->setStartTime($dateTimeNow);
         $auction->setMaxPrice($command->getMaxPrice());
         $auction->setMaxRealizationDate($command->getMaxRealizationDate());
+
+        foreach($command->getAttributeValues() as $commandAV){
+            /** @var \GPI\AuctionBundle\Entity\AddAuctionCommandAttributeValue $commandAV */
+            $auctionAtributeValue = new AuctionAttributeValue();
+            $auctionAtributeValue->setName($commandAV->getName());
+            $auctionAtributeValue->setValue($commandAV->getValue());
+            $auctionAtributeValue->setAuction($auction);
+            $auction->getAttributeValues()->add($auctionAtributeValue);
+        }
+
         foreach ($command->getDocuments() as $document) {
             $auction->getDocuments()->add($document);
             /** @var $document \GPI\CoreBundle\Model\Document\Document */

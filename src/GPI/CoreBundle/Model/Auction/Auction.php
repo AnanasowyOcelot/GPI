@@ -29,6 +29,7 @@ class Auction
     protected $comments;
     protected $disableReason;
     protected $isFinished = false;
+    protected $attributeValues;
 
     private $calendar;
     private $defaultImgPath;
@@ -39,6 +40,7 @@ class Auction
         $this->isDeactivated = false;
         $this->documents = new ArrayCollection();
         $this->comments = new ArrayCollection();
+        $this->attributeValues = new ArrayCollection();
         $this->disableReason = new ArrayCollection();
         $this->offers = new ArrayCollection();
         $this->setEndTime($endTime);
@@ -55,6 +57,22 @@ class Auction
         }
 
         $this->init($calendar, $defaultImgPath);
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\ArrayCollection $attributeValues
+     */
+    public function setAttributeValues($attributeValues)
+    {
+        $this->attributeValues = $attributeValues;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\ArrayCollection
+     */
+    public function getAttributeValues()
+    {
+        return $this->attributeValues;
     }
 
     /**

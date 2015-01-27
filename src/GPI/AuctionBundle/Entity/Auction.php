@@ -148,6 +148,12 @@ class Auction extends \GPI\CoreBundle\Model\Auction\Auction
     protected $createdBy;
 
     /**
+     * @var ArrayCollection $attributeValues
+     * @ORM\OneToMany(targetEntity="\GPI\AuctionBundle\Entity\AuctionAttributeValue", cascade={"persist"}, mappedBy="auction")
+     */
+    protected $attributeValues;
+
+    /**
      * @ORM\PrePersist
      * @ORM\PreUpdate
      */

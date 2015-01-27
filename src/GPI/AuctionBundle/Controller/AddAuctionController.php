@@ -2,7 +2,10 @@
 
 namespace GPI\AuctionBundle\Controller;
 
+use Functional as F;
+
 use GPI\AuctionBundle\Entity\AddAuctionCommandAttributeValue;
+use GPI\CoreBundle\Model\Auction\AuctionAttribute;
 use GPI\DocumentBundle\Entity\Document;
 use GPI\AuctionBundle\Entity\Auction;
 
@@ -20,7 +23,7 @@ class AddAuctionController extends Controller
         }
         /** @var \GPI\CoreBundle\Model\Auction\AddNewAuctionCommand $command */
         $commandRepo = $this->getDoctrine()->getRepository('GPIAuctionBundle:AddNewAuctionCommand');
-        $command = $commandRepo->findOneBy(array('id'=>$commandId));
+        $command = $commandRepo->findOneBy(array('id' => $commandId));
         $this->validateUser($command);
 
         $d1 = new Document();
@@ -28,17 +31,26 @@ class AddAuctionController extends Controller
         $command->getDocuments()->add($d1);
         ////////////////////////////////////////////////
 
-        $auctionCommandAttributeValue = new AddAuctionCommandAttributeValue();
-        $auctionCommandAttributeValue->setCommandId($command->getId());
-        $auctionCommandAttributeValue->setName("Długość");
-        $auctionCommandAttributeValue->setValue("123");
-        $auctionCommandAttributeValue2 = new AddAuctionCommandAttributeValue();
-        $auctionCommandAttributeValue2->setCommandId($command->getId());
-        $auctionCommandAttributeValue2->setName("Wysokość");
-        $auctionCommandAttributeValue2->setValue("12222");
-        $command->addAttributeValue($auctionCommandAttributeValue);
-        $command->addAttributeValue($auctionCommandAttributeValue2);
+        // C -> [A]
+        $mapCategoryToAttributes = function ($category) {
+            return $this->findAttributes($category);
+        };
+        // A -> F
+        $mapAttrToField = function (AuctionAttribute $aa) use ($command) {
+            $f = new AddAuctionCommandAttributeValue();
+            $f->setName($aa->getName());
+            $f->setCommandId($command->getId());
+            return $f;
+        };
+        // F -> ...
+        $addField = function ($field) use ($command) {
+            $command->addAttributeValue($field);
+        };
 
+        $categories = $command->getCategories()->toArray();
+        $attributes = F\flatten(F\map($categories, $mapCategoryToAttributes));
+        $fields = F\map($attributes, $mapAttrToField);
+        F\each($fields, $addField);
 
         ///////////////////////////////////////////////
         $form = $this->createForm('auction', $command);
@@ -58,6 +70,18 @@ class AddAuctionController extends Controller
                 'form' => $form->createView()
             )
         );
+    }
+
+    /**
+     * @param $category
+     * @return AuctionAttribute[]
+     */
+    private function findAttributes($category)
+    {
+        $attrGroupRepo = $auctionAttributesGroup = $this->getDoctrine()
+            ->getRepository('GPIAuctionBundle:AuctionAttributesGroup');
+        $group = $attrGroupRepo->findOneBy(['category' => $category]);
+        return $group->getAuctionAttributes()->toArray();
     }
 
     /**

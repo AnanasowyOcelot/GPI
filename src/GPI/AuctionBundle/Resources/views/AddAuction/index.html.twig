@@ -100,7 +100,9 @@
             <fieldset>
                 {{ form_row(form.categories) }}
             </fieldset>
+
             {% for attributeValue in form.attributeValues %}
+
                 <hr/>
                 <fieldset>
                     <label class="col-sm-2 control-label">{{ attributeValue.vars.value }}</label>
