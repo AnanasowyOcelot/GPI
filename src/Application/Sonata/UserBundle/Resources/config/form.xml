@@ -43,7 +43,7 @@
             </argument>
         </service>
 
-        <service id="sonata.user.registration.form.type" class="Sonata\UserBundle\Form\Type\RegistrationFormType">
+        <service id="sonata.user.registration.form.type" class="Application\Sonata\UserBundle\Form\Type\RegistrationFormType">
             <tag name="form.type" alias="sonata_user_registration" />
             <argument>%fos_user.model.user.class%</argument>
             <argument>%sonata.user.registration.form.options%</argument>
