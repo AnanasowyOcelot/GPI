@@ -19,3 +19,7 @@ monolog:
 #            type:  firephp
 #            level: info
 
+#liip_imagine:
+#    resolvers:
+#       default:
+#          web_path: ~

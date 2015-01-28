@@ -14,7 +14,7 @@
             {% for auction in auctions %}
                 <tr>
                     <td>
-                        <img class="rounded-x" src="{{ asset(auction.getMainPhoto()) | imagine_filter('list_thumb') }}" alt="">
+                        <img class="rounded-x" src="{{ asset(auction.getMainPhoto() | imagine_filter('list_thumb'))|replace({'media':'web/media'}) }}" alt="">
                     </td>
                     <td>
                         <h3 class="auction-name">{{ auction.name }}</h3>

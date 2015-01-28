@@ -12,7 +12,7 @@
         </div>
         {# sorting of properties based on query components #}
         {#<div{% if pagination.isSorted('a.name') %} class="sorted"{% endif %}>Sortuj#}
-            {#po: {{ knp_pagination_sortable(pagination, 'Nazwa', 'a.name') }}  {{ knp_pagination_sortable(pagination, 'Id', 'a.id') }}</div>#}
+        {#po: {{ knp_pagination_sortable(pagination, 'Nazwa', 'a.name') }}  {{ knp_pagination_sortable(pagination, 'Id', 'a.id') }}</div>#}
     </div>
 
     {# table body #}
@@ -32,10 +32,12 @@
 
                     <tr>
                         <td>
-                            <img class="rounded-x" src="{{ asset(auction.getMainPhoto()) | imagine_filter('list_thumb') }}" alt="">
+                            <img class="rounded-x"
+                                 src="{{ asset(auction.getMainPhoto() | imagine_filter('list_thumb'))|replace({'media':'web/media'}) }}" alt="">
                         </td>
                         <td class="td-width">
-                            <h3><a href="{{ path('gpi_auction_details', {'id': auction.id }) }}">{{ auction.name }}</a>
+                            <h3>
+                                <a href="{{ path('gpi_auction_details', {'id': auction.id }) }}">{{ auction.name }}</a>
                             </h3>
 
                             <p>{{ auction.getContentShort() }}</p>

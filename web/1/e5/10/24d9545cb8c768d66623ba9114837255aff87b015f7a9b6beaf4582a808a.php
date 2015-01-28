@@ -18,7 +18,7 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
     {
         // line 1
         $this->displayBlock('block', $context, $blocks);
-        // line 61
+        // line 63
         echo "
 
 
@@ -53,7 +53,7 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
         // line 14
         echo "        ";
         // line 15
-        echo "            ";
+        echo "        ";
         // line 16
         echo "    </div>
 
@@ -80,14 +80,16 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
             echo "
                     <tr>
                         <td>
-                            <img class=\"rounded-x\" src=\"";
-            // line 35
-            echo twig_escape_filter($this->env, $this->env->getExtension('liip_imagine')->filter($this->env->getExtension('assets')->getAssetUrl($this->getAttribute($context["auction"], "getMainPhoto", array(), "method")), "list_thumb"), "html", null, true);
+                            <img class=\"rounded-x\"
+                                 src=\"";
+            // line 36
+            echo twig_escape_filter($this->env, strtr($this->env->getExtension('assets')->getAssetUrl($this->env->getExtension('liip_imagine')->filter($this->getAttribute($context["auction"], "getMainPhoto", array(), "method"), "list_thumb")), array("media" => "web/media")), "html", null, true);
             echo "\" alt=\"\">
                         </td>
                         <td class=\"td-width\">
-                            <h3><a href=\"";
-            // line 38
+                            <h3>
+                                <a href=\"";
+            // line 40
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_details", array("id" => $this->getAttribute($context["auction"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "name", array()), "html", null, true);
@@ -95,13 +97,13 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
                             </h3>
 
                             <p>";
-            // line 41
+            // line 43
             echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "getContentShort", array(), "method"), "html", null, true);
             echo "</p>
                         </td>
                         <td>
                             <h3>";
-            // line 44
+            // line 46
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["auction"], "getEndTime", array(), "method"), "format", array(0 => "Y-m-d H:i:s"), "method"), "html", null, true);
             echo "</h3>
                         </td>
@@ -111,7 +113,7 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['auction'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 48
+        // line 50
         echo "
                 </tbody>
             </table>
@@ -120,10 +122,10 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
     <!--End Table Search v2-->
 
     ";
-        // line 56
+        // line 58
         echo "    <div class=\"navigation\">
         ";
-        // line 57
+        // line 59
         echo $this->env->getExtension('knp_pagination')->render((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         echo "
     </div>
@@ -138,6 +140,6 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
 
     public function getDebugInfo()
     {
-        return array (  127 => 57,  124 => 56,  115 => 48,  105 => 44,  99 => 41,  91 => 38,  85 => 35,  80 => 32,  76 => 31,  62 => 19,  58 => 16,  56 => 15,  54 => 14,  49 => 11,  40 => 5,  33 => 2,  30 => 1,  22 => 61,  20 => 1,);
+        return array (  129 => 59,  126 => 58,  117 => 50,  107 => 46,  101 => 43,  93 => 40,  86 => 36,  80 => 32,  76 => 31,  62 => 19,  58 => 16,  56 => 15,  54 => 14,  49 => 11,  40 => 5,  33 => 2,  30 => 1,  22 => 63,  20 => 1,);
     }
 }

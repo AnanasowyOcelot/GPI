@@ -122,9 +122,9 @@ class AppKernel extends Kernel
             new Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
 
             // Disable this if you don't want the timeline in the admin
-            new Spy\TimelineBundle\SpyTimelineBundle(),
-            new Sonata\TimelineBundle\SonataTimelineBundle(),
-            new Application\Sonata\TimelineBundle\ApplicationSonataTimelineBundle(), // easy extends integration
+            new Spy\TimelineBundle\SpyTimelineBundle(), // todo ?
+            new Sonata\TimelineBundle\SonataTimelineBundle(), // todo ?
+            new Application\Sonata\TimelineBundle\ApplicationSonataTimelineBundle(), // easy extends integration // todo ?
 
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
             new GPI\AuctionBundle\GPIAuctionBundle(),
