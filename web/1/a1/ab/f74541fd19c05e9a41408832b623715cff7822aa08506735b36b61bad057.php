@@ -107,7 +107,7 @@ class __TwigTemplate_a1abf74541fd19c05e9a41408832b623715cff7822aa08506735b36b61b
                         <div class=\"cbp-caption-defaultWrap\">
                             <img src=\"";
             // line 42
-            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute($context["document"], "getWebPath", array(), "method")), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('liip_imagine')->filter($this->env->getExtension('assets')->getAssetUrl($this->getAttribute($context["document"], "getWebPath", array(), "method")), "details_thumb"), "html", null, true);
             echo "\" alt=\"\" width=\"100%\">
                         </div>
                         <div class=\"cbp-caption-activeWrap\">

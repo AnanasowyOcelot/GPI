@@ -176,16 +176,16 @@ stof_doctrine_extensions:
 
 liip_imagine:
     resolvers:
-        default:
-            web_path:
-                web_root: %kernel.root_dir%/../web/img
-                # %kernel.root_dir%/../web/img is the folder where filtered images will be created!
-                cache_prefix: media/cache
-                # media/cache the prefix of folder where the cached images will be created
+       default:
+          web_path: ~
 
     filter_sets:
-#        cache: ~
-        my_thumb:
+        cache: ~
+        list_thumb:
             quality: 75
             filters:
-                thumbnail: { size: [120, 90], mode: outbound }
+                thumbnail: { size: [50, 50], mode: outbound }
+        details_thumb:
+            quality: 100
+            filters:
+                thumbnail: { size: [500, 500], mode: outbound }

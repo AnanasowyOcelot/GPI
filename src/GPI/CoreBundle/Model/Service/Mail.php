@@ -27,7 +27,7 @@ class Mail
         $message = $this->mailer->createMessage()
             ->setSubject($subject)
             ->setFrom('poczta@gpi.bitgrind.pl')
-            ->setTo('lukasz.woroniecki@gmail.com')
+            ->setTo($adress)
 //            ->setTo($adress)
             ->setBody($template);
 

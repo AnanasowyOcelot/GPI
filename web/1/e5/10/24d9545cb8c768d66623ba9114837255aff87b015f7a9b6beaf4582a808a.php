@@ -82,7 +82,7 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
                         <td>
                             <img class=\"rounded-x\" src=\"";
             // line 35
-            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute($context["auction"], "getMainPhoto", array(), "method")), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('liip_imagine')->filter($this->env->getExtension('assets')->getAssetUrl($this->getAttribute($context["auction"], "getMainPhoto", array(), "method")), "list_thumb"), "html", null, true);
             echo "\" alt=\"\">
                         </td>
                         <td class=\"td-width\">
