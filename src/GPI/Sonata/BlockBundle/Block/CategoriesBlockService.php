@@ -101,6 +101,9 @@ class CategoriesBlockService extends BaseBlockService
 
         $numbersDict = array();
         foreach ($categories as $category) {
+//            print_r(mb_detect_encoding($category->getName()));
+////            print_r(mb_http_output());
+//            die();
             $numbersDict[$category->getId()] = $this->getNumberOfElementsInCategory($category);
         }
 //        echo "<pre>";
