@@ -18,7 +18,7 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
     {
         // line 1
         $this->displayBlock('block', $context, $blocks);
-        // line 63
+        // line 117
         echo "
 
 
@@ -30,37 +30,89 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
     public function block_block($context, array $blocks = array())
     {
         // line 2
-        echo "    <div class=\"headline\"><h2>";
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["settings"]) ? $context["settings"] : $this->getContext($context, "settings")), "title", array()), "html", null, true);
-        echo "</h2></div>
+        echo "    ";
+        // line 3
+        echo "
+    <style>
+        .searchform {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
 
-    <form>
-        <input type=\"text\" name=\"name\" value=\"";
-        // line 5
+        .lub-word {
+            margin-top: 7px;
+            color: #f5f5f5;
+        }
+
+        .counter {
+            min-height: 20px;
+            padding: 7px;
+            margin-bottom: 20px;
+            background-color: #F5F5F5;
+            border: 1px solid #E3E3E3;
+            border-radius: 4px;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+    </style>
+
+    <div class=\"row searchform\">
+        <form>
+            <div class=\"col-sm-4\">
+                <div class=\"input-group\">
+
+                    <span class=\"input-group-addon\"><i class=\"glyphicon glyphicon-search\"></i></span>
+                    <input type=\"text\" name=\"name\" value=\"";
+        // line 34
         echo twig_escape_filter($this->env, (isset($context["searchParam"]) ? $context["searchParam"] : $this->getContext($context, "searchParam")), "html", null, true);
-        echo "\"/>
-        <input type=\"submit\" value=\"Szukaj\"/>
-    </form>
+        echo "\" placeholder=\"wpisz tytuł aukcji\"
+                           class=\"form-control\">
+                </div>
+            </div>
+            <div class=\"col-sm-4 md-margin-bottom-10\">
+                <input type=\"submit\" class=\"btn-u btn-block btn-u-dark\" value=\"SZUKAJ AUKCJI\"/>
+            </div>
 
-    <div class=\"block-newsletter col-sm-12 well\">
+            <div class=\"col-sm-4\">
+                <div class=\"col-sm-2\">
+                    <div class=\"lub-word\">lub</div>
+                </div>
+                <div class=\"col-sm-10\">
+                    <a type=\"button\" href=\"";
+        // line 47
+        echo $this->env->getExtension('routing')->getPath("gpi_auction_add");
+        echo "\" class=\"btn-u btn-block btn-u-dark\">DODAJ
+                        NOWĄ</a>
+
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <div class=\"col-sm-12 counter\">
         <div class=\"count\">
-            Całkowita ilość aukcji: ";
-        // line 11
+            Znaleziono aukcji: ";
+        // line 61
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "getTotalItemCount", array()), "html", null, true);
         echo "
         </div>
         ";
-        // line 14
+        // line 64
         echo "        ";
-        // line 15
+        // line 65
         echo "        ";
-        // line 16
+        // line 66
         echo "    </div>
 
     ";
-        // line 19
+        // line 69
         echo "    <!--Table Search v2-->
-    <div class=\"table-search-v2 margin-bottom-20\">
+    <div class=\"table-search-v2 margin-bottom-10\">
         <div class=\"table-responsive\">
             <table class=\"table table-hover\">
                 <thead>
@@ -72,24 +124,25 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
                 </thead>
                 <tbody>
                 ";
-        // line 31
+        // line 81
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         foreach ($context['_seq'] as $context["_key"] => $context["auction"]) {
-            // line 32
+            // line 82
             echo "
                     <tr>
                         <td>
                             <img class=\"rounded-x\"
                                  src=\"";
-            // line 36
+            // line 86
             echo twig_escape_filter($this->env, strtr($this->env->getExtension('assets')->getAssetUrl($this->env->getExtension('liip_imagine')->filter($this->getAttribute($context["auction"], "getMainPhoto", array(), "method"), "list_thumb")), array("media" => "web/media")), "html", null, true);
-            echo "\" alt=\"\">
+            echo "\"
+                                 alt=\"\">
                         </td>
                         <td class=\"td-width\">
                             <h3>
                                 <a href=\"";
-            // line 40
+            // line 91
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_details", array("id" => $this->getAttribute($context["auction"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "name", array()), "html", null, true);
@@ -97,13 +150,13 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
                             </h3>
 
                             <p>";
-            // line 43
+            // line 94
             echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "getContentShort", array(), "method"), "html", null, true);
             echo "</p>
                         </td>
                         <td>
                             <h3>";
-            // line 46
+            // line 97
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["auction"], "getEndTime", array(), "method"), "format", array(0 => "Y-m-d H:i:s"), "method"), "html", null, true);
             echo "</h3>
                         </td>
@@ -113,7 +166,7 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['auction'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 50
+        // line 101
         echo "
                 </tbody>
             </table>
@@ -121,13 +174,16 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
     </div>
     <!--End Table Search v2-->
 
+
     ";
-        // line 58
-        echo "    <div class=\"navigation\">
-        ";
-        // line 59
+        // line 110
+        echo "    <div class=\"text-center\">
+        <div class=\"navigation\\\">
+                ";
+        // line 112
         echo $this->env->getExtension('knp_pagination')->render((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         echo "
+        </div>
     </div>
 
 ";
@@ -140,6 +196,6 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
 
     public function getDebugInfo()
     {
-        return array (  129 => 59,  126 => 58,  117 => 50,  107 => 46,  101 => 43,  93 => 40,  86 => 36,  80 => 32,  76 => 31,  62 => 19,  58 => 16,  56 => 15,  54 => 14,  49 => 11,  40 => 5,  33 => 2,  30 => 1,  22 => 63,  20 => 1,);
+        return array (  184 => 112,  180 => 110,  170 => 101,  160 => 97,  154 => 94,  146 => 91,  138 => 86,  132 => 82,  128 => 81,  114 => 69,  110 => 66,  108 => 65,  106 => 64,  101 => 61,  84 => 47,  68 => 34,  35 => 3,  33 => 2,  30 => 1,  22 => 117,  20 => 1,);
     }
 }

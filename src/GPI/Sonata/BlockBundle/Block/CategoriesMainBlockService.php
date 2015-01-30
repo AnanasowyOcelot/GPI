@@ -5,10 +5,8 @@ namespace GPI\Sonata\BlockBundle\Block;
 
 use Doctrine\ORM\EntityManager;
 use GPI\CoreBundle\Model\Auction\AuctionRepository;
-use GPI\Sonata\ClassificationBundle\Admin\CategoryAdmin;
 use GPI\Sonata\ClassificationBundle\Entity\CategoryRepository;
 use Sonata\BlockBundle\Block\BaseBlockService;
-use Sonata\ClassificationBundle\Model\Category;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Sonata\BlockBundle\Model\BlockInterface;
@@ -16,10 +14,11 @@ use Sonata\BlockBundle\Block\BlockContextInterface;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Validator\ErrorElement;
 use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
+use Functional as F;
 
 use Symfony\Component\HttpFoundation\RequestStack;
 
-class CategoriesBlockService extends BaseBlockService
+class CategoriesMainBlockService extends BaseBlockService
 {
     /**
      * @var CategoryRepository
@@ -46,7 +45,7 @@ class CategoriesBlockService extends BaseBlockService
 
     public function getName()
     {
-        return 'Lista Kategorii';
+        return 'Lista kategorii na stronie głównej';
     }
 
     public function getDefaultSettings()
@@ -57,8 +56,8 @@ class CategoriesBlockService extends BaseBlockService
     public function setDefaultSettings(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'title' => 'Lista Kategorii',
-            'template' => 'GPISonataBlockBundle:Block:block_core_categories.html.twig',
+            'title' => 'Lista kategorii',
+            'template' => 'GPISonataBlockBundle:Block:block_core_categories_main.html.twig',
         ));
     }
 
@@ -95,64 +94,36 @@ class CategoriesBlockService extends BaseBlockService
     {
 
         $settings = $blockContext->getSettings();
-        $categoryToBoldSlug = $this->request->get('categorySlug');
-        $categoriesTree = $this->catRepo->auctionCategoryTree();
-        $categories = $this->catRepo->findAll();
+        $categories = $this->catRepo->findByParentId(305);
 
         $numbersDict = array();
-        foreach ($categories as $category) {
-//            print_r(mb_detect_encoding($category->getName()));
-////            print_r(mb_http_output());
-//            die();
-            $numbersDict[$category->getId()] = $this->getNumberOfElementsInCategory($category);
-        }
-//        echo "<pre>";
-//        print_r($numbersDict);
-//        echo "<pre/>";
-//
-//        die();
+
+        $categoriesCols = $this->getColumns($categories, 6);
+
         return $this->renderResponse($blockContext->getTemplate(), array(
-            'categories' => $categoriesTree,
+            'categoriesCol0' => $categoriesCols[0],
+            'categoriesCol1' => $categoriesCols[1],
+            'categoriesCol2' => $categoriesCols[2],
+            'categoriesCol3' => $categoriesCols[3],
+            'categoriesCol4' => $categoriesCols[4],
+            'categoriesCol5' => $categoriesCols[5],
             'numbersDict' => $numbersDict,
             'block' => $blockContext->getBlock(),
             'settings' => $settings,
-            'slug' => $categoryToBoldSlug,
-            'parentSlug' => $this->catRepo->findParentSlugBySlug($categoryToBoldSlug)
         ), $response);
     }
 
-    private function getCategoryAndSubcategoriesIds($category){
-        $sql = "SELECT cc.id FROM classification__category cc
-                WHERE cc.id = :id
-                OR cc.parent_id = :id";
-        $stmt = $this->entityManager->getConnection()->prepare($sql);
-        $stmt->bindValue('id', $category->getId());
-//        $stmt->bindValue('id', 306);
-        $stmt->execute();
-        $results = $stmt->fetchAll();
-        $resultsArr = array_map(function ($row) {
-            return $row['id'];
-        }, $results);
-
-        return $resultsArr;
-    }
-
-    private function getNumberOfElementsInCategory(Category $category)
+    private function getColumns($collection, $numCols)
     {
-
-        $categoryIds = $this->getCategoryAndSubcategoriesIds($category);
-
-        $sql = "SELECT COUNT(DISTINCT auction.id)
-             FROM auction
-             LEFT JOIN auction_category ac ON auction.id = ac.auction_id
-             WHERE
-                auction.is_partially_active = 1
-                AND auction.end_time > now()
-                AND ac.category_id IN (?)";
-        $stmt = $this->entityManager->getConnection()->executeQuery($sql, array($categoryIds), array(\Doctrine\DBAL\Connection::PARAM_INT_ARRAY));
-
-        $result = $stmt->fetchColumn();
-
-        return $result;
+        $colSize = ceil(count($collection) / $numCols);
+        $cols = [];
+        for($i = 0; $i < $numCols; $i ++) {
+            $cols[$i] = array_slice(
+                $collection,
+                $i * $colSize,
+                $colSize
+            );
+        }
+        return $cols;
     }
 }

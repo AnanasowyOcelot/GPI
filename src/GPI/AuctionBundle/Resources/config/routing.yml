@@ -1,6 +1,7 @@
 gpi_auction_details:
     path:     /auction/details/{id}
     defaults: { _controller: GPIAuctionBundle:AuctionDetails:index }
+
 gpi_auction_cancel:
     path:     /auction/cancel/{id}
     defaults: { _controller: GPIAuctionBundle:CancelAuction:index }

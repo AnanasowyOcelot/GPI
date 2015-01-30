@@ -1,14 +1,64 @@
 {% block block %}
-    <div class="headline"><h2>{{ settings.title }}</h2></div>
+    {#<div class="headline"><h2>{{ settings.title }}</h2></div>#}
 
-    <form>
-        <input type="text" name="name" value="{{ searchParam }}"/>
-        <input type="submit" value="Szukaj"/>
-    </form>
+    <style>
+        .searchform {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
 
-    <div class="block-newsletter col-sm-12 well">
+        .lub-word {
+            margin-top: 7px;
+            color: #f5f5f5;
+        }
+
+        .counter {
+            min-height: 20px;
+            padding: 7px;
+            margin-bottom: 20px;
+            background-color: #F5F5F5;
+            border: 1px solid #E3E3E3;
+            border-radius: 4px;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+    </style>
+
+    <div class="row searchform">
+        <form>
+            <div class="col-sm-4">
+                <div class="input-group">
+
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                    <input type="text" name="name" value="{{ searchParam }}" placeholder="wpisz tytuł aukcji"
+                           class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-4 md-margin-bottom-10">
+                <input type="submit" class="btn-u btn-block btn-u-dark" value="SZUKAJ AUKCJI"/>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="col-sm-2">
+                    <div class="lub-word">lub</div>
+                </div>
+                <div class="col-sm-10">
+                    <a type="button" href="{{ path('gpi_auction_add') }}" class="btn-u btn-block btn-u-dark">DODAJ
+                        NOWĄ</a>
+
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <div class="col-sm-12 counter">
         <div class="count">
-            Całkowita ilość aukcji: {{ pagination.getTotalItemCount }}
+            Znaleziono aukcji: {{ pagination.getTotalItemCount }}
         </div>
         {# sorting of properties based on query components #}
         {#<div{% if pagination.isSorted('a.name') %} class="sorted"{% endif %}>Sortuj#}
@@ -17,7 +67,7 @@
 
     {# table body #}
     <!--Table Search v2-->
-    <div class="table-search-v2 margin-bottom-20">
+    <div class="table-search-v2 margin-bottom-10">
         <div class="table-responsive">
             <table class="table table-hover">
                 <thead>
@@ -33,7 +83,8 @@
                     <tr>
                         <td>
                             <img class="rounded-x"
-                                 src="{{ asset(auction.getMainPhoto() | imagine_filter('list_thumb'))|replace({'media':'web/media'}) }}" alt="">
+                                 src="{{ asset(auction.getMainPhoto() | imagine_filter('list_thumb'))|replace({'media':'web/media'}) }}"
+                                 alt="">
                         </td>
                         <td class="td-width">
                             <h3>
@@ -54,9 +105,12 @@
     </div>
     <!--End Table Search v2-->
 
+
     {# display navigation #}
-    <div class="navigation">
-        {{ knp_pagination_render(pagination) }}
+    <div class="text-center">
+        <div class="navigation\">
+                {{ knp_pagination_render(pagination) }}
+        </div>
     </div>
 
 {% endblock %}

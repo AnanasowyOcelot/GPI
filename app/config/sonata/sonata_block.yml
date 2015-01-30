@@ -95,3 +95,4 @@ sonata_block:
         # Custom
         gpi.block.service.auction:
         gpi.block.service.categories:
+        gpi.block.service.categories_main:

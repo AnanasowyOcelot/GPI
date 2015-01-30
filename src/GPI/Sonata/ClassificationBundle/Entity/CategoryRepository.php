@@ -21,6 +21,11 @@ class CategoryRepository extends EntityRepository
         return $categories;
     }
 
+    public function findParentSlugBySlug($slug){
+        $cat = $this->findOneBy(array('slug'=>$slug));
+        return $cat->getParent()->getSlug();
+    }
+
     public function auctionCategoryTree($parentCatId = null)
     {
         $parentId = $parentCatId;
@@ -32,11 +37,13 @@ class CategoryRepository extends EntityRepository
 
         $tree = array();
         foreach ($categories as $category) {
+            /** @var \Application\Sonata\ClassificationBundle\Entity\Category $category */
             $tree[] = array(
                 'name' => $category->getName(),
                 'children' => $this->auctionCategoryTree($category->getId()),
                 'slug' => $category->getSlug(),
-                'entity' => $category
+                'entity' => $category,
+                'parentSlug' => $category->getParent()->getSlug()
             );
         }
 

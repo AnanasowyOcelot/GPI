@@ -1,0 +1,84 @@
+{% block block %}
+
+
+    </div>
+
+    <div class="row main-menu">
+        <div class="row col-sm-6 col-md-4">
+            <div class="col-sm-12">
+                <ul>
+                    {% for category in categoriesCol0 %}
+                        <li><i class="fa fa-chevron-circle-right"></i> <a
+                                    href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-sm-12">
+                <ul>
+                    {% for category in categoriesCol1 %}
+                        <li><i class="fa fa-chevron-circle-right"></i> <a
+                                    href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="row col-sm-6 col-md-4">
+            <div class="col-sm-12">
+                <ul >
+                    {% for category in categoriesCol2 %}
+                        <li><i class="fa fa-chevron-circle-right"></i> <a
+                                    href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-sm-12">
+                <ul >
+                    {% for category in categoriesCol3 %}
+                        <li><i class="fa fa-chevron-circle-right"></i> <a
+                                    href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="row col-sm-6 col-md-4">
+            <div class="col-sm-6">
+                <ul>
+                    {% for category in categoriesCol4 %}
+                        <li><i class="fa fa-chevron-circle-right"></i> <a
+                                    href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <ul>
+                    {% for category in categoriesCol5 %}
+                        <li><i class="fa fa-chevron-circle-right"></i> <a
+                                    href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .main-menu ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-menu li {
+            list-style-type: none;
+            position: relative;
+        }
+
+        .main-menu li {
+            font-size: 15px;
+        }
+    </style>
+{% endblock %}

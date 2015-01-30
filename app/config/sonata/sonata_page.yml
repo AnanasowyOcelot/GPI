@@ -77,9 +77,10 @@ sonata_page:
                      B: content_bottom
                      F: footer
 
-        2columns:
+
+        new_layout:
             path: 'ApplicationSonataPageBundle::new_layout.html.twig'
-            name: '2 columns layout'
+            name: 'New super layout'
             containers:
                  header:
                      name: Header
@@ -108,10 +109,9 @@ sonata_page:
                      R: rigth_col
                      B: content_bottom
                      F: footer
-
-        new_layout:
-            path: 'ApplicationSonataPageBundle::new_layout.html.twig'
-            name: 'New super layout'
+        2columns:
+            path: 'ApplicationSonataPageBundle::main_page.html.twig'
+            name: 'Strona glowna'
             containers:
                  header:
                      name: Header

@@ -14956,11 +14956,11 @@ var SonataCore = {
                 allowClearEnabled = false;
             }
 
-//            select.select2({
-//                width: 'resolve',
-//                minimumResultsForSearch: 10,
-//                allowClear: allowClearEnabled
-//            });
+            select.select2({
+                width: 'resolve',
+                minimumResultsForSearch: 10,
+                allowClear: allowClearEnabled
+            });
 
             var popover = select.data('popover');
 

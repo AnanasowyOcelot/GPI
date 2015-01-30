@@ -62,6 +62,18 @@ services:
             - {name: sonata.block}
         calls:
             - [setRequest, [@request_stack]]
+    gpi.block.service.categories_main:
+        id: gpi.block.service.categories_main
+        class: GPI\Sonata\BlockBundle\Block\CategoriesMainBlockService
+        arguments:
+            - gpi.block.service.categories
+            - @templating
+            - @gpi_sonata.category_repository
+            - @doctrine.orm.entity_manager
+        tags:
+            - {name: sonata.block}
+        calls:
+            - [setRequest, [@request_stack]]
     gpi_auction.form.auction:
         class: GPI\AuctionBundle\Form\AddAuctionType
         tags:

@@ -1,16 +1,43 @@
-{% macro menu_categories(categories, slug, numbersDict) %}
+{% macro menu_categories(categories, slug, numbersDict, parentSlug) %}
     {% for category in categories %}
-        <li>
-            {% set class = "" %}
-            {% if category.slug == slug %}
-                {% set class = "active" %}
-            {% endif %}
-            <a class="{{ class }}" href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }} ({{ numbersDict[category.entity.id] }})</a>
+        {% set class = "" %}
+        {% if (category.slug == slug and category.children) or category.slug == parentSlug %}
+            {% set class = "active accordion-toggle" %}
+            {% set classA = "" %}
+            {% set classUL = "collapse in" %}
+            {% set classLI = "list-group-item list-toggle active" %}
+
+        {% else %}
+            {% set class = "accordion-toggle collapsed" %}
+            {% set classA = "collapsed" %}
+            {% set classUL = "collapse" %}
+            {% set classLI = "list-group-item list-toggle" %}
+
+        {% endif %}
+        <li class="{{ classLI }}" style="overflow: hidden;">
+
+            {#<a class="{{ class }} collapsed" data-toggle="collapse" data-parent="#sidebar-nav"  href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }} ({{ numbersDict[category.entity.id] }})</a>#}
+            <a class="{{ classA }} " style="display: inline; line-height: 34px;"
+               href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">
+                {{ category.name }}
+                <span class="badge rounded badge-light">
+                    {{ numbersDict[category.entity.id] }}
+                </span>
+            </a>
+
+
+
 
             {% if category.children %}
-                <div class="buttonToggle icon-arrow-down"></div>
-                <ul>
-                    {{ _self.menu_categories(category.children, slug, numbersDict) }}
+                <a class="{{ classA }} " style="display: inline; position: absolute; right: 0;"
+                   data-toggle="collapse"
+                   data-parent="#sidebar-nav"
+                   href="#collapse-{{ category.slug }}">&raquo;
+                </a>
+
+                <ul id="collapse-{{ category.slug }}" class="{{ classUL }}">
+                    {{ _self.menu_categories(category.children, slug, numbersDict, parentSlug) }}
+
                 </ul>
             {% endif %}
         </li>
@@ -18,48 +45,73 @@
 {% endmacro %}
 
 {% block block %}
-    <div class="headline"><h2>{{ settings.title }}</h2></div>
+    {#<div class="headline"><h2>{{ settings.title }}</h2></div>#}
 
 
-    <button type="button" class="navbar navbar-default mega-menu navbar-toggle" data-toggle="collapse" data-target=".main-menu">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="fa fa-bars"></span>
-    </button>
+    {#<button type="button" class="navbar navbar-default mega-menu navbar-toggle" data-toggle="collapse" data-target=".main-menu">#}
+    {#<span class="sr-only">Toggle navigation</span>#}
+    {#<span class="fa fa-bars"></span>#}
+    {#</button>#}
 
-    <ul class="main-menu collapse navbar-collapse navbar-responsive-collapse">
-        {{ _self.menu_categories(categories, slug, numbersDict) }}
+    {#<ul class="main-menu collapse navbar-collapse navbar-responsive-collapse">#}
+    {#<ul class="main-menu">#}
+
+    {#</ul>#}
+    {#///////////////////////////////////////////////////////////////////////////////////////////#}
+    <ul class="main-menu list-group sidebar-nav-v1" id="sidebar-nav">
+        <!-- Typography -->
+        {{ _self.menu_categories(categories, slug, numbersDict, parentSlug) }}
+        {#<li class="list-group-item list-toggle">#}
+        {#<a class="collapsed" data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-typography">Typography</a>#}
+        {#<ul style="height: 0px;" id="collapse-typography" class="collapse">#}
+        {#<li><a href=""><i class="fa fa-sort-alpha-asc"></i> General Typography</a></li>#}
+        {#</ul>#}
+        {#</li>#}
+        <!-- End Typography -->
+
     </ul>
-
+    {#///////////////////////////////////////////////////////////////////////////////////////////  #}
     {% verbatim %}
     <script type="application/javascript">
-        jQuery(document).ready(function () {
-            var mainMenu = jQuery('.main-menu');
-            jQuery('.buttonToggle', mainMenu).click(function () {
-                jQuery(this).closest('li').find('> ul').toggle();
-            });
-            jQuery('ul', mainMenu).hide();
-            jQuery('a.active', mainMenu)
-                    .closest('ul').show()
-                    .closest('ul').show();
-        });
+        //        jQuery(document).ready(function () {
+        //            var mainMenu = jQuery('.main-menu');
+        //            jQuery('.buttonToggle', mainMenu).click(function () {
+        //                jQuery(this).closest('li').find('> ul').toggle();
+        //            });
+        //            jQuery('ul', mainMenu).hide();
+        //            jQuery('a.active', mainMenu)
+        //                    .closest('ul').show()
+        //                    .closest('ul').show();
+        //        });
     </script>
 
     <style>
-        .main-menu .active {
-            font-weight: bold;
+        /*.main-menu .active {*/
+        /*font-weight: bold;*/
+        /*}*/
+
+        /*.main-menu .buttonToggle {*/
+        /*cursor: pointer;*/
+        /*display: inline-block;*/
+        /*}*/
+
+        /*.main-menu ul {*/
+        /*display: none;*/
+        /*}*/
+
+        .main-menu li {
+            width: 100%;
         }
-        .main-menu .buttonToggle {
-            cursor: pointer;
-            display: inline-block;
-        }
-        .main-menu ul {
+
+        .main-menu .list-toggle:after {
             display: none;
         }
-        .main-menu li {
-            list-style-type: none;
-            position: relative;
-            left: -30px;
+
+        .main-menu.sidebar-nav-v1 li ul a {
+            border: none;
         }
+
     </style>
     {% endverbatim %}
 {% endblock %}
+
