@@ -51,7 +51,7 @@ class __TwigTemplate_bea4ead8b116c65db1dcea40cf4445a453a32d148bc5f0bb9203851dd36
                             <br/>
                             <img id=\"logo-header\" src=\"";
         // line 88
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/img/logo1-default.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/img/logo-lightback.png"), "html", null, true);
         echo "\"
                                  alt=\"Logo\">
                         </a>
@@ -148,7 +148,7 @@ class __TwigTemplate_bea4ead8b116c65db1dcea40cf4445a453a32d148bc5f0bb9203851dd36
                         <a href=\"index.html\"><img id=\"logo-footer\" class=\"footer-logo\"
                                                   src=\"";
         // line 204
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/img/logo1-default.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/img/logo-darkback.png"), "html", null, true);
         echo "\" alt=\"\"></a>
 
                         <p>Nowatorski serwis \"aukcyjno-ogłoszeniowy\" o&nbsp;tematyce inżynierskiej.<br/><br/>

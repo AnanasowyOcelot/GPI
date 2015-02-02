@@ -45,6 +45,7 @@ services:
             - @gpi_auction.auction_repository
             - @doctrine.orm.entity_manager
             - @gpi_sonata.category_repository
+            - @gpi_core.service.cron
         tags:
             - {name: sonata.block}
             - { name: knp_paginator.injectable, paginator: knp_paginator }

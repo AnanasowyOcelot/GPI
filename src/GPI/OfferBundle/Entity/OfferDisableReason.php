@@ -30,7 +30,7 @@ class OfferDisableReason extends \GPI\CoreBundle\Model\Offer\OfferDisableReason
     protected $content;
 
     /**
-     * @ORM\ManyToOne(targetEntity="\GPI\OfferBundle\Entity\Offer", inversedBy="comments")
+     * @ORM\ManyToOne(targetEntity="\GPI\OfferBundle\Entity\Offer", inversedBy="disableReason")
      */
     protected $offer;
 

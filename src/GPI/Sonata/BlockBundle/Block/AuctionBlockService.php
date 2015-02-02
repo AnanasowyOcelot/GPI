@@ -8,6 +8,7 @@ use Doctrine\ORM\EntityManager;
 use GPI\AuctionBundle\Entity\AuctionFilterParams;
 use GPI\AuctionBundle\Entity\AuctionRepository;
 use GPI\CoreBundle\Model\Auction\AuctionStatus;
+use GPI\CoreBundle\Model\Service\Cron;
 use Knp\Bundle\PaginatorBundle\Definition\PaginatorAwareInterface;
 use Knp\Component\Pager\Paginator;
 use Sonata\BlockBundle\Block\BaseBlockService;
@@ -44,20 +45,25 @@ class AuctionBlockService extends BaseBlockService implements PaginatorAwareInte
      */
     private $em;
 
+    /** @var \GPI\CoreBundle\Model\Service\Cron  */
+    private $cron;
+
     /**
      * @param string $name
      * @param EngineInterface $templating
      * @param AuctionRepository $or
      * @param EntityManager $em
      * @param CategoryRepository $catRepo
+     * @param Cron $cron
      */
-    public function __construct($name, EngineInterface $templating, AuctionRepository $or, EntityManager $em, CategoryRepository $catRepo)
+    public function __construct($name, EngineInterface $templating, AuctionRepository $or, EntityManager $em, CategoryRepository $catRepo, Cron $cron)
     {
         $this->name = $name;
         $this->templating = $templating;
         $this->or = $or;
         $this->em = $em;
         $this->catRepo = $catRepo;
+        $this->cron = $cron;
 
     }
 
@@ -101,6 +107,9 @@ class AuctionBlockService extends BaseBlockService implements PaginatorAwareInte
 
     public function execute(BlockContextInterface $blockContext, Response $response = null)
     {
+        $this->cron->cron5();
+
+
         $searchParams = new AuctionFilterParams();
         $categorySlug = $this->request->get('categorySlug');
         $searchParams->setCategory($this->catRepo->findOneBy(array('slug' => $categorySlug)));

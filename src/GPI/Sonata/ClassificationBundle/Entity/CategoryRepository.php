@@ -23,6 +23,9 @@ class CategoryRepository extends EntityRepository
 
     public function findParentSlugBySlug($slug){
         $cat = $this->findOneBy(array('slug'=>$slug));
+        if(!$cat){
+            return null;
+        }
         return $cat->getParent()->getSlug();
     }
 
