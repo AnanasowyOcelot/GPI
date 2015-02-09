@@ -1,0 +1,34 @@
+{% extends "SonataUserBundle:Profile:action.html.twig" %}
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+{% block sonata_profile_content %}
+
+
+
+    <div class="tag-box tag-box-v3 form-page" style="overflow: hidden;">
+        <div class="headline"><h3>Wybierz podkategorie dla aukcji</h3></div>
+
+        <form method="POST" {{ form_enctype(form) }}>
+            <fieldset>
+                {#{% for child in form.categories %}#}
+                {#<h4>sdfgh</h4>#}
+                {#{{ form_row(child) }}#}
+                {#{% endfor %}#}
+                {#&#123;&#35;{{ form_row(form.categories) }}&#35;&#125;#}
+                {#{{ form_row(form.subcategories_0) }}#}
+                {#{{ form_row(form.subcategories_1) }}#}
+            </fieldset>
+            <hr/>
+            <div style="display: none;">
+                {{ form_row(form.categories) }}
+            </div>
+            <hr/>
+            <fieldset>
+                {{ form_rest(form) }}
+            </fieldset>
+        </form>
+    </div>
+
+
+{% endblock %}
+
+

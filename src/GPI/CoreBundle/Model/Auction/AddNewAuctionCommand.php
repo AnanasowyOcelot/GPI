@@ -20,11 +20,17 @@ class AddNewAuctionCommand
     protected $maxRealizationDate;
     protected $createdBy;
     protected $attributeValues;
+    protected $subcategories = [];
 
     public function __construct()
     {
         $this->documents = new ArrayCollection();
         $this->attributeValues = new ArrayCollection();
+    }
+
+    public function getSubcategoriesIds()
+    {
+        return call_user_func_array('array_merge', $this->subcategories);
     }
 
     /**
@@ -90,9 +96,6 @@ class AddNewAuctionCommand
     {
         return $this->timePeriod;
     }
-
-
-
 
     public function getDocuments()
     {
@@ -178,11 +181,13 @@ class AddNewAuctionCommand
         $this->name = $name;
     }
 
-    public function toString(){
+    public function toString()
+    {
         return "Name: " . $this->getName() . " Content: " . $this->getContent() . " Category: " . $this->getCategories()->getName();
     }
 
-    public function isOwner(User $user) {
+    public function isOwner(User $user)
+    {
         return $this->getCreatedBy() === $user;
     }
 
@@ -201,6 +206,4 @@ class AddNewAuctionCommand
     {
         return $this->attributeValues;
     }
-
-
 }

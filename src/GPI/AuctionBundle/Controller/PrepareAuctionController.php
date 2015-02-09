@@ -29,7 +29,7 @@ class PrepareAuctionController extends Controller
             $em->persist($command);
             $em->flush();
 
-            return $this->redirect($this->generateUrl("gpi_auction_add2", array('commandId'=>$command->getId())));
+            return $this->redirect($this->generateUrl("gpi_auction_add1", array('commandId'=>$command->getId())));
         }
 
         return $this->render(

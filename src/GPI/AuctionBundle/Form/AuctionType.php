@@ -52,8 +52,9 @@ abstract class AuctionType extends AbstractType
             ->add('content', 'textarea', array('label' => "Treść:"))
             ->add('maxRealizationDate', 'date', array(
                 'attr' => array(
-                    'data-sonata-select2' => 'false',
+                    'data-sonata-select2' => false,
                 ),
+
                 'label' => "Maksymalny termin wykonania:",
                 'required'    => false,
                 'input' => 'datetime',
@@ -77,7 +78,7 @@ abstract class AuctionType extends AbstractType
                         'data-sonata-select2' => 'false',
 
                     ),
-                    'label' => "Kategorie:",
+                    'label' => "Wybrane kategorie:",
                 )
             )
             ->add(

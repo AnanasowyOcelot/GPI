@@ -47,6 +47,10 @@ class AddNewAuctionCommand extends \GPI\CoreBundle\Model\Auction\AddNewAuctionCo
     /**
      * @var ArrayCollection $categories
      * @ORM\ManyToMany(targetEntity="\Application\Sonata\ClassificationBundle\Entity\Category", cascade={"persist"})
+     * @Assert\Count(
+     *      min = "1",
+     *      minMessage = "Wybierz minimum jedną kategorię",
+     * )
      */
     protected $categories;
     /**
@@ -78,4 +82,31 @@ class AddNewAuctionCommand extends \GPI\CoreBundle\Model\Auction\AddNewAuctionCo
      * @ORM\JoinColumn(name="created_by", referencedColumnName="id")
      */
     protected $createdBy;
+
+    /**
+     * format: [categoryId => categoryName]
+     *
+     * @ORM\Column(name="subcategories", type="json_array")
+     */
+    protected $subcategories = [];
+
+    public function __get($property) {
+        $propertyNameParts = explode('_', $property);
+        if($propertyNameParts[0] === 'subcategories') {
+            $subCatIndex = (int)$propertyNameParts[1];
+            if(isset($this->subcategories[$subCatIndex]) && is_array($this->subcategories[$subCatIndex])) {
+                return $this->subcategories[$subCatIndex];
+            }
+            return [];
+        }
+        return null;
+    }
+
+    public function __set($property, $value) {
+        $propertyNameParts = explode('_', $property);
+        if($propertyNameParts[0] === 'subcategories') {
+            $subCatIndex = (int)$propertyNameParts[1];
+            $this->subcategories["" . $subCatIndex] = $value;
+        }
+    }
 }

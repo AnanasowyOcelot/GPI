@@ -10,6 +10,10 @@ gpi_auction_add:
     path:     /auction/add
     defaults: { _controller: GPIAuctionBundle:PrepareAuction:index }
 
+gpi_auction_add1:
+    path:     /auction/add1/{commandId}
+    defaults: { _controller: GPIAuctionBundle:PrepareSubcategoriesForAuction:index }
+
 gpi_auction_add2:
     path:     /auction/add2/{commandId}
     defaults: { _controller: GPIAuctionBundle:AddAuction:index }

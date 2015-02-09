@@ -1,7 +1,7 @@
 <?php
 
-/* GPIAuctionBundle:AddAuction:prepare.html.twig */
-class __TwigTemplate_21cae1a19b2aa9e4aae839e667998580741e90692880105da1d1da9bacb350d0 extends Sonata\CacheBundle\Twig\TwigTemplate14
+/* GPIAuctionBundle:AddAuction:prepareSubcategories.html.twig */
+class __TwigTemplate_ae9076af8aaaef6af819c5124bbeefc452436c7ae60a5ba3ed45fcc05068590e extends Sonata\CacheBundle\Twig\TwigTemplate14
 {
     public function __construct(Twig_Environment $env)
     {
@@ -43,26 +43,39 @@ class __TwigTemplate_21cae1a19b2aa9e4aae839e667998580741e90692880105da1d1da9bacb
 
 
     <div class=\"tag-box tag-box-v3 form-page\" style=\"overflow: hidden;\">
-        <div class=\"headline\"><h3>Wybierz kategorie dla aukcji</h3></div>
+        <div class=\"headline\"><h3>Wybierz podkategorie dla aukcji</h3></div>
 
         <form method=\"POST\" ";
         // line 10
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
         echo ">
-
-
             <fieldset>
                 ";
+        // line 13
+        echo "                ";
         // line 14
+        echo "                ";
+        // line 15
+        echo "                ";
+        // line 16
+        echo "                ";
+        // line 17
+        echo "                ";
+        // line 18
+        echo "                ";
+        // line 19
+        echo "            </fieldset>
+            <hr/>
+            <div style=\"display: none;\">
+                ";
+        // line 22
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "categories", array()), 'row');
         echo "
-            </fieldset>
-            <hr/>
-
+            </div>
             <hr/>
             <fieldset>
                 ";
-        // line 20
+        // line 26
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
             </fieldset>
@@ -75,7 +88,7 @@ class __TwigTemplate_21cae1a19b2aa9e4aae839e667998580741e90692880105da1d1da9bacb
 
     public function getTemplateName()
     {
-        return "GPIAuctionBundle:AddAuction:prepare.html.twig";
+        return "GPIAuctionBundle:AddAuction:prepareSubcategories.html.twig";
     }
 
     public function isTraitable()
@@ -85,6 +98,6 @@ class __TwigTemplate_21cae1a19b2aa9e4aae839e667998580741e90692880105da1d1da9bacb
 
     public function getDebugInfo()
     {
-        return array (  66 => 20,  57 => 14,  50 => 10,  42 => 4,  39 => 3,  35 => 1,  33 => 2,  11 => 1,);
+        return array (  79 => 26,  72 => 22,  67 => 19,  65 => 18,  63 => 17,  61 => 16,  59 => 15,  57 => 14,  55 => 13,  50 => 10,  42 => 4,  39 => 3,  35 => 1,  33 => 2,  11 => 1,);
     }
 }

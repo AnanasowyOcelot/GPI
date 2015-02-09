@@ -32,17 +32,14 @@ class PrepareAuctionType extends AbstractType
      */
     private $catRepo;
 
-    private function categoryTreeMap($tree, $depth = 0)
+    private function categoryTreeMap($tree)
     {
         $treeMap = array();
         foreach ($tree as $node) {
+            /** @var \Application\Sonata\ClassificationBundle\Entity\Category $node */
             $treeMap[] = array(
-                'label' => str_repeat('-', $depth) . ' ' . $node['name'],
-                'entity' => $node['entity']
-            );
-            $treeMap = array_merge(
-                $treeMap,
-                $this->categoryTreeMap($node['children'], $depth + 1)
+                'label' => $node->getName(),
+                'entity' => $node
             );
         }
         return $treeMap;
@@ -53,7 +50,7 @@ class PrepareAuctionType extends AbstractType
      */
     protected  function categoryChoiceList()
     {
-        $tree = $this->catRepo->auctionCategoryTree();
+        $tree = $this->catRepo->findMainCategories();
         $treeMap = $this->categoryTreeMap($tree);
         return new ChoiceList(
             F\pluck($treeMap, 'entity'),
@@ -68,12 +65,16 @@ class PrepareAuctionType extends AbstractType
                 'categories',
                 'entity',
                 array(
+                    'required' => true,
                     'class' => 'Application\Sonata\ClassificationBundle\Entity\Category',
                     'choice_list' => $this->categoryChoiceList(),
                     'multiple' => true,
-                    'attr' => array('data-sonata-select2' => 'false'),
-                    'label' => "Kategorie:"
-                )
+                    'expanded' => true,
+                    'attr' => array(
+                        'data-sonata-select2' => 'false',
+                    ),
+                    'label' => "Kategorie:",
+                                    )
             )
             ->add('submit', 'submit');
     }

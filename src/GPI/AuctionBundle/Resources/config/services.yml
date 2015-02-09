@@ -87,6 +87,12 @@ services:
             - { name: form.type, alias: prepare_auction }
         arguments:
             - @gpi_sonata.category_repository
+    gpi_auction.form.prepare_auction_subcategories:
+        class: GPI\AuctionBundle\Form\PrepareAuctionWithSubcategoriesType
+        tags:
+            - { name: form.type, alias: prepare_auction_subcategories }
+        arguments:
+            - @gpi_sonata.category_repository
     gpi_auction.form.auction_update:
         class: GPI\AuctionBundle\Form\UpdateAuctionType
         tags:

@@ -47,7 +47,18 @@ class AddAuctionController extends Controller
             $command->addAttributeValue($field);
         };
 
+        /** @var \GPI\Sonata\ClassificationBundle\Entity\CategoryRepository $catRepo */
+        $catRepo = $this->get('gpi_sonata.category_repository');
+
+        $subcategories = $catRepo->findCategoriesByIds($command->getSubcategoriesIds());
+        foreach ($subcategories as $subcategorie) {
+            $command->addCategory($subcategorie);
+        }
         $categories = $command->getCategories()->toArray();
+
+        //        $categories = array_merge($categories, $subcategories);
+        //        $command->
+
         $attributes = F\flatten(F\map($categories, $mapCategoryToAttributes));
         $fields = F\map($attributes, $mapAttrToField);
         F\each($fields, $addField);
