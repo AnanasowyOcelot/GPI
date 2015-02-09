@@ -73,12 +73,6 @@ class CategoriesBlockService extends BaseBlockService
 
     public function validateBlock(ErrorElement $errorElement, BlockInterface $block)
     {
-        //        $errorElement
-        //            ->with('settings.title')
-        //            ->assertNotNull(array())
-        //            ->assertNotBlank()
-        //            ->assertMaxLength(array('limit' => 50))
-        //            ->end();
     }
 
     /**
@@ -101,16 +95,9 @@ class CategoriesBlockService extends BaseBlockService
 
         $numbersDict = array();
         foreach ($categories as $category) {
-//            print_r(mb_detect_encoding($category->getName()));
-////            print_r(mb_http_output());
-//            die();
             $numbersDict[$category->getId()] = $this->getNumberOfElementsInCategory($category);
         }
-//        echo "<pre>";
-//        print_r($numbersDict);
-//        echo "<pre/>";
-//
-//        die();
+
         return $this->renderResponse($blockContext->getTemplate(), array(
             'categories' => $categoriesTree,
             'numbersDict' => $numbersDict,

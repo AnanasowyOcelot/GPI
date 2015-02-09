@@ -5,7 +5,7 @@
     </div>
 {% elseif hasProperlyEnded %}
 
-<div class="alert alert-success fade in">Aukcja jest zakończona.</div>
+    <div class="alert alert-success fade in">Aukcja jest zakończona.</div>
 
 {% elseif not isActive %}
     <div class="alert alert-warning fade in">Aukcja jest nieaktywna.</div>
@@ -25,7 +25,14 @@
             </fieldset>
         {% endif %}
         {% if not (app.security.getToken().getUser() == auction.createdBy()) and auction.isActive() %}
-            <a class="btn-u" href="{{ path("gpi_offer_homepage", {'auctionId': auction.id }) }}">Dodaj nową ofertę</a>
+            {% if app.user %}
+                <a class="btn-u" href="{{ path("gpi_offer_homepage", {'auctionId': auction.id }) }}">Dodaj nową
+                    ofertę</a>
+            {% else %}
+                <a class="btn-u" href="{{ path("gpi_offer_homepage", {'auctionId': auction.id }) }}">Dodaj nową
+                    ofertę<div style="font-size: 10px" >(musisz być zalogowany)</div></a>
+
+            {% endif %}
         {% endif %}
 
     </div>
@@ -37,24 +44,20 @@
                 <li><strong>Maksymalna data realizacji
                         zlecenia: </strong> {{ auction.maxRealizationDate.format('Y-m-d') }}</li>
             {% endif %}
-            <br/>
-            <br/>
-            <li>Czas trwania aukcji:</li>
+
+            <li><strong>Czas trwania aukcji:</strong></li>
             <li><strong>Data dodania:</strong> {{ auction.getStartTime().format('Y-m-d H:i:s') }}</li>
             <li><strong>Data zakończenia:</strong> {{ auction.getEndTime().format('Y-m-d H:i:s') }}</li>
-            <br/>
-            <br/>
+
             <li><strong>Kategorie:</strong></li>
             {% for category in auction.getCategories() %}
                 <li>&nbsp;&nbsp;&nbsp;&nbsp;{{ category }}</li>
             {% endfor %}
-            <br/>
-            <br/>
+
             {% if auction.getMaxPrice != null and app.user %}
                 <li><strong>Cena maksymalna:</strong> {{ auction.getMaxPrice() }}</li>
             {% endif %}
-            <br/>
-            <br/>
+
             {% if auction.getAttributeValues() != null %}
                 {% for attribute in auction.getAttributeValues() %}
                     <li><strong>{{ attribute.name }}:</strong> {{ attribute.value }}</li>
@@ -63,7 +66,6 @@
         </ul>
     </div>
 </div>
-
 
 <div class="fusion-portfolio wrapper-portfolio-grid cbp-3-col">
     <div id="grid-container" class="cbp-l-grid-gallery">
@@ -89,6 +91,9 @@
 
     </div>
 </div>
+
+
+
 <div class="table-responsive">
     <table class="table table-hover">
         <thead>

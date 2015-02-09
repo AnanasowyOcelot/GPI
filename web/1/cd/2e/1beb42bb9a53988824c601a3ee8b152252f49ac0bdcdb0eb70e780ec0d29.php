@@ -16,53 +16,49 @@ class __TwigTemplate_cd2e1beb42bb9a53988824c601a3ee8b152252f49ac0bdcdb0eb70e780e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        // line 46
+        // line 48
         echo "
 ";
-        // line 47
+        // line 49
         $this->displayBlock('block', $context, $blocks);
-        // line 117
+        // line 125
         echo "
 ";
     }
 
-    // line 47
+    // line 49
     public function block_block($context, array $blocks = array())
     {
-        // line 48
+        // line 50
         echo "    ";
-        // line 49
+        // line 51
         echo "
 
     ";
-        // line 52
-        echo "    ";
-        // line 53
-        echo "    ";
         // line 54
         echo "    ";
         // line 55
-        echo "
-    ";
+        echo "    ";
+        // line 56
+        echo "    ";
         // line 57
-        echo "    ";
-        // line 58
         echo "
     ";
-        // line 60
+        // line 59
         echo "    ";
-        // line 61
+        // line 60
+        echo "
+    ";
+        // line 62
+        echo "    ";
+        // line 63
         echo "    <ul class=\"main-menu list-group sidebar-nav-v1\" id=\"sidebar-nav\">
         <!-- Typography -->
         ";
-        // line 63
+        // line 65
         echo $this->getAttribute($this, "menu_categories", array(0 => (isset($context["categories"]) ? $context["categories"] : $this->getContext($context, "categories")), 1 => (isset($context["slug"]) ? $context["slug"] : $this->getContext($context, "slug")), 2 => (isset($context["numbersDict"]) ? $context["numbersDict"] : $this->getContext($context, "numbersDict")), 3 => (isset($context["parentSlug"]) ? $context["parentSlug"] : $this->getContext($context, "parentSlug"))), "method");
         echo "
         ";
-        // line 65
-        echo "        ";
-        // line 66
-        echo "        ";
         // line 67
         echo "        ";
         // line 68
@@ -70,13 +66,17 @@ class __TwigTemplate_cd2e1beb42bb9a53988824c601a3ee8b152252f49ac0bdcdb0eb70e780e
         // line 69
         echo "        ";
         // line 70
+        echo "        ";
+        // line 71
+        echo "        ";
+        // line 72
         echo "        <!-- End Typography -->
 
     </ul>
     ";
-        // line 74
+        // line 76
         echo "    ";
-        // line 115
+        // line 123
         echo "
     <script type=\"application/javascript\">
         //        jQuery(document).ready(function () {
@@ -115,6 +115,12 @@ class __TwigTemplate_cd2e1beb42bb9a53988824c601a3ee8b152252f49ac0bdcdb0eb70e780e
 
         .main-menu.sidebar-nav-v1 li ul a {
             border: none;
+        }
+
+        .sidebar-nav-v1 li ul, .sidebar-nav-v1 li.active ul a {
+
+            background: #ffffff;
+
         }
 
     </style>
@@ -198,47 +204,54 @@ class __TwigTemplate_cd2e1beb42bb9a53988824c601a3ee8b152252f49ac0bdcdb0eb70e780e
                 // line 22
                 echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
                 echo "
-                <span class=\"badge rounded badge-light\">
+                ";
+                // line 23
+                if (($this->getAttribute((isset($context["numbersDict"]) ? $context["numbersDict"] : $this->getContext($context, "numbersDict")), $this->getAttribute($this->getAttribute($context["category"], "entity", array()), "id", array()), array(), "array") > 0)) {
+                    // line 24
+                    echo "                <span class=\"badge rounded badge-light\">
                     ";
-                // line 24
-                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["numbersDict"]) ? $context["numbersDict"] : $this->getContext($context, "numbersDict")), $this->getAttribute($this->getAttribute($context["category"], "entity", array()), "id", array()), array(), "array"), "html", null, true);
-                echo "
+                    // line 25
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["numbersDict"]) ? $context["numbersDict"] : $this->getContext($context, "numbersDict")), $this->getAttribute($this->getAttribute($context["category"], "entity", array()), "id", array()), array(), "array"), "html", null, true);
+                    echo "
                 </span>
-            </a>
+                ";
+                }
+                // line 28
+                echo "            </a>
 
 
 
 
             ";
-                // line 31
+                // line 33
                 if ($this->getAttribute($context["category"], "children", array())) {
-                    // line 32
+                    // line 34
                     echo "                <a class=\"";
                     echo twig_escape_filter($this->env, (isset($context["classA"]) ? $context["classA"] : $this->getContext($context, "classA")), "html", null, true);
                     echo " \" style=\"display: inline; position: absolute; right: 0;\"
                    data-toggle=\"collapse\"
                    data-parent=\"#sidebar-nav\"
                    href=\"#collapse-";
-                    // line 35
+                    // line 37
                     echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "slug", array()), "html", null, true);
                     echo "\">&raquo;
                 </a>
 
                 <ul id=\"collapse-";
-                    // line 38
+                    // line 40
                     echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "slug", array()), "html", null, true);
                     echo "\" class=\"";
                     echo twig_escape_filter($this->env, (isset($context["classUL"]) ? $context["classUL"] : $this->getContext($context, "classUL")), "html", null, true);
                     echo "\">
                     ";
-                    // line 39
+                    // line 41
                     echo $this->getAttribute($this, "menu_categories", array(0 => $this->getAttribute($context["category"], "children", array()), 1 => (isset($context["slug"]) ? $context["slug"] : $this->getContext($context, "slug")), 2 => (isset($context["numbersDict"]) ? $context["numbersDict"] : $this->getContext($context, "numbersDict")), 3 => (isset($context["parentSlug"]) ? $context["parentSlug"] : $this->getContext($context, "parentSlug"))), "method");
                     echo "
 
                 </ul>
             ";
                 }
-                // line 43
+                // line 45
                 echo "        </li>
     ";
             }
@@ -266,6 +279,6 @@ class __TwigTemplate_cd2e1beb42bb9a53988824c601a3ee8b152252f49ac0bdcdb0eb70e780e
 
     public function getDebugInfo()
     {
-        return array (  242 => 43,  235 => 39,  229 => 38,  223 => 35,  216 => 32,  214 => 31,  204 => 24,  199 => 22,  195 => 21,  190 => 20,  184 => 17,  180 => 15,  177 => 14,  174 => 13,  171 => 12,  168 => 11,  164 => 9,  161 => 8,  158 => 7,  155 => 6,  152 => 5,  149 => 4,  146 => 3,  141 => 2,  127 => 1,  80 => 115,  78 => 74,  73 => 70,  71 => 69,  69 => 68,  67 => 67,  65 => 66,  63 => 65,  59 => 63,  55 => 61,  53 => 60,  50 => 58,  48 => 57,  45 => 55,  43 => 54,  41 => 53,  39 => 52,  35 => 49,  33 => 48,  30 => 47,  25 => 117,  23 => 47,  20 => 46,);
+        return array (  255 => 45,  248 => 41,  242 => 40,  236 => 37,  229 => 34,  227 => 33,  220 => 28,  214 => 25,  211 => 24,  209 => 23,  205 => 22,  201 => 21,  196 => 20,  190 => 17,  186 => 15,  183 => 14,  180 => 13,  177 => 12,  174 => 11,  170 => 9,  167 => 8,  164 => 7,  161 => 6,  158 => 5,  155 => 4,  152 => 3,  147 => 2,  133 => 1,  80 => 123,  78 => 76,  73 => 72,  71 => 71,  69 => 70,  67 => 69,  65 => 68,  63 => 67,  59 => 65,  55 => 63,  53 => 62,  50 => 60,  48 => 59,  45 => 57,  43 => 56,  41 => 55,  39 => 54,  35 => 51,  33 => 50,  30 => 49,  25 => 125,  23 => 49,  20 => 48,);
     }
 }

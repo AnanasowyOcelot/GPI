@@ -83,7 +83,6 @@ class Auction
         $this->comments = $comments;
     }
 
-
     /**
      * @return ArrayCollection
      */
@@ -108,8 +107,6 @@ class Auction
         return $this->createdBy;
     }
 
-
-
     /**
      * @return \Doctrine\Common\Collections\ArrayCollection
      */
@@ -117,8 +114,6 @@ class Auction
     {
         return $this->disableReason;
     }
-
-
 
     public function init(Calendar $calendar, $defaultImgPath)
     {
@@ -238,7 +233,8 @@ class Auction
         return !$this->hasEnded() && $this->isPartiallyActive();
     }
 
-    public function hasProperlyEnded(){
+    public function hasProperlyEnded()
+    {
         return $this->hasEnded() && $this->isPartiallyActive();
     }
 
@@ -252,7 +248,8 @@ class Auction
         $this->isDeactivated = true;
     }
 
-    public function getCurrentDisableReason(){
+    public function getCurrentDisableReason()
+    {
         return $this->disableReason->first();
     }
 
@@ -283,11 +280,13 @@ class Auction
         return $this;
     }
 
-    public function finish(){
+    public function finish()
+    {
         $this->isFinished = true;
     }
 
-    public function addOffer(Offer $offer){
+    public function addOffer(Offer $offer)
+    {
         $this->offers->add($offer);
     }
 
@@ -347,6 +346,23 @@ class Auction
     public function getContent()
     {
         return $this->content;
+    }
+
+    public function getDaysToEnd()
+    {
+//        (int)$this->endTime->diff($this->calendar->dateTimeNow())->format('%d');
+//
+//        $difference = $this->endTime - $this->calendar->dateTimeNow();
+//
+//        if ($difference < 0) {
+//            $difference = 0;
+//        }
+        $end = $this->endTime;
+        $now = $this->calendar->dateTimeNow();
+        $daysLeft = (int)$end->diff($now)->format('%d');
+
+        $daysLeft = max(0, $daysLeft);
+        return $daysLeft;
     }
 
     /**

@@ -44,8 +44,13 @@
                     <div class="lub-word">lub</div>
                 </div>
                 <div class="col-sm-10">
+                    {% if app.user %}
                     <a type="button" href="{{ path('gpi_auction_add') }}" class="btn-u btn-block btn-u-dark">DODAJ
                         NOWĄ</a>
+                    {% else %}
+                    <a type="button" href="{{ path('gpi_auction_add') }}" class="btn-u btn-block btn-u-dark" >DODAJ
+                            NOWĄ</a>
+                    {% endif %}
 
                 </div>
 
@@ -95,6 +100,7 @@
                         </td>
                         <td>
                             <h3>{{ auction.getEndTime().format('Y-m-d H:i:s') }}</h3>
+                            <p>Pozostało dni: {{ auction.getDaysToEnd() }}</p>
                         </td>
                     </tr>
                 {% endfor %}

@@ -20,9 +20,11 @@
             <a class="{{ classA }} " style="display: inline; line-height: 34px;"
                href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">
                 {{ category.name }}
+                {% if numbersDict[category.entity.id] > 0 %}
                 <span class="badge rounded badge-light">
                     {{ numbersDict[category.entity.id] }}
                 </span>
+                {% endif %}
             </a>
 
 
@@ -109,6 +111,12 @@
 
         .main-menu.sidebar-nav-v1 li ul a {
             border: none;
+        }
+
+        .sidebar-nav-v1 li ul, .sidebar-nav-v1 li.active ul a {
+
+            background: #ffffff;
+
         }
 
     </style>

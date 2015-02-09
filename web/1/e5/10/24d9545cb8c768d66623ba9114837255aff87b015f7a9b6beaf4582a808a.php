@@ -18,7 +18,7 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
     {
         // line 1
         $this->displayBlock('block', $context, $blocks);
-        // line 117
+        // line 123
         echo "
 
 
@@ -79,12 +79,25 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
                     <div class=\"lub-word\">lub</div>
                 </div>
                 <div class=\"col-sm-10\">
-                    <a type=\"button\" href=\"";
+                    ";
         // line 47
-        echo $this->env->getExtension('routing')->getPath("gpi_auction_add");
-        echo "\" class=\"btn-u btn-block btn-u-dark\">DODAJ
+        if ($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array())) {
+            // line 48
+            echo "                    <a type=\"button\" href=\"";
+            echo $this->env->getExtension('routing')->getPath("gpi_auction_add");
+            echo "\" class=\"btn-u btn-block btn-u-dark\">DODAJ
                         NOWĄ</a>
-
+                    ";
+        } else {
+            // line 51
+            echo "                    <a type=\"button\" href=\"";
+            echo $this->env->getExtension('routing')->getPath("gpi_auction_add");
+            echo "\" class=\"btn-u btn-block btn-u-dark\" >DODAJ
+                            NOWĄ</a>
+                    ";
+        }
+        // line 54
+        echo "
                 </div>
 
             </div>
@@ -97,20 +110,20 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
     <div class=\"col-sm-12 counter\">
         <div class=\"count\">
             Znaleziono aukcji: ";
-        // line 61
+        // line 66
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "getTotalItemCount", array()), "html", null, true);
         echo "
         </div>
         ";
-        // line 64
+        // line 69
         echo "        ";
-        // line 65
+        // line 70
         echo "        ";
-        // line 66
+        // line 71
         echo "    </div>
 
     ";
-        // line 69
+        // line 74
         echo "    <!--Table Search v2-->
     <div class=\"table-search-v2 margin-bottom-10\">
         <div class=\"table-responsive\">
@@ -124,17 +137,17 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
                 </thead>
                 <tbody>
                 ";
-        // line 81
+        // line 86
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         foreach ($context['_seq'] as $context["_key"] => $context["auction"]) {
-            // line 82
+            // line 87
             echo "
                     <tr>
                         <td>
                             <img class=\"rounded-x\"
                                  src=\"";
-            // line 86
+            // line 91
             echo twig_escape_filter($this->env, strtr($this->env->getExtension('assets')->getAssetUrl($this->env->getExtension('liip_imagine')->filter($this->getAttribute($context["auction"], "getMainPhoto", array(), "method"), "list_thumb")), array("media" => "web/media")), "html", null, true);
             echo "\"
                                  alt=\"\">
@@ -142,7 +155,7 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
                         <td class=\"td-width\">
                             <h3>
                                 <a href=\"";
-            // line 91
+            // line 96
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_details", array("id" => $this->getAttribute($context["auction"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "name", array()), "html", null, true);
@@ -150,15 +163,19 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
                             </h3>
 
                             <p>";
-            // line 94
+            // line 99
             echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "getContentShort", array(), "method"), "html", null, true);
             echo "</p>
                         </td>
                         <td>
                             <h3>";
-            // line 97
+            // line 102
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["auction"], "getEndTime", array(), "method"), "format", array(0 => "Y-m-d H:i:s"), "method"), "html", null, true);
             echo "</h3>
+                            <p>Pozostało dni: ";
+            // line 103
+            echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "getDaysToEnd", array(), "method"), "html", null, true);
+            echo "</p>
                         </td>
                     </tr>
                 ";
@@ -166,7 +183,7 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['auction'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 101
+        // line 107
         echo "
                 </tbody>
             </table>
@@ -176,11 +193,11 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
 
 
     ";
-        // line 110
+        // line 116
         echo "    <div class=\"text-center\">
         <div class=\"navigation\\\">
                 ";
-        // line 112
+        // line 118
         echo $this->env->getExtension('knp_pagination')->render((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         echo "
         </div>
@@ -196,6 +213,6 @@ class __TwigTemplate_e51024d9545cb8c768d66623ba9114837255aff87b015f7a9b6beaf4582
 
     public function getDebugInfo()
     {
-        return array (  184 => 112,  180 => 110,  170 => 101,  160 => 97,  154 => 94,  146 => 91,  138 => 86,  132 => 82,  128 => 81,  114 => 69,  110 => 66,  108 => 65,  106 => 64,  101 => 61,  84 => 47,  68 => 34,  35 => 3,  33 => 2,  30 => 1,  22 => 117,  20 => 1,);
+        return array (  201 => 118,  197 => 116,  187 => 107,  177 => 103,  173 => 102,  167 => 99,  159 => 96,  151 => 91,  145 => 87,  141 => 86,  127 => 74,  123 => 71,  121 => 70,  119 => 69,  114 => 66,  100 => 54,  93 => 51,  86 => 48,  84 => 47,  68 => 34,  35 => 3,  33 => 2,  30 => 1,  22 => 123,  20 => 1,);
     }
 }

@@ -3,14 +3,18 @@
 
     </div>
 
-    <div class="row main-menu">
+    <div class="row main-menu" style="margin-left: 15px">
         <div class="row col-sm-6 col-md-4">
             <div class="col-sm-12">
                 <ul>
                     {% for category in categoriesCol0 %}
                         <li><i class="fa fa-chevron-circle-right"></i> <a
                                     href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }}</a>
-                        </li>
+                            {% if numbersDict[category.id] > 0 %}
+                                <span class="badge rounded badge-light">
+                                    {{ numbersDict[category.id] }}
+                                 </span>
+                            {% endif %}</li>
                     {% endfor %}
                 </ul>
             </div>
@@ -19,27 +23,39 @@
                     {% for category in categoriesCol1 %}
                         <li><i class="fa fa-chevron-circle-right"></i> <a
                                     href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }}</a>
-                        </li>
+                            {% if numbersDict[category.id] > 0 %}
+                                <span class="badge rounded badge-light">
+                                    {{ numbersDict[category.id] }}
+                                 </span>
+                            {% endif %}</li></li>
                     {% endfor %}
                 </ul>
             </div>
         </div>
         <div class="row col-sm-6 col-md-4">
             <div class="col-sm-12">
-                <ul >
+                <ul>
                     {% for category in categoriesCol2 %}
                         <li><i class="fa fa-chevron-circle-right"></i> <a
                                     href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }}</a>
-                        </li>
+                            {% if numbersDict[category.id] > 0 %}
+                                <span class="badge rounded badge-light">
+                                    {{ numbersDict[category.id] }}
+                                 </span>
+                            {% endif %}</li></li>
                     {% endfor %}
                 </ul>
             </div>
             <div class="col-sm-12">
-                <ul >
+                <ul>
                     {% for category in categoriesCol3 %}
                         <li><i class="fa fa-chevron-circle-right"></i> <a
                                     href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }}</a>
-                        </li>
+                            {% if numbersDict[category.id] > 0 %}
+                                <span class="badge rounded badge-light">
+                                    {{ numbersDict[category.id] }}
+                                 </span>
+                            {% endif %}</li></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -50,7 +66,11 @@
                     {% for category in categoriesCol4 %}
                         <li><i class="fa fa-chevron-circle-right"></i> <a
                                     href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }}</a>
-                        </li>
+                            {% if numbersDict[category.id] > 0 %}
+                                <span class="badge rounded badge-light">
+                                    {{ numbersDict[category.id] }}
+                                 </span>
+                            {% endif %}</li></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -59,7 +79,11 @@
                     {% for category in categoriesCol5 %}
                         <li><i class="fa fa-chevron-circle-right"></i> <a
                                     href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }}</a>
-                        </li>
+                            {% if numbersDict[category.id] > 0 %}
+                                <span class="badge rounded badge-light">
+                                    {{ numbersDict[category.id] }}
+                                 </span>
+                            {% endif %}</li></li>
                     {% endfor %}
                 </ul>
             </div>

@@ -31,7 +31,7 @@ class AuctionDisableReason extends \GPI\CoreBundle\Model\Auction\AuctionDisableR
     protected $content;
 
     /**
-     * @ORM\ManyToOne(targetEntity="\GPI\AuctionBundle\Entity\Auction", inversedBy="comments")
+     * @ORM\ManyToOne(targetEntity="\GPI\AuctionBundle\Entity\Auction", inversedBy="disableReason")
      */
     protected $auction;
 

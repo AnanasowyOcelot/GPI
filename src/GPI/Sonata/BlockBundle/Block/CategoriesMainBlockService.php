@@ -3,6 +3,7 @@
 
 namespace GPI\Sonata\BlockBundle\Block;
 
+use Application\Sonata\ClassificationBundle\Entity\Category;
 use Doctrine\ORM\EntityManager;
 use GPI\CoreBundle\Model\Auction\AuctionRepository;
 use GPI\Sonata\ClassificationBundle\Entity\CategoryRepository;
@@ -72,12 +73,6 @@ class CategoriesMainBlockService extends BaseBlockService
 
     public function validateBlock(ErrorElement $errorElement, BlockInterface $block)
     {
-        //        $errorElement
-        //            ->with('settings.title')
-        //            ->assertNotNull(array())
-        //            ->assertNotBlank()
-        //            ->assertMaxLength(array('limit' => 50))
-        //            ->end();
     }
 
     /**
@@ -97,6 +92,9 @@ class CategoriesMainBlockService extends BaseBlockService
         $categories = $this->catRepo->findByParentId(305);
 
         $numbersDict = array();
+        foreach ($categories as $category) {
+            $numbersDict[$category->getId()] = $this->getNumberOfElementsInCategory($category);
+        }
 
         $categoriesCols = $this->getColumns($categories, 6);
 
@@ -117,7 +115,7 @@ class CategoriesMainBlockService extends BaseBlockService
     {
         $colSize = ceil(count($collection) / $numCols);
         $cols = [];
-        for($i = 0; $i < $numCols; $i ++) {
+        for ($i = 0; $i < $numCols; $i++) {
             $cols[$i] = array_slice(
                 $collection,
                 $i * $colSize,
@@ -125,5 +123,41 @@ class CategoriesMainBlockService extends BaseBlockService
             );
         }
         return $cols;
+    }
+
+    private function getNumberOfElementsInCategory(Category $category)
+    {
+
+        $categoryIds = $this->getCategoryAndSubcategoriesIds($category);
+
+        $sql = "SELECT COUNT(DISTINCT auction.id)
+             FROM auction
+             LEFT JOIN auction_category ac ON auction.id = ac.auction_id
+             WHERE
+                auction.is_partially_active = 1
+                AND auction.end_time > now()
+                AND ac.category_id IN (?)";
+        $stmt = $this->entityManager->getConnection()->executeQuery($sql, array($categoryIds), array(\Doctrine\DBAL\Connection::PARAM_INT_ARRAY));
+
+        $result = $stmt->fetchColumn();
+
+        return $result;
+    }
+
+    private function getCategoryAndSubcategoriesIds($category)
+    {
+        $sql = "SELECT cc.id FROM classification__category cc
+                WHERE cc.id = :id
+                OR cc.parent_id = :id";
+        $stmt = $this->entityManager->getConnection()->prepare($sql);
+        $stmt->bindValue('id', $category->getId());
+        //        $stmt->bindValue('id', 306);
+        $stmt->execute();
+        $results = $stmt->fetchAll();
+        $resultsArr = array_map(function ($row) {
+            return $row['id'];
+        }, $results);
+
+        return $resultsArr;
     }
 }
