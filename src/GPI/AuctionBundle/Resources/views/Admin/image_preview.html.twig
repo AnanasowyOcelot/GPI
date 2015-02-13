@@ -1,7 +1,7 @@
 <th>{% block name %}{{ admin.trans(field_description.label) }}{% endblock %}</th>
 <td>
     <a href="/{{ object.getWebPath() }}" target="_blank">
-        <img style="width: 350px" src="/{{ asset(object.getWebPath) }}" title="{{ object.getDescription() }}"/>
+        <img style="width: 350px" src="/{{ asset(object.getWebImagePath) }}" title="{{ object.getDescription() }}"/>
     </a>
     <br/>
     {% block field %}{{ value|nl2br }}{% endblock %}

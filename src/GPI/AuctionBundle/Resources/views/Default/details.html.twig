@@ -30,7 +30,9 @@
                     ofertę</a>
             {% else %}
                 <a class="btn-u" href="{{ path("gpi_offer_homepage", {'auctionId': auction.id }) }}">Dodaj nową
-                    ofertę<div style="font-size: 10px" >(musisz być zalogowany)</div></a>
+                    ofertę
+                    <div style="font-size: 10px">(musisz być zalogowany)</div>
+                </a>
 
             {% endif %}
         {% endif %}
@@ -67,31 +69,33 @@
     </div>
 </div>
 
-<div class="fusion-portfolio wrapper-portfolio-grid cbp-3-col">
+<div class="fusion-portfolio wrapper-portfolio-grid cbp-4-col">
     <div id="grid-container" class="cbp-l-grid-gallery">
         <ul>
             {% for document in auction.documents %}
                 <li class="cbp-item motion">
+                    {% if not document.isDownloadable() %}
                     <a href="{{ asset(document.getWebPath()) }}" target="_blank" class="cbp-caption cbp-lightbox">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="{{ asset(document.getWebPath()) }}" alt="" width="100%">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <p class="cbp-l-caption-desc">{{ document.description }}</p>
-                                </div>
+                        {% else %}
+                        <a href="{{ asset(document.getWebPath()) }}" download>
+                            {% endif %}
+                            <div class="cbp-caption-defaultWrap" style="text-align: center;">
+                                <img src="{{ asset(document.getWebImagePath()) }}" alt=""
+                                     style="width: auto; max-width: 100%; max-height: 100%;">
                             </div>
-                        </div>
-                    </a>
+                            {#<div class="cbp-caption-activeWrap">#}
+                            {#<div class="cbp-l-caption-alignCenter">#}
+                            {#<div class="cbp-l-caption-body">#}
+                            {#<p class="cbp-l-caption-desc">{{ document.description }}</p>#}
+                            {#</div>#}
+                            {#</div>#}
+                            {#</div>#}
+                        </a>
                 </li>
             {% endfor %}
-
         </ul>
-
     </div>
 </div>
-
 
 
 <div class="table-responsive">

@@ -298,7 +298,7 @@ class Auction
     public function getMainPhoto()
     {
         if (!$this->getDocuments()->isEmpty()) {
-            return $this->getDocuments()->get(0)->getWebPath();
+            return $this->getDocuments()->get(0)->getWebImagePath();
         } else {
             return $this->defaultImgPath;
         }

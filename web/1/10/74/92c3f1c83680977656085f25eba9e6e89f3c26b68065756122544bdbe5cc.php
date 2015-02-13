@@ -41,9 +41,9 @@ class __TwigTemplate_107492c3f1c83680977656085f25eba9e6e89f3c26b68065756122544bd
 
     <div class=\"tag-box tag-box-v3 form-page\" style=\"overflow: hidden;\">
         <div class=\"well\">
-            <span class=\"label rounded label-green\" style=\"display: inline-block; width: 30%; border: 1px solid black\">&nbsp;</span>
-            <span class=\"label rounded label-green\" style=\"display: inline-block; width: 30%; border: 1px solid black\">&nbsp;</span>
-            <span class=\"label rounded label-green\" style=\"display: inline-block; width: 30%; border: 1px solid black\">&nbsp;</span>
+            <span class=\"label rounded label-green\" style=\"display: inline-block; width: 33%; border: 1px solid black\">&nbsp;</span>
+            <span class=\"label rounded label-green\" style=\"display: inline-block; width: 33%; border: 1px solid black\">&nbsp;</span>
+            <span class=\"label rounded label-green\" style=\"display: inline-block; width: 33%; border: 1px solid black\">&nbsp;</span>
         </div>
 
         Aukcja o tytule <strong>\"";

@@ -44,9 +44,9 @@ class __TwigTemplate_b51bbeca52893e40e46880891032cfe09f80f607327ef661717daacc26f
 
     <div class=\"tag-box tag-box-v3 form-page\" style=\"overflow: hidden;\">
         <div class=\"well\">
-            <span class=\"label rounded label-green\" style=\"display: inline-block; width: 30%; border: 1px solid black\">&nbsp;</span>
-            <span class=\"label rounded label-blue\" style=\"display: inline-block; width: 30%; border: 1px solid black\">&nbsp;</span>
-            <span class=\"label rounded label-light\" style=\"display: inline-block; width: 30%; border: 1px solid black\">&nbsp;</span>
+            <span class=\"label rounded label-green\" style=\"display: inline-block; width: 33%; border: 1px solid black\">&nbsp;</span>
+            <span class=\"label rounded label-blue\" style=\"display: inline-block; width: 33%; border: 1px solid black\">&nbsp;</span>
+            <span class=\"label rounded label-light\" style=\"display: inline-block; width: 33%; border: 1px solid black\">&nbsp;</span>
         </div>
         <div class=\"headline\"><h3>Wybierz podkategorie dla aukcji</h3></div>
 

@@ -126,11 +126,31 @@ class Document extends BaseDocument
             : $this->getUploadRootDir() . '/' . $this->path;
     }
 
+    public function isDownloadable(){
+        return !($this->getWebPath() === $this->getWebImagePath());
+    }
+
     public function getWebPath()
     {
-        return null === $this->path
-            ? null
-            : $this->getUploadDir() . '/' . $this->path;
+        if(null === $this->path){
+            return null;
+        }else{
+            $url = $this->getUploadDir() . '/' . $this->path;
+
+                return $url;
+        }
+    }
+    public function getWebImagePath(){
+        if(null === $this->path){
+            return null;
+        }else{
+            $url = $this->getUploadDir() . '/' . $this->path;
+            if(!getimagesize($url)){
+                return '/uploads/documents/defaultDoc.png';
+            }else{
+                return $url;
+            }
+        }
     }
 
     protected function getUploadRootDir()

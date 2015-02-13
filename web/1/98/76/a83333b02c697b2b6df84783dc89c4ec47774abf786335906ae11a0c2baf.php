@@ -107,9 +107,9 @@ class __TwigTemplate_9876a83333b02c697b2b6df84783dc89c4ec47774abf786335906ae11a0
 
     <div class=\"tag-box tag-box-v3 form-page\" style=\"overflow: hidden;\">
         <div class=\"well\">
-            <span class=\"label rounded label-blue\" style=\"display: inline-block; width: 30%; border: 1px solid black\">&nbsp;</span>
-            <span class=\"label rounded label-blue\" style=\"display: inline-block; width: 30%; border: 1px solid black\">&nbsp;</span>
-            <span class=\"label rounded label-green\" style=\"display: inline-block; width: 30%; border: 1px solid black\">&nbsp;</span>
+            <span class=\"label rounded label-blue\" style=\"display: inline-block; width: 33%; border: 1px solid black\">&nbsp;</span>
+            <span class=\"label rounded label-blue\" style=\"display: inline-block; width: 33%; border: 1px solid black\">&nbsp;</span>
+            <span class=\"label rounded label-green\" style=\"display: inline-block; width: 33%; border: 1px solid black\">&nbsp;</span>
         </div>
         <div class=\"headline\"><h3>Dodaj nową aukcję</h3></div>
 
