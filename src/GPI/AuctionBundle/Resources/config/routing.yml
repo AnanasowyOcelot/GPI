@@ -18,6 +18,10 @@ gpi_auction_add2:
     path:     /auction/add2/{commandId}
     defaults: { _controller: GPIAuctionBundle:AddAuction:index }
 
+gpi_auction_finish:
+    path:     /auction/finish/{auctionId}
+    defaults: { _controller: GPIAuctionBundle:AddAuction:finish }
+
 gpi_auction_edit:
     path:     /auction/edit/{id}
     defaults: { _controller: GPIAuctionBundle:AuctionEdit:edit }

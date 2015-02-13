@@ -74,7 +74,7 @@ class AddAuctionController extends Controller
             $auction = $auctionService->createNewAuction($command);
             $this->persistAuction($auction);
 
-            return $this->redirect($this->generateUrl('sonata_user_profile_show'));
+            return $this->redirect($this->generateUrl("gpi_auction_finish", array('auctionId'=>$auction->getId())));
         }
 
         return $this->render(
@@ -82,6 +82,21 @@ class AddAuctionController extends Controller
             array(
                 'form' => $form->createView()
             )
+        );
+    }
+
+    public function finishAction($auctionId){
+        if (!$this->container->get('security.context')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
+            throw new AccessDeniedException('You have to be logged');
+        }
+        /** @var \Doctrine\Common\Persistence\ObjectRepository $auctionRepo */
+        $auctionRepo = $this->get('gpi_auction.auction_repository');
+        /** @var \GPI\AuctionBundle\Entity\Auction $auction */
+        $auction = $auctionRepo->find($auctionId);
+        $title = $auction->getName();
+        return $this->render(
+            'GPIAuctionBundle:AddAuction:finish.html.twig',
+            array('title'=>$title, 'id'=>$auctionId)
         );
     }
 

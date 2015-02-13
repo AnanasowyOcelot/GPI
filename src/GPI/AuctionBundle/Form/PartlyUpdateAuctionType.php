@@ -62,7 +62,7 @@ class PartlyUpdateAuctionType extends AuctionType
                 array(
                     'label' => 'Dodaj uwagę: '
                 ))
-            ->add('submit', 'submit');
+            ->add('submit', 'submit', array('label'=> 'Zapisz'));
     }
 
     public function getName()

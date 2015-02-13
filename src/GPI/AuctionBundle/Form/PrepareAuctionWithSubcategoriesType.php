@@ -77,7 +77,7 @@ class PrepareAuctionWithSubcategoriesType extends AbstractType
                 )
             );
 
-        $builder->add('submit', 'submit');
+        $builder->add('submit', 'submit', array('label'=> 'Dalej'));
     }
 
     /**

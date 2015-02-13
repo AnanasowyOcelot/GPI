@@ -92,7 +92,7 @@ abstract class AuctionType extends AbstractType
                     'label' => "Dokumenty:"
                 )
             )
-            ->add('submit', 'submit');
+            ->add('submit', 'submit', array('label'=> 'Dalej'));
     }
 
     abstract protected function addTimePeriodToForm(FormBuilderInterface $builder);

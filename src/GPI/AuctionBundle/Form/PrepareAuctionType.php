@@ -76,7 +76,7 @@ class PrepareAuctionType extends AbstractType
                     'label' => "Kategorie:",
                                     )
             )
-            ->add('submit', 'submit');
+            ->add('submit', 'submit', array('label'=> 'Dalej'));
     }
 
     /**

@@ -24,7 +24,7 @@ class DisableAuctionType extends AbstractType
                 'label' => "Treść:",
                 'required' => true
             ))
-            ->add('submit', 'submit');
+            ->add('submit', 'submit', array('label'=> 'Potwierdź'));
 
     }
 

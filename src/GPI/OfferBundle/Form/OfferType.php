@@ -61,7 +61,7 @@ abstract class OfferType extends AbstractType
                     'label' => "Dokumenty:"
                 )
             )
-            ->add('submit', 'submit');
+            ->add('submit', 'submit', array('label'=> 'Dodaj'));
     }
 
     /**
