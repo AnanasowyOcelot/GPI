@@ -75,22 +75,17 @@
             {% for document in auction.documents %}
                 <li class="cbp-item motion">
                     {% if not document.isDownloadable() %}
-                    <a href="{{ asset(document.getWebPath()) }}" target="_blank" class="cbp-caption cbp-lightbox">
-                        {% else %}
-                        <a href="{{ asset(document.getWebPath()) }}" download>
-                            {% endif %}
-                            <div class="cbp-caption-defaultWrap" style="text-align: center;">
-                                <img src="{{ asset(document.getWebImagePath()) }}" alt=""
-                                     style="width: auto; max-width: 100%; max-height: 100%;">
-                            </div>
-                            {#<div class="cbp-caption-activeWrap">#}
-                            {#<div class="cbp-l-caption-alignCenter">#}
-                            {#<div class="cbp-l-caption-body">#}
-                            {#<p class="cbp-l-caption-desc">{{ document.description }}</p>#}
-                            {#</div>#}
-                            {#</div>#}
-                            {#</div>#}
-                        </a>
+                        {% set a_tag_attributes = 'target="_blank" class="cbp-caption cbp-lightbox"' %}
+                    {% else %}
+                        {% set a_tag_attributes = 'download' %}
+                    {% endif %}
+
+                    <a href="{{ asset(document.getWebPath()) }}" {{ a_tag_attributes|raw }}>
+                        <div class="cbp-caption-defaultWrap" style="text-align: center;">
+                            <img src="{{ asset(document.getWebImagePath()) }}" alt=""
+                                 style="width: auto; max-width: 100%; max-height: 100%;">
+                        </div>
+                    </a>
                 </li>
             {% endfor %}
         </ul>
