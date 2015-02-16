@@ -6,7 +6,9 @@
 
     <div class="tag-box tag-box-v3 form-page" style="overflow: hidden;">
         <div class="well">
+            <a href="{{ path('gpi_auction_add')}}">
             <span class="label rounded label-green" style="display: inline-block; width: 33%; border: 1px solid black">&nbsp;</span>
+            </a>
             <span class="label rounded label-blue" style="display: inline-block; width: 33%; border: 1px solid black">&nbsp;</span>
             <span class="label rounded label-light" style="display: inline-block; width: 33%; border: 1px solid black">&nbsp;</span>
         </div>
@@ -14,13 +16,7 @@
 
         <form method="POST" {{ form_enctype(form) }}>
             <fieldset>
-                {#{% for child in form.categories %}#}
-                {#<h4>sdfgh</h4>#}
-                {#{{ form_row(child) }}#}
-                {#{% endfor %}#}
-                {#&#123;&#35;{{ form_row(form.categories) }}&#35;&#125;#}
-                {#{{ form_row(form.subcategories_0) }}#}
-                {#{{ form_row(form.subcategories_1) }}#}
+
             </fieldset>
             <hr/>
             <div style="display: none;">
