@@ -158,7 +158,7 @@ class __TwigTemplate_e011a4560458fb8d4f74eb7436b24c7bc33048c62acc3d544e9165d78aa
             // line 60
             echo "                <li><strong>Cena maksymalna:</strong> ";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["auction"]) ? $context["auction"] : $this->getContext($context, "auction")), "getMaxPrice", array(), "method"), "html", null, true);
-            echo "</li>
+            echo "&nbsp;PLN</li>
             ";
         }
         // line 62
@@ -189,7 +189,7 @@ class __TwigTemplate_e011a4560458fb8d4f74eb7436b24c7bc33048c62acc3d544e9165d78aa
         echo "        </ul>
     </div>
 </div>
-
+<hr/>
 <div class=\"fusion-portfolio wrapper-portfolio-grid cbp-4-col\">
     <div id=\"grid-container\" class=\"cbp-l-grid-gallery\">
         <ul>
@@ -241,6 +241,7 @@ class __TwigTemplate_e011a4560458fb8d4f74eb7436b24c7bc33048c62acc3d544e9165d78aa
         echo "        </ul>
     </div>
 </div>
+<hr/>
 
 
 <div class=\"table-responsive\">
@@ -255,7 +256,7 @@ class __TwigTemplate_e011a4560458fb8d4f74eb7436b24c7bc33048c62acc3d544e9165d78aa
         </thead>
         <tbody>
         ";
-        // line 107
+        // line 108
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["auction"]) ? $context["auction"] : $this->getContext($context, "auction")), "getActiveOffers", array(), "method"));
         $context['loop'] = array(
@@ -272,51 +273,51 @@ class __TwigTemplate_e011a4560458fb8d4f74eb7436b24c7bc33048c62acc3d544e9165d78aa
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["offer"]) {
-            // line 108
+            // line 109
             echo "            ";
             if ($this->getAttribute($context["loop"], "first", array())) {
-                // line 109
-                echo "                <tr style=\"background-color: #88de73\">
+                // line 110
+                echo "                <tr style=\"background-color: #ccffc1\">
             ";
             } else {
-                // line 111
+                // line 112
                 echo "                <tr>
             ";
             }
-            // line 113
+            // line 114
             echo "            <td class=\"td-width\">
                 ";
-            // line 114
+            // line 115
             echo twig_escape_filter($this->env, $this->getAttribute($context["offer"], "createdBy", array()), "html", null, true);
             echo "
             </td>
             <td class=\"td-width\">
                 ";
-            // line 117
+            // line 118
             echo twig_escape_filter($this->env, $this->getAttribute($context["offer"], "actualPrice", array()), "html", null, true);
-            echo "
+            echo "&nbsp;PLN
             </td>
             <td class=\"td-width\">
                 ";
-            // line 120
+            // line 121
             if ((($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "security", array()), "getToken", array(), "method"), "getUser", array(), "method") == $this->getAttribute($context["offer"], "createdBy", array(), "method")) || ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "security", array()), "getToken", array(), "method"), "getUser", array(), "method") == $this->getAttribute($this->getAttribute($context["offer"], "getAuction", array(), "method"), "createdBy", array(), "method")))) {
-                // line 121
+                // line 122
                 echo "                    <a class=\"btn-u btn-u-blue\"
                        href=\"";
-                // line 122
+                // line 123
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_offer_details", array("id" => $this->getAttribute($context["offer"], "id", array()))), "html", null, true);
                 echo "\">Szczegóły</a>
                 ";
             }
-            // line 124
+            // line 125
             echo "            </td>
             <td>
                         <span class=\"";
-            // line 126
+            // line 127
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["offerStatus"]) ? $context["offerStatus"] : $this->getContext($context, "offerStatus")), "label", array(0 => $this->getAttribute($context["offer"], "getStatus", array(), "method")), "method"), "html", null, true);
             echo "\">
                         ";
-            // line 127
+            // line 128
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["offerStatus"]) ? $context["offerStatus"] : $this->getContext($context, "offerStatus")), "name", array(0 => $this->getAttribute($context["offer"], "getStatus", array(), "method")), "method"), "html", null, true);
             echo "
                         </span>
@@ -335,7 +336,7 @@ class __TwigTemplate_e011a4560458fb8d4f74eb7436b24c7bc33048c62acc3d544e9165d78aa
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['offer'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 132
+        // line 133
         echo "        </tbody>
     </table>
 </div>
@@ -354,6 +355,6 @@ class __TwigTemplate_e011a4560458fb8d4f74eb7436b24c7bc33048c62acc3d544e9165d78aa
 
     public function getDebugInfo()
     {
-        return array (  339 => 132,  320 => 127,  316 => 126,  312 => 124,  307 => 122,  304 => 121,  302 => 120,  296 => 117,  290 => 114,  287 => 113,  283 => 111,  279 => 109,  276 => 108,  259 => 107,  241 => 91,  229 => 85,  222 => 83,  219 => 82,  216 => 81,  213 => 80,  210 => 79,  207 => 78,  205 => 77,  202 => 76,  198 => 75,  189 => 68,  186 => 67,  175 => 65,  170 => 64,  168 => 63,  165 => 62,  159 => 60,  157 => 59,  154 => 58,  145 => 56,  141 => 55,  135 => 52,  131 => 51,  127 => 49,  122 => 47,  119 => 46,  117 => 45,  113 => 44,  106 => 39,  103 => 38,  93 => 32,  86 => 29,  83 => 28,  80 => 27,  76 => 25,  65 => 23,  61 => 22,  55 => 18,  53 => 17,  49 => 16,  45 => 15,  41 => 13,  37 => 11,  31 => 7,  25 => 4,  21 => 2,  19 => 1,);
+        return array (  340 => 133,  321 => 128,  317 => 127,  313 => 125,  308 => 123,  305 => 122,  303 => 121,  297 => 118,  291 => 115,  288 => 114,  284 => 112,  280 => 110,  277 => 109,  260 => 108,  241 => 91,  229 => 85,  222 => 83,  219 => 82,  216 => 81,  213 => 80,  210 => 79,  207 => 78,  205 => 77,  202 => 76,  198 => 75,  189 => 68,  186 => 67,  175 => 65,  170 => 64,  168 => 63,  165 => 62,  159 => 60,  157 => 59,  154 => 58,  145 => 56,  141 => 55,  135 => 52,  131 => 51,  127 => 49,  122 => 47,  119 => 46,  117 => 45,  113 => 44,  106 => 39,  103 => 38,  93 => 32,  86 => 29,  83 => 28,  80 => 27,  76 => 25,  65 => 23,  61 => 22,  55 => 18,  53 => 17,  49 => 16,  45 => 15,  41 => 13,  37 => 11,  31 => 7,  25 => 4,  21 => 2,  19 => 1,);
     }
 }

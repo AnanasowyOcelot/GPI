@@ -26,11 +26,11 @@
                         <small class="hex">Zakończenie {{ auction.getEndTime().format('Y-m-d H:i:s') }}</small>
                     </td>
                     <td>
-                        <p><a class="btn-u btn-u-blue" href="{{ path('gpi_auction_details', {'id': auction.id }) }}">Szczegóły</a></p>
+                        <p><a style="width: 80%; text-align: center" class="btn-u btn-u-blue" href="{{ path('gpi_auction_details', {'id': auction.id }) }}">Szczegóły</a></p>
                         {% if auction.isActive() %}
-                            <p><a class="btn-u btn-u-blue" href="{{ path('gpi_auction_edit', {'id': auction.id }) }}">Edytuj</a></p>
+                            <p ><a style="width: 80%; text-align: center" class="btn-u btn-u-blue" href="{{ path('gpi_auction_edit', {'id': auction.id }) }}">Edytuj</a></p>
 
-                            <p><a class="btn-u btn-u-red" href="{{ path('gpi_auction_cancel', {'id': auction.id }) }}">Anuluj</a></p>
+                            <p><a style="width: 80%; text-align: center" class="btn-u btn-u-red" href="{{ path('gpi_auction_cancel', {'id': auction.id }) }}">Anuluj</a></p>
                         {% endif %}
                     </td>
                     <td>

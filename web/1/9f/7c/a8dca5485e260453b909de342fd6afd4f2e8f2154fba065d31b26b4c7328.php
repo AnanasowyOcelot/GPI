@@ -16,94 +16,40 @@ class __TwigTemplate_9f7ca8dca5485e260453b909de342fd6afd4f2e8f2154fba065d31b26b4
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        // line 48
+        // line 44
         echo "
 ";
-        // line 49
+        // line 45
         $this->displayBlock('block', $context, $blocks);
-        // line 125
+        // line 81
         echo "
 ";
     }
 
-    // line 49
+    // line 45
     public function block_block($context, array $blocks = array())
     {
-        // line 50
-        echo "    ";
-        // line 51
-        echo "
-
-    ";
-        // line 54
-        echo "    ";
-        // line 55
-        echo "    ";
-        // line 56
-        echo "    ";
-        // line 57
+        // line 46
         echo "
     ";
-        // line 59
-        echo "    ";
-        // line 60
-        echo "
-    ";
-        // line 62
-        echo "    ";
-        // line 63
+        // line 48
         echo "    <ul class=\"main-menu list-group sidebar-nav-v1\" id=\"sidebar-nav\">
-        <!-- Typography -->
         ";
-        // line 65
+        // line 49
         echo $this->getAttribute($this, "menu_categories", array(0 => (isset($context["categories"]) ? $context["categories"] : $this->getContext($context, "categories")), 1 => (isset($context["slug"]) ? $context["slug"] : $this->getContext($context, "slug")), 2 => (isset($context["numbersDict"]) ? $context["numbersDict"] : $this->getContext($context, "numbersDict")), 3 => (isset($context["parentSlug"]) ? $context["parentSlug"] : $this->getContext($context, "parentSlug"))), "method");
         echo "
-        ";
-        // line 67
-        echo "        ";
-        // line 68
-        echo "        ";
-        // line 69
-        echo "        ";
-        // line 70
-        echo "        ";
-        // line 71
-        echo "        ";
-        // line 72
-        echo "        <!-- End Typography -->
 
     </ul>
     ";
-        // line 76
+        // line 53
         echo "    ";
-        // line 123
+        // line 79
         echo "
     <script type=\"application/javascript\">
-        //        jQuery(document).ready(function () {
-        //            var mainMenu = jQuery('.main-menu');
-        //            jQuery('.buttonToggle', mainMenu).click(function () {
-        //                jQuery(this).closest('li').find('> ul').toggle();
-        //            });
-        //            jQuery('ul', mainMenu).hide();
-        //            jQuery('a.active', mainMenu)
-        //                    .closest('ul').show()
-        //                    .closest('ul').show();
-        //        });
+
     </script>
 
     <style>
-        /*.main-menu .active {*/
-        /*font-weight: bold;*/
-        /*}*/
-
-        /*.main-menu .buttonToggle {*/
-        /*cursor: pointer;*/
-        /*display: inline-block;*/
-        /*}*/
-
-        /*.main-menu ul {*/
-        /*display: none;*/
-        /*}*/
 
         .main-menu li {
             width: 100%;
@@ -120,8 +66,8 @@ class __TwigTemplate_9f7ca8dca5485e260453b909de342fd6afd4f2e8f2154fba065d31b26b4
         .sidebar-nav-v1 li ul, .sidebar-nav-v1 li.active ul a {
 
             background: #ffffff;
-
         }
+
 
     </style>
     ";
@@ -153,7 +99,7 @@ class __TwigTemplate_9f7ca8dca5485e260453b909de342fd6afd4f2e8f2154fba065d31b26b4
                 $context["class"] = "";
                 // line 4
                 echo "        ";
-                if (((($this->getAttribute($context["category"], "slug", array()) == (isset($context["slug"]) ? $context["slug"] : $this->getContext($context, "slug"))) && $this->getAttribute($context["category"], "children", array())) || ($this->getAttribute($context["category"], "slug", array()) == (isset($context["parentSlug"]) ? $context["parentSlug"] : $this->getContext($context, "parentSlug"))))) {
+                if (((($this->getAttribute($context["category"], "slug", array()) == (isset($context["slug"]) ? $context["slug"] : $this->getContext($context, "slug"))) && (null === $this->getAttribute($this->getAttribute($this->getAttribute($context["category"], "entity", array()), "parent", array()), "parent", array()))) || ($this->getAttribute($context["category"], "slug", array()) == (isset($context["parentSlug"]) ? $context["parentSlug"] : $this->getContext($context, "parentSlug"))))) {
                     // line 5
                     echo "            ";
                     $context["class"] = "active accordion-toggle";
@@ -191,67 +137,66 @@ class __TwigTemplate_9f7ca8dca5485e260453b909de342fd6afd4f2e8f2154fba065d31b26b4
                 echo twig_escape_filter($this->env, (isset($context["classLI"]) ? $context["classLI"] : $this->getContext($context, "classLI")), "html", null, true);
                 echo "\" style=\"overflow: hidden;\">
 
-            ";
-                // line 20
-                echo "            <a class=\"";
+            <a class=\"";
+                // line 19
                 echo twig_escape_filter($this->env, (isset($context["classA"]) ? $context["classA"] : $this->getContext($context, "classA")), "html", null, true);
                 echo " \" style=\"display: inline; line-height: 34px;\"
                href=\"";
-                // line 21
+                // line 20
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_auctions_by_category", array("categorySlug" => $this->getAttribute($context["category"], "slug", array()))), "html", null, true);
                 echo "\">
                 ";
-                // line 22
+                // line 21
+                if (($this->getAttribute($context["category"], "slug", array()) == (isset($context["slug"]) ? $context["slug"] : $this->getContext($context, "slug")))) {
+                    echo "&#8226&nbsp;";
+                }
                 echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
                 echo "
                 ";
-                // line 23
+                // line 22
                 if (($this->getAttribute((isset($context["numbersDict"]) ? $context["numbersDict"] : $this->getContext($context, "numbersDict")), $this->getAttribute($this->getAttribute($context["category"], "entity", array()), "id", array()), array(), "array") > 0)) {
-                    // line 24
+                    // line 23
                     echo "                <span class=\"badge rounded badge-light\">
                     ";
-                    // line 25
+                    // line 24
                     echo twig_escape_filter($this->env, $this->getAttribute((isset($context["numbersDict"]) ? $context["numbersDict"] : $this->getContext($context, "numbersDict")), $this->getAttribute($this->getAttribute($context["category"], "entity", array()), "id", array()), array(), "array"), "html", null, true);
                     echo "
                 </span>
                 ";
                 }
-                // line 28
+                // line 27
                 echo "            </a>
 
-
-
-
             ";
-                // line 33
+                // line 29
                 if ($this->getAttribute($context["category"], "children", array())) {
-                    // line 34
+                    // line 30
                     echo "                <a class=\"";
                     echo twig_escape_filter($this->env, (isset($context["classA"]) ? $context["classA"] : $this->getContext($context, "classA")), "html", null, true);
                     echo " \" style=\"display: inline; position: absolute; right: 0;\"
                    data-toggle=\"collapse\"
                    data-parent=\"#sidebar-nav\"
                    href=\"#collapse-";
-                    // line 37
+                    // line 33
                     echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "slug", array()), "html", null, true);
                     echo "\">&raquo;
                 </a>
 
                 <ul id=\"collapse-";
-                    // line 40
+                    // line 36
                     echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "slug", array()), "html", null, true);
                     echo "\" class=\"";
                     echo twig_escape_filter($this->env, (isset($context["classUL"]) ? $context["classUL"] : $this->getContext($context, "classUL")), "html", null, true);
                     echo "\">
-                    ";
-                    // line 41
+                  ";
+                    // line 37
                     echo $this->getAttribute($this, "menu_categories", array(0 => $this->getAttribute($context["category"], "children", array()), 1 => (isset($context["slug"]) ? $context["slug"] : $this->getContext($context, "slug")), 2 => (isset($context["numbersDict"]) ? $context["numbersDict"] : $this->getContext($context, "numbersDict")), 3 => (isset($context["parentSlug"]) ? $context["parentSlug"] : $this->getContext($context, "parentSlug"))), "method");
                     echo "
 
                 </ul>
             ";
                 }
-                // line 45
+                // line 41
                 echo "        </li>
     ";
             }
@@ -279,6 +224,6 @@ class __TwigTemplate_9f7ca8dca5485e260453b909de342fd6afd4f2e8f2154fba065d31b26b4
 
     public function getDebugInfo()
     {
-        return array (  255 => 45,  248 => 41,  242 => 40,  236 => 37,  229 => 34,  227 => 33,  220 => 28,  214 => 25,  211 => 24,  209 => 23,  205 => 22,  201 => 21,  196 => 20,  190 => 17,  186 => 15,  183 => 14,  180 => 13,  177 => 12,  174 => 11,  170 => 9,  167 => 8,  164 => 7,  161 => 6,  158 => 5,  155 => 4,  152 => 3,  147 => 2,  133 => 1,  80 => 123,  78 => 76,  73 => 72,  71 => 71,  69 => 70,  67 => 69,  65 => 68,  63 => 67,  59 => 65,  55 => 63,  53 => 62,  50 => 60,  48 => 59,  45 => 57,  43 => 56,  41 => 55,  39 => 54,  35 => 51,  33 => 50,  30 => 49,  25 => 125,  23 => 49,  20 => 48,);
+        return array (  200 => 41,  193 => 37,  187 => 36,  181 => 33,  174 => 30,  172 => 29,  168 => 27,  162 => 24,  159 => 23,  157 => 22,  150 => 21,  146 => 20,  142 => 19,  136 => 17,  132 => 15,  129 => 14,  126 => 13,  123 => 12,  120 => 11,  116 => 9,  113 => 8,  110 => 7,  107 => 6,  104 => 5,  101 => 4,  98 => 3,  93 => 2,  79 => 1,  47 => 79,  45 => 53,  39 => 49,  36 => 48,  33 => 46,  30 => 45,  25 => 81,  23 => 45,  20 => 44,);
     }
 }

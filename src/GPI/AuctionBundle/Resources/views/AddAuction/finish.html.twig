@@ -3,16 +3,84 @@
 
 
 
+    {#<div class="tag-box tag-box-v3 form-page" style="overflow: hidden;">#}
     <div class="tag-box tag-box-v3 form-page" style="overflow: hidden;">
-        <div class="well">
-            <span class="label rounded label-green" style="display: inline-block; width: 33%; border: 1px solid black">&nbsp;</span>
-            <span class="label rounded label-green" style="display: inline-block; width: 33%; border: 1px solid black">&nbsp;</span>
-            <span class="label rounded label-green" style="display: inline-block; width: 33%; border: 1px solid black">&nbsp;</span>
+        <div class="well" style="text-align: center">
+                <span class="label rounded label-blue"
+                      style="display: inline-block; width: 31%; border: 1px solid #aaaaaa">Kategorie</span>
+            <i class="fa fa-angle-double-right"></i>
+                <span class="label rounded label-light"
+                      style="display: inline-block; width: 31%; border: 1px solid #aaaaaa">Podkategorie</span>
+            <i class="fa fa-angle-double-right"></i>
+                <span class="label rounded label-light"
+                      style="display: inline-block; width: 31%; border: 1px solid #aaaaaa">Szczegóły aukcji</span>
         </div>
+        {#</div>#}
+        Aukcja o tytule <strong>"{{ auction.name }}"</strong> została dodana. Możesz ją zobaczyć <a
+                href="{{ path('gpi_auction_details', {'id': auction.id }) }}">tutaj</a>
+    {#</div>#}
+    {#<div>#}
+        <hr/>
+        <fieldset>
 
-        Aukcja o tytule <strong>"{{ title }}"</strong> została dodana. Możesz ją zobaczyć <a href="{{ path('gpi_auction_details', {'id': id }) }}">tutaj</a>
+            <strong>Data zakończenia:</strong>
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;{{ auction.getEndTime().format('Y-m-d H:i:s') }}
+        </fieldset>
+               <hr/>
+        <fieldset>
+
+            <strong>Treść:</strong>
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;{{ auction.content }}
+        </fieldset>
+        <hr/>
+        <fieldset>
+            <strong>Kategorie:</strong>
+            {% for category in auction.getCategories() %}
+                <br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;{{ category }}
+            {% endfor %}
+        </fieldset>
+        <hr/>
+        {% if auction.getMaxPrice != null %}
+            <fieldset>
+                <strong>Cena maksymalna:</strong>
+                <br/>
+                &nbsp;&nbsp;&nbsp;&nbsp; {{ auction.getMaxPrice() }}&nbsp;PLN
+            </fieldset>
+        {% endif %}
+        <hr/>
+        <fieldset>
+
+            <strong>Pliki: </strong>
+            <br/>
+            <br/>
+            <div class="fusion-portfolio wrapper-portfolio-grid cbp-4-col">
+                <div id="grid-container" class="cbp-l-grid-gallery">
+                    <ul>
+                        {% for document in auction.documents %}
+                            <li class="cbp-item motion">
+                                {% if not document.isDownloadable() %}
+                                    {% set a_tag_attributes = 'target="_blank" class="cbp-caption cbp-lightbox"' %}
+                                {% else %}
+                                    {% set a_tag_attributes = 'download' %}
+                                {% endif %}
+
+                                <a href="{{ asset(document.getWebPath()) }}" {{ a_tag_attributes|raw }}>
+                                    <div class="cbp-caption-defaultWrap" style="text-align: center;">
+                                        <img src="{{ asset(document.getWebImagePath()) }}" alt=""
+                                             style="width: auto; max-width: 100%; max-height: 100%;">
+                                    </div>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </fieldset>
+
     </div>
-
 
 {% endblock %}
 

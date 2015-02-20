@@ -30,7 +30,10 @@ class AddNewAuctionCommand
 
     public function getSubcategoriesIds()
     {
-        return call_user_func_array('array_merge', $this->subcategories);
+        if($this->subcategories){
+            return call_user_func_array('array_merge', $this->subcategories);
+        }
+        return null;
     }
 
     /**

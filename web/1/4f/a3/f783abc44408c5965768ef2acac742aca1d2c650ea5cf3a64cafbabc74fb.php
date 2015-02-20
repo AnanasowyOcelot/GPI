@@ -82,7 +82,7 @@ class __TwigTemplate_4fa3f783abc44408c5965768ef2acac742aca1d2c650ea5cf3a64cafbab
             echo "</small>
                     </td>
                     <td>
-                        <p><a class=\"btn-u btn-u-blue\" href=\"";
+                        <p><a style=\"width: 80%; text-align: center\" class=\"btn-u btn-u-blue\" href=\"";
             // line 29
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_details", array("id" => $this->getAttribute($context["auction"], "id", array()))), "html", null, true);
             echo "\">Szczegóły</a></p>
@@ -90,11 +90,11 @@ class __TwigTemplate_4fa3f783abc44408c5965768ef2acac742aca1d2c650ea5cf3a64cafbab
             // line 30
             if ($this->getAttribute($context["auction"], "isActive", array(), "method")) {
                 // line 31
-                echo "                            <p><a class=\"btn-u btn-u-blue\" href=\"";
+                echo "                            <p ><a style=\"width: 80%; text-align: center\" class=\"btn-u btn-u-blue\" href=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_edit", array("id" => $this->getAttribute($context["auction"], "id", array()))), "html", null, true);
                 echo "\">Edytuj</a></p>
 
-                            <p><a class=\"btn-u btn-u-red\" href=\"";
+                            <p><a style=\"width: 80%; text-align: center\" class=\"btn-u btn-u-red\" href=\"";
                 // line 33
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_cancel", array("id" => $this->getAttribute($context["auction"], "id", array()))), "html", null, true);
                 echo "\">Anuluj</a></p>

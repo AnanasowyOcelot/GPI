@@ -42,26 +42,28 @@ class PrepareAuctionWithSubcategoriesType extends AbstractType
 
         $index = 0;
         foreach ($parentsWithChildrenArr as $parentName => $children) {
-            $choices = [];
-            foreach ($children as $catEntity) {
-                $choices = $this->addCatToChoices($catEntity, $choices);
-            }
+            if ($children) {
+                $choices = [];
+                foreach ($children as $catEntity) {
+                    $choices = $this->addCatToChoices($catEntity, $choices);
+                }
 
-            $builder
-                ->add(
-                    'subcategories_' . $index,
-                    'choice',
-                    array(
-                        'required' => true,
-                        'choices' => $choices,
-                        'multiple' => true,
-                        'expanded' => true,
-                        'attr' => array('data-sonata-select2' => 'false'),
-                        'label' => $parentName
+                $builder
+                    ->add(
+                        'subcategories_' . $index,
+                        'choice',
+                        array(
+                            'required' => true,
+                            'choices' => $choices,
+                            'multiple' => true,
+                            'expanded' => true,
+                            'attr' => array('data-sonata-select2' => 'false'),
+                            'label' => $parentName
                         )
-                );
+                    );
 
-            $index++;
+                $index++;
+            }
         }
 
         $builder
@@ -77,7 +79,7 @@ class PrepareAuctionWithSubcategoriesType extends AbstractType
                 )
             );
 
-        $builder->add('submit', 'submit', array('label'=> 'Dalej'));
+        $builder->add('submit', 'submit', array('label' => 'Dalej'));
     }
 
     /**

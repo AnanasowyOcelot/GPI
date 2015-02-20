@@ -152,7 +152,7 @@ class __TwigTemplate_35b504285c9359f775ad86643540849247f06667cc7f8894025a324354a
             echo "\" target=\"_blank\">
                         <img class=\"thumbnail\" src=\"";
             // line 57
-            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute($context["document"], "getWebPath", array(), "method")), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute($context["document"], "getWebImagePath", array(), "method")), "html", null, true);
             echo "\" alt=\"\">
                     </a>
                 ";

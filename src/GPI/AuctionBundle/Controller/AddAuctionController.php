@@ -26,9 +26,6 @@ class AddAuctionController extends Controller
         $command = $commandRepo->findOneBy(array('id' => $commandId));
         $this->validateUser($command);
 
-        $d1 = new Document();
-
-        $command->getDocuments()->add($d1);
         ////////////////////////////////////////////////
 
         // C -> [A]
@@ -50,7 +47,11 @@ class AddAuctionController extends Controller
         /** @var \GPI\Sonata\ClassificationBundle\Entity\CategoryRepository $catRepo */
         $catRepo = $this->get('gpi_sonata.category_repository');
 
-        $subcategories = $catRepo->findCategoriesByIds($command->getSubcategoriesIds());
+        $subcategoriesIds = array();
+        if($command->getSubcategoriesIds()){
+            $subcategoriesIds = $command->getSubcategoriesIds();
+        }
+        $subcategories = $catRepo->findCategoriesByIds($subcategoriesIds);
         foreach ($subcategories as $subcategorie) {
             $command->addCategory($subcategorie);
         }
@@ -96,7 +97,7 @@ class AddAuctionController extends Controller
         $title = $auction->getName();
         return $this->render(
             'GPIAuctionBundle:AddAuction:finish.html.twig',
-            array('title'=>$title, 'id'=>$auctionId)
+            array('auction'=>$auction)
         );
     }
 

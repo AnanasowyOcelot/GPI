@@ -363,68 +363,84 @@ $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttri
     public function block_form_label($context, array $blocks = array())
     {
         // line 140
-        $context["label_attr"] = twig_array_merge((isset($context["label_attr"]) ? $context["label_attr"] : $this->getContext($context, "label_attr")), array("class" => trim(((($this->getAttribute((isset($context["label_attr"]) ? $context["label_attr"] : null), "class", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute((isset($context["label_attr"]) ? $context["label_attr"] : null), "class", array()), "")) : ("")) . " control-label"))));
+        ob_start();
         // line 141
-        $this->displayParentBlock("form_label", $context, $blocks);
-    }
-
-    // line 144
-    public function block_choice_label($context, array $blocks = array())
-    {
-        // line 145
-        echo "    ";
-        // line 146
-        echo "    ";
-        $context["label_attr"] = twig_array_merge((isset($context["label_attr"]) ? $context["label_attr"] : $this->getContext($context, "label_attr")), array("class" => trim(strtr((($this->getAttribute((isset($context["label_attr"]) ? $context["label_attr"] : null), "class", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute((isset($context["label_attr"]) ? $context["label_attr"] : null), "class", array()), "")) : ("")), array("checkbox-inline" => "", "radio-inline" => "")))));
+        echo "        ";
+        if (((isset($context["label"]) ? $context["label"] : $this->getContext($context, "label")) === false)) {
+            // line 142
+            echo "            <div class=\"";
+            $this->displayBlock("form_label_class", $context, $blocks);
+            echo "\"></div>
+        ";
+        } else {
+            // line 144
+            echo "            ";
+            $context["label_attr"] = twig_array_merge((isset($context["label_attr"]) ? $context["label_attr"] : $this->getContext($context, "label_attr")), array("class" => trim((((($this->getAttribute((isset($context["label_attr"]) ? $context["label_attr"] : null), "class", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute((isset($context["label_attr"]) ? $context["label_attr"] : null), "class", array()), "")) : ("")) . " ") . $this->renderBlock("form_label_class", $context, $blocks)))));
+            // line 145
+            $this->displayParentBlock("form_label", $context, $blocks);
+        }
         // line 147
-        $this->displayBlock("form_label", $context, $blocks);
+        echo "    ";
+        echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
     }
 
     // line 150
-    public function block_checkbox_label($context, array $blocks = array())
+    public function block_choice_label($context, array $blocks = array())
     {
         // line 151
+        echo "    ";
+        // line 152
+        echo "    ";
+        $context["label_attr"] = twig_array_merge((isset($context["label_attr"]) ? $context["label_attr"] : $this->getContext($context, "label_attr")), array("class" => trim(strtr((($this->getAttribute((isset($context["label_attr"]) ? $context["label_attr"] : null), "class", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute((isset($context["label_attr"]) ? $context["label_attr"] : null), "class", array()), "")) : ("")), array("checkbox-inline" => "", "radio-inline" => "")))));
+        // line 153
+        $this->displayBlock("form_label", $context, $blocks);
+    }
+
+    // line 156
+    public function block_checkbox_label($context, array $blocks = array())
+    {
+        // line 157
         $this->displayBlock("checkbox_radio_label", $context, $blocks);
     }
 
-    // line 154
+    // line 160
     public function block_radio_label($context, array $blocks = array())
     {
-        // line 155
+        // line 161
         $this->displayBlock("checkbox_radio_label", $context, $blocks);
     }
 
-    // line 158
+    // line 164
     public function block_checkbox_radio_label($context, array $blocks = array())
     {
-        // line 159
-        echo "    ";
-        if ((isset($context["required"]) ? $context["required"] : $this->getContext($context, "required"))) {
-            // line 160
-            echo "        ";
-            $context["label_attr"] = twig_array_merge((isset($context["label_attr"]) ? $context["label_attr"] : $this->getContext($context, "label_attr")), array("class" => trim(((($this->getAttribute((isset($context["label_attr"]) ? $context["label_attr"] : null), "class", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute((isset($context["label_attr"]) ? $context["label_attr"] : null), "class", array()), "")) : ("")) . " required"))));
-            // line 161
-            echo "    ";
-        }
-        // line 162
-        echo "    ";
-        if (array_key_exists("parent_label_class", $context)) {
-            // line 163
-            echo "        ";
-            $context["label_attr"] = twig_array_merge((isset($context["label_attr"]) ? $context["label_attr"] : $this->getContext($context, "label_attr")), array("class" => trim(((($this->getAttribute((isset($context["label_attr"]) ? $context["label_attr"] : null), "class", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute((isset($context["label_attr"]) ? $context["label_attr"] : null), "class", array()), "")) : ("")) . (isset($context["parent_label_class"]) ? $context["parent_label_class"] : $this->getContext($context, "parent_label_class"))))));
-            // line 164
-            echo "    ";
-        }
         // line 165
         echo "    ";
-        if (twig_test_empty((isset($context["label"]) ? $context["label"] : $this->getContext($context, "label")))) {
+        if ((isset($context["required"]) ? $context["required"] : $this->getContext($context, "required"))) {
             // line 166
             echo "        ";
-            $context["label"] = $this->env->getExtension('form')->humanize((isset($context["name"]) ? $context["name"] : $this->getContext($context, "name")));
+            $context["label_attr"] = twig_array_merge((isset($context["label_attr"]) ? $context["label_attr"] : $this->getContext($context, "label_attr")), array("class" => trim(((($this->getAttribute((isset($context["label_attr"]) ? $context["label_attr"] : null), "class", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute((isset($context["label_attr"]) ? $context["label_attr"] : null), "class", array()), "")) : ("")) . " required"))));
             // line 167
             echo "    ";
         }
         // line 168
+        echo "    ";
+        if (array_key_exists("parent_label_class", $context)) {
+            // line 169
+            echo "        ";
+            $context["label_attr"] = twig_array_merge((isset($context["label_attr"]) ? $context["label_attr"] : $this->getContext($context, "label_attr")), array("class" => trim(((($this->getAttribute((isset($context["label_attr"]) ? $context["label_attr"] : null), "class", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute((isset($context["label_attr"]) ? $context["label_attr"] : null), "class", array()), "")) : ("")) . (isset($context["parent_label_class"]) ? $context["parent_label_class"] : $this->getContext($context, "parent_label_class"))))));
+            // line 170
+            echo "    ";
+        }
+        // line 171
+        echo "    ";
+        if (twig_test_empty((isset($context["label"]) ? $context["label"] : $this->getContext($context, "label")))) {
+            // line 172
+            echo "        ";
+            $context["label"] = $this->env->getExtension('form')->humanize((isset($context["name"]) ? $context["name"] : $this->getContext($context, "name")));
+            // line 173
+            echo "    ";
+        }
+        // line 174
         echo "    <label";
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["label_attr"]) ? $context["label_attr"] : $this->getContext($context, "label_attr")));
@@ -440,139 +456,139 @@ $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttri
         $context = array_intersect_key($context, $_parent) + $_parent;
         echo ">
         ";
-        // line 169
+        // line 175
         echo (isset($context["widget"]) ? $context["widget"] : $this->getContext($context, "widget"));
         echo "
         ";
-        // line 170
+        // line 176
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans((isset($context["label"]) ? $context["label"] : $this->getContext($context, "label")), array(), (isset($context["translation_domain"]) ? $context["translation_domain"] : $this->getContext($context, "translation_domain"))), "html", null, true);
         echo "
     </label>
 ";
     }
 
-    // line 176
+    // line 182
     public function block_form_row($context, array $blocks = array())
     {
-        // line 177
+        // line 183
         echo "<div class=\"form-group";
         if ((( !(isset($context["compound"]) ? $context["compound"] : $this->getContext($context, "compound")) || ((array_key_exists("force_error", $context)) ? (_twig_default_filter((isset($context["force_error"]) ? $context["force_error"] : $this->getContext($context, "force_error")), false)) : (false))) &&  !(isset($context["valid"]) ? $context["valid"] : $this->getContext($context, "valid")))) {
             echo " has-error";
         }
         echo "\">
         ";
-        // line 178
+        // line 184
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'label');
         echo "
         ";
-        // line 179
+        // line 185
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
         echo "
         ";
-        // line 180
+        // line 186
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
         echo "
     </div>";
     }
 
-    // line 184
+    // line 190
     public function block_choice_row($context, array $blocks = array())
     {
-        // line 185
+        // line 191
         $context["force_error"] = true;
-        // line 186
+        // line 192
         echo "    ";
         $this->displayBlock("form_row", $context, $blocks);
     }
 
-    // line 189
+    // line 195
     public function block_date_row($context, array $blocks = array())
     {
-        // line 190
+        // line 196
         $context["force_error"] = true;
-        // line 191
+        // line 197
         echo "    ";
         $this->displayBlock("form_row", $context, $blocks);
     }
 
-    // line 194
+    // line 200
     public function block_time_row($context, array $blocks = array())
     {
-        // line 195
+        // line 201
         $context["force_error"] = true;
-        // line 196
+        // line 202
         echo "    ";
         $this->displayBlock("form_row", $context, $blocks);
     }
 
-    // line 199
+    // line 205
     public function block_datetime_row($context, array $blocks = array())
     {
-        // line 200
+        // line 206
         $context["force_error"] = true;
-        // line 201
+        // line 207
         echo "    ";
         $this->displayBlock("form_row", $context, $blocks);
     }
 
-    // line 204
+    // line 210
     public function block_checkbox_row($context, array $blocks = array())
     {
-        // line 205
+        // line 211
         echo "<div class=\"form-group";
         if ( !(isset($context["valid"]) ? $context["valid"] : $this->getContext($context, "valid"))) {
             echo " has-error";
         }
         echo "\">
         ";
-        // line 206
+        // line 212
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
         echo "
-        ";
-        // line 207
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
-        echo "
-    </div>";
-    }
-
-    // line 211
-    public function block_radio_row($context, array $blocks = array())
-    {
-        // line 212
-        echo "<div class=\"form-group";
-        if ( !(isset($context["valid"]) ? $context["valid"] : $this->getContext($context, "valid"))) {
-            echo " has-error";
-        }
-        echo "\">
         ";
         // line 213
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
-        echo "
-        ";
-        // line 214
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
         echo "
     </div>";
     }
 
-    // line 220
+    // line 217
+    public function block_radio_row($context, array $blocks = array())
+    {
+        // line 218
+        echo "<div class=\"form-group";
+        if ( !(isset($context["valid"]) ? $context["valid"] : $this->getContext($context, "valid"))) {
+            echo " has-error";
+        }
+        echo "\">
+        ";
+        // line 219
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
+        echo "
+        ";
+        // line 220
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
+        echo "
+    </div>";
+    }
+
+    // line 226
     public function block_form_errors($context, array $blocks = array())
     {
-        // line 221
+        // line 227
         if ((twig_length_filter($this->env, (isset($context["errors"]) ? $context["errors"] : $this->getContext($context, "errors"))) > 0)) {
-            // line 222
+            // line 228
             if ($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "parent", array())) {
                 echo "<span class=\"help-block\">";
             } else {
                 echo "<div class=\"alert alert-danger\">";
             }
-            // line 223
+            // line 229
             echo "    <ul class=\"list-unstyled\">";
-            // line 224
+            // line 230
             $context['_parent'] = (array) $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["errors"]) ? $context["errors"] : $this->getContext($context, "errors")));
             foreach ($context['_seq'] as $context["_key"] => $context["error"]) {
-                // line 225
+                // line 231
                 echo "<li><span class=\"glyphicon glyphicon-exclamation-sign\"></span> ";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["error"], "message", array()), "html", null, true);
                 echo "</li>";
@@ -580,10 +596,10 @@ $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttri
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['error'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 227
+            // line 233
             echo "</ul>
     ";
-            // line 228
+            // line 234
             if ($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "parent", array())) {
                 echo "</span>";
             } else {
@@ -604,6 +620,6 @@ $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttri
 
     public function getDebugInfo()
     {
-        return array (  587 => 228,  584 => 227,  576 => 225,  572 => 224,  570 => 223,  564 => 222,  562 => 221,  559 => 220,  553 => 214,  549 => 213,  542 => 212,  539 => 211,  533 => 207,  529 => 206,  522 => 205,  519 => 204,  514 => 201,  512 => 200,  509 => 199,  504 => 196,  502 => 195,  499 => 194,  494 => 191,  492 => 190,  489 => 189,  484 => 186,  482 => 185,  479 => 184,  473 => 180,  469 => 179,  465 => 178,  458 => 177,  455 => 176,  448 => 170,  444 => 169,  428 => 168,  425 => 167,  422 => 166,  419 => 165,  416 => 164,  413 => 163,  410 => 162,  407 => 161,  404 => 160,  401 => 159,  398 => 158,  394 => 155,  391 => 154,  387 => 151,  384 => 150,  380 => 147,  377 => 146,  375 => 145,  372 => 144,  368 => 141,  366 => 140,  363 => 139,  355 => 132,  352 => 131,  346 => 129,  343 => 128,  341 => 127,  338 => 126,  330 => 121,  327 => 120,  321 => 118,  318 => 117,  316 => 116,  313 => 115,  307 => 111,  300 => 109,  297 => 107,  293 => 106,  288 => 105,  284 => 103,  277 => 101,  274 => 99,  270 => 98,  267 => 97,  265 => 96,  262 => 95,  258 => 92,  256 => 91,  253 => 90,  248 => 87,  244 => 85,  241 => 84,  232 => 83,  226 => 81,  223 => 80,  220 => 79,  217 => 77,  215 => 76,  212 => 75,  207 => 72,  203 => 70,  201 => 69,  198 => 68,  196 => 67,  195 => 66,  194 => 65,  192 => 64,  186 => 62,  183 => 61,  180 => 60,  177 => 58,  175 => 57,  172 => 56,  164 => 51,  160 => 50,  156 => 49,  152 => 48,  147 => 47,  144 => 46,  141 => 44,  139 => 43,  136 => 42,  131 => 38,  129 => 37,  127 => 36,  124 => 35,  120 => 32,  114 => 30,  112 => 29,  110 => 28,  104 => 26,  101 => 25,  99 => 24,  96 => 23,  93 => 22,  89 => 19,  87 => 18,  84 => 17,  80 => 14,  78 => 13,  75 => 12,  71 => 9,  68 => 8,  65 => 7,  63 => 6,  60 => 5,  11 => 1,);
+        return array (  603 => 234,  600 => 233,  592 => 231,  588 => 230,  586 => 229,  580 => 228,  578 => 227,  575 => 226,  569 => 220,  565 => 219,  558 => 218,  555 => 217,  549 => 213,  545 => 212,  538 => 211,  535 => 210,  530 => 207,  528 => 206,  525 => 205,  520 => 202,  518 => 201,  515 => 200,  510 => 197,  508 => 196,  505 => 195,  500 => 192,  498 => 191,  495 => 190,  489 => 186,  485 => 185,  481 => 184,  474 => 183,  471 => 182,  464 => 176,  460 => 175,  444 => 174,  441 => 173,  438 => 172,  435 => 171,  432 => 170,  429 => 169,  426 => 168,  423 => 167,  420 => 166,  417 => 165,  414 => 164,  410 => 161,  407 => 160,  403 => 157,  400 => 156,  396 => 153,  393 => 152,  391 => 151,  388 => 150,  383 => 147,  380 => 145,  377 => 144,  371 => 142,  368 => 141,  366 => 140,  363 => 139,  355 => 132,  352 => 131,  346 => 129,  343 => 128,  341 => 127,  338 => 126,  330 => 121,  327 => 120,  321 => 118,  318 => 117,  316 => 116,  313 => 115,  307 => 111,  300 => 109,  297 => 107,  293 => 106,  288 => 105,  284 => 103,  277 => 101,  274 => 99,  270 => 98,  267 => 97,  265 => 96,  262 => 95,  258 => 92,  256 => 91,  253 => 90,  248 => 87,  244 => 85,  241 => 84,  232 => 83,  226 => 81,  223 => 80,  220 => 79,  217 => 77,  215 => 76,  212 => 75,  207 => 72,  203 => 70,  201 => 69,  198 => 68,  196 => 67,  195 => 66,  194 => 65,  192 => 64,  186 => 62,  183 => 61,  180 => 60,  177 => 58,  175 => 57,  172 => 56,  164 => 51,  160 => 50,  156 => 49,  152 => 48,  147 => 47,  144 => 46,  141 => 44,  139 => 43,  136 => 42,  131 => 38,  129 => 37,  127 => 36,  124 => 35,  120 => 32,  114 => 30,  112 => 29,  110 => 28,  104 => 26,  101 => 25,  99 => 24,  96 => 23,  93 => 22,  89 => 19,  87 => 18,  84 => 17,  80 => 14,  78 => 13,  75 => 12,  71 => 9,  68 => 8,  65 => 7,  63 => 6,  60 => 5,  11 => 1,);
     }
 }

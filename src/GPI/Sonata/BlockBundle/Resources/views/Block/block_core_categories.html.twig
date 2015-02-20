@@ -1,7 +1,7 @@
 {% macro menu_categories(categories, slug, numbersDict, parentSlug) %}
     {% for category in categories %}
         {% set class = "" %}
-        {% if (category.slug == slug and category.children) or category.slug == parentSlug %}
+        {% if (category.slug == slug and category.entity.parent.parent is null) or category.slug == parentSlug %}
             {% set class = "active accordion-toggle" %}
             {% set classA = "" %}
             {% set classUL = "collapse in" %}
@@ -16,19 +16,15 @@
         {% endif %}
         <li class="{{ classLI }}" style="overflow: hidden;">
 
-            {#<a class="{{ class }} collapsed" data-toggle="collapse" data-parent="#sidebar-nav"  href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">{{ category.name }} ({{ numbersDict[category.entity.id] }})</a>#}
             <a class="{{ classA }} " style="display: inline; line-height: 34px;"
                href="{{ path('gpi_auction_auctions_by_category', {'categorySlug': category.slug}) }}">
-                {{ category.name }}
+                {% if category.slug == slug %}&#8226&nbsp;{% endif %}{{ category.name }}
                 {% if numbersDict[category.entity.id] > 0 %}
                 <span class="badge rounded badge-light">
                     {{ numbersDict[category.entity.id] }}
                 </span>
                 {% endif %}
             </a>
-
-
-
 
             {% if category.children %}
                 <a class="{{ classA }} " style="display: inline; position: absolute; right: 0;"
@@ -38,7 +34,7 @@
                 </a>
 
                 <ul id="collapse-{{ category.slug }}" class="{{ classUL }}">
-                    {{ _self.menu_categories(category.children, slug, numbersDict, parentSlug) }}
+                  {{ _self.menu_categories(category.children, slug, numbersDict, parentSlug) }}
 
                 </ul>
             {% endif %}
@@ -47,59 +43,19 @@
 {% endmacro %}
 
 {% block block %}
-    {#<div class="headline"><h2>{{ settings.title }}</h2></div>#}
 
-
-    {#<button type="button" class="navbar navbar-default mega-menu navbar-toggle" data-toggle="collapse" data-target=".main-menu">#}
-    {#<span class="sr-only">Toggle navigation</span>#}
-    {#<span class="fa fa-bars"></span>#}
-    {#</button>#}
-
-    {#<ul class="main-menu collapse navbar-collapse navbar-responsive-collapse">#}
-    {#<ul class="main-menu">#}
-
-    {#</ul>#}
     {#///////////////////////////////////////////////////////////////////////////////////////////#}
     <ul class="main-menu list-group sidebar-nav-v1" id="sidebar-nav">
-        <!-- Typography -->
         {{ _self.menu_categories(categories, slug, numbersDict, parentSlug) }}
-        {#<li class="list-group-item list-toggle">#}
-        {#<a class="collapsed" data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-typography">Typography</a>#}
-        {#<ul style="height: 0px;" id="collapse-typography" class="collapse">#}
-        {#<li><a href=""><i class="fa fa-sort-alpha-asc"></i> General Typography</a></li>#}
-        {#</ul>#}
-        {#</li>#}
-        <!-- End Typography -->
 
     </ul>
     {#///////////////////////////////////////////////////////////////////////////////////////////  #}
     {% verbatim %}
     <script type="application/javascript">
-        //        jQuery(document).ready(function () {
-        //            var mainMenu = jQuery('.main-menu');
-        //            jQuery('.buttonToggle', mainMenu).click(function () {
-        //                jQuery(this).closest('li').find('> ul').toggle();
-        //            });
-        //            jQuery('ul', mainMenu).hide();
-        //            jQuery('a.active', mainMenu)
-        //                    .closest('ul').show()
-        //                    .closest('ul').show();
-        //        });
+
     </script>
 
     <style>
-        /*.main-menu .active {*/
-        /*font-weight: bold;*/
-        /*}*/
-
-        /*.main-menu .buttonToggle {*/
-        /*cursor: pointer;*/
-        /*display: inline-block;*/
-        /*}*/
-
-        /*.main-menu ul {*/
-        /*display: none;*/
-        /*}*/
 
         .main-menu li {
             width: 100%;
@@ -116,8 +72,8 @@
         .sidebar-nav-v1 li ul, .sidebar-nav-v1 li.active ul a {
 
             background: #ffffff;
-
         }
+
 
     </style>
     {% endverbatim %}

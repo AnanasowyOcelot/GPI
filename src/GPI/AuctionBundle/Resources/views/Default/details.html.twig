@@ -57,7 +57,7 @@
             {% endfor %}
 
             {% if auction.getMaxPrice != null and app.user %}
-                <li><strong>Cena maksymalna:</strong> {{ auction.getMaxPrice() }}</li>
+                <li><strong>Cena maksymalna:</strong> {{ auction.getMaxPrice() }}&nbsp;PLN</li>
             {% endif %}
 
             {% if auction.getAttributeValues() != null %}
@@ -68,7 +68,7 @@
         </ul>
     </div>
 </div>
-
+<hr/>
 <div class="fusion-portfolio wrapper-portfolio-grid cbp-4-col">
     <div id="grid-container" class="cbp-l-grid-gallery">
         <ul>
@@ -91,6 +91,7 @@
         </ul>
     </div>
 </div>
+<hr/>
 
 
 <div class="table-responsive">
@@ -106,7 +107,7 @@
         <tbody>
         {% for offer in auction.getActiveOffers() %}
             {% if loop.first %}
-                <tr style="background-color: #88de73">
+                <tr style="background-color: #ccffc1">
             {% else %}
                 <tr>
             {% endif %}
@@ -114,7 +115,7 @@
                 {{ offer.createdBy }}
             </td>
             <td class="td-width">
-                {{ offer.actualPrice }}
+                {{ offer.actualPrice }}&nbsp;PLN
             </td>
             <td class="td-width">
                 {% if app.security.getToken().getUser() == offer.createdBy() or app.security.getToken().getUser() == offer.getAuction().createdBy() %}

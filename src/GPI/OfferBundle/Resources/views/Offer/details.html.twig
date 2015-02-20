@@ -10,7 +10,7 @@
 
 <div class="row margin-bottom-60">
     <div class="col-sm-8">
-        <p>{{ offer.content|raw }}</p>
+        <p style="padding-top: 50px; padding-bottom: 50px">{{ offer.content|raw }}</p>
         <br/>
     </div>
     <div class="col-sm-4">
@@ -18,9 +18,9 @@
         <ul class="list-unstyled project-details">
             <li><strong>Aukcja:</strong><a class="active" href="{{ path('gpi_auction_details', {'id': offer.getAuction().id }) }}">{{ offer.getAuction().getName() }}</a></li>
             <li><strong>Dodano przez:</strong> {{ offer.getCreatedBy() }}</li>
-            <li><strong>Cena minimalna:</strong> {{ offer.actualPrice }}</li>
+            <li><strong>Cena minimalna:</strong> {{ offer.actualPrice }}&nbsp;PLN</li>
             {% if app.security.getToken().getUser() == offer.createdBy() %}
-                <li><strong>Dolny limit ceny:</strong> {{ offer.price }}</li>
+                <li><strong>Dolny limit ceny:</strong> {{ offer.price }}&nbsp;PLN</li>
                 {% if offer.bidPercent is not null %}
                     <li><strong>Procent przebicia:</strong> {{ offer.bidPercent * 100 }}%</li>
                 {% else %}
@@ -31,7 +31,7 @@
     </div>
 </div>
 
-
+<hr/>
 <div class="fusion-portfolio wrapper-portfolio-grid cbp-3-col">
     <div id="grid-container" class="cbp-l-grid-gallery">
         <ul>
@@ -54,3 +54,4 @@
         </ul>
     </div>
 </div>
+<hr/>

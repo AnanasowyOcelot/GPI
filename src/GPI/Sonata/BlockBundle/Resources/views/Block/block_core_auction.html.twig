@@ -78,14 +78,14 @@
                 <thead>
                 <tr>
                     <th></th>
-                    <th class="hidden-sm">Oferta</th>
+                    <th class="hidden-sm">Aukcja</th>
                     <th>Czas zakończenia</th>
                 </tr>
                 </thead>
                 <tbody>
                 {% for auction in pagination %}
 
-                    <tr>
+                    <tr onclick="document.location = '{{ path('gpi_auction_details', {'id': auction.id }) }}';">
                         <td>
                             <img class="rounded-x"
                                  src="{{ asset(auction.getMainPhoto() | imagine_filter('list_thumb'))|replace({'media':'web/media'}) }}"
@@ -93,7 +93,7 @@
                         </td>
                         <td class="td-width">
                             <h3>
-                                <a href="{{ path('gpi_auction_details', {'id': auction.id }) }}">{{ auction.name }}</a>
+                                {{ auction.name }}
                             </h3>
 
                             <p>{{ auction.getContentShort() }}</p>

@@ -2,6 +2,7 @@
 
 namespace GPI\AuctionBundle\Controller;
 
+use Application\Sonata\ClassificationBundle\Document\Category;
 use GPI\DocumentBundle\Entity\Document;
 use GPI\AuctionBundle\Entity\AddNewAuctionCommand;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -26,10 +27,15 @@ class PrepareAuctionController extends Controller
         if ($form->isValid()) {
             /** @var \Doctrine\ORM\EntityManager $em */
             $em = $this->getDoctrine()->getManager();
+
             $em->persist($command);
             $em->flush();
+            if($this->anyCategoryHasSubcategory($command->getCategories()->toArray())){
+                return $this->redirect($this->generateUrl("gpi_auction_add1", array('commandId'=>$command->getId())));
+            }else{
+                return $this->redirect($this->generateUrl("gpi_auction_add2", array('commandId'=>$command->getId())));
 
-            return $this->redirect($this->generateUrl("gpi_auction_add1", array('commandId'=>$command->getId())));
+            }
         }
 
         return $this->render(
@@ -38,5 +44,17 @@ class PrepareAuctionController extends Controller
                 'form' => $form->createView()
             )
         );
+    }
+
+    private function anyCategoryHasSubcategory($categories){
+        $result = false;
+        foreach($categories as $category){
+//            print_r($category->getChildren()->toArray());
+            /** @var $category \Application\Sonata\ClassificationBundle\Document\Category */
+            if($category->getChildren()->toArray()){
+                $result = true;
+            }
+        }
+        return $result;
     }
 }

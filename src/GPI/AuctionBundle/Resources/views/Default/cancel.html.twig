@@ -1,13 +1,16 @@
 {% extends "SonataUserBundle:Profile:action.html.twig" %}
 {% block sonata_profile_content %}
 
+    <div class="well" style="text-align: center">
     Czy napewno chcesz usunąć aukcję <strong>"{{ auction.name() }}"</strong> ?
     <br/>
-    <a style="display:inline;" class="btn btn-success" href="{{ path("fos_user_profile_show") }}">Nie</a>
+    <br/>
+    <br/>
+    <a style="display:inline;" class="btn-u btn-u-default" href="{{ path("fos_user_profile_show") }}">Nie</a>
     <form style="display:inline;" action="{{ path("gpi_auction_cancel", {'id': auction.id }) }}" method="POST">
-        <button class="btn btn-success" value="pac">Tak</button>
+        <button class="btn-u btn-u-red" style="line-height: normal;" value="pac">Tak</button>
     </form>
-
+    </div>
 
 {% endblock %}
 

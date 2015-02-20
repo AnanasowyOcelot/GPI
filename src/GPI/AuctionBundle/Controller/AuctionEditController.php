@@ -37,8 +37,8 @@ class AuctionEditController extends Controller
             $command->setCategories($auction->getCategories());
             $command->setMaxRealizationDate($auction->getMaxRealizationDate());
             $command->setAttributeValues($auction->getAttributeValues());
-            $d1 = new Document();
-            $command->getDocuments()->add($d1);
+//            $d1 = new Document();
+//            $command->getDocuments()->add($d1);
             $form = $this->createForm('auction_update', $command);
         } else {
             $command = new PartlyUpdateAuctionCommand();

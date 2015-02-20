@@ -106,86 +106,102 @@ class __TwigTemplate_9876a83333b02c697b2b6df84783dc89c4ec47774abf786335906ae11a0
     </script>
 
     <div class=\"tag-box tag-box-v3 form-page\" style=\"overflow: hidden;\">
-        <div class=\"well\">
-            <span class=\"label rounded label-blue\" style=\"display: inline-block; width: 33%; border: 1px solid black\">&nbsp;</span>
-            <span class=\"label rounded label-blue\" style=\"display: inline-block; width: 33%; border: 1px solid black\">&nbsp;</span>
-            <span class=\"label rounded label-green\" style=\"display: inline-block; width: 33%; border: 1px solid black\">&nbsp;</span>
+        <div class=\"well\" style=\"text-align: center\">
+            <span class=\"label rounded label-blue\" style=\"display: inline-block; width: 31%; border: 1px solid #aaaaaa\">Kategorie</span>
+            <i class=\"fa fa-angle-double-right\"></i>
+            <span class=\"label rounded label-blue\" style=\"display: inline-block; width: 31%; border: 1px solid #aaaaaa\">Podkategorie</span>
+            <i class=\"fa fa-angle-double-right\"></i>
+            <span class=\"label rounded label-green\" style=\"display: inline-block; width: 31%; border: 1px solid #aaaaaa\">Szczegóły aukcji</span>
         </div>
         <div class=\"headline\"><h3>Dodaj nową aukcję</h3></div>
 
         <form method=\"POST\" ";
-        // line 78
+        // line 80
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
         echo " class=\"sky-form\">
             <fieldset>
                 ";
-        // line 80
+        // line 82
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "name", array()), 'row');
         echo "
             </fieldset>
             <hr/>
             <fieldset>
                 ";
-        // line 84
+        // line 86
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "content", array()), 'row');
         echo "
             </fieldset>
             <hr/>
             <fieldset>
                 ";
-        // line 88
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "maxPrice", array()), 'row');
+        // line 90
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "maxPrice", array()), 'label');
         echo "
-                <br/>
-
+                ";
+        // line 91
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "maxPrice", array()), 'widget');
+        echo "&nbsp;PLN
+                ";
+        // line 93
+        echo "
                 <div class=\"note\">Pole opcjonalne</div>
             </fieldset>
 
             <fieldset>
-                ";
-        // line 95
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "maxRealizationDate", array()), 'row');
-        echo "
-                <br/>
 
-                <div class=\"note\">Pole opcjonalne</div>
+                ";
+        // line 99
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "maxRealizationDate", array()), 'label');
+        echo "
+                <div class=\"note\">dzień/miesiąc/rok</div>
+
+                ";
+        // line 102
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "maxRealizationDate", array()), 'widget');
+        echo "
+
+
+                ";
+        // line 106
+        echo "                <div class=\"note\">Pole opcjonalne</div>
             </fieldset>
             <hr/>
             <fieldset>
                 ";
-        // line 102
+        // line 110
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "timePeriod", array()), 'row');
         echo "
             </fieldset>
             <hr/>
             <fieldset>
                 ";
-        // line 106
+        // line 114
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "categories", array()), 'row');
         echo "
             </fieldset>
 
             ";
-        // line 109
+        // line 117
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "attributeValues", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["attributeValue"]) {
-            // line 110
+            // line 118
             echo "
                 <hr/>
                 <fieldset>
                     <label class=\"col-sm-2 control-label\">";
-            // line 113
+            // line 121
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["attributeValue"], "vars", array()), "value", array()), "html", null, true);
             echo "</label>
 
                     <div class=\"col-sm-10\">
                         ";
-            // line 116
+            // line 124
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["attributeValue"], "name", array()), 'widget');
             echo "
                         ";
-            // line 117
+            // line 125
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["attributeValue"], "value", array()), 'widget');
             echo "
                     </div>
@@ -195,22 +211,22 @@ class __TwigTemplate_9876a83333b02c697b2b6df84783dc89c4ec47774abf786335906ae11a0
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['attributeValue'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 121
+        // line 129
         echo "            <hr/>
             <fieldset>
                 <label class=\"col-sm-2 control-label\">Dokumenty:</label>
 
                 <div class=\"col-sm-10\">
                     <ul class=\"documents\" data-prototype=\"";
-        // line 126
+        // line 134
         echo twig_escape_filter($this->env, $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "documents", array()), "vars", array()), "prototype", array()), 'widget'));
         echo "\">
                         ";
-        // line 127
+        // line 135
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "documents", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
-            // line 128
+            // line 136
             echo "                            <li class=\"tag-box-v2\">";
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["document"], "description", array()), 'row');
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["document"], "file", array()), 'row');
@@ -220,7 +236,7 @@ class __TwigTemplate_9876a83333b02c697b2b6df84783dc89c4ec47774abf786335906ae11a0
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 130
+        // line 138
         echo "                    </ul>
                 </div>
             </fieldset>
@@ -228,7 +244,7 @@ class __TwigTemplate_9876a83333b02c697b2b6df84783dc89c4ec47774abf786335906ae11a0
 
             <fieldset>
                 ";
-        // line 137
+        // line 145
         echo "                ";
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
@@ -266,6 +282,6 @@ class __TwigTemplate_9876a83333b02c697b2b6df84783dc89c4ec47774abf786335906ae11a0
 
     public function getDebugInfo()
     {
-        return array (  232 => 137,  224 => 130,  214 => 128,  210 => 127,  206 => 126,  199 => 121,  189 => 117,  185 => 116,  179 => 113,  174 => 110,  170 => 109,  164 => 106,  157 => 102,  147 => 95,  137 => 88,  130 => 84,  123 => 80,  118 => 78,  42 => 4,  39 => 3,  35 => 1,  33 => 2,  11 => 1,);
+        return array (  248 => 145,  240 => 138,  230 => 136,  226 => 135,  222 => 134,  215 => 129,  205 => 125,  201 => 124,  195 => 121,  190 => 118,  186 => 117,  180 => 114,  173 => 110,  167 => 106,  161 => 102,  155 => 99,  147 => 93,  143 => 91,  139 => 90,  132 => 86,  125 => 82,  120 => 80,  42 => 4,  39 => 3,  35 => 1,  33 => 2,  11 => 1,);
     }
 }

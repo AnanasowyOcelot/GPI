@@ -350,20 +350,17 @@ class Auction
 
     public function getDaysToEnd()
     {
-//        (int)$this->endTime->diff($this->calendar->dateTimeNow())->format('%d');
-//
-//        $difference = $this->endTime - $this->calendar->dateTimeNow();
-//
-//        if ($difference < 0) {
-//            $difference = 0;
-//        }
+
         $end = $this->endTime;
         $now = $this->calendar->dateTimeNow();
-        $daysLeft = (int)$end->diff($now)->format('%d');
 
-        $daysLeft = max(0, $daysLeft);
+        $daysLeft = $end->format("U") - $now->format("U");
+        $daysLeft = (floor(($daysLeft % 2592000) / 86400)>0)?floor(($daysLeft % 2592000) / 86400):"";
+
         return $daysLeft;
     }
+
+
 
     /**
      * Get content short

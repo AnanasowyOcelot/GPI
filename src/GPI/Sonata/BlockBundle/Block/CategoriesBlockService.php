@@ -30,13 +30,16 @@ class CategoriesBlockService extends BaseBlockService
      */
     private $auctionRepo;
 
+    private $rootCatId;
+
     /**
      * @param string $name
      * @param EngineInterface $templating
      * @param CategoryRepository $catRepo
      * @param EntityManager $entityManager
+     * @param $rootCatId
      */
-    public function __construct($name, EngineInterface $templating, CategoryRepository $catRepo, EntityManager $entityManager)
+    public function __construct($name, EngineInterface $templating, CategoryRepository $catRepo, EntityManager $entityManager, $rootCatId)
     {
         $this->name = $name;
         $this->templating = $templating;
@@ -104,7 +107,8 @@ class CategoriesBlockService extends BaseBlockService
             'block' => $blockContext->getBlock(),
             'settings' => $settings,
             'slug' => $categoryToBoldSlug,
-            'parentSlug' => $this->catRepo->findParentSlugBySlug($categoryToBoldSlug)
+            'parentSlug' => $this->catRepo->findParentSlugBySlug($categoryToBoldSlug),
+            'rootCatId' => $this->rootCatId
         ), $response);
     }
 

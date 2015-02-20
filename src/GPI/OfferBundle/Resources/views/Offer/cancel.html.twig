@@ -1,13 +1,16 @@
 {% extends "SonataUserBundle:Profile:action.html.twig" %}
 {% block sonata_profile_content %}
 
-    Czy napewno chcesz usunąć ofertę?
-    <br/>
-    <a style="display:inline;" class="btn btn-success" href="{{ path("gpi_offer_list") }}">Nie</a>
-    <form style="display:inline;" action="{{ path("gpi_offer_cancel", {'id': offer.id }) }}" method="POST">
-        <button class="btn btn-success" value="pac">Tak</button>
-    </form>
-
+    <div class="well" style="text-align: center">
+        Czy napewno chcesz usunąć ofertę?
+        <br/>
+        <br/>
+        <br/>
+        <a style="display:inline;" class="btn-u btn-u-default" href="{{ path("gpi_offer_list") }}">Nie</a>
+        <form style="display:inline;" action="{{ path("gpi_offer_cancel", {'id': offer.id }) }}" method="POST">
+            <button class="btn-u btn-u-red" style="line-height: normal;" value="pac">Tak</button>
+        </form>
+    </div>
 
 {% endblock %}
 

@@ -20,16 +20,16 @@
                         {{ offer.auctionName }}
                     </td>
                     <td class="td-width">
-                        {{ offer.actualPrice }}
+                        {{ offer.actualPrice }}&nbsp;PLN
                     </td>
                     <td class="td-width">
-                        {{ offer.price }}
+                        {{ offer.price }}&nbsp;PLN
                     </td>
                     <td>
-                        <p><a class="btn-u btn-u-blue" href="{{ path('gpi_auction_details', {'id': offer.auctionId }) }}">Przejdź do aukcji</a>
+                        <p><a style="width: 100%; text-align: center" class="btn-u btn-u-blue" href="{{ path('gpi_auction_details', {'id': offer.auctionId }) }}">Przejdź do aukcji</a>
                         </p>
                         {% if offer.isActive  and not offer.hasWon %}
-                            <p><a class="btn-u btn-u-red" href="{{ path('gpi_offer_cancel', {'id': offer.id }) }}">Anuluj</a>
+                            <p><a style="width: 100%; text-align: center" class="btn-u btn-u-red" href="{{ path('gpi_offer_cancel', {'id': offer.id }) }}">Anuluj</a>
                             </p>
                         {% endif %}
                     </td>

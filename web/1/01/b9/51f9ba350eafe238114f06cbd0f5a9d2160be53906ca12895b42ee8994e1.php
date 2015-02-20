@@ -131,7 +131,7 @@ class __TwigTemplate_01b951f9ba350eafe238114f06cbd0f5a9d2160be53906ca12895b42ee8
                 <thead>
                 <tr>
                     <th></th>
-                    <th class=\"hidden-sm\">Oferta</th>
+                    <th class=\"hidden-sm\">Aukcja</th>
                     <th>Czas zakończenia</th>
                 </tr>
                 </thead>
@@ -143,7 +143,10 @@ class __TwigTemplate_01b951f9ba350eafe238114f06cbd0f5a9d2160be53906ca12895b42ee8
         foreach ($context['_seq'] as $context["_key"] => $context["auction"]) {
             // line 87
             echo "
-                    <tr>
+                    <tr onclick=\"document.location = '";
+            // line 88
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_details", array("id" => $this->getAttribute($context["auction"], "id", array()))), "html", null, true);
+            echo "';\">
                         <td>
                             <img class=\"rounded-x\"
                                  src=\"";
@@ -154,12 +157,10 @@ class __TwigTemplate_01b951f9ba350eafe238114f06cbd0f5a9d2160be53906ca12895b42ee8
                         </td>
                         <td class=\"td-width\">
                             <h3>
-                                <a href=\"";
+                                ";
             // line 96
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("gpi_auction_details", array("id" => $this->getAttribute($context["auction"], "id", array()))), "html", null, true);
-            echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["auction"], "name", array()), "html", null, true);
-            echo "</a>
+            echo "
                             </h3>
 
                             <p>";
@@ -213,6 +214,6 @@ class __TwigTemplate_01b951f9ba350eafe238114f06cbd0f5a9d2160be53906ca12895b42ee8
 
     public function getDebugInfo()
     {
-        return array (  201 => 118,  197 => 116,  187 => 107,  177 => 103,  173 => 102,  167 => 99,  159 => 96,  151 => 91,  145 => 87,  141 => 86,  127 => 74,  123 => 71,  121 => 70,  119 => 69,  114 => 66,  100 => 54,  93 => 51,  86 => 48,  84 => 47,  68 => 34,  35 => 3,  33 => 2,  30 => 1,  22 => 123,  20 => 1,);
+        return array (  202 => 118,  198 => 116,  188 => 107,  178 => 103,  174 => 102,  168 => 99,  162 => 96,  154 => 91,  148 => 88,  145 => 87,  141 => 86,  127 => 74,  123 => 71,  121 => 70,  119 => 69,  114 => 66,  100 => 54,  93 => 51,  86 => 48,  84 => 47,  68 => 34,  35 => 3,  33 => 2,  30 => 1,  22 => 123,  20 => 1,);
     }
 }

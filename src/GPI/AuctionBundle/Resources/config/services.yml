@@ -59,6 +59,7 @@ services:
             - @templating
             - @gpi_sonata.category_repository
             - @doctrine.orm.entity_manager
+            - %gpi_auction.root_category_id%
         tags:
             - {name: sonata.block}
         calls:

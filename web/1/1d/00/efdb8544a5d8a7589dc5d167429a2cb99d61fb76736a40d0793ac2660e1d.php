@@ -43,31 +43,32 @@ class __TwigTemplate_1d00efdb8544a5d8a7589dc5d167429a2cb99d61fb76736a40d0793ac26
 
 
     <div class=\"tag-box tag-box-v3 form-page\" style=\"overflow: hidden;\">
-        <div class=\"well\">
-            <span class=\"label rounded label-blue\" style=\"display: inline-block; width: 33%; border: 1px solid black\">&nbsp;</span>
-            <span class=\"label rounded label-light\" style=\"display: inline-block; width: 33%; border: 1px solid black\">&nbsp;</span>
-            <span class=\"label rounded label-light\" style=\"display: inline-block; width: 33%; border: 1px solid black\">&nbsp;</span>
+        <div class=\"well\" style=\"text-align: center\">
+            <span class=\"label rounded label-blue\" style=\"display: inline-block; width: 31%; border: 1px solid #aaaaaa\">Kategorie</span>
+            <i class=\"fa fa-angle-double-right\"></i>
+            <span class=\"label rounded label-light\" style=\"display: inline-block; width: 31%; border: 1px solid #aaaaaa\">Podkategorie</span>
+            <i class=\"fa fa-angle-double-right\"></i>
+            <span class=\"label rounded label-light\" style=\"display: inline-block; width: 31%; border: 1px solid #aaaaaa\">Szczegóły aukcji</span>
         </div>
         <div class=\"headline\"><h3>Wybierz kategorie dla aukcji</h3></div>
 
         <form method=\"POST\" ";
-        // line 15
+        // line 17
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
         echo ">
 
 
             <fieldset>
                 ";
-        // line 19
+        // line 21
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "categories", array()), 'row');
         echo "
             </fieldset>
             <hr/>
 
-            <hr/>
             <fieldset>
                 ";
-        // line 25
+        // line 26
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
             </fieldset>
@@ -90,6 +91,6 @@ class __TwigTemplate_1d00efdb8544a5d8a7589dc5d167429a2cb99d61fb76736a40d0793ac26
 
     public function getDebugInfo()
     {
-        return array (  71 => 25,  62 => 19,  55 => 15,  42 => 4,  39 => 3,  35 => 1,  33 => 2,  11 => 1,);
+        return array (  72 => 26,  64 => 21,  57 => 17,  42 => 4,  39 => 3,  35 => 1,  33 => 2,  11 => 1,);
     }
 }

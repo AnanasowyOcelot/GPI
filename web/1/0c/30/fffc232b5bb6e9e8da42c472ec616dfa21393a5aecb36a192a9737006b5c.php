@@ -65,7 +65,7 @@ class __TwigTemplate_0c30fffc232b5bb6e9e8da42c472ec616dfa21393a5aecb36a192a97370
             // line 96
             echo "                                    <li><a href=\"";
             echo $this->env->getExtension('routing')->getPath("sonata_user_profile_show");
-            echo "\">";
+            echo "\"><i class=\"fa fa-user\"></i>&nbsp; ";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
             echo "</a>
                                     </li>
@@ -75,7 +75,7 @@ class __TwigTemplate_0c30fffc232b5bb6e9e8da42c472ec616dfa21393a5aecb36a192a97370
                                         <a href=\"";
             // line 101
             echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
-            echo "\">";
+            echo "\"><i class=\"fa fa-sign-out\"></i>&nbsp;";
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("link_logout", array(), "SonataUserBundle"), "html", null, true);
             echo "</a>
                                     </li>
@@ -86,7 +86,7 @@ class __TwigTemplate_0c30fffc232b5bb6e9e8da42c472ec616dfa21393a5aecb36a192a97370
                                         <a href=\"";
             // line 105
             echo $this->env->getExtension('routing')->getPath("fos_user_security_login");
-            echo "\">";
+            echo "\"><i class=\"fa fa-sign-in\"></i>&nbsp;";
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("link_login", array(), "SonataUserBundle"), "html", null, true);
             echo "
                                             / ";

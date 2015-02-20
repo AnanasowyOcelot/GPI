@@ -134,10 +134,12 @@
                     </ul>
                 </div>
             </fieldset>
-            <hr/>
-            <fieldset>
-                {{ form_rest(form) }}
+            {#<hr/>#}
+            <fieldset style="text-align: left">
+                {{ form_widget(form.submit) }}
+
             </fieldset>
+            {{ form_rest(form) }}
         </form>
     </div>
 
