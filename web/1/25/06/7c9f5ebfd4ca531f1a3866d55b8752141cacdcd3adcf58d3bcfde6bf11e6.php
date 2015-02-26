@@ -45,9 +45,7 @@ class __TwigTemplate_25067c9f5ebfd4ca531f1a3866d55b8752141cacdcd3adcf58d3bcfde6b
             echo "    ";
         }
         // line 18
-        echo "
-    ";
-        // line 19
+        echo "    ";
         $this->displayParentBlock("fos_user_content", $context, $blocks);
         echo "
 ";
@@ -65,6 +63,6 @@ class __TwigTemplate_25067c9f5ebfd4ca531f1a3866d55b8752141cacdcd3adcf58d3bcfde6b
 
     public function getDebugInfo()
     {
-        return array (  51 => 19,  48 => 18,  45 => 17,  42 => 16,  39 => 15,  36 => 14,  11 => 12,);
+        return array (  48 => 18,  45 => 17,  42 => 16,  39 => 15,  36 => 14,  11 => 12,);
     }
 }

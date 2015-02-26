@@ -69,7 +69,7 @@ class Offer extends \GPI\CoreBundle\Model\Offer\Offer
     protected $content;
 
     /**
-     * @var ArrayCollection $trainings
+     * @var ArrayCollection $documents
      * @ORM\ManyToMany(targetEntity="\GPI\DocumentBundle\Entity\Document")
      */
     protected $documents;

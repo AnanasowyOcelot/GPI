@@ -42,11 +42,11 @@ class __TwigTemplate_0b8670c0c04c8f37a6070df742173326556212b66ae2465c604df9db824
     <!--=== Header ===-->
     <div class=\"header\">
         <!-- Topbar -->
-        <div class=\"topbar\" style=\"padding:0\">
+        <div class=\"topbar\" style=\"padding:0; min-width: 400px\">
 
             <div class=\"container\">
-                <div class=\"row\">
-                    <div class=\"col-md-3\">
+                <div class=\"row\" style=\"position: relative;\">
+                    <div class=\"col-md-3 col-xs-12\">
                         <a class=\"navbar-brand\" href=\"/\">
                             <br/>
                             <img id=\"logo-header\" src=\"";
@@ -56,65 +56,72 @@ class __TwigTemplate_0b8670c0c04c8f37a6070df742173326556212b66ae2465c604df9db824
                                  alt=\"Logo\">
                         </a>
                     </div>
-                    <div class=\"col-md-9\" style=\"height: 100px;\">
-                        <div style=\"overflow: hidden;\">
-                            <ul class=\"loginbar pull-right\">
-                                ";
-        // line 95
+                    <div class=\"col-md-9 col-xs-12\" style=\"position: static; height: 35px; overflow: hidden;\">
+                        &nbsp;
+                    </div>
+
+                    <div style=\"overflow: hidden; position: absolute; right: 5px; top: 0; \">
+                        <ul class=\"loginbar pull-right\">
+                            ";
+        // line 98
         if ($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array())) {
-            // line 96
-            echo "                                    <li><a href=\"";
+            // line 99
+            echo "                                <li><a href=\"";
             echo $this->env->getExtension('routing')->getPath("sonata_user_profile_show");
-            echo "\"><i class=\"fa fa-user\"></i>&nbsp; ";
+            echo "\"><i
+                                                class=\"fa fa-user\"></i>&nbsp; ";
+            // line 100
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
             echo "</a>
-                                    </li>
-                                    <li class=\"topbar-devider\"></li>
+                                </li>
+                                <li class=\"topbar-devider\"></li>
 
-                                    <li>
-                                        <a href=\"";
-            // line 101
+                                <li>
+                                    <a href=\"";
+            // line 105
             echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
             echo "\"><i class=\"fa fa-sign-out\"></i>&nbsp;";
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("link_logout", array(), "SonataUserBundle"), "html", null, true);
-            echo "</a>
-                                    </li>
-                                ";
+            echo "
+                                    </a>
+                                </li>
+                            ";
         } else {
-            // line 104
-            echo "                                    <li>
-                                        <a href=\"";
-            // line 105
+            // line 109
+            echo "                                <li>
+                                    <a href=\"";
+            // line 110
             echo $this->env->getExtension('routing')->getPath("fos_user_security_login");
-            echo "\"><i class=\"fa fa-sign-in\"></i>&nbsp;";
+            echo "\"><i
+                                                class=\"fa fa-sign-in\"></i>&nbsp;";
+            // line 111
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("link_login", array(), "SonataUserBundle"), "html", null, true);
             echo "
-                                            / ";
-            // line 106
+                                        / ";
+            // line 112
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("link_register", array(), "SonataUserBundle"), "html", null, true);
             echo "</a></li>
-                                ";
+                            ";
         }
-        // line 108
-        echo "                            </ul>
-                        </div>
-                        <div class=\"navbar navbar-default mega-menu\" role=\"navigation\"
-                             style=\"position: absolute; bottom: 0; right: 0\">
-                            <ul class=\"nav navbar-nav\">
-                                <li><a href=\"/\">Strona główna</a></li>
-                                <li><a href=\"";
         // line 114
+        echo "                        </ul>
+                    </div>
+
+                    <div class=\"navbar navbar-default mega-menu\" role=\"navigation\"
+                         style=\"position: absolute; right: 0; bottom: 0;\">
+                        <ul class=\"nav navbar-nav\">
+                            <li style=\"display: inline-block\"><a href=\"/\">Strona główna</a></li>
+                            <li style=\"display: inline-block\"><a href=\"";
+        // line 121
         echo $this->env->getExtension('routing')->getPath("gpi_site_regulations");
         echo "\">Regulamin</a></li>
-                                <li><a href=\"";
-        // line 115
+                            <li style=\"display: inline-block\"><a href=\"";
+        // line 122
         echo $this->env->getExtension('routing')->getPath("gpi_site_faq");
         echo "\">FAQ</a></li>
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
                 </div>
-
 
 
             </div>
@@ -135,9 +142,9 @@ class __TwigTemplate_0b8670c0c04c8f37a6070df742173326556212b66ae2465c604df9db824
     <!--=== End Breadcrumbs ===-->
 
     ";
-        // line 140
+        // line 145
         $this->displayBlock('sonata_page_container', $context, $blocks);
-        // line 183
+        // line 188
         echo "
     <!--=== Footer Version 1 ===-->
     <div class=\"footer-v1\" style=\"padding: 10px 0px;\">
@@ -148,7 +155,7 @@ class __TwigTemplate_0b8670c0c04c8f37a6070df742173326556212b66ae2465c604df9db824
                     <div class=\"col-md-3 md-margin-bottom-40\">
                         <a href=\"index.html\"><img id=\"logo-footer\" class=\"footer-logo\"
                                                   src=\"";
-        // line 192
+        // line 197
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/img/logo-darkback.png"), "html", null, true);
         echo "\" alt=\"\"></a>
 
@@ -170,11 +177,11 @@ class __TwigTemplate_0b8670c0c04c8f37a6070df742173326556212b66ae2465c604df9db824
                         <div class=\"headline\"><h2>Przydatne linki</h2></div>
                         <ul class=\"list-unstyled link-list\">
                             <li><a href=\"";
-        // line 211
+        // line 216
         echo $this->env->getExtension('routing')->getPath("gpi_site_regulations");
         echo "\">Regulamin</a><i class=\"fa fa-angle-right\"></i></li>
                             <li><a href=\"";
-        // line 212
+        // line 217
         echo $this->env->getExtension('routing')->getPath("gpi_site_faq");
         echo "\">FAQ</a><i class=\"fa fa-angle-right\"></i></li>
                         </ul>
@@ -186,11 +193,12 @@ class __TwigTemplate_0b8670c0c04c8f37a6070df742173326556212b66ae2465c604df9db824
                     <div class=\"col-md-3 map-img md-margin-bottom-40\">
                         <div class=\"headline\"><h2>Kontakt</h2></div>
                         <address class=\"md-margin-bottom-40\">
-                            25, Lorem Lis Street, Orange <br>
-                            California, US <br>
-                            Phone: 800 123 3456 <br>
-                            Fax: 800 123 3456 <br>
-                            Email: <a href=\"mailto:kontakt@gpi.pl\" class=\"\">kontakt@gpi.pl</a>
+                            Marek Laszuk \"RUSKÓW\" <br>
+                            ul. Wiejska 10 <br>
+                            08-200 Łosice, Polska <br>
+                            Telefon: +48 (083) 359 06 13  <br>
+                            Fax: +48 (083) 359 06 13 <br>
+                            Email: <a href=\"mailto:gpi@projektyinzynierskie.pl\" class=\"\">gpi@projektyinzynierskie.pl</a>
                         </address>
                     </div>
                     <!--/col-md-3-->
@@ -210,44 +218,44 @@ class __TwigTemplate_0b8670c0c04c8f37a6070df742173326556212b66ae2465c604df9db824
 
 <!-- JS Global Compulsory -->
 <script type=\"text/javascript\" src=\"";
-        // line 245
+        // line 251
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/plugins/jquery/jquery-migrate.min.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 246
+        // line 252
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/plugins/bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 <!-- JS Implementing Plugins -->
 <script type=\"text/javascript\" src=\"";
-        // line 248
+        // line 254
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/plugins/back-to-top.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\"
         src=\"";
-        // line 250
+        // line 256
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/plugins/flexslider/jquery.flexslider-min.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\"
         src=\"";
-        // line 252
+        // line 258
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/plugins/owl-carousel/owl-carousel/owl.carousel.js"), "html", null, true);
         echo "\"></script>
 <!-- JS Customization -->
 <script type=\"text/javascript\" src=\"";
-        // line 254
+        // line 260
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/js/custom.js"), "html", null, true);
         echo "\"></script>
 <!-- JS Page Level -->
 <script type=\"text/javascript\" src=\"";
-        // line 256
+        // line 262
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/js/app.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 257
+        // line 263
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/js/plugins/owl-recent-works.js"), "html", null, true);
         echo "\"></script>
 ";
-        // line 260
+        // line 266
         echo "<script type=\"text/javascript\">
     jQuery(document).ready(function () {
         App.init();
@@ -258,26 +266,26 @@ class __TwigTemplate_0b8670c0c04c8f37a6070df742173326556212b66ae2465c604df9db824
 
 <!-- JS Implementing Plugins -->
 <script type=\"text/javascript\" src=\"";
-        // line 269
+        // line 275
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/plugins/back-to-top.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\"
         src=\"";
-        // line 271
+        // line 277
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"), "html", null, true);
         echo "\"></script>
 <!-- JS Customization -->
 <script type=\"text/javascript\" src=\"";
-        // line 273
+        // line 279
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/js/custom.js"), "html", null, true);
         echo "\"></script>
 <!-- JS Page Level -->
 <script type=\"text/javascript\" src=\"";
-        // line 275
+        // line 281
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/js/app.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 276
+        // line 282
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/js/plugins/cube-portfolio.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\">
@@ -289,20 +297,20 @@ class __TwigTemplate_0b8670c0c04c8f37a6070df742173326556212b66ae2465c604df9db824
 
 <!--[if lt IE 9]>
 <script type=\"text/javascript\" src=\"";
-        // line 285
+        // line 291
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/plugins/respond.js"), "html", null, true);
         echo "\"></script>
 <
 script
 type = \"text/javascript\"
 src = \"";
-        // line 289
+        // line 295
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl(" / bundles / gpilayout / plugins / html5shiv.js
 "), "html", null, true);
-        // line 290
+        // line 296
         echo "\" ></script>
 <script type=\"text/javascript\" src=\"";
-        // line 291
+        // line 297
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/js/plugins/placeholder-IE-fixes.js"), "html", null, true);
         echo "\"></script>
 <![endif]-->
@@ -498,67 +506,67 @@ src = \"";
 ";
     }
 
-    // line 140
+    // line 145
     public function block_sonata_page_container($context, array $blocks = array())
     {
-        // line 141
+        // line 146
         echo "        <!--=== Content Part ===-->
 
         <div class=\"container content\" style=\"padding-top: 0\">
             ";
-        // line 144
+        // line 149
         $this->displayBlock('page_content', $context, $blocks);
-        // line 179
+        // line 184
         echo "
         </div><!--/container-->
         <!--=== End Content Part ===-->
     ";
     }
 
-    // line 144
+    // line 149
     public function block_page_content($context, array $blocks = array())
     {
-        // line 145
+        // line 150
         echo "                ";
         if (array_key_exists("content", $context)) {
-            // line 146
+            // line 151
             echo "                    ";
             echo (isset($context["content"]) ? $context["content"] : $this->getContext($context, "content"));
             echo "
                 ";
         } else {
-            // line 148
+            // line 153
             echo "                    ";
             $context["content"] = $this->renderBlock("content", $context, $blocks);
-            // line 149
+            // line 154
             echo "                    ";
             if ((twig_length_filter($this->env, (isset($context["content"]) ? $context["content"] : $this->getContext($context, "content"))) > 0)) {
-                // line 150
+                // line 155
                 echo "                        ";
                 echo (isset($context["content"]) ? $context["content"] : $this->getContext($context, "content"));
                 echo "
                     ";
             } elseif (array_key_exists("page", $context)) {
-                // line 152
+                // line 157
                 echo "                        ";
                 echo $this->env->getExtension('sonata_page')->renderContainer("content", (isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")));
                 echo "
                     ";
             }
-            // line 154
+            // line 159
             echo "                ";
         }
-        // line 155
+        // line 160
         echo "                ";
         if (array_key_exists("page", $context)) {
-            // line 156
+            // line 161
             echo "
                     <div class=\"row\">
 
 
                         <div class=\"col-md-4\">
                             ";
-            // line 161
+            // line 166
             echo $this->env->getExtension('sonata_page')->renderContainer("left_col", (isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")));
             echo "
                             <!-- About Us -->
@@ -571,7 +579,7 @@ src = \"";
 
                         <div class=\"col-md-8\">
                             ";
-            // line 171
+            // line 176
             echo $this->env->getExtension('sonata_page')->renderContainer("right_col", (isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")));
             echo "
 
@@ -580,7 +588,7 @@ src = \"";
                     </div><!--/row-->
                 ";
         }
-        // line 177
+        // line 182
         echo "
             ";
     }
@@ -597,6 +605,6 @@ src = \"";
 
     public function getDebugInfo()
     {
-        return array (  584 => 177,  575 => 171,  562 => 161,  555 => 156,  552 => 155,  549 => 154,  543 => 152,  537 => 150,  534 => 149,  531 => 148,  525 => 146,  522 => 145,  519 => 144,  512 => 179,  510 => 144,  505 => 141,  502 => 140,  497 => 74,  494 => 73,  490 => 67,  481 => 65,  477 => 64,  470 => 59,  466 => 58,  462 => 68,  459 => 58,  456 => 57,  452 => 54,  443 => 52,  438 => 51,  434 => 50,  430 => 55,  427 => 50,  424 => 49,  418 => 69,  416 => 57,  413 => 56,  411 => 49,  406 => 47,  400 => 44,  396 => 43,  389 => 39,  384 => 37,  381 => 36,  379 => 35,  375 => 33,  371 => 32,  367 => 31,  361 => 28,  357 => 27,  342 => 15,  338 => 14,  332 => 12,  329 => 11,  318 => 2,  315 => 1,  306 => 291,  303 => 290,  300 => 289,  293 => 285,  281 => 276,  277 => 275,  272 => 273,  267 => 271,  262 => 269,  251 => 260,  247 => 257,  243 => 256,  238 => 254,  233 => 252,  228 => 250,  223 => 248,  218 => 246,  214 => 245,  178 => 212,  174 => 211,  152 => 192,  141 => 183,  139 => 140,  111 => 115,  107 => 114,  99 => 108,  94 => 106,  88 => 105,  85 => 104,  77 => 101,  66 => 96,  64 => 95,  54 => 88,  40 => 76,  38 => 73,  35 => 72,  33 => 11,  30 => 10,  28 => 1,);
+        return array (  592 => 182,  583 => 176,  570 => 166,  563 => 161,  560 => 160,  557 => 159,  551 => 157,  545 => 155,  542 => 154,  539 => 153,  533 => 151,  530 => 150,  527 => 149,  520 => 184,  518 => 149,  513 => 146,  510 => 145,  505 => 74,  502 => 73,  498 => 67,  489 => 65,  485 => 64,  478 => 59,  474 => 58,  470 => 68,  467 => 58,  464 => 57,  460 => 54,  451 => 52,  446 => 51,  442 => 50,  438 => 55,  435 => 50,  432 => 49,  426 => 69,  424 => 57,  421 => 56,  419 => 49,  414 => 47,  408 => 44,  404 => 43,  397 => 39,  392 => 37,  389 => 36,  387 => 35,  383 => 33,  379 => 32,  375 => 31,  369 => 28,  365 => 27,  350 => 15,  346 => 14,  340 => 12,  337 => 11,  326 => 2,  323 => 1,  314 => 297,  311 => 296,  308 => 295,  301 => 291,  289 => 282,  285 => 281,  280 => 279,  275 => 277,  270 => 275,  259 => 266,  255 => 263,  251 => 262,  246 => 260,  241 => 258,  236 => 256,  231 => 254,  226 => 252,  222 => 251,  185 => 217,  181 => 216,  159 => 197,  148 => 188,  146 => 145,  120 => 122,  116 => 121,  107 => 114,  102 => 112,  98 => 111,  94 => 110,  91 => 109,  82 => 105,  74 => 100,  69 => 99,  67 => 98,  54 => 88,  40 => 76,  38 => 73,  35 => 72,  33 => 11,  30 => 10,  28 => 1,);
     }
 }

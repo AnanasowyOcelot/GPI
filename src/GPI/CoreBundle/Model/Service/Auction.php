@@ -181,7 +181,8 @@ class Auction
             'auction_owner_mail' => $auctionCreatorEmail
         ));
 
-        $this->mail->sendMail($userEmail, $mailContent, "GPI: wygrana");
+//        $this->mail->sendMail($userEmail, $mailContent, "GPI: wygrana");
+        $this->mail->sendMail('lukasz.woroniecki@gmail.com', $mailContent, "GPI: wygrana");
     }
 
     /**

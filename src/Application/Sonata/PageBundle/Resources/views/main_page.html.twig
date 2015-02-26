@@ -75,176 +75,186 @@
 {% endblock %}
 
 <div class="wrapper">
-    <!--=== Header ===-->
-    <div class="header">
-        <!-- Topbar -->
-        <div class="topbar" style="padding:0">
+<!--=== Header ===-->
+<div class="header">
+    <!-- Topbar -->
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <a class="navbar-brand" href="/">
-                            <br/>
-                            <img id="logo-header" src="{{ asset("/bundles/gpilayout/img/logo-lightback.png") }}"
-                                 alt="Logo">
-                        </a>
-                    </div>
-                    <div class="col-md-9" style="height: 100px;">
-                        <div style="overflow: hidden;">
-                            <ul class="loginbar pull-right">
-                                {% if app.user %}
-                                    <li><a href="{{ path('sonata_user_profile_show') }}"><i class="fa fa-user"></i>&nbsp; {{ app.user.username }}</a>
-                                    </li>
-                                    <li class="topbar-devider"></li>
+    <div class="topbar" style="padding:0; min-width: 400px">
 
-                                    <li>
-                                        <a href="{{ path('fos_user_security_logout') }}"><i class="fa fa-sign-out"></i>&nbsp;{{ 'link_logout' | trans({}, "SonataUserBundle") }}</a>
-                                    </li>
-                                {% else %}
-                                    <li>
-                                        <a href="{{ path('fos_user_security_login') }}"><i class="fa fa-sign-in"></i>&nbsp;{{ 'link_login'|trans({}, 'SonataUserBundle') }}
-                                            / {{ 'link_register'|trans({}, 'SonataUserBundle') }}</a></li>
-                                {% endif %}
-                            </ul>
-                        </div>
-                        <div class="navbar navbar-default mega-menu" role="navigation"
-                             style="position: absolute; bottom: 0; right: 0">
-                            <ul class="nav navbar-nav">
-                                <li><a href="/">Strona główna</a></li>
-                                <li><a href="{{ path('gpi_site_regulations') }}">Regulamin</a></li>
-                                <li><a href="{{ path('gpi_site_faq') }}">FAQ</a></li>
-                            </ul>
-                        </div>
-                    </div>
+        <div class="container">
+            <div class="row" style="position: relative;">
+                <div class="col-md-3 col-xs-12">
+                    <a class="navbar-brand" href="/">
+                        <br/>
+                        <img id="logo-header" src="{{ asset("/bundles/gpilayout/img/logo-lightback.png") }}"
+                             alt="Logo">
+                    </a>
+                </div>
+                <div class="col-md-9 col-xs-12" style="position: static; height: 35px; overflow: hidden;">
+                    &nbsp;
                 </div>
 
+                <div style="overflow: hidden; position: absolute; right: 5px; top: 0; ">
+                    <ul class="loginbar pull-right">
+                        {% if app.user %}
+                            <li><a href="{{ path('sonata_user_profile_show') }}"><i
+                                            class="fa fa-user"></i>&nbsp; {{ app.user.username }}</a>
+                            </li>
+                            <li class="topbar-devider"></li>
 
+                            <li>
+                                <a href="{{ path('fos_user_security_logout') }}"><i class="fa fa-sign-out"></i>&nbsp;{{ 'link_logout' | trans({}, "SonataUserBundle") }}
+                                </a>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a href="{{ path('fos_user_security_login') }}"><i
+                                            class="fa fa-sign-in"></i>&nbsp;{{ 'link_login'|trans({}, 'SonataUserBundle') }}
+                                    / {{ 'link_register'|trans({}, 'SonataUserBundle') }}</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+                <div class="navbar navbar-default mega-menu" role="navigation"
+                     style="position: absolute; right: 0; bottom: 0;">
+                    <ul class="nav navbar-nav">
+                        <li style="display: inline-block"><a href="/">Strona główna</a></li>
+                        <li style="display: inline-block"><a href="{{ path('gpi_site_regulations') }}">Regulamin</a></li>
+                        <li style="display: inline-block"><a href="{{ path('gpi_site_faq') }}">FAQ</a></li>
+                    </ul>
+                </div>
             </div>
+
+
         </div>
-        <!-- End Topbar -->
-
-        <!-- Navbar -->
-
-        <!-- End Navbar -->
     </div>
-    <!--=== End Header ===-->
 
-    <!--=== Breadcrumbs ===-->
-    <div class="breadcrumbs">
+    <!-- End Topbar -->
 
-    </div>
-    <!--/breadcrumbs-->
-    <!--=== End Breadcrumbs ===-->
+    <!-- Navbar -->
 
-    {% block sonata_page_container %}
-        <!--=== Content Part ===-->
+    <!-- End Navbar -->
+</div>
+<!--=== End Header ===-->
 
-        <div class="container content" style="padding-top: 0">
-            <div class="service-block service-block-dark-blue" style="">
-                <h2 class="heading-md" style="margin-top: 0;"><i class="icon-2x color-light icon-line icon-bulb"></i>
-                    Czym jest Giełda Projektów Inżynierskich?</h2>
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs">
 
-                <p>Nowatorski serwis "aukcyjno-ogłoszeniowy" o&nbsp;tematyce inżynierskiej.<br/>
-                    <span class="label rounded label-primary"><strong>Zleceniodawca</strong></span> określa ile może
-                    zapłacić za&nbsp;projekt,
-                    a&nbsp;<span class="label rounded label-primary"><strong>Ofertujący</strong></span> wie ile wynosi
-                    najniższa oferta.<br/>
-                    Takie podejście daje możliwość Ofertującym bycia konkurencyjnym,
-                    a&nbsp;Zleceniodawcy pewność, że nie przepłacił za projekt.</p>
-            </div>
+</div>
+<!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
 
-            {% block page_content %}
-                {% if content is defined %}
+{% block sonata_page_container %}
+    <!--=== Content Part ===-->
+
+    <div class="container content" style="padding-top: 0">
+        <div class="service-block service-block-dark-blue" style="">
+            <h2 class="heading-md" style="margin-top: 0;"><i class="icon-2x color-light icon-line icon-bulb"></i>
+                Czym jest Giełda Projektów Inżynierskich?</h2>
+
+            <p>Nowatorski serwis "aukcyjno-ogłoszeniowy" o&nbsp;tematyce inżynierskiej.<br/>
+                <span class="label rounded label-primary"><strong>Zleceniodawca</strong></span> określa ile może
+                zapłacić za&nbsp;projekt,
+                a&nbsp;<span class="label rounded label-primary"><strong>Ofertujący</strong></span> wie ile wynosi
+                najniższa oferta.<br/>
+                Takie podejście daje możliwość Ofertującym bycia konkurencyjnym,
+                a&nbsp;Zleceniodawcy pewność, że nie przepłacił za projekt.</p>
+        </div>
+
+        {% block page_content %}
+            {% if content is defined %}
+                {{ content|raw }}
+            {% else %}
+                {% set content = block('content') %}
+                {% if content|length > 0 %}
                     {{ content|raw }}
-                {% else %}
-                    {% set content = block('content') %}
-                    {% if content|length > 0 %}
-                        {{ content|raw }}
-                    {% elseif page is defined %}
-                        {{ sonata_page_render_container('content', page) }}
-                    {% endif %}
+                {% elseif page is defined %}
+                    {{ sonata_page_render_container('content', page) }}
                 {% endif %}
-                {% if page is defined %}
+            {% endif %}
+            {% if page is defined %}
 
-                    <div class="row">
-
-
-                        <div class="col-md-12">
-                            {{ sonata_page_render_container('left_col', page) }}
-                            <!-- About Us -->
-                            <div class="margin-bottom-30">
-
-                            </div>
-
-                        </div>
-                        <!--/col-md-3-->
-
-                        <div class="col-md-12">
-                            {{ sonata_page_render_container('right_col', page) }}
-
-                        </div>
-                        <!--/col-md-9-->
-                    </div><!--/row-->
-                {% endif %}
-
-            {% endblock %}
-
-        </div><!--/container-->
-        <!--=== End Content Part ===-->
-    {% endblock %}
-
-    <!--=== Footer Version 1 ===-->
-    <div class="footer-v1" style="padding: 10px 0px;">
-        <div class="footer" style="padding: 10px 0px;">
-            <div class="container">
                 <div class="row">
-                    <!-- About -->
-                    <div class="col-md-3 md-margin-bottom-40">
-                        <a href="index.html"><img id="logo-footer" class="footer-logo"
-                                                  src="{{ asset("/bundles/gpilayout/img/logo-darkback.png") }}" alt=""></a>
 
-                        <p>Nowatorski serwis "aukcyjno-ogłoszeniowy" o&nbsp;tematyce inżynierskiej.<br/><br/>
-                            Zleceniodawca określa ile może
-                            zapłacić za&nbsp;projekt,
-                            a&nbsp;Ofertujący wie ile wynosi
-                            najniższa oferta.</p>
+
+                    <div class="col-md-12">
+                        {{ sonata_page_render_container('left_col', page) }}
+                        <!-- About Us -->
+                        <div class="margin-bottom-30">
+
+                        </div>
+
                     </div>
                     <!--/col-md-3-->
-                    <!-- End About -->
 
-                    <div class="col-md-3 md-margin-bottom-40">
+                    <div class="col-md-12">
+                        {{ sonata_page_render_container('right_col', page) }}
 
                     </div>
+                    <!--/col-md-9-->
+                </div><!--/row-->
+            {% endif %}
 
-                    <!-- Link List -->
-                    <div class="col-md-3 md-margin-bottom-40">
-                        <div class="headline"><h2>Przydatne linki</h2></div>
-                        <ul class="list-unstyled link-list">
-                            <li><a href="{{ path('gpi_site_regulations') }}">Regulamin</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="{{ path('gpi_site_faq') }}">FAQ</a><i class="fa fa-angle-right"></i></li>
-                        </ul>
-                    </div>
-                    <!--/col-md-3-->
-                    <!-- End Link List -->
+        {% endblock %}
 
-                    <!-- Address -->
-                    <div class="col-md-3 map-img md-margin-bottom-40">
-                        <div class="headline"><h2>Kontakt</h2></div>
-                        <address class="md-margin-bottom-40">
-                            25, Lorem Lis Street, Orange <br>
-                            California, US <br>
-                            Phone: 800 123 3456 <br>
-                            Fax: 800 123 3456 <br>
-                            Email: <a href="mailto:kontakt@gpi.pl" class="">kontakt@gpi.pl</a>
-                        </address>
-                    </div>
-                    <!--/col-md-3-->
-                    <!-- End Address -->
+    </div><!--/container-->
+    <!--=== End Content Part ===-->
+{% endblock %}
+
+<!--=== Footer Version 1 ===-->
+<div class="footer-v1" style="padding: 10px 0px;">
+    <div class="footer" style="padding: 10px 0px;">
+        <div class="container">
+            <div class="row">
+                <!-- About -->
+                <div class="col-md-3 md-margin-bottom-40">
+                    <a href="index.html"><img id="logo-footer" class="footer-logo"
+                                              src="{{ asset("/bundles/gpilayout/img/logo-darkback.png") }}" alt=""></a>
+
+                    <p>Nowatorski serwis "aukcyjno-ogłoszeniowy" o&nbsp;tematyce inżynierskiej.<br/><br/>
+                        Zleceniodawca określa ile może
+                        zapłacić za&nbsp;projekt,
+                        a&nbsp;Ofertujący wie ile wynosi
+                        najniższa oferta.</p>
                 </div>
+                <!--/col-md-3-->
+                <!-- End About -->
+
+                <div class="col-md-3 md-margin-bottom-40">
+
+                </div>
+
+                <!-- Link List -->
+                <div class="col-md-3 md-margin-bottom-40">
+                    <div class="headline"><h2>Przydatne linki</h2></div>
+                    <ul class="list-unstyled link-list">
+                        <li><a href="{{ path('gpi_site_regulations') }}">Regulamin</a><i
+                                    class="fa fa-angle-right"></i></li>
+                        <li><a href="{{ path('gpi_site_faq') }}">FAQ</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div>
+                <!--/col-md-3-->
+                <!-- End Link List -->
+
+                <!-- Address -->
+                <div class="col-md-3 map-img md-margin-bottom-40">
+                    <div class="headline"><h2>Kontakt</h2></div>
+                    <address class="md-margin-bottom-40">
+                        Marek Laszuk "RUSKÓW" <br>
+                        ul. Wiejska 10 <br>
+                        08-200 Łosice, Polska <br>
+                        Telefon: +48 (083) 359 06 13  <br>
+                        Fax: +48 (083) 359 06 13 <br>
+                        Email: <a href="mailto:gpi@projektyinzynierskie.pl" class="">gpi@projektyinzynierskie.pl</a>
+                    </address>
+                </div>
+                <!--/col-md-3-->
+                <!-- End Address -->
             </div>
         </div>
     </div>
-    <!--=== End Footer Version 1 ===-->
+</div>
+<!--=== End Footer Version 1 ===-->
 </div>
 <!--/wrapper-->
 

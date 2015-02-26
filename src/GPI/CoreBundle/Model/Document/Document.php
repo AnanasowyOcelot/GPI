@@ -23,24 +23,6 @@ abstract class Document
     {
         $metadata->addPropertyConstraint('description', new NotBlank());
         $metadata->addPropertyConstraint('file', new NotBlank());
-        $metadata->addPropertyConstraint(
-            'file',
-            new Assert\File(
-                array(
-                    'maxSize' => '10240k',
-                    'mimeTypes' => array(
-                        'application/pdf',
-                        'image/jpg',
-                        'image/png',
-                        'text/doc',
-                        'text/docx',
-                        'text/txt',
-                        "image/jpeg"
-                    ),
-                    'mimeTypesMessage' => 'Please upload a valid PDF, image or text file',
-                )
-            )
-        );
     }
 
     abstract public function upload();

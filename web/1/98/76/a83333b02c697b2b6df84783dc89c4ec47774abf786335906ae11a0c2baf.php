@@ -107,11 +107,11 @@ class __TwigTemplate_9876a83333b02c697b2b6df84783dc89c4ec47774abf786335906ae11a0
 
     <div class=\"tag-box tag-box-v3 form-page\" style=\"overflow: hidden;\">
         <div class=\"well\" style=\"text-align: center\">
-            <span class=\"label rounded label-blue\" style=\"display: inline-block; width: 31%; border: 1px solid #aaaaaa\">Kategorie</span>
+            <span class=\"label rounded label-green\" style=\"display: inline-block; width: 31%; border: 1px solid #aaaaaa\">Kategorie</span>
             <i class=\"fa fa-angle-double-right\"></i>
-            <span class=\"label rounded label-blue\" style=\"display: inline-block; width: 31%; border: 1px solid #aaaaaa\">Podkategorie</span>
+            <span class=\"label rounded label-green\" style=\"display: inline-block; width: 31%; border: 1px solid #aaaaaa\">Podkategorie</span>
             <i class=\"fa fa-angle-double-right\"></i>
-            <span class=\"label rounded label-green\" style=\"display: inline-block; width: 31%; border: 1px solid #aaaaaa\">Szczegóły aukcji</span>
+            <span class=\"label rounded label-blue\" style=\"display: inline-block; width: 31%; border: 1px solid #aaaaaa\">Szczegóły aukcji</span>
         </div>
         <div class=\"headline\"><h3>Dodaj nową aukcję</h3></div>
 

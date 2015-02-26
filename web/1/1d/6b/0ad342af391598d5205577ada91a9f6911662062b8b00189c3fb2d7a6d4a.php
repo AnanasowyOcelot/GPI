@@ -100,21 +100,39 @@ class __TwigTemplate_1d6b0ad342af391598d5205577ada91a9f6911662062b8b00189c3fb2d7
         foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
             // line 39
             echo "                <li class=\"cbp-item motion\">
-                    <a href=\"";
+                    ";
             // line 40
+            if ( !$this->getAttribute($context["document"], "isDownloadable", array(), "method")) {
+                // line 41
+                echo "                        ";
+                $context["a_tag_attributes"] = "target=\"_blank\" class=\"cbp-caption cbp-lightbox\"";
+                // line 42
+                echo "                    ";
+            } else {
+                // line 43
+                echo "                        ";
+                $context["a_tag_attributes"] = "download";
+                // line 44
+                echo "                    ";
+            }
+            // line 45
+            echo "                    <a href=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute($context["document"], "getWebPath", array(), "method")), "html", null, true);
-            echo "\"  target=\"_blank\" class=\"cbp-caption cbp-lightbox\">
-                        <div class=\"cbp-caption-defaultWrap\">
+            echo "\" ";
+            echo (isset($context["a_tag_attributes"]) ? $context["a_tag_attributes"] : $this->getContext($context, "a_tag_attributes"));
+            echo ">
+                        <div class=\"cbp-caption-defaultWrap\" style=\"text-align: center;\">
                             <img src=\"";
-            // line 42
+            // line 47
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute($context["document"], "getWebImagePath", array(), "method")), "html", null, true);
-            echo "\" alt=\"\" width=\"100%\">
+            echo "\" alt=\"\"
+                                 style=\"width: auto; max-width: 100%; max-height: 100%;\">
                         </div>
                         <div class=\"cbp-caption-activeWrap\">
                             <div class=\"cbp-l-caption-alignCenter\">
                                 <div class=\"cbp-l-caption-body\">
                                     <p class=\"cbp-l-caption-desc\">";
-            // line 47
+            // line 53
             echo twig_escape_filter($this->env, $this->getAttribute($context["document"], "description", array()), "html", null, true);
             echo "</p>
                                 </div>
@@ -127,7 +145,7 @@ class __TwigTemplate_1d6b0ad342af391598d5205577ada91a9f6911662062b8b00189c3fb2d7
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 54
+        // line 60
         echo "        </ul>
     </div>
 </div>
@@ -146,6 +164,6 @@ class __TwigTemplate_1d6b0ad342af391598d5205577ada91a9f6911662062b8b00189c3fb2d7
 
     public function getDebugInfo()
     {
-        return array (  131 => 54,  118 => 47,  110 => 42,  105 => 40,  102 => 39,  98 => 38,  88 => 30,  85 => 29,  81 => 27,  75 => 25,  73 => 24,  68 => 23,  66 => 22,  62 => 21,  58 => 20,  52 => 19,  43 => 13,  38 => 10,  34 => 8,  28 => 5,  24 => 3,  22 => 2,  19 => 1,);
+        return array (  149 => 60,  136 => 53,  127 => 47,  119 => 45,  116 => 44,  113 => 43,  110 => 42,  107 => 41,  105 => 40,  102 => 39,  98 => 38,  88 => 30,  85 => 29,  81 => 27,  75 => 25,  73 => 24,  68 => 23,  66 => 22,  62 => 21,  58 => 20,  52 => 19,  43 => 13,  38 => 10,  34 => 8,  28 => 5,  24 => 3,  22 => 2,  19 => 1,);
     }
 }

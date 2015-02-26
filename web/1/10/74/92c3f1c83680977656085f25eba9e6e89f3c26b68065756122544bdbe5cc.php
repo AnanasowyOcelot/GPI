@@ -43,13 +43,13 @@ class __TwigTemplate_107492c3f1c83680977656085f25eba9e6e89f3c26b68065756122544bd
         // line 7
         echo "    <div class=\"tag-box tag-box-v3 form-page\" style=\"overflow: hidden;\">
         <div class=\"well\" style=\"text-align: center\">
-                <span class=\"label rounded label-blue\"
+                <span class=\"label rounded label-green\"
                       style=\"display: inline-block; width: 31%; border: 1px solid #aaaaaa\">Kategorie</span>
             <i class=\"fa fa-angle-double-right\"></i>
-                <span class=\"label rounded label-light\"
+                <span class=\"label rounded label-green\"
                       style=\"display: inline-block; width: 31%; border: 1px solid #aaaaaa\">Podkategorie</span>
             <i class=\"fa fa-angle-double-right\"></i>
-                <span class=\"label rounded label-light\"
+                <span class=\"label rounded label-green\"
                       style=\"display: inline-block; width: 31%; border: 1px solid #aaaaaa\">Szczegóły aukcji</span>
         </div>
         ";

@@ -37,9 +37,15 @@
         <ul>
             {% for document in offer.documents %}
                 <li class="cbp-item motion">
-                    <a href="{{ asset(document.getWebPath()) }}"  target="_blank" class="cbp-caption cbp-lightbox">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="{{ asset(document.getWebImagePath())  }}" alt="" width="100%">
+                    {% if not document.isDownloadable() %}
+                        {% set a_tag_attributes = 'target="_blank" class="cbp-caption cbp-lightbox"' %}
+                    {% else %}
+                        {% set a_tag_attributes = 'download' %}
+                    {% endif %}
+                    <a href="{{ asset(document.getWebPath()) }}" {{ a_tag_attributes|raw }}>
+                        <div class="cbp-caption-defaultWrap" style="text-align: center;">
+                            <img src="{{ asset(document.getWebImagePath()) }}" alt=""
+                                 style="width: auto; max-width: 100%; max-height: 100%;">
                         </div>
                         <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignCenter">

@@ -78,46 +78,51 @@
     <!--=== Header ===-->
     <div class="header">
         <!-- Topbar -->
-        <div class="topbar" style="padding:0">
+        <div class="topbar" style="padding:0; min-width: 400px">
 
             <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
+                <div class="row" style="position: relative;">
+                    <div class="col-md-3 col-xs-12">
                         <a class="navbar-brand" href="/">
                             <br/>
                             <img id="logo-header" src="{{ asset("/bundles/gpilayout/img/logo-lightback.png") }}"
                                  alt="Logo">
                         </a>
                     </div>
-                    <div class="col-md-9" style="height: 100px;">
-                        <div style="overflow: hidden;">
-                            <ul class="loginbar pull-right">
-                                {% if app.user %}
-                                    <li><a href="{{ path('sonata_user_profile_show') }}"><i class="fa fa-user"></i>&nbsp; {{ app.user.username }}</a>
-                                    </li>
-                                    <li class="topbar-devider"></li>
+                    <div class="col-md-9 col-xs-12" style="position: static; height: 35px; overflow: hidden;">
+                        &nbsp;
+                    </div>
 
-                                    <li>
-                                        <a href="{{ path('fos_user_security_logout') }}"><i class="fa fa-sign-out"></i>&nbsp;{{ 'link_logout' | trans({}, "SonataUserBundle") }}</a>
-                                    </li>
-                                {% else %}
-                                    <li>
-                                        <a href="{{ path('fos_user_security_login') }}"><i class="fa fa-sign-in"></i>&nbsp;{{ 'link_login'|trans({}, 'SonataUserBundle') }}
-                                            / {{ 'link_register'|trans({}, 'SonataUserBundle') }}</a></li>
-                                {% endif %}
-                            </ul>
-                        </div>
-                        <div class="navbar navbar-default mega-menu" role="navigation"
-                             style="position: absolute; bottom: 0; right: 0">
-                            <ul class="nav navbar-nav">
-                                <li><a href="/">Strona główna</a></li>
-                                <li><a href="{{ path('gpi_site_regulations') }}">Regulamin</a></li>
-                                <li><a href="{{ path('gpi_site_faq') }}">FAQ</a></li>
-                            </ul>
-                        </div>
+                    <div style="overflow: hidden; position: absolute; right: 5px; top: 0; ">
+                        <ul class="loginbar pull-right">
+                            {% if app.user %}
+                                <li><a href="{{ path('sonata_user_profile_show') }}"><i
+                                                class="fa fa-user"></i>&nbsp; {{ app.user.username }}</a>
+                                </li>
+                                <li class="topbar-devider"></li>
+
+                                <li>
+                                    <a href="{{ path('fos_user_security_logout') }}"><i class="fa fa-sign-out"></i>&nbsp;{{ 'link_logout' | trans({}, "SonataUserBundle") }}
+                                    </a>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <a href="{{ path('fos_user_security_login') }}"><i
+                                                class="fa fa-sign-in"></i>&nbsp;{{ 'link_login'|trans({}, 'SonataUserBundle') }}
+                                        / {{ 'link_register'|trans({}, 'SonataUserBundle') }}</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+
+                    <div class="navbar navbar-default mega-menu" role="navigation"
+                         style="position: absolute; right: 0; bottom: 0;">
+                        <ul class="nav navbar-nav">
+                            <li style="display: inline-block"><a href="/">Strona główna</a></li>
+                            <li style="display: inline-block"><a href="{{ path('gpi_site_regulations') }}">Regulamin</a></li>
+                            <li style="display: inline-block"><a href="{{ path('gpi_site_faq') }}">FAQ</a></li>
+                        </ul>
                     </div>
                 </div>
-
 
 
             </div>
@@ -219,11 +224,12 @@
                     <div class="col-md-3 map-img md-margin-bottom-40">
                         <div class="headline"><h2>Kontakt</h2></div>
                         <address class="md-margin-bottom-40">
-                            25, Lorem Lis Street, Orange <br>
-                            California, US <br>
-                            Phone: 800 123 3456 <br>
-                            Fax: 800 123 3456 <br>
-                            Email: <a href="mailto:kontakt@gpi.pl" class="">kontakt@gpi.pl</a>
+                            Marek Laszuk "RUSKÓW" <br>
+                            ul. Wiejska 10 <br>
+                            08-200 Łosice, Polska <br>
+                            Telefon: +48 (083) 359 06 13  <br>
+                            Fax: +48 (083) 359 06 13 <br>
+                            Email: <a href="mailto:gpi@projektyinzynierskie.pl" class="">gpi@projektyinzynierskie.pl</a>
                         </address>
                     </div>
                     <!--/col-md-3-->

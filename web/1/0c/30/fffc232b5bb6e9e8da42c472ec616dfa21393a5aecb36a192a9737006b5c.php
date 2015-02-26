@@ -39,209 +39,221 @@ class __TwigTemplate_0c30fffc232b5bb6e9e8da42c472ec616dfa21393a5aecb36a192a97370
         // line 76
         echo "
 <div class=\"wrapper\">
-    <!--=== Header ===-->
-    <div class=\"header\">
-        <!-- Topbar -->
-        <div class=\"topbar\" style=\"padding:0\">
+<!--=== Header ===-->
+<div class=\"header\">
+    <!-- Topbar -->
 
-            <div class=\"container\">
-                <div class=\"row\">
-                    <div class=\"col-md-3\">
-                        <a class=\"navbar-brand\" href=\"/\">
-                            <br/>
-                            <img id=\"logo-header\" src=\"";
-        // line 88
+    <div class=\"topbar\" style=\"padding:0; min-width: 400px\">
+
+        <div class=\"container\">
+            <div class=\"row\" style=\"position: relative;\">
+                <div class=\"col-md-3 col-xs-12\">
+                    <a class=\"navbar-brand\" href=\"/\">
+                        <br/>
+                        <img id=\"logo-header\" src=\"";
+        // line 89
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/img/logo-lightback.png"), "html", null, true);
         echo "\"
-                                 alt=\"Logo\">
-                        </a>
-                    </div>
-                    <div class=\"col-md-9\" style=\"height: 100px;\">
-                        <div style=\"overflow: hidden;\">
-                            <ul class=\"loginbar pull-right\">
-                                ";
-        // line 95
+                             alt=\"Logo\">
+                    </a>
+                </div>
+                <div class=\"col-md-9 col-xs-12\" style=\"position: static; height: 35px; overflow: hidden;\">
+                    &nbsp;
+                </div>
+
+                <div style=\"overflow: hidden; position: absolute; right: 5px; top: 0; \">
+                    <ul class=\"loginbar pull-right\">
+                        ";
+        // line 99
         if ($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array())) {
-            // line 96
-            echo "                                    <li><a href=\"";
+            // line 100
+            echo "                            <li><a href=\"";
             echo $this->env->getExtension('routing')->getPath("sonata_user_profile_show");
-            echo "\"><i class=\"fa fa-user\"></i>&nbsp; ";
+            echo "\"><i
+                                            class=\"fa fa-user\"></i>&nbsp; ";
+            // line 101
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
             echo "</a>
-                                    </li>
-                                    <li class=\"topbar-devider\"></li>
+                            </li>
+                            <li class=\"topbar-devider\"></li>
 
-                                    <li>
-                                        <a href=\"";
-            // line 101
+                            <li>
+                                <a href=\"";
+            // line 106
             echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
             echo "\"><i class=\"fa fa-sign-out\"></i>&nbsp;";
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("link_logout", array(), "SonataUserBundle"), "html", null, true);
-            echo "</a>
-                                    </li>
-                                ";
+            echo "
+                                </a>
+                            </li>
+                        ";
         } else {
-            // line 104
-            echo "                                    <li>
-                                        <a href=\"";
-            // line 105
+            // line 110
+            echo "                            <li>
+                                <a href=\"";
+            // line 111
             echo $this->env->getExtension('routing')->getPath("fos_user_security_login");
-            echo "\"><i class=\"fa fa-sign-in\"></i>&nbsp;";
+            echo "\"><i
+                                            class=\"fa fa-sign-in\"></i>&nbsp;";
+            // line 112
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("link_login", array(), "SonataUserBundle"), "html", null, true);
             echo "
-                                            / ";
-            // line 106
+                                    / ";
+            // line 113
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("link_register", array(), "SonataUserBundle"), "html", null, true);
             echo "</a></li>
-                                ";
+                        ";
         }
-        // line 108
-        echo "                            </ul>
-                        </div>
-                        <div class=\"navbar navbar-default mega-menu\" role=\"navigation\"
-                             style=\"position: absolute; bottom: 0; right: 0\">
-                            <ul class=\"nav navbar-nav\">
-                                <li><a href=\"/\">Strona główna</a></li>
-                                <li><a href=\"";
-        // line 114
-        echo $this->env->getExtension('routing')->getPath("gpi_site_regulations");
-        echo "\">Regulamin</a></li>
-                                <li><a href=\"";
         // line 115
-        echo $this->env->getExtension('routing')->getPath("gpi_site_faq");
-        echo "\">FAQ</a></li>
-                            </ul>
-                        </div>
-                    </div>
+        echo "                    </ul>
                 </div>
 
-
+                <div class=\"navbar navbar-default mega-menu\" role=\"navigation\"
+                     style=\"position: absolute; right: 0; bottom: 0;\">
+                    <ul class=\"nav navbar-nav\">
+                        <li style=\"display: inline-block\"><a href=\"/\">Strona główna</a></li>
+                        <li style=\"display: inline-block\"><a href=\"";
+        // line 122
+        echo $this->env->getExtension('routing')->getPath("gpi_site_regulations");
+        echo "\">Regulamin</a></li>
+                        <li style=\"display: inline-block\"><a href=\"";
+        // line 123
+        echo $this->env->getExtension('routing')->getPath("gpi_site_faq");
+        echo "\">FAQ</a></li>
+                    </ul>
+                </div>
             </div>
+
+
         </div>
-        <!-- End Topbar -->
-
-        <!-- Navbar -->
-
-        <!-- End Navbar -->
     </div>
-    <!--=== End Header ===-->
 
-    <!--=== Breadcrumbs ===-->
-    <div class=\"breadcrumbs\">
+    <!-- End Topbar -->
 
-    </div>
-    <!--/breadcrumbs-->
-    <!--=== End Breadcrumbs ===-->
+    <!-- Navbar -->
 
-    ";
-        // line 139
+    <!-- End Navbar -->
+</div>
+<!--=== End Header ===-->
+
+<!--=== Breadcrumbs ===-->
+<div class=\"breadcrumbs\">
+
+</div>
+<!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+";
+        // line 147
         $this->displayBlock('sonata_page_container', $context, $blocks);
-        // line 195
+        // line 203
         echo "
-    <!--=== Footer Version 1 ===-->
-    <div class=\"footer-v1\" style=\"padding: 10px 0px;\">
-        <div class=\"footer\" style=\"padding: 10px 0px;\">
-            <div class=\"container\">
-                <div class=\"row\">
-                    <!-- About -->
-                    <div class=\"col-md-3 md-margin-bottom-40\">
-                        <a href=\"index.html\"><img id=\"logo-footer\" class=\"footer-logo\"
-                                                  src=\"";
-        // line 204
+<!--=== Footer Version 1 ===-->
+<div class=\"footer-v1\" style=\"padding: 10px 0px;\">
+    <div class=\"footer\" style=\"padding: 10px 0px;\">
+        <div class=\"container\">
+            <div class=\"row\">
+                <!-- About -->
+                <div class=\"col-md-3 md-margin-bottom-40\">
+                    <a href=\"index.html\"><img id=\"logo-footer\" class=\"footer-logo\"
+                                              src=\"";
+        // line 212
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/img/logo-darkback.png"), "html", null, true);
         echo "\" alt=\"\"></a>
 
-                        <p>Nowatorski serwis \"aukcyjno-ogłoszeniowy\" o&nbsp;tematyce inżynierskiej.<br/><br/>
-                            Zleceniodawca określa ile może
-                            zapłacić za&nbsp;projekt,
-                            a&nbsp;Ofertujący wie ile wynosi
-                            najniższa oferta.</p>
-                    </div>
-                    <!--/col-md-3-->
-                    <!-- End About -->
+                    <p>Nowatorski serwis \"aukcyjno-ogłoszeniowy\" o&nbsp;tematyce inżynierskiej.<br/><br/>
+                        Zleceniodawca określa ile może
+                        zapłacić za&nbsp;projekt,
+                        a&nbsp;Ofertujący wie ile wynosi
+                        najniższa oferta.</p>
+                </div>
+                <!--/col-md-3-->
+                <!-- End About -->
 
-                    <div class=\"col-md-3 md-margin-bottom-40\">
+                <div class=\"col-md-3 md-margin-bottom-40\">
 
-                    </div>
+                </div>
 
-                    <!-- Link List -->
-                    <div class=\"col-md-3 md-margin-bottom-40\">
-                        <div class=\"headline\"><h2>Przydatne linki</h2></div>
-                        <ul class=\"list-unstyled link-list\">
-                            <li><a href=\"";
-        // line 223
+                <!-- Link List -->
+                <div class=\"col-md-3 md-margin-bottom-40\">
+                    <div class=\"headline\"><h2>Przydatne linki</h2></div>
+                    <ul class=\"list-unstyled link-list\">
+                        <li><a href=\"";
+        // line 231
         echo $this->env->getExtension('routing')->getPath("gpi_site_regulations");
-        echo "\">Regulamin</a><i class=\"fa fa-angle-right\"></i></li>
-                            <li><a href=\"";
-        // line 224
+        echo "\">Regulamin</a><i
+                                    class=\"fa fa-angle-right\"></i></li>
+                        <li><a href=\"";
+        // line 233
         echo $this->env->getExtension('routing')->getPath("gpi_site_faq");
         echo "\">FAQ</a><i class=\"fa fa-angle-right\"></i></li>
-                        </ul>
-                    </div>
-                    <!--/col-md-3-->
-                    <!-- End Link List -->
-
-                    <!-- Address -->
-                    <div class=\"col-md-3 map-img md-margin-bottom-40\">
-                        <div class=\"headline\"><h2>Kontakt</h2></div>
-                        <address class=\"md-margin-bottom-40\">
-                            25, Lorem Lis Street, Orange <br>
-                            California, US <br>
-                            Phone: 800 123 3456 <br>
-                            Fax: 800 123 3456 <br>
-                            Email: <a href=\"mailto:kontakt@gpi.pl\" class=\"\">kontakt@gpi.pl</a>
-                        </address>
-                    </div>
-                    <!--/col-md-3-->
-                    <!-- End Address -->
+                    </ul>
                 </div>
+                <!--/col-md-3-->
+                <!-- End Link List -->
+
+                <!-- Address -->
+                <div class=\"col-md-3 map-img md-margin-bottom-40\">
+                    <div class=\"headline\"><h2>Kontakt</h2></div>
+                    <address class=\"md-margin-bottom-40\">
+                        Marek Laszuk \"RUSKÓW\" <br>
+                        ul. Wiejska 10 <br>
+                        08-200 Łosice, Polska <br>
+                        Telefon: +48 (083) 359 06 13  <br>
+                        Fax: +48 (083) 359 06 13 <br>
+                        Email: <a href=\"mailto:gpi@projektyinzynierskie.pl\" class=\"\">gpi@projektyinzynierskie.pl</a>
+                    </address>
+                </div>
+                <!--/col-md-3-->
+                <!-- End Address -->
             </div>
         </div>
     </div>
-    <!--=== End Footer Version 1 ===-->
+</div>
+<!--=== End Footer Version 1 ===-->
 </div>
 <!--/wrapper-->
 
 <!-- JS Global Compulsory -->
 <script type=\"text/javascript\" src=\"";
-        // line 252
+        // line 262
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/plugins/jquery/jquery-migrate.min.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 253
+        // line 263
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/plugins/bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 <!-- JS Implementing Plugins -->
 <script type=\"text/javascript\" src=\"";
-        // line 255
+        // line 265
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/plugins/back-to-top.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\"
         src=\"";
-        // line 257
+        // line 267
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/plugins/flexslider/jquery.flexslider-min.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\"
         src=\"";
-        // line 259
+        // line 269
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/plugins/owl-carousel/owl-carousel/owl.carousel.js"), "html", null, true);
         echo "\"></script>
 <!-- JS Customization -->
 <script type=\"text/javascript\" src=\"";
-        // line 261
+        // line 271
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/js/custom.js"), "html", null, true);
         echo "\"></script>
 <!-- JS Page Level -->
 <script type=\"text/javascript\" src=\"";
-        // line 263
+        // line 273
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/js/app.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 264
+        // line 274
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/js/plugins/owl-recent-works.js"), "html", null, true);
         echo "\"></script>
 ";
-        // line 267
+        // line 277
         echo "<script type=\"text/javascript\">
     jQuery(document).ready(function () {
         App.init();
@@ -252,26 +264,26 @@ class __TwigTemplate_0c30fffc232b5bb6e9e8da42c472ec616dfa21393a5aecb36a192a97370
 
 <!-- JS Implementing Plugins -->
 <script type=\"text/javascript\" src=\"";
-        // line 276
+        // line 286
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/plugins/back-to-top.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\"
         src=\"";
-        // line 278
+        // line 288
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"), "html", null, true);
         echo "\"></script>
 <!-- JS Customization -->
 <script type=\"text/javascript\" src=\"";
-        // line 280
+        // line 290
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/js/custom.js"), "html", null, true);
         echo "\"></script>
 <!-- JS Page Level -->
 <script type=\"text/javascript\" src=\"";
-        // line 282
+        // line 292
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/js/app.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 283
+        // line 293
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/js/plugins/cube-portfolio.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\">
@@ -283,20 +295,20 @@ class __TwigTemplate_0c30fffc232b5bb6e9e8da42c472ec616dfa21393a5aecb36a192a97370
 
 <!--[if lt IE 9]>
 <script type=\"text/javascript\" src=\"";
-        // line 292
+        // line 302
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/plugins/respond.js"), "html", null, true);
         echo "\"></script>
 <
 script
 type = \"text/javascript\"
 src = \"";
-        // line 296
+        // line 306
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl(" / bundles / gpilayout / plugins / html5shiv.js
 "), "html", null, true);
-        // line 297
+        // line 307
         echo "\" ></script>
 <script type=\"text/javascript\" src=\"";
-        // line 298
+        // line 308
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("/bundles/gpilayout/js/plugins/placeholder-IE-fixes.js"), "html", null, true);
         echo "\"></script>
 <![endif]-->
@@ -492,104 +504,104 @@ src = \"";
 ";
     }
 
-    // line 139
+    // line 147
     public function block_sonata_page_container($context, array $blocks = array())
     {
-        // line 140
-        echo "        <!--=== Content Part ===-->
+        // line 148
+        echo "    <!--=== Content Part ===-->
 
-        <div class=\"container content\" style=\"padding-top: 0\">
-            <div class=\"service-block service-block-dark-blue\" style=\"\">
-                <h2 class=\"heading-md\" style=\"margin-top: 0;\"><i class=\"icon-2x color-light icon-line icon-bulb\"></i>
-                    Czym jest Giełda Projektów Inżynierskich?</h2>
+    <div class=\"container content\" style=\"padding-top: 0\">
+        <div class=\"service-block service-block-dark-blue\" style=\"\">
+            <h2 class=\"heading-md\" style=\"margin-top: 0;\"><i class=\"icon-2x color-light icon-line icon-bulb\"></i>
+                Czym jest Giełda Projektów Inżynierskich?</h2>
 
-                <p>Nowatorski serwis \"aukcyjno-ogłoszeniowy\" o&nbsp;tematyce inżynierskiej.<br/>
-                    <span class=\"label rounded label-primary\"><strong>Zleceniodawca</strong></span> określa ile może
-                    zapłacić za&nbsp;projekt,
-                    a&nbsp;<span class=\"label rounded label-primary\"><strong>Ofertujący</strong></span> wie ile wynosi
-                    najniższa oferta.<br/>
-                    Takie podejście daje możliwość Ofertującym bycia konkurencyjnym,
-                    a&nbsp;Zleceniodawcy pewność, że nie przepłacił za projekt.</p>
-            </div>
+            <p>Nowatorski serwis \"aukcyjno-ogłoszeniowy\" o&nbsp;tematyce inżynierskiej.<br/>
+                <span class=\"label rounded label-primary\"><strong>Zleceniodawca</strong></span> określa ile może
+                zapłacić za&nbsp;projekt,
+                a&nbsp;<span class=\"label rounded label-primary\"><strong>Ofertujący</strong></span> wie ile wynosi
+                najniższa oferta.<br/>
+                Takie podejście daje możliwość Ofertującym bycia konkurencyjnym,
+                a&nbsp;Zleceniodawcy pewność, że nie przepłacił za projekt.</p>
+        </div>
 
-            ";
-        // line 156
+        ";
+        // line 164
         $this->displayBlock('page_content', $context, $blocks);
-        // line 191
+        // line 199
         echo "
-        </div><!--/container-->
-        <!--=== End Content Part ===-->
-    ";
+    </div><!--/container-->
+    <!--=== End Content Part ===-->
+";
     }
 
-    // line 156
+    // line 164
     public function block_page_content($context, array $blocks = array())
     {
-        // line 157
-        echo "                ";
+        // line 165
+        echo "            ";
         if (array_key_exists("content", $context)) {
-            // line 158
-            echo "                    ";
-            echo (isset($context["content"]) ? $context["content"] : $this->getContext($context, "content"));
-            echo "
-                ";
-        } else {
-            // line 160
-            echo "                    ";
-            $context["content"] = $this->renderBlock("content", $context, $blocks);
-            // line 161
-            echo "                    ";
-            if ((twig_length_filter($this->env, (isset($context["content"]) ? $context["content"] : $this->getContext($context, "content"))) > 0)) {
-                // line 162
-                echo "                        ";
-                echo (isset($context["content"]) ? $context["content"] : $this->getContext($context, "content"));
-                echo "
-                    ";
-            } elseif (array_key_exists("page", $context)) {
-                // line 164
-                echo "                        ";
-                echo $this->env->getExtension('sonata_page')->renderContainer("content", (isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")));
-                echo "
-                    ";
-            }
             // line 166
             echo "                ";
-        }
-        // line 167
-        echo "                ";
-        if (array_key_exists("page", $context)) {
-            // line 168
+            echo (isset($context["content"]) ? $context["content"] : $this->getContext($context, "content"));
             echo "
-                    <div class=\"row\">
+            ";
+        } else {
+            // line 168
+            echo "                ";
+            $context["content"] = $this->renderBlock("content", $context, $blocks);
+            // line 169
+            echo "                ";
+            if ((twig_length_filter($this->env, (isset($context["content"]) ? $context["content"] : $this->getContext($context, "content"))) > 0)) {
+                // line 170
+                echo "                    ";
+                echo (isset($context["content"]) ? $context["content"] : $this->getContext($context, "content"));
+                echo "
+                ";
+            } elseif (array_key_exists("page", $context)) {
+                // line 172
+                echo "                    ";
+                echo $this->env->getExtension('sonata_page')->renderContainer("content", (isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")));
+                echo "
+                ";
+            }
+            // line 174
+            echo "            ";
+        }
+        // line 175
+        echo "            ";
+        if (array_key_exists("page", $context)) {
+            // line 176
+            echo "
+                <div class=\"row\">
 
 
-                        <div class=\"col-md-12\">
-                            ";
-            // line 173
+                    <div class=\"col-md-12\">
+                        ";
+            // line 181
             echo $this->env->getExtension('sonata_page')->renderContainer("left_col", (isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")));
             echo "
-                            <!-- About Us -->
-                            <div class=\"margin-bottom-30\">
-
-                            </div>
+                        <!-- About Us -->
+                        <div class=\"margin-bottom-30\">
 
                         </div>
-                        <!--/col-md-3-->
 
-                        <div class=\"col-md-12\">
-                            ";
-            // line 183
+                    </div>
+                    <!--/col-md-3-->
+
+                    <div class=\"col-md-12\">
+                        ";
+            // line 191
             echo $this->env->getExtension('sonata_page')->renderContainer("right_col", (isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")));
             echo "
 
-                        </div>
-                        <!--/col-md-9-->
-                    </div><!--/row-->
-                ";
-        }
-        // line 189
-        echo "
+                    </div>
+                    <!--/col-md-9-->
+                </div><!--/row-->
             ";
+        }
+        // line 197
+        echo "
+        ";
     }
 
     public function getTemplateName()
@@ -604,6 +616,6 @@ src = \"";
 
     public function getDebugInfo()
     {
-        return array (  591 => 189,  582 => 183,  569 => 173,  562 => 168,  559 => 167,  556 => 166,  550 => 164,  544 => 162,  541 => 161,  538 => 160,  532 => 158,  529 => 157,  526 => 156,  519 => 191,  517 => 156,  499 => 140,  496 => 139,  491 => 74,  488 => 73,  484 => 67,  475 => 65,  471 => 64,  464 => 59,  460 => 58,  456 => 68,  453 => 58,  450 => 57,  446 => 54,  437 => 52,  432 => 51,  428 => 50,  424 => 55,  421 => 50,  418 => 49,  412 => 69,  410 => 57,  407 => 56,  405 => 49,  400 => 47,  394 => 44,  390 => 43,  383 => 39,  378 => 37,  375 => 36,  373 => 35,  369 => 33,  365 => 32,  361 => 31,  355 => 28,  351 => 27,  336 => 15,  332 => 14,  326 => 12,  323 => 11,  312 => 2,  309 => 1,  300 => 298,  297 => 297,  294 => 296,  287 => 292,  275 => 283,  271 => 282,  266 => 280,  261 => 278,  256 => 276,  245 => 267,  241 => 264,  237 => 263,  232 => 261,  227 => 259,  222 => 257,  217 => 255,  212 => 253,  208 => 252,  177 => 224,  173 => 223,  151 => 204,  140 => 195,  138 => 139,  111 => 115,  107 => 114,  99 => 108,  94 => 106,  88 => 105,  85 => 104,  77 => 101,  66 => 96,  64 => 95,  54 => 88,  40 => 76,  38 => 73,  35 => 72,  33 => 11,  30 => 10,  28 => 1,);
+        return array (  603 => 197,  594 => 191,  581 => 181,  574 => 176,  571 => 175,  568 => 174,  562 => 172,  556 => 170,  553 => 169,  550 => 168,  544 => 166,  541 => 165,  538 => 164,  531 => 199,  529 => 164,  511 => 148,  508 => 147,  503 => 74,  500 => 73,  496 => 67,  487 => 65,  483 => 64,  476 => 59,  472 => 58,  468 => 68,  465 => 58,  462 => 57,  458 => 54,  449 => 52,  444 => 51,  440 => 50,  436 => 55,  433 => 50,  430 => 49,  424 => 69,  422 => 57,  419 => 56,  417 => 49,  412 => 47,  406 => 44,  402 => 43,  395 => 39,  390 => 37,  387 => 36,  385 => 35,  381 => 33,  377 => 32,  373 => 31,  367 => 28,  363 => 27,  348 => 15,  344 => 14,  338 => 12,  335 => 11,  324 => 2,  321 => 1,  312 => 308,  309 => 307,  306 => 306,  299 => 302,  287 => 293,  283 => 292,  278 => 290,  273 => 288,  268 => 286,  257 => 277,  253 => 274,  249 => 273,  244 => 271,  239 => 269,  234 => 267,  229 => 265,  224 => 263,  220 => 262,  188 => 233,  183 => 231,  161 => 212,  150 => 203,  148 => 147,  121 => 123,  117 => 122,  108 => 115,  103 => 113,  99 => 112,  95 => 111,  92 => 110,  83 => 106,  75 => 101,  70 => 100,  68 => 99,  55 => 89,  40 => 76,  38 => 73,  35 => 72,  33 => 11,  30 => 10,  28 => 1,);
     }
 }
