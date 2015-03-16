@@ -1,7 +1,7 @@
 <?php
 
 /* SonataAdminBundle:Button:create_button.html.twig */
-class __TwigTemplate_9814af70faa8d5c7cc908c94d6f4c7659fe3de747f96253ffec86175cf540f12 extends Sonata\CacheBundle\Twig\TwigTemplate14
+class __TwigTemplate_b0aa3d791e71ef31a551fc8fc75c3eb53b298774fe979904cda437206da3642b extends Sonata\CacheBundle\Twig\TwigTemplate14
 {
     public function __construct(Twig_Environment $env)
     {
@@ -27,9 +27,9 @@ class __TwigTemplate_9814af70faa8d5c7cc908c94d6f4c7659fe3de747f96253ffec86175cf5
                 echo "        <a class=\"sonata-action-element\" href=\"";
                 echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "generateUrl", array(0 => "create"), "method"), "html", null, true);
                 echo "\">
+            <i class=\"fa fa-plus-circle\"></i>
             ";
                 // line 16
-                echo "            ";
                 echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("link_action_create", array(), "SonataAdminBundle"), "html", null, true);
                 echo "</a>
     ";
@@ -47,9 +47,9 @@ class __TwigTemplate_9814af70faa8d5c7cc908c94d6f4c7659fe3de747f96253ffec86175cf5
                     // line 21
                     echo twig_escape_filter($this->env, $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "generateUrl", array(0 => "create", 1 => array("subclass" => $context["subclass"])), "method"), "html", null, true);
                     echo "\">
+                    <i class=\"fa fa-plus-circle\"></i>
                     ";
                     // line 23
-                    echo "                    ";
                     echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("link_action_create", array(), "SonataAdminBundle"), "html", null, true);
                     echo " ";
                     echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans($context["subclass"], array(), $this->getAttribute((isset($context["admin"]) ? $context["admin"] : $this->getContext($context, "admin")), "translationdomain", array())), "html", null, true);
@@ -80,6 +80,6 @@ class __TwigTemplate_9814af70faa8d5c7cc908c94d6f4c7659fe3de747f96253ffec86175cf5
 
     public function getDebugInfo()
     {
-        return array (  65 => 27,  52 => 23,  48 => 21,  45 => 20,  41 => 19,  38 => 18,  32 => 16,  27 => 14,  24 => 13,  22 => 12,  19 => 11,);
+        return array (  65 => 27,  53 => 23,  48 => 21,  45 => 20,  41 => 19,  38 => 18,  33 => 16,  27 => 14,  24 => 13,  22 => 12,  19 => 11,);
     }
 }

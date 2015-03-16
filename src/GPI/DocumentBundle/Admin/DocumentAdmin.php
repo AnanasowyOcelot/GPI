@@ -9,6 +9,7 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Knp\Menu\ItemInterface as MenuItemInterface;
 use Sonata\AdminBundle\Admin\AdminInterface;
+use Sonata\AdminBundle\Route\RouteCollection;
 
 class DocumentAdmin extends Admin
 {
@@ -45,6 +46,14 @@ class DocumentAdmin extends Admin
                     'label' => 'Opcje'
                 )
             );
+    }
+
+    protected function configureRoutes(RouteCollection $collection)
+    {
+        // to remove a single route
+        $collection->remove('create');
+        // OR remove all route except named ones
+        //        $collection->clearExcept(array('list', 'show'));
     }
 
     /**

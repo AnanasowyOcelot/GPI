@@ -117,5 +117,6 @@ class AuctionAdmin extends Admin
     {
         $collection->add('deactivate', $this->getRouterIdParameter().'/deactivate');
         $collection->add('activate', $this->getRouterIdParameter().'/activate');
+        $collection->remove('create');
     }
 }

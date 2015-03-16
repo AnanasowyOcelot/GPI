@@ -56,6 +56,7 @@ class OfferAdmin extends Admin
             );
     }
 
+
     /**
      * @param FormMapper $formMapper
      */
@@ -107,5 +108,7 @@ class OfferAdmin extends Admin
     {
         $collection->add('deactivate', $this->getRouterIdParameter() . '/deactivate');
         $collection->add('activate', $this->getRouterIdParameter() . '/activate');
+        $collection->remove('create');
+
     }
 }

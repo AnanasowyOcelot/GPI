@@ -57,10 +57,18 @@ class AuctionAttributesAdmin extends Admin
     {
         $categories = $this->getCatRepo()->findAll();
         $auctionAttrGroups = $this->getAuctionAttrGroupRepo()->findAll();
-        $subjectCategoryId = $this->getSubject()->getCategory()->getId();
+
+        $subjectCategoryId = null;
+        if($this->getSubject()->getCategory() != null){
+            $subjectCategoryId = $this->getSubject()->getCategory()->getId();
+        }
 
         $usedCatIds = F\map($auctionAttrGroups, function (AuctionAttributesGroup $aag) {
-            return $aag->getCategory()->getId();
+            if($aag->getCategory() !== null){
+                return $aag->getCategory()->getId();
+            }else{
+                return null;
+            }
         });
 
         $forbiddenCatIds = F\filter($usedCatIds, function ($catId) use ($subjectCategoryId) {
